@@ -1,0 +1,20 @@
+@import 'css/colors';
+
+.button {
+  border-style: solid;
+  border-color: $light-font;
+  border-width: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding:1em 2em;
+  background-color: $voltera-blue;
+}
+
+.button {
+   color: $light-font;
+   text-decoration: none;
+  }
+
+.button:hover {
+    color:$voltera-green;
+  }

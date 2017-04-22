@@ -6,6 +6,8 @@ import { config } from "config"
 import Footer from 'components/footer'
 import Header from 'components/header'
 
+import 'css/main.scss'
+
 module.exports = React.createClass({
   propTypes() {
     return {
@@ -14,7 +16,7 @@ module.exports = React.createClass({
   },
   render() {
     return (
-      <div>
+      <div className="container">
         <Helmet
           title={config.siteTitle}
           meta={[
@@ -23,9 +25,7 @@ module.exports = React.createClass({
           ]}
           />
         <Header />
-        <div>
-          {this.props.children}
-        </div>
+        {this.props.children}
         <Footer />
       </div>
     )

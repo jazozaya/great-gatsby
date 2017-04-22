@@ -1,4 +1,4 @@
-@import 'css/main';
+@import 'css/colors';
 
 .header {
   background-color: $voltera-blue;
@@ -6,11 +6,11 @@
   width: 100%;
 }
 
-.nav-wrapper {
+.header-wrapper {
   display: flex;
   align-items: center;
   margin:auto;
-  max-width: 1200px;
+  max-width: $max-width;
   height: 100%;
 }
 
@@ -30,6 +30,10 @@
 
 .header a:hover{
   color: $voltera-green;
+}
+
+.header .links {
+  margin-right: 20px;
 }
 
 .header .store-link {

@@ -1,0 +1,47 @@
+@import 'css/colors';
+
+.footer {
+  background-color: $voltera-blue;
+  width: 100%;
+}
+
+.footer-wrapper {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin:auto;
+  max-width: $max-width;
+  padding: 50px 20px;
+}
+
+.column {
+  flex: auto;
+}
+
+.column p {
+  margin: 0px;
+  color: $light-font;
+  font-size: 1.2em;
+}
+
+.column ul {
+  list-style: none;
+  padding: 0px;
+  margin-top: 10px;
+}
+
+.footer-wrapper li {
+  color: $soft-grey;
+  font-size: 14px;
+  line-height: 1.8em;
+  font-weight: 400;
+}
+
+.footer-wrapper a {
+  color: $soft-grey;
+  text-decoration: none;
+}
+
+.footer-wrapper a:hover{
+  color: $voltera-green;
+}

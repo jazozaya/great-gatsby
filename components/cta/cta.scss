@@ -1,0 +1,28 @@
+@import 'css/colors';
+
+.cta {
+background-color: $voltera-green;
+}
+
+.cta-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: auto;
+  max-width: $max-width;
+  padding: 40px 20px;
+}
+
+.cta .title {
+  flex: auto;
+}
+
+.cta h1 {
+  margin-bottom: 0px;
+  font-size: 28px;
+}
+
+.cta p {
+  margin-top: 0px;
+  font-size: 18px;
+}
