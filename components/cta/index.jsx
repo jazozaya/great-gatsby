@@ -1,6 +1,4 @@
 import React from 'react'
-
-import Title from './title'
 import Button from 'components/common/button'
 
 import './cta.scss'
@@ -13,7 +11,10 @@ export default class CallToAction extends React.Component {
 
     return (<div className="cta">
     <div className="cta-wrapper">
-      <Title title={title} subtitle={subtitle}/>
+      <div className="title">
+        <h2>{title}</h2>
+        <p>{subtitle}</p>
+      </div>
       <Button label={label} url={url} color="dark"/>
     </div>
   </div>);

@@ -1,0 +1,36 @@
+@import 'css/colors';
+
+.testimonial {
+background-color: $voltera-green;
+}
+
+.testimonial-wrapper {
+  max-width: $narrow-width;
+  padding: 40px 20px;
+  margin: auto;
+  display: flex;
+
+}
+
+.testimonial img {
+  border-radius: 90px;
+  filter: grayscale(0.4);
+  border-color: $voltera-blue;
+  border-style: solid;
+  border-width: 3px;
+  margin-left: 30px;
+}
+
+.testimonial img:hover {
+  filter: grayscale(0);
+}
+
+.testimonial .quote {
+  font-size: 1.5em;
+  text-align: right;
+}
+
+.testimonial .author {
+  text-align: right;
+
+}

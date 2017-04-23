@@ -6,7 +6,7 @@ export default class Logo extends React.Component {
     return (
       <div className="logo-wrapper">
         <a href="http://voltera.io">
-          <img className="logo-image" src="assets/voltera-logo.png"/>
+          <img className="logo-image" src="/assets/voltera-logo.png"/>
         </a>
     </div>
     );

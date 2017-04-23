@@ -86,7 +86,7 @@ export default class Specs extends React.Component {
       <div className="table">
         <h3>Footprint</h3>
         <Row>
-          <p>Dimensions (L x W x H)</p>
+          <p>Dimensions (L &times; W &times; H)</p>
           <p>	390mm x 257mm x 207mm</p>
           <p>	15.4” x 10.1” x 8.2”</p>
         </Row>
@@ -102,7 +102,7 @@ export default class Specs extends React.Component {
         <Row>
           <p>Operating Systems</p>
           <p>Windows 7, 8, 10 (64bit), OSX 10.11+ </p>
-          <p>	15.4” x 10.1” x 8.2”</p>
+          <p>Windows 7, 8, 10 (64bit), OSX 10.11+</p>
         </Row>
         <Row light>
           <p>Compatible file format</p>

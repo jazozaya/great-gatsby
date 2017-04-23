@@ -1,7 +1,7 @@
 @import './colors.scss';
 
 body {
-  color: $dark-font;
+  color: $voltera-blue;
   font-family: 'Open Sans', sans-serif;
   margin: 0px
 }
@@ -10,14 +10,22 @@ body {
   display: flex;
   flex-direction: column;
 }
-.content {
+.page-content {
   flex-grow: 1;
 }
 
-h1, h2 {
-  color: $dark-font;
+h1 {
+  color: $voltera-blue;
   font-weight: 400;
   text-align: center;
+}
+
+h2 {
+  color: $voltera-blue;
+  font-weight: 400;
+  font-size: 1.8em;
+  text-align: center;
+
 }
 
 h3 {
@@ -30,4 +38,8 @@ h3 {
 a {
     color: $voltera-green;
     transition: all 0.1s ease-in-out 0s;
+}
+
+.dummy-header {
+  height: $header-height;
 }

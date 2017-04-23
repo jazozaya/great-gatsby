@@ -2,16 +2,17 @@ import React from 'react'
 import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
 import Helmet from 'react-helmet'
-import { config } from 'config'
+import DummyHeader from 'components/common/dummyHeader'
 
-export default class Index extends React.Component {
+
+import Specs from 'components/specs'
+
+export default class Spec extends React.Component {
   render() {
     return (
       <div>
-        <h1>
-          Hi people
-        </h1>
-        <p>Welcome to page 2</p>
+        <DummyHeader />
+        <Specs />
         <Link to={prefixLink('/')}>Go back to the homepage</Link>
       </div>
     )

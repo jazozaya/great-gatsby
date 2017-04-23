@@ -1,0 +1,37 @@
+@import 'css/colors';
+
+.awards {
+background-color: $white-background;
+}
+
+.awards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  max-width: $narrow-width;
+  padding: 40px 20px;
+}
+
+.awards img {
+  filter: grayscale(0.9);
+  transition: all 0.1s ease-in-out 0s;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.awards img:hover {
+  filter: grayscale(0);
+}
+.awards h3 {
+  text-align: center;
+  color: $voltera-green;
+  text-transform: capitalize;
+}
+
+.awards .vertical {
+  background-color: $voltera-green;
+  height: 120px;
+  width: 1px;
+}
