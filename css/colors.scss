@@ -3,8 +3,14 @@ $voltera-blue: #333E48;
 $voltera-green: #79ce00;
 $light-font: #FFF; // For dark backgrounds
 $dark-font: #384953; // For light backgrounds
-$header-font: #384953;
-$soft-grey: #8A9093;
+$soft-grey: #8A9093; // Used in footer
+
+
+
+// Background colors
+$grey-background: #e4e3e4;
 
 // General Dimensions
 $max-width: 1200px;
+$header-height: 75px;
+$specs-width: 1000px;

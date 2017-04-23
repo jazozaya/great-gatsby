@@ -12,8 +12,7 @@ module.exports = React.createClass({
   },
   render() {
     const head = Helmet.rewind()
-    console.log(BUILD_TIME);
-
+    
     let css
     if (process.env.NODE_ENV === 'production') {
       css = (

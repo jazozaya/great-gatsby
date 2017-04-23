@@ -1,0 +1,49 @@
+@import 'css/colors';
+
+
+$amount: 5;
+
+.specs {
+background-color: $grey-background;
+}
+
+.specs-wrapper {
+  margin: auto;
+  max-width: $specs-width;
+  padding: 40px;
+}
+
+.specs .table {
+    margin: 50px 0px;
+}
+
+.specs .row {
+  display: flex;
+  justify-content: space-between;;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: left;
+}
+
+.specs .row.light {
+  background-color: darken($grey-background, $amount);
+}
+
+.specs .category {
+  flex-grow: 1;
+}
+
+.specs h3 {
+  padding-bottom: 2px;
+  margin-bottom: 0px;
+  border-bottom-color: $voltera-green;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+.specs p {
+  margin: 5px 0px;
+  text-transform: capitalize;
+  font-size: 0.8em;
+  flex-basis: 280px;
+}

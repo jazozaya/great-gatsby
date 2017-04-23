@@ -3,6 +3,8 @@ import Logo from 'components/common/logo'
 import Links from './links'
 import './header.scss'
 
+//import Scrollspy from 'react-scrollspy'
+
 export default class Header extends React.Component {
 
   render() {

@@ -2,8 +2,9 @@
 
 .header {
   background-color: $voltera-blue;
-  height: 77px;
+  height: $header-height;
   width: 100%;
+  position: fixed;
 }
 
 .header-wrapper {
@@ -19,7 +20,7 @@
 }
 
 .header a {
-  color: #fff;
+  color: $light-font;
   text-decoration: none;
   padding-left: 20px;
   text-transform: uppercase;

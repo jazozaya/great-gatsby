@@ -14,7 +14,7 @@ export default class CallToAction extends React.Component {
     return (<div className="cta">
     <div className="cta-wrapper">
       <Title title={title} subtitle={subtitle}/>
-      <Button label={label} url={url}/>
+      <Button label={label} url={url} color="dark"/>
     </div>
   </div>);
 }
