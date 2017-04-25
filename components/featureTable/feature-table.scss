@@ -1,20 +1,20 @@
 @import 'css/colors';
 
-.features {
-background-color: $white-background;
-padding: 20px 0px
+.feature-table {
+background-color: $grey-background;
+padding: $vertical-padding $horizontal-padding;
 }
-.features-wrapper {
+.feature-table-wrapper {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
-  margin: 10px auto;
+  margin: auto;
   max-width: $narrow-width;
   padding: 0px 10px;
 }
 
-.features .vertical {
+.feature-table .vertical {
     background-color: $voltera-green;
     height: 30px;
     width: 1px;

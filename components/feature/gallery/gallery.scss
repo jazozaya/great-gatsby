@@ -1,0 +1,19 @@
+@import 'css/colors';
+
+.gallery {
+background-color: $grey-background;
+text-align: center;
+}
+
+.gallery-wrapper {
+  max-width: $max-width;
+  padding: 0px 20px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.gallery img {
+  width: 360px;
+  height: auto;
+}

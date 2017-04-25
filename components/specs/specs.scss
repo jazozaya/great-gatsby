@@ -1,8 +1,5 @@
 @import 'css/colors';
 
-
-$amount: 5;
-
 .specs {
 background-color: $grey-background;
 }
@@ -10,7 +7,7 @@ background-color: $grey-background;
 .specs-wrapper {
   margin: auto;
   max-width: $narrow-width;
-  padding: 40px;
+  padding: $vertical-padding $horizontal-padding;
 }
 
 .specs .table {
@@ -26,7 +23,7 @@ background-color: $grey-background;
 }
 
 .specs .row.light {
-  background-color: darken($grey-background, $amount);
+  background-color: darken($grey-background, 5);
 }
 
 .specs .category {
@@ -44,6 +41,6 @@ background-color: $grey-background;
 .specs p {
   margin: 5px 0px;
   text-transform: capitalize;
-  font-size: 0.8em;
+  font-size: 0.9em;
   flex-basis: 280px;
 }

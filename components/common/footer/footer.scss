@@ -11,7 +11,7 @@
   flex-wrap: wrap;
   margin:auto;
   max-width: $max-width;
-  padding: 50px 20px;
+  padding: $vertical-padding $horizontal-padding;
 }
 
 .column {

@@ -10,7 +10,7 @@ background-color: $voltera-green;
   align-items: center;
   margin: auto;
   max-width: $max-width;
-  padding: 40px 20px;
+  padding: $vertical-padding $horizontal-padding;
 }
 
 .cta .title {

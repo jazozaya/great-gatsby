@@ -1,5 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
+import Favicon from 'react-favicon'
 
 import { prefixLink } from 'gatsby-helpers'
 const BUILD_TIME = new Date().getTime()
@@ -12,7 +13,7 @@ module.exports = React.createClass({
   },
   render() {
     const head = Helmet.rewind()
-    
+
     let css
     if (process.env.NODE_ENV === 'production') {
       css = (
@@ -36,6 +37,7 @@ module.exports = React.createClass({
           {head.title.toComponent()}
           {head.meta.toComponent()}
 
+          <Favicon url={['favicon.ico']}/>
           <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet"/>
           {css}
         </head>

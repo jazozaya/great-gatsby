@@ -1,15 +1,14 @@
 @import 'css/colors';
 
 .testimonial {
-background-color: $voltera-green;
+  background-color: $voltera-green;
 }
 
 .testimonial-wrapper {
   max-width: $narrow-width;
-  padding: 40px 20px;
+  padding: $vertical-padding $horizontal-padding;
   margin: auto;
   display: flex;
-
 }
 
 .testimonial img {
@@ -29,8 +28,6 @@ background-color: $voltera-green;
   font-size: 1.5em;
   text-align: right;
 }
-
 .testimonial .author {
   text-align: right;
-
 }

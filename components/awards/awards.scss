@@ -1,7 +1,7 @@
 @import 'css/colors';
 
 .awards {
-background-color: $white-background;
+background-color: $grey-background;
 }
 
 .awards-wrapper {
@@ -11,7 +11,7 @@ background-color: $white-background;
   justify-content: space-between;
   margin: auto;
   max-width: $narrow-width;
-  padding: 40px 20px;
+  padding: $vertical-padding $horizontal-padding;
 }
 
 .awards img {

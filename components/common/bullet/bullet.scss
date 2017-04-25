@@ -1,7 +1,7 @@
 @import 'css/colors';
 
 .bullet {
-background-color: darken($white-background, 0.8);
+background-color: $grey-background;
 }
 .bullet a { //Acts as my wrapper.
   display: flex;
@@ -11,6 +11,7 @@ background-color: darken($white-background, 0.8);
   width: 280px;
   margin: auto;
   color: $voltera-blue;
+  border-radius: 2px;
 
   text-decoration: none;
   transition: all 0.2s ease-in-out 0s;
