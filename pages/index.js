@@ -7,8 +7,8 @@ import { config } from 'config'
 import Hero from 'components/hero'
 import Awards from 'components/awards'
 import Testimonial from 'components/testimonial'
-import FeatureTable from 'components/FeatureTable'
-import Feature from 'components/Feature'
+import FeatureTable from 'components/featureTable'
+import Feature from 'components/feature'
 
 
 import "css/main.scss"
