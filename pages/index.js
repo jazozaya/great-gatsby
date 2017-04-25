@@ -7,6 +7,7 @@ import { config } from 'config'
 import Hero from 'components/hero'
 import Awards from 'components/awards'
 import Testimonial from 'components/testimonial'
+import Features from 'components/features'
 
 
 import "css/main.scss"
@@ -17,8 +18,7 @@ export default class Index extends React.Component {
       <div className="page-content">
         <Hero />
         <Testimonial />
-        <Awards />
-
+        <Features />
         <h1>
           Welcome to Voltera!!!!
         </h1>

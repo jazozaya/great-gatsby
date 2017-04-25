@@ -1,9 +1,9 @@
-import React from 'react'
-import Logo from 'components/common/logo'
-import Links from './links'
-import './header.scss'
+import React from 'react';
+import Logo from 'components/common/logo';
+import Links from './links';
+import './header.scss';
 
-//import Scrollspy from 'react-scrollspy'
+// import Scrollspy from 'react-scrollspy'
 
 export default class Header extends React.Component {
 
@@ -13,6 +13,6 @@ export default class Header extends React.Component {
         <Logo />
         <Links />
       </div>
-  </div>);
+    </div>);
   }
 }

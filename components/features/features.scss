@@ -1,0 +1,21 @@
+@import 'css/colors';
+
+.features {
+background-color: $white-background;
+padding: 20px 0px
+}
+.features-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  margin: 10px auto;
+  max-width: $narrow-width;
+  padding: 0px 10px;
+}
+
+.features .vertical {
+    background-color: $voltera-green;
+    height: 30px;
+    width: 1px;
+}

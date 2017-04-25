@@ -2,12 +2,12 @@ import React from 'react'
 
 import './testimonial.scss'
 
-export default class Awards extends React.Component {
+export default class Testimonial extends React.Component {
 
   render() {
     return (<div className="testimonial">
     <div className="testimonial-wrapper">
-      <div class="content">
+      <div>
         <p className="quote"><i>&ldquo;As an engineer, I know the frustrations of waiting for circuit boards, and the Voltera V-One elegantly solves this problem.&rdquo;
         </i></p>
         <h3 className="author">Sir James Dyson - Inventor & founder.</h3>

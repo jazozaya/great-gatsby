@@ -3,8 +3,8 @@ import { Link } from "react-router"
 import { prefixLink } from "gatsby-helpers"
 import Helmet from "react-helmet"
 import { config } from "config"
-import Footer from 'components/footer'
-import Header from 'components/header'
+import Footer from 'components/common/footer'
+import Header from 'components/common/header'
 
 import 'css/main.scss'
 
