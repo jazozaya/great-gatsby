@@ -1,0 +1,11 @@
+@import 'css/colors';
+
+.feature-selector {
+background-color: $grey-background;
+}
+
+.feature-selector-wrapper {
+  max-width: $max-width;
+  padding: $vertical-padding $horizontal-padding;
+  margin: auto;
+}

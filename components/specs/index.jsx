@@ -6,9 +6,17 @@ import './specs.scss'
 
 export default class Specs extends React.Component {
 
+  componentDidMount() {
+
+      setTimeout(function() {
+        document.getElementById("specs").scrollIntoView();
+      }, 0);
+  }
+
+
   render() {
 
-    return (<div className="specs">
+    return (<div id="specs" className="specs">
     <div className="specs-wrapper">
       <h1>Detailed Specifications</h1>
       <div className="table">

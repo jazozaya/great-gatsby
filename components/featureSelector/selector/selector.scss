@@ -1,0 +1,20 @@
+@import 'css/colors';
+
+.selector {
+  padding: $vertical-padding $horizontal-padding;
+}
+
+.selector .selector-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  max-width: $max-width;
+}
+
+.selector .vertical {
+    background-color: $voltera-green;
+    height: 30px;
+    width: 1px;
+}

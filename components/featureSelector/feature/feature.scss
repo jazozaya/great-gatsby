@@ -1,0 +1,25 @@
+@import 'css/colors';
+
+.feature-wrapper {
+  max-width: $max-width;
+  padding: $vertical-padding 0px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.feature h2 {
+  text-transform: capitalize;
+}
+
+.feature .description {
+  padding: 0 30px;
+  flex-basis: 500px;
+  flex-grow: 1;
+
+}
+.feature p {
+  font-size: 1.0em;
+  line-height: 2em;
+}

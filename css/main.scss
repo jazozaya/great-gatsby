@@ -42,7 +42,7 @@ h3 {
 
 a {
     color: $voltera-green;
-    transition: all 0.1s ease-in-out 0s;
+    transition: all $t-time ease-in-out 0s;
 }
 
 .dummy-header {

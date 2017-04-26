@@ -16,4 +16,8 @@ $header-height: 75px;
 
 // Section paddings
 $horizontal-padding: 20px; // How close items can get to the edge.
-$vertical-padding: 40px // Distance between sections (usually a color change)
+$vertical-padding: 40px; // Distance between sections (usually a color change)
+
+
+// Transition time
+$t-time: 0.1s;

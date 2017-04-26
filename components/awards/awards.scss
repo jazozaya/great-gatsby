@@ -16,7 +16,7 @@ background-color: $grey-background;
 
 .awards img {
   filter: grayscale(0.9);
-  transition: all 0.1s ease-in-out 0s;
+  transition: all $t-time ease-in-out 0s;
   margin-left: 10px;
   margin-right: 10px;
 }
