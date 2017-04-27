@@ -5,7 +5,7 @@ export default class Links extends React.Component {
     return (<div className="links">
       <a href="http://voltera.io/blog">Blog</a>
       <a href="http://community.voltera.io">Forums</a>
-      <a href="http://voltera.io/support">Support</a>
+      <a href="http://support.voltera.io">Support</a>
       <a href="http://voltera.io/contact">Contact</a>
       <a className="store-link" href="http://store.voltera.io">Store</a>
     </div>);

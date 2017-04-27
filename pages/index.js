@@ -5,6 +5,7 @@ import { prefixLink } from 'gatsby-helpers'
 import Helmet from 'react-helmet'
 import { config } from 'config'
 
+import CallToAction from 'components/cta';
 import Awards from 'components/awards'
 import FeatureSelector from 'components/featureSelector'
 
@@ -25,7 +26,22 @@ export default class Index extends React.Component {
         </h1>
         <p>Are you ready to build hardware faster!?! Cause I sure am. </p>
         <p>Let's do this!</p>
-        <Link to={prefixLink('/specs/')}>Go to page 2</Link>
+        <ul>
+          <li>
+            <Link to={prefixLink('/specs/')}>Go to page Specs</Link>
+          </li>
+          <li>
+            <Link to={prefixLink('/gallery/')}>Go to page Gallery</Link>
+          </li>
+        </ul>
+
+        <Awards />
+        <CallToAction
+          title="Want to request a quote?"
+          subtitle="We can help you with that!"
+          label="Request Quote"
+          url="this is my url"
+        />
       </div>
     )
   }

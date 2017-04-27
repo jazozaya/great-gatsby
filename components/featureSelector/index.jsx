@@ -1,17 +1,14 @@
 import React from 'react';
 import './featureSelector.scss';
 
-import { prefixLink } from 'gatsby-helpers'
-import { Link } from 'react-router'
-
-import Bullet from 'components/common/bullet';
-
 import Print from './feature/print'
 import Paste from './feature/paste'
+import Software from './feature/software'
+import Platform from './feature/platform'
+
+
 import Selector from './selector'
 import { features } from './constants'
-
-
 
 export default class FeatureSelector extends React.Component {
 
@@ -29,7 +26,7 @@ export default class FeatureSelector extends React.Component {
       featureName: name
     })
   }
-  
+
   renderFeature() {
     // Depending on selection, rende a different feature.
 
@@ -41,9 +38,9 @@ export default class FeatureSelector extends React.Component {
       case features.paste.name:
         return <Paste />
       case features.software.name:
-        return <Paste />
+        return <Software />
       case features.platform.name:
-        return <Paste />
+        return <Platform />
       case features.experiment.name:
         return <Paste />
     }
@@ -53,8 +50,8 @@ export default class FeatureSelector extends React.Component {
     return (<div className="feature-selector">
     <div className="feature-selector-wrapper">
       {this.renderFeature()}
-      <Selector selected={this.state.featureName} handler={this.handler}/>
     </div>
+    <Selector selected={this.state.featureName} handler={this.handler}/>
   </div>);
 }
 }

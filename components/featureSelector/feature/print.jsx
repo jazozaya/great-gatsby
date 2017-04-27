@@ -2,7 +2,8 @@ import React from 'react'
 import Youtube from 'react-youtube'
 import LazyLoad from 'react-lazy-load';
 
-import Gallery from './gallery'
+import Highlights from './highlights'
+import Picture from 'components/common/picture'
 import './feature.scss'
 
 export default class Feature extends React.Component {
@@ -32,7 +33,20 @@ export default class Feature extends React.Component {
         <p>Create <strong>two layer circuit boards</strong> on your desk. Load your Gerber files and watch the dispenser lay down a <strong>silver-based conductive ink</strong> to print your circuit right before your eyes.</p>
       </div>
     </div>
-    <Gallery />
+    <Highlights>
+      <Picture
+        url="/assets/features/print-1.jpg"
+        subtitle="Repeatable 8 mil trace width"
+      />
+      <Picture
+        url="/assets/features/print-2.jpg"
+        subtitle="The V-One puts the fab house on your desk"
+      />
+      <Picture
+        url="/assets/features/print-3.jpg"
+        subtitle="Fully solderable conductive ink... even by hand!"
+      />
+  </Highlights>
   </div>);
 }
 }

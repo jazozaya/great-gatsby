@@ -17,9 +17,27 @@
   padding: 0 30px;
   flex-basis: 500px;
   flex-grow: 1;
-
 }
 .feature p {
   font-size: 1.0em;
   line-height: 2em;
+}
+
+.feature .wrap {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.feature .highlights {
+background-color: $grey-background;
+text-align: center;
+}
+
+.feature .highlights-wrapper {
+  max-width: $max-width;
+
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }

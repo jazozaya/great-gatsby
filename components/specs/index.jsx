@@ -6,19 +6,19 @@ import './specs.scss'
 
 export default class Specs extends React.Component {
 
-  componentDidMount() {
-
-      setTimeout(function() {
-        document.getElementById("specs").scrollIntoView();
-      }, 0);
-  }
+  // componentDidMount() {
+  //
+  //     setTimeout(function() {
+  //       document.getElementById("specs").scrollIntoView();
+  //     }, 0);
+  // }
 
 
   render() {
 
     return (<div id="specs" className="specs">
     <div className="specs-wrapper">
-      <h1>Detailed Specifications</h1>
+      <h1>Technical Specifications</h1>
       <div className="table">
         <h3>Printing Specifications</h3>
         <Row>
@@ -123,7 +123,6 @@ export default class Specs extends React.Component {
           <p>Wired USB</p>
         </Row>
       </div>
-
     </div>
   </div>);
 }

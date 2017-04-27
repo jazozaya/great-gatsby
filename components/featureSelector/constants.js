@@ -34,7 +34,7 @@ export const features = {
   },
   software: {
     name: "software",
-    label: "Software you want to use",
+    label: "Software you love to use",
     iconSvg: require('!raw-loader!./icons/software.min.svg'),
     url: "myUrl"
   },
