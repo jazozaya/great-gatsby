@@ -7,7 +7,7 @@ import DummyHeader from 'components/common/dummyHeader'
 import CallToAction from 'components/cta';
 import Gallery from 'components/gallery'
 
-export default class Spec extends React.Component {
+export default class MyGallery extends React.Component {
 
   render() {
     return (

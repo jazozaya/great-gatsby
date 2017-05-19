@@ -1,6 +1,5 @@
 import React from 'react'
 import Youtube from 'react-youtube'
-import LazyLoad from 'react-lazy-load';
 
 import Highlights from './highlights'
 import Picture from 'components/common/picture'
@@ -8,23 +7,37 @@ import './feature.scss'
 
 export default class Feature extends React.Component {
 
-  render() {
+  constructor(props) {
+    super(props);
+    this.state = {
+      playVideo: false
+    };
+  }
 
+  renderStaticImage() {
+    return <img className="thumbnail" onClick={() => this.setState({ playVideo: true})}src="/assets/features/dispense-solder-paste.jpg"></img>
+  }
+  renderVideo() {
     const opts = {
        playerVars: { // https://developers.google.com/youtube/player_parameters
          color: 'white',
          controls: 2,
          rel: 0,
          showinfo: 0,
+         autoplay: 1,
        }
      };
+    return <Youtube videoId="NdJQ5Xl4jkw" opts={opts}/>
+  }
+
+
+  render() {
 
     return (<div className="feature">
     <div className="feature-wrapper">
-      <Youtube
-          videoId="NdJQ5Xl4jkw"
-          opts={opts}
-      />
+      <div className="video-wrapper">
+        {this.state.playVideo ? this.renderVideo() : this.renderStaticImage()}
+      </div>
       <div className="description">
         <h2>Dispense Solder Paste</h2>
         <p>Focus on designing, not soldering. Regardless if they came from <strong>from a factory, or from your desk</strong> -  just mount your board on the V-One and off you go.</p>

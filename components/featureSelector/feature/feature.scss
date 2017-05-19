@@ -29,7 +29,7 @@
 }
 
 .feature .highlights {
-background-color: $grey-background;
+background-color: $white-background;
 text-align: center;
 }
 
@@ -40,4 +40,14 @@ text-align: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.feature .video-wrapper {
+  width: 640px;
+  height: 360px;
+}
+
+.feature .thumbnail {
+  cursor: pointer;
+
 }

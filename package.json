@@ -8,6 +8,7 @@
     "object-assign": "^4.1.1",
     "react": "^15.5.4",
     "react-addons-test-utils": "^15.5.1",
+    "react-dom": "^15.5.4",
     "react-favicon": "0.0.5",
     "react-helmet": "^5.0.3",
     "react-image-lightbox": "^3.4.3",

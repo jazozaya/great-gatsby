@@ -1,6 +1,5 @@
 import React from 'react'
 import Youtube from 'react-youtube'
-import LazyLoad from 'react-lazy-load';
 
 import Highlights from './highlights'
 import Picture from 'components/common/picture'
@@ -8,25 +7,36 @@ import './feature.scss'
 
 export default class Feature extends React.Component {
 
-  render() {
+  constructor(props) {
+    super(props);
+    this.state = {
+      playVideo: false
+    };
+  }
 
+  renderStaticImage() {
+    return <img className="thumbnail" onClick={() => this.setState({ playVideo: true})}src="/assets/features/print-conductive-silver-ink.jpg"></img>
+  }
+  renderVideo() {
     const opts = {
        playerVars: { // https://developers.google.com/youtube/player_parameters
          color: 'white',
          controls: 2,
          rel: 0,
          showinfo: 0,
+         autoplay: 1,
        }
      };
+    return <Youtube videoId="PeW1nURJ5ww" opts={opts}/>
+  }
+
+  render() {
 
     return (<div className="feature">
     <div className="feature-wrapper">
-      <LazyLoad offset={60} width={640} height={360}>
-        <Youtube
-          videoId="PeW1nURJ5ww"
-          opts={opts}
-        />
-      </LazyLoad>
+      <div className="video-wrapper">
+        {this.state.playVideo ? this.renderVideo() : this.renderStaticImage()}
+      </div>
       <div className="description">
         <h2>Print your own Circuit Boards</h2>
         <p>On your desktop and on your schedule, the Voltera V-One gets you from prototype to production faster than ever before.</p>

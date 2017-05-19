@@ -6,6 +6,22 @@ import Picture from 'components/common/picture'
 
 import { images } from './constants';
 
+    // {isOpen && <Lightbox
+    //    mainSrc={'/assets/gallery/large/' + images[photoIndex].name}
+    //    nextSrc={'/assets/gallery/large/' + images[(photoIndex + 1) % images.length].name}
+    //    prevSrc={'/assets/gallery/large/' + images[(photoIndex + images.length - 1) % images.length].name}
+    //    imageCaption={<div className="lbox-caption"><p>{images[photoIndex].subtitle}</p></div>}
+    //
+    //    onCloseRequest={() => this.setState({ isOpen: false })}
+    //    onMovePrevRequest={() => this.setState({
+    //        photoIndex: (photoIndex + images.length - 1) % images.length,
+    //    })}
+    //    onMoveNextRequest={() => this.setState({
+    //        photoIndex: (photoIndex + 1) % images.length,
+    //    })}
+    //      />
+    //  }
+
 export default class Gallery extends React.Component {
 
   constructor(props) {
@@ -44,21 +60,7 @@ export default class Gallery extends React.Component {
       {this.renderGrid()}
     </div>
 
-    {isOpen && <Lightbox
-       mainSrc={'/assets/gallery/large/' + images[photoIndex].name}
-       nextSrc={'/assets/gallery/large/' + images[(photoIndex + 1) % images.length].name}
-       prevSrc={'/assets/gallery/large/' + images[(photoIndex + images.length - 1) % images.length].name}
-       imageCaption={<div className="lbox-caption"><p>{images[photoIndex].subtitle}</p></div>}
 
-       onCloseRequest={() => this.setState({ isOpen: false })}
-       onMovePrevRequest={() => this.setState({
-           photoIndex: (photoIndex + images.length - 1) % images.length,
-       })}
-       onMoveNextRequest={() => this.setState({
-           photoIndex: (photoIndex + 1) % images.length,
-       })}
-         />
-     }
   </div>);
 }
 }

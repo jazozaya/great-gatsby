@@ -33,6 +33,9 @@ export default class Index extends React.Component {
           <li>
             <Link to={prefixLink('/gallery/')}>Go to page Gallery</Link>
           </li>
+          <li>
+            <Link to={prefixLink('/faq/')}>Go to page FAQ</Link>
+          </li>
         </ul>
 
         <Awards />

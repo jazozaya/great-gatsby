@@ -1,6 +1,5 @@
 import React from 'react'
 import Youtube from 'react-youtube'
-import LazyLoad from 'react-lazy-load';
 
 import Highlights from './highlights'
 import Picture from 'components/common/picture'
@@ -8,23 +7,39 @@ import './feature.scss'
 
 export default class Feature extends React.Component {
 
-  render() {
-
-    const opts = {
-      playerVars: { // https://developers.google.com/youtube/player_parameters
-        color: 'white',
-        controls: 2,
-        rel: 0,
-        showinfo: 0,
-      }
+  constructor(props) {
+    super(props);
+    this.state = {
+      playVideo: false
     };
+  }
+
+  renderStaticImage() {
+    return <img className="thumbnail" onClick={() => this.setState({ playVideo: true})}src="/assets/features/voltera-software.jpg"></img>
+  }
+
+  renderVideo() {
+    const opts = {
+       playerVars: { // https://developers.google.com/youtube/player_parameters
+         color: 'white',
+         controls: 2,
+         rel: 0,
+         showinfo: 0,
+         autoplay: 1,
+       }
+     };
+    return <Youtube videoId="3oCkXdwWpUY" opts={opts}/>
+  }
+
+
+
+  render() {
 
     return (<div className="feature">
     <div className="feature-wrapper">
-      <Youtube
-        videoId="3oCkXdwWpUY"
-        opts={opts}
-        />
+      <div className="video-wrapper">
+        {this.state.playVideo ? this.renderVideo() : this.renderStaticImage()}
+      </div>
       <div className="description">
         <h2>Software you love to use</h2>
         <p>Voltera’s software is designed to be understood. From importing your Gerber files to the moment you press print, the <strong>software walks you though each step</strong> with built in videos and tutorial.</p>

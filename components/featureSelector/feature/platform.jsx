@@ -1,7 +1,4 @@
 import React from 'react'
-import Youtube from 'react-youtube'
-import LazyLoad from 'react-lazy-load';
-
 import Button from 'components/common/button'
 import './feature.scss'
 
