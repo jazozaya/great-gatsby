@@ -1,7 +1,7 @@
 import React from 'react'
 import './gallery.scss'
 
-import Lightbox from 'react-image-lightbox';
+//import Lightbox from 'react-image-lightbox';
 import Picture from 'components/common/picture'
 
 import { images } from './constants';
