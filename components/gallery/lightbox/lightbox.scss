@@ -1,0 +1,32 @@
+@import 'css/colors';
+
+.lightbox {
+background-color: rgba(0, 0, 0, 0.95);
+position: fixed;
+top: $header-height;
+width: 100vw;
+height: calc(100vh - 75px);
+z-index: 1;
+
+}
+.lightbox-wrapper {
+  width: 100%;
+  height: 100%;
+
+  color: $light-font;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox img {
+  max-width: 60vw;
+  max-height: 60vh;
+}
+
+.lightbox-content p, .lightbox-content h1 {
+  color: $light-font;
+  text-align: left;
+}

@@ -14,16 +14,13 @@ export default class MyGallery extends React.Component {
       <div>
         <DummyHeader />
         <Gallery />
-        <h1>Community Projects</h1>
         <Link to={prefixLink('/')}>Go back to the homepage</Link>
-
         <CallToAction
-            title="Want to request a quote?"
-            subtitle="We can help you with that!"
-            label="Request Quote"
-            url="this is my url"
+            title="Want to see more?"
+            subtitle="Visit our forums to see what community is up to."
+            label="Visit Forums"
+            url="http://community.voltera.io"
           />
-
       </div>
     )
   }

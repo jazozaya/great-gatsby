@@ -1,7 +1,7 @@
 @import 'css/colors';
 
 .specs {
-background-color: $grey-background;
+background-color: $white-background;
 }
 
 .specs-wrapper {
@@ -38,7 +38,7 @@ background-color: $grey-background;
   border-bottom-width: 1px;
 }
 
-.specs p {
+.specs .table p {
   margin: 5px 0px;
   text-transform: capitalize;
   font-size: 0.9em;

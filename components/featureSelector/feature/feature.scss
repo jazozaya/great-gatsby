@@ -29,13 +29,11 @@
 }
 
 .feature .highlights {
-background-color: $white-background;
 text-align: center;
 }
 
 .feature .highlights-wrapper {
   max-width: $max-width;
-
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -49,5 +47,4 @@ text-align: center;
 
 .feature .thumbnail {
   cursor: pointer;
-
 }

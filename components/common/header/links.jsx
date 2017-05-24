@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router'
+import { prefixLink } from 'gatsby-helpers'
 
 export default class Links extends React.Component {
   render() {
@@ -6,7 +8,8 @@ export default class Links extends React.Component {
       <a href="http://voltera.io/blog">Blog</a>
       <a href="http://community.voltera.io">Forums</a>
       <a href="http://support.voltera.io">Support</a>
-      <a href="http://voltera.io/contact">Contact</a>
+      <Link to={prefixLink('/faq/')}>FAQ</Link>
+      <Link to={prefixLink('/contact/')}>Contact</Link>
       <a className="store-link" href="http://store.voltera.io">Store</a>
     </div>);
   }

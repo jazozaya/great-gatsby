@@ -2,6 +2,9 @@ import React from 'react';
 import Logo from 'components/common/logo';
 import './footer.scss';
 
+import { Link } from 'react-router'
+import { prefixLink } from 'gatsby-helpers'
+
 export default class Footer extends React.Component {
 
   render() {
@@ -22,14 +25,15 @@ export default class Footer extends React.Component {
           <ul>
             <li><a href="http://store.voltera.io">Store</a></li>
             <li><a href="http://support.voltera.io">Support</a></li>
-            <li><a href="/gallery/">Gallery</a></li>
+            <li><Link to={prefixLink('/faq/')}>FAQ</Link></li>
+            <li><Link to={prefixLink('/gallery/')}>Gallery</Link></li>
           </ul>
         </div>
         <div className="column">
-          <p>Company</p>
+          <p>Contact Sales</p>
           <ul>
             <li>sales@voltera.io</li>
-            <li>+1 888-381-3332</li>
+            <li>+1 888-381-3332 ext 1</li>
           </ul>
         </div>
       </div>

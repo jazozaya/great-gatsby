@@ -4,25 +4,23 @@ import { prefixLink } from 'gatsby-helpers'
 import Helmet from 'react-helmet'
 import DummyHeader from 'components/common/dummyHeader'
 
+import Specs from 'components/specs'
 import CallToAction from 'components/cta';
-import FAQ from 'components/faq'
 
-export default class Faq extends React.Component {
+export default class Spec extends React.Component {
 
   render() {
     return (
       <div>
         <DummyHeader />
-        <h1>THIS PAGE NEEDS TO HAVE PROPER LINKS</h1>
-        <FAQ />
+        <Specs />
         <Link to={prefixLink('/')}>Go back to the homepage</Link>
         <CallToAction
-            title="Can't find what you are looking for?"
-            subtitle="Let's book a time to talk."
-            label="Schedule Call"
-            url="this is my url"
+            title="Want to share with your colleagues?"
+            subtitle="Download our technical datasheet"
+            label="Download"
+            url="/assets/docs/V-One-Summary.pdf"
           />
-
       </div>
     )
   }

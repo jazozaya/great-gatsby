@@ -14,17 +14,17 @@
   padding: $vertical-padding $horizontal-padding;
 }
 
-.column {
+.footer .column {
   flex: auto;
 }
 
-.column p {
+.footer .column p {
   margin: 0px;
   color: $light-font;
   font-size: 1.2em;
 }
 
-.column ul {
+.footer .column ul {
   list-style: none;
   padding: 0px;
   margin-top: 10px;
@@ -39,7 +39,6 @@
 
 .footer-wrapper a {
   color: $soft-grey;
-  text-decoration: none;
 }
 
 .footer-wrapper a:hover{

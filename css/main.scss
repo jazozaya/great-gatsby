@@ -1,23 +1,19 @@
 @import './colors.scss';
 
 body {
-  color: $voltera-blue;
   font-family: 'Open Sans', sans-serif;
-  margin: 0px
+  color: $voltera-blue;
+  margin: 0px;
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
+  //display: flex;
+  //flex-direction: column;
 }
 .page-content {
-  flex-grow: 1;
+  //flex-grow: 1;
 }
 
-// A Section is an element that spans the width of the page.
-.section {
-  padding: 40px 20px;
-}
 
 h1 {
   color: $voltera-blue;
@@ -43,7 +39,12 @@ h3 {
 a {
     cursor: pointer;
     color: $voltera-green;
+    text-decoration: none;
     transition: all $t-time ease-in-out 0s;
+}
+
+.header-caption {
+  text-align: center;
 }
 
 .dummy-header {

@@ -17,7 +17,7 @@ import "css/main.scss"
 export default class Index extends React.Component {
   render() {
     return (
-      <div className="page-content">
+      <div>
         <Hero />
         <Testimonial />
         <FeatureSelector/>
@@ -37,6 +37,9 @@ export default class Index extends React.Component {
             <Link to={prefixLink('/faq/')}>Go to page FAQ</Link>
           </li>
         </ul>
+
+        <p> TODO: helmet nonesense, SEO links (pre-rendering)
+        </p>
 
         <Awards />
         <CallToAction
