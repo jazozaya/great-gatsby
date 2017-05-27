@@ -3,7 +3,7 @@ export const volteraImages = [
   {
     fileName:"flexible-heater.jpg",
     subtitle:"Create a flexible heater",
-    description: "here.",
+    description: "The V-One can dispense on a wide variety of surfaces. This pattern was printing on matieral X and was molded to a 3d printed.... .",
     isVideo: false
   },
   {

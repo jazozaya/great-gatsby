@@ -1,0 +1,52 @@
+@import 'css/colors';
+
+.customer {
+  background-color: $voltera-green;
+}
+
+.customer-wrapper {
+  max-width: $max-width;
+  min-height: 114px;
+  padding: $vertical-padding $horizontal-padding;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.customer .quote {
+  font-weight: 300;
+  font-size: 1.5em;
+  font-style: italic;
+  text-align: center;
+  max-width: 800px;
+}
+
+.customer .quote.visible {
+  opacity: 1;
+  transition: all 0.2s ease-in-out 0s;
+}
+.customer .quote.hidden {
+  opacity: 0;
+  transition: none;
+}
+
+.customer .navigation {
+  border-radius: 100%;
+  padding: 10px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $voltera-blue;
+  cursor: pointer;
+  transition: all $t-time ease-in-out 0s;
+  margin: $horizontal-padding;
+  flex-shrink: 0;
+}
+
+.customer .navigation:hover {
+  background-color: $white-background;
+  color: $voltera-blue;
+}

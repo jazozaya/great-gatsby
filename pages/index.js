@@ -11,6 +11,7 @@ import FeatureSelector from 'components/featureSelector'
 
 import Hero from 'components/hero'
 import Testimonial from 'components/testimonial'
+import CustomerQuotes from 'components/customer'
 
 import "css/main.scss"
 
@@ -21,6 +22,7 @@ export default class Index extends React.Component {
         <Hero />
         <Testimonial />
         <FeatureSelector/>
+        <CustomerQuotes />
         <ul>
           <li>
             <Link to={prefixLink('/specs/')}>Go to page Specs</Link>
