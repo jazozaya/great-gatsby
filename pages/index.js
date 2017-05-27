@@ -21,20 +21,12 @@ export default class Index extends React.Component {
         <Hero />
         <Testimonial />
         <FeatureSelector/>
-        <h1>
-          Welcome to Voltera!!!!
-        </h1>
-        <p>Are you ready to build hardware faster!?! Cause I sure am. </p>
-        <p>Let's do this!</p>
         <ul>
           <li>
             <Link to={prefixLink('/specs/')}>Go to page Specs</Link>
           </li>
           <li>
-            <Link to={prefixLink('/gallery/')}>Go to page Gallery</Link>
-          </li>
-          <li>
-            <Link to={prefixLink('/faq/')}>Go to page FAQ</Link>
+            <Link to={prefixLink('/product/')}>Go to page Product</Link>
           </li>
         </ul>
 

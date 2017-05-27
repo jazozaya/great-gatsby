@@ -1,49 +1,79 @@
 
-export const images = [
+export const volteraImages = [
   {
-    name:"print-1.jpg",
-    subtitle:"My Print 1",
-    description: "this is my descriasdfption"
+    fileName:"flexible-heater.jpg",
+    subtitle:"Create a flexible heater",
+    description: "here.",
+    isVideo: false
   },
   {
-    name:"print-2.jpg",
+    fileName:"print-2.jpg",
     subtitle:"My Print 2",
-    description: "this is my description 2"
+    description: "this is my description 2",
+    isVideo: false
   },
   {
-    name:"print-3.jpg",
+    fileName:"print-3.jpg",
     subtitle:"My Print 3",
-    description: "this is my description 3"
+    description: "this is my description 3",
+    isVideo: false
   },
   {
-    name:"print-preview.jpg",
+    fileName:"print-preview.jpg",
     subtitle:"My Print Preview",
-    description: "this is my description 4"
+    description: "this is my description 4",
+    isVideo: false
   },
   {
-    name:"prototyping-platform.jpg",
-    subtitle:"My prototyping-platform",
-    description: "this is my description 5"
+    fileName:"flexible-electronics.jpg",
+    subtitle:"Create flexible electronics",
+    description: "Don't let design constraints dicate what you can and cannot do. You are the boss, let the electronics bend for you.",
+    isVideo: false
   },
   {
-    name:"reflow-component.jpg",
-    subtitle:"my reflow components",
-    description: "this is my description 6"
+    fileName:"reflow-component.jpg",
+    subtitle:"Reflow right before your eyes.",
+    description: "The V-One is equipped with a 550W heated platform. In this close up we can see the individual solder balls melting into each other and the surface tension of the solder paste pulling the component into place.",
+    videoId: "y3RZLiPDljs",
+    isVideo: true
   },
 
   {
-    name:"solder-paste-0603.jpg",
-    subtitle:"My solder paste",
-    description: "this is my description 7"
+    fileName:"solder-paste-0603.jpg",
+    subtitle:"Dispense solder paste with ease.",
+    description: "Solder paste is being dispensed through a 200 micron nozzle onto 0603 pads. The amount of paste dispensed can be adjusted on the fly with a touch of a button.",
+    videoId: "s_cjg2BzySg",
+    isVideo: true
   },
   {
-    name:"solder-paste-bga.jpg",
-    subtitle:"My solder paste bga",
-    description: "this is my description 8"
+    fileName:"solder-paste-bga.jpg",
+    subtitle:"Support down to 0.4 mm pitch",
+    description: "Paste dispensing works well even on fine pitch components, all the way down to 0.4 mm. It can even dispense on BGA pads!",
+    videoId: "lbZVRBrdXKU",
+    isVideo: true
   },
   {
-    name:"video-tutorial.jpg",
-    subtitle:"my video tutorial",
-    description: "this is my description 9"
+    fileName:"fast-reflow.jpg",
+    subtitle:"Reflowing in fast motion.",
+    description: "One of the coolest reflow videos we've seen. You can see how the heat radiates from the center of the board outwards. Soldering everything in its path. Blink and you'll miss it! ",
+    videoId: "-yfQR5mc-Y8",
+    isVideo: true
+  }
+]
+
+export const communityImages = [
+  {
+    fileName:"fast-reflow.jpg",
+    subtitle:"Reflowing in fast motion.",
+    description: "One of the coolest reflow videos we've seen. You can see how the heat radiates from the center of the board outwards. Soldering everything in its path. Blink and you'll miss it! ",
+    videoId: "-yfQR5mc-Y8",
+    isVideo: true
+  },
+
+  {
+    fileName:"voltera-photon-shield.jpg",
+    subtitle:"Compatible with your Photon!",
+    description: "Take advantage of our templates! We offer Arduino, Raspberry Pi and Photon templates to help you build faster. This particular board was used to automate a chicken coop door! Yes. IoT for chickens. ",
+    isVideo: false
   }
 ]

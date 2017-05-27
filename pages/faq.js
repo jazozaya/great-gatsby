@@ -15,14 +15,12 @@ export default class Faq extends React.Component {
         <DummyHeader />
         <h1>THIS PAGE NEEDS TO HAVE PROPER LINKS</h1>
         <FAQ />
-        <Link to={prefixLink('/')}>Go back to the homepage</Link>
         <CallToAction
             title="Can't find what you are looking for?"
             subtitle="Let's book a time to talk."
             label="Schedule Call"
             url="this is my url"
           />
-
       </div>
     )
   }

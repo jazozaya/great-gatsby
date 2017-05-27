@@ -1,5 +1,6 @@
 import React from 'react'
 import './lightbox.scss'
+import Youtube from 'react-youtube'
 
 import Picture from 'components/common/picture'
 
@@ -22,17 +23,34 @@ export default class Lightbox extends React.Component {
     return <Picture url={urlName} onClick={() => this.toggleLightbox()} subtitle={subtitle} />
   }
 
-  renderLightbox() {
+  renderVideo(videoId) {
+    const opts = {
+       height: '450',
+       width: '800',
+       playerVars: { // https://developers.google.com/youtube/player_parameters
+         color: 'white',
+         controls: 2,
+         rel: 0,
+         showinfo: 0,
+         autoplay: 1,
+       }
+     };
+    return <Youtube videoId={videoId} opts={opts}/>;
+  }
 
-    const { fileName, description, subtitle } = this.props;
+  renderImage(fileName) {
     const urlName = `/assets/gallery/large/${fileName}`
+    return <img src={urlName} onClick={() => this.toggleLightbox()} />
+  }
 
+  renderLightbox() {
+    const { fileName, description, subtitle, videoId, isVideo } = this.props;
     return (
-      <div className="lightbox">
-        <div className="lightbox-wrapper" onClick={() => this.toggleLightbox()}>
+      <div className="lightbox" onClick={() => this.toggleLightbox()}>
+        <div className="lightbox-wrapper">
           <div className="lightbox-content">
-            <img src={urlName} onClick={() => this.toggleLightbox()} />
-            <h1>{subtitle}</h1>
+            {isVideo ? this.renderVideo(videoId) : this.renderImage(fileName)}
+             <h1>{subtitle}</h1>
             <p>{description}</p>
           </div>
         </div>
@@ -43,3 +61,9 @@ export default class Lightbox extends React.Component {
     return this.state.lightboxOn ? this.renderLightbox(): this.renderNormal()
   }
 }
+//
+// <div className="lightbox-content">
+//   {isVideo ? this.renderVideo(videoId) : this.renderImage(fileName)}
+//   <h1>{subtitle}</h1>
+//   <p>{description}</p>
+// </div>
