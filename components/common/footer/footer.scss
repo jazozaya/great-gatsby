@@ -11,7 +11,7 @@
   flex-wrap: wrap;
   margin:auto;
   max-width: $max-width;
-  padding: $vertical-padding $horizontal-padding;
+  padding: $vertical-padding $horizontal-padding 0px $horizontal-padding;
 }
 
 .footer .column {
@@ -42,5 +42,22 @@
 }
 
 .footer-wrapper a:hover{
+  color: $voltera-green;
+}
+
+.footer-links {
+  color: $soft-grey;
+  font-size: 0.9em;
+  max-width: $max-width;
+  text-align: right;
+  margin: auto;
+  padding: 0px $horizontal-padding $vertical-padding $horizontal-padding;
+}
+
+.footer-links a {
+  color: $soft-grey;
+}
+
+.footer-links a:hover {
   color: $voltera-green;
 }

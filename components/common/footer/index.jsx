@@ -14,7 +14,7 @@ export default class Footer extends React.Component {
         <div className="column">
           <p>Company</p>
           <ul>
-            <li><a href="http://voltera.io/about">About Us</a></li>
+            <li><Link to={prefixLink('/about/')}>About Us</Link></li>
             <li><a href="http://voltera.io/contact">Contact</a></li>
             <li><a href="http://voltera.io/blog">Blog</a></li>
             <li><a href="http://community.voltera.io">Forums</a></li>
@@ -36,6 +36,10 @@ export default class Footer extends React.Component {
             <li>+1 888-381-3332 ext 1</li>
           </ul>
         </div>
+      </div>
+      <div className="footer-links">
+        <a href="/assets/docs/V-One-Summary.pdf">Privacy Policy</a> |
+        <a href="/assets/docs/V-One-Summary.pdf">Terms of Service</a>
       </div>
     </div>);
   }
