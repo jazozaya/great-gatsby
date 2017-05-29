@@ -5,7 +5,7 @@ import { prefixLink } from 'gatsby-helpers'
 import Helmet from 'react-helmet'
 import { config } from 'config'
 
-import CallToAction from 'components/cta';
+import CallToAction from 'components/common/cta';
 import Awards from 'components/awards'
 import FeatureSelector from 'components/featureSelector'
 

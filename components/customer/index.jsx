@@ -29,7 +29,9 @@ export default class CustomerQuotes extends React.Component {
   }
 
   componentDidUpdate() {
-    setTimeout(() => this.setState( { quoteOpacity: "visible" }), 600);
+    if (this.state.quoteOpacity !== "visible") {
+      setTimeout(() => this.setState( { quoteOpacity: "visible" }) , 400);
+    }
   }
 
   render() {
