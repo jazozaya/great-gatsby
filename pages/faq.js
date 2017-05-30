@@ -4,7 +4,7 @@ import { prefixLink } from 'gatsby-helpers'
 import Helmet from 'react-helmet'
 import DummyHeader from 'components/common/dummyHeader'
 
-import CallToAction from 'components/cta';
+import CallToAction from 'components/common/cta';
 import FAQ from 'components/faq'
 
 export default class Faq extends React.Component {

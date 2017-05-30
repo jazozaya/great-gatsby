@@ -8,8 +8,7 @@ export default class Testimonial extends React.Component {
     return (<div className="testimonial">
     <div className="testimonial-wrapper">
       <div>
-        <p className="quote"><i>&ldquo;As an engineer, I know the frustrations of waiting for circuit boards, and the Voltera V-One elegantly solves this problem.&rdquo;
-        </i></p>
+        <p className="quote">&ldquo;As an engineer, I know the frustrations of waiting for circuit boards, and the Voltera V-One elegantly solves this problem.&rdquo;</p>
         <h3 className="author">Sir James Dyson - Inventor & founder.</h3>
       </div>
       <div>

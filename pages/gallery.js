@@ -1,7 +1,7 @@
 import React from 'react'
 import DummyHeader from 'components/common/dummyHeader'
 import Helmet from 'react-helmet'
-import CallToAction from 'components/cta';
+import CallToAction from 'components/common/cta';
 import Gallery from 'components/gallery'
 
 export default class MyGallery extends React.Component {

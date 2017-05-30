@@ -14,12 +14,12 @@ export default class Contact extends React.Component {
       <div className="email-wrapper">
         <div className="column">
           <ul>
-            <h4>Sales Inquiries</h4>
+            <h4>Sales & Technical Inquiries</h4>
             <li><a href="mailto:sales@voltera.io">sales@voltera.io</a></li>
             <li>+1 888-381-3332 ext: 1</li>
           </ul>
           <ul>
-            <h4>Technical Support</h4>
+            <h4>Customer Support</h4>
             <li><a href="mailto:support@voltera.io">support@voltera.io</a></li>
             <li>+1 888-381-3332 ext: 2</li>
           </ul>

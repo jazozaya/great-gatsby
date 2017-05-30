@@ -1,0 +1,14 @@
+@import 'css/colors';
+
+.about-image {
+  background-image: url('./../../pages/assets/v-one-assembly.jpg');
+  background-position: center;
+  height: 500px;
+}
+
+
+.about-wrapper {
+  margin: auto;
+  padding: $vertical-padding $horizontal-padding;
+  max-width: $narrow-width;
+}

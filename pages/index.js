@@ -1,11 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router'
-//import { HashLink as Link } from 'react-router-hash-link';
 import { prefixLink } from 'gatsby-helpers'
 import Helmet from 'react-helmet'
 import { config } from 'config'
 
-import CallToAction from 'components/cta';
+import CallToAction from 'components/common/cta';
 import Awards from 'components/awards'
 import FeatureSelector from 'components/featureSelector'
 
