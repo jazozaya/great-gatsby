@@ -14,7 +14,7 @@ export default class Footer extends React.Component {
         <div className="column">
           <p>Company</p>
           <ul>
-            <li><a href="http://voltera.io/about">About Us</a></li>
+            <li><Link to={prefixLink('/about/')}>About Us</Link></li>
             <li><a href="http://voltera.io/contact">Contact</a></li>
             <li><a href="http://voltera.io/blog">Blog</a></li>
             <li><a href="http://community.voltera.io">Forums</a></li>

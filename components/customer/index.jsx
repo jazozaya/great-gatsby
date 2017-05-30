@@ -33,7 +33,6 @@ export default class CustomerQuotes extends React.Component {
   }
 
   render() {
-
     const quoteClass = `quote ${this.state.quoteOpacity}`
 
     return (<div className="customer">

@@ -10,7 +10,7 @@ export default class Award extends React.Component {
 
     return (
     <div>
-      <a href={linkUrl}>
+      <a href={linkUrl} target="_blank">
         <img width="200" height="120" src={imageUrl} />
       </a>
       <h3>{label}</h3>

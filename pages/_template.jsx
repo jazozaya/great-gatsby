@@ -16,7 +16,7 @@ module.exports = React.createClass({
   },
   render() {
     return (
-      <div className="container">
+      <div>
         <Helmet
           title={config.siteTitle}
           meta={[
