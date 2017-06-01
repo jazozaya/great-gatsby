@@ -8,8 +8,6 @@ import Experiment from './experiment'
 import Educate from './educate'
 import Something from './something'
 
-import Collapse from 'rc-collapse'
-var Panel = Collapse.Panel;
 export default class FAQ extends React.Component {
 
   render() {

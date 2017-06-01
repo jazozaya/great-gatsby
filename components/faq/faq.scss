@@ -15,10 +15,8 @@ background-color: $white-background;
 }
 
 .rc-collapse {
-  //background-color: lighten($grey-background, 3);
-  border-radius: 3px;
-  border: 1px solid #d9d9d9;
 }
+
 .rc-collapse-anim-active {
 
 }
@@ -34,6 +32,7 @@ background-color: $white-background;
   text-indent: 1em;
   color: $voltera-green;
   cursor: pointer;
+  font-weight: 600;
 }
 .rc-collapse > .rc-collapse-item > .rc-collapse-header .arrow {
   display: inline-block;
