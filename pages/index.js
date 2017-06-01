@@ -12,6 +12,8 @@ import Hero from 'components/hero'
 import Testimonial from 'components/testimonial'
 import CustomerQuotes from 'components/customer'
 
+import QuoteRequest from 'components/quoteRequest'
+
 import "css/main.scss"
 
 export default class Index extends React.Component {
@@ -33,7 +35,7 @@ export default class Index extends React.Component {
 
         <p> TODO: helmet nonesense, SEO links (pre-rendering)
         </p>
-
+        <QuoteRequest />
         <Awards />
         <CallToAction
           title="Want to request a quote?"

@@ -15,7 +15,7 @@ export default class Footer extends React.Component {
           <p>Company</p>
           <ul>
             <li><Link to={prefixLink('/about/')}>About Us</Link></li>
-            <li><a href="http://voltera.io/contact">Contact</a></li>
+            <li><Link to={prefixLink('/contact/')}>Contact</Link></li>
             <li><a href="http://voltera.io/blog">Blog</a></li>
             <li><a href="http://community.voltera.io">Forums</a></li>
           </ul>

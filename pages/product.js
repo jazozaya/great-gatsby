@@ -2,7 +2,9 @@ import React from 'react'
 import DummyHeader from 'components/common/dummyHeader'
 import Helmet from 'react-helmet'
 
-import Product from 'components/product'
+import Box from 'components/box'
+import Cartridge from 'components/product/cartridge'
+import Software from 'components/product/software'
 
 export default class MyProduct extends React.Component {
 
@@ -10,7 +12,8 @@ export default class MyProduct extends React.Component {
     return (
       <div>
         <DummyHeader />
-        <Product />
+        <Box />
+        <Software />
       </div>
     )
   }
