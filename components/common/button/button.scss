@@ -9,15 +9,13 @@
   color: $voltera-blue;
 }
 
-.button-wrapper {
-  display: inline;
-}
-
 .button.clear {
   background-color: transparent;
 }
 
 .button {
+  cursor: pointer;
+  display: inline;
   color: $light-font;
   border-style: solid;
   border-color: $light-font;
