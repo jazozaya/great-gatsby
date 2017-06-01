@@ -1,0 +1,139 @@
+@import 'css/colors';
+
+.box {
+background-color: $white-background;
+
+}
+.box-wrapper {
+  margin: auto;
+  max-width: $max-width;
+  padding: $vertical-padding $horizontal-padding;
+}
+
+.box h2 {
+  text-align: left;
+}
+
+.box .box-content {
+  display: flex;
+  align-items: center;
+}
+
+.box .description {
+  padding: 0px $vertical-padding;
+}
+
+
+.box .in-the-box {
+  background-image: url('./../../pages/assets/v-one-in-box-small.png');
+  background-position: bottom;
+  width: 600px;
+  height: 400px;
+  position: relative;
+  transition: all $t-time ease-in-out 0s;
+  flex-shrink: 0;
+}
+
+.box .outline {
+  opacity: 0;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: top;
+  position: absolute;
+}
+
+.box .visible {
+  opacity: 1;
+}
+
+.box  .outline:hover {
+  opacity: 1;
+}
+
+.box .v-one {
+  background-image: url('./v-one.min.svg');
+  top: 45px;
+  left: 90px;
+  width: 495px;
+  height: 305px;
+}
+
+.box .burnishing-pad {
+  background-image: url('./burnishing-pad.min.svg');
+  left: 133px;
+  top: 236px;
+  width: 105px;
+  height: 96px;
+}
+
+.box .nozzles {
+  background-image: url('./nozzles.min.svg');
+  left: 247px;
+  top: 297px;
+  width: 128px;
+  height: 82px;
+}
+
+.box .solder-wire {
+  background-image: url('./solder-wire.min.svg');
+  left: 390px;
+  top: 362px;
+  width: 33px;
+  height: 27px;
+}
+
+.box .substrates {
+  background-image: url('./substrates.min.svg');
+  top: 297px;
+  left: 56px;
+  width: 164px;
+  height: 75px;
+}
+
+.box .dispenser-ink {
+  background-image: url('./dispenser-ink.min.svg');
+  left: 356px;
+  top: 204px;
+  width: 57px;
+  height: 162px;
+}
+
+.box .dispenser-paste {
+  background-image: url('./dispenser-paste.min.svg');
+  left: 251px;
+  top: 191px;
+  width: 51px;
+  height: 152px;
+}
+
+.box .cartridge-paste {
+  background-image: url('./cartridge-paste.min.svg');
+  top: 249px;
+  left: 294px;
+  width: 39px;
+  height: 101px;
+}
+
+.box .cartridge-ink {
+  background-image: url('./cartridge-ink.min.svg');
+  top: 267px;
+  left: 403px;
+  width: 42px;
+  height: 108px;
+}
+
+.box .probe {
+  background-image: url('./probe.min.svg');
+  top: 92px;
+  left: 327px;
+  width: 37px;
+  height: 101px;
+}
+
+.box .clamps {
+  background-image: url('./clamps.min.svg');
+  top: 198px;
+  left: 307px;
+  width: 198px;
+  height: 60px;
+}
