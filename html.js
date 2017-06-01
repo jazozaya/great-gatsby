@@ -38,6 +38,7 @@ module.exports = React.createClass({
           {head.meta.toComponent()}
 
           <Favicon url={['favicon.ico']}/>
+          <link href="https://fonts.googleapis.com/css?family=Raleway:300,600" rel="stylesheet"/>
           <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet"/>
           {css}
         </head>
