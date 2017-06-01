@@ -1,0 +1,33 @@
+@import 'css/colors';
+
+.software {
+  // border-top-color: $voltera-green;
+  // border-top-width: thin;
+  // border-top-style: solid;
+}
+
+.software h2 {
+  text-align: left;
+}
+
+.software-wrapper {
+  width: $max-width;
+  padding: $vertical-padding $horizontal-padding;
+  margin: auto;
+  display: flex;
+}
+
+.software-image {
+  background-position: center;
+  background-image: url('./software.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  width: 600px;
+  flex-shrink: 0;
+}
+
+.software .description {
+  padding-top: 40px;
+
+}
