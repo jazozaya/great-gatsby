@@ -1,5 +1,5 @@
 import React from 'react'
-import './quoteRequest.scss'
+import './requestQuote.scss'
 import Button from 'components/common/button'
 
 
@@ -156,7 +156,7 @@ export default class QuoteRequest extends React.Component {
       </form>
       {this.state.missingFields ? <p className="missing">Please fill out of all of the required fields! ({this.state.count})</p> : null}
       <div className="button-wrapper">
-        <Button label="Submit" url={"none"} color="dark" onClick={this.sendQuoteRequest.bind(this)}/>
+        <Button label="Submit" color="dark" onClick={this.sendQuoteRequest.bind(this)}/>
       </div>
     </div>
   );

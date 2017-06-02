@@ -1,14 +1,7 @@
 @import 'css/colors';
 
 .quote-request {
-  background: rgba(121,206,0,0.05);
-  background: -moz-linear-gradient(left, rgba(121,206,0,0.05) 0%, rgba(255,255,255,0.05) 50%, rgba(121,206,0,0.05) 100%);
-  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(121,206,0,0.05)), color-stop(50%, rgba(255,255,255,0.05)), color-stop(100%, rgba(121,206,0,0.05)));
-  background: -webkit-linear-gradient(left, rgba(121,206,0,0.05) 0%, rgba(255,255,255,0.05) 50%, rgba(121,206,0,0.05) 100%);
-  background: -o-linear-gradient(left, rgba(121,206,0,0.05) 0%, rgba(255,255,255,0.05) 50%, rgba(121,206,0,0.05) 100%);
-  background: -ms-linear-gradient(left, rgba(121,206,0,0.05) 0%, rgba(255,255,255,0.05) 50%, rgba(121,206,0,0.05) 100%);
-  background: linear-gradient(to right, rgba(121,206,0,0.05) 0%, rgba(255,255,255,0.05) 50%, rgba(121,206,0,0.05) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#79ce00', endColorstr='#79ce00', GradientType=1 );
+  background-color: $grey-background;
 
 // Centers the wrapper.
 padding: $vertical-padding $horizontal-padding;

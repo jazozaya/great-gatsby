@@ -10,7 +10,7 @@ import FeatureSelector from 'components/featureSelector'
 
 import Hero from 'components/hero'
 import Testimonial from 'components/testimonial'
-import CustomerQuotes from 'components/customer'
+import CustomerQuotes from 'components/common/customer'
 
 import "css/main.scss"
 
@@ -37,7 +37,7 @@ export default class Index extends React.Component {
           title="Want to request a quote?"
           subtitle="We can help you with that!"
           label="Request Quote"
-          url="/quote/"
+          url="/requestQuote/"
         />
       </div>
     )

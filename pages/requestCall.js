@@ -2,8 +2,8 @@ import React from 'react'
 import DummyHeader from 'components/common/dummyHeader'
 import Helmet from 'react-helmet'
 
-import QuoteRequest from 'components/quoteRequest'
-import CustomerQuotes from 'components/customer'
+import RequestCall from 'components/requestCall'
+import Testimonial from 'components/testimonial'
 
 export default class MyQuote extends React.Component {
 
@@ -11,8 +11,8 @@ export default class MyQuote extends React.Component {
     return (
       <div>
         <DummyHeader />
-        <QuoteRequest />
-        <CustomerQuotes />
+        <RequestCall />
+        <Testimonial />
       </div>
     )
   }

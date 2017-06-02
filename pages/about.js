@@ -3,6 +3,7 @@ import DummyHeader from 'components/common/dummyHeader'
 import Helmet from 'react-helmet'
 
 import About from 'components/about'
+import Awards from 'components/awards'
 
 export default class MyAbout extends React.Component {
 
@@ -11,6 +12,7 @@ export default class MyAbout extends React.Component {
       <div>
         <DummyHeader />
         <About />
+        <Awards />
       </div>
     )
   }
