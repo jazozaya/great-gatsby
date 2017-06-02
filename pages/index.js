@@ -12,8 +12,6 @@ import Hero from 'components/hero'
 import Testimonial from 'components/testimonial'
 import CustomerQuotes from 'components/customer'
 
-import QuoteRequest from 'components/quoteRequest'
-
 import "css/main.scss"
 
 export default class Index extends React.Component {
@@ -32,16 +30,14 @@ export default class Index extends React.Component {
             <Link to={prefixLink('/product/')}>Go to page Product</Link>
           </li>
         </ul>
-
         <p> TODO: helmet nonesense, SEO links (pre-rendering)
         </p>
-        <QuoteRequest />
         <Awards />
         <CallToAction
           title="Want to request a quote?"
           subtitle="We can help you with that!"
           label="Request Quote"
-          url="this is my url"
+          url="/quote/"
         />
       </div>
     )

@@ -41,6 +41,8 @@ module.exports = React.createClass({
           <link href="https://fonts.googleapis.com/css?family=Raleway:300,600" rel="stylesheet"/>
           <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet"/>
           {css}
+
+          <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
         </head>
         <body>
           <div

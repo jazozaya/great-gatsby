@@ -22,10 +22,10 @@ render() {
       />
     <div className="vertical"></div>
     <Award
-      imageUrl="/assets/awards/maker-faire.jpg"
-      linkUrl="http://makezine.com/2015/06/15/volteras-v-one-prints-2-layer-circuit-boards/"
-      label="Editor's Choice"
-      />
+        imageUrl="/assets/awards/james-dyson-award.jpg"
+        linkUrl="http://www.jamesdysonaward.org/en-GB/news/voltera-v-one-wins-2015-james-dyson-award/"
+        label="International Winner"
+        />
     <div className="vertical"></div>
     <Award
         imageUrl="/assets/awards/canadian-printed-electronics.jpg"
@@ -38,8 +38,7 @@ render() {
 }
 
 // <Award
-//   imageUrl="/assets/awards/james-dyson-award.jpg"
-//   linkUrl="http://www.jamesdysonaward.org/en-GB/news/voltera-v-one-wins-2015-james-dyson-award/"
-//   label="International Winner"
+//   imageUrl="/assets/awards/maker-faire.jpg"
+//   linkUrl="http://makezine.com/2015/06/15/volteras-v-one-prints-2-layer-circuit-boards/"
+//   label="Editor's Choice"
 //   />
-//   <div className="vertical"></div>

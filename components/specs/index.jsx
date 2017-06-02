@@ -19,7 +19,7 @@ export default class Specs extends React.Component {
     return (<div id="specs" className="specs">
     <div className="specs-wrapper">
       <h1>Technical Specifications</h1>
-      <p className="header-caption">Find the most up to date specifications about the Voltera V-One here. If you can't find what you are looking for, send us an email at <strong>support@voltera.io</strong> with your question.</p>
+      <p className="pull-center">Find the most up to date specifications about the Voltera V-One here. If you can't find what you are looking for, send us an email at <strong>support@voltera.io</strong> with your question.</p>
       <div className="table">
         <h3>Printing Specifications</h3>
         <Row>

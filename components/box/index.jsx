@@ -170,7 +170,7 @@ export default class Product extends React.Component {
     return (<div className="box">
     <div className="box-wrapper">
       <h1>Meet your new favorite tool.</h1>
-      <p className="header-caption">The V-One comes with all the accessories and consumables you need to start building hardware faster.</p>
+      <p className="pull-center">The V-One comes with all the accessories and consumables you need to start building hardware faster.</p>
       <div className="box-content">
         <div className="in-the-box">
           <div className={this.renderClassName(summary.vOne)} onClick={() => this.setDescription(summary.vOne)}></div>

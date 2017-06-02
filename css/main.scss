@@ -40,8 +40,15 @@ a {
     transition: all $t-time ease-in-out 0s;
 }
 
-.header-caption {
+.pull-center {
   text-align: center;
+}
+.pull-right {
+  text-align: right;
+}
+
+.pull-left {
+  text-align: left;
 }
 
 .dummy-header {

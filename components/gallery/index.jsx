@@ -31,14 +31,14 @@ export default class Gallery extends React.Component {
       return (<div className="gallery">
       <div className="gallery-wrapper">
         <h1>Gallery</h1>
-        <p className="header-caption">The V-One is a flexible platform that can help you in every step of development. Just <strong>click on any picture</strong> below to learn more.</p>
+        <p className="pull-center">The V-One is a flexible platform that can help you in every step of development. Just <strong>click on any picture</strong> below to learn more.</p>
       </div>
       <div className="gallery-grid-wrapper">
         {this.renderGrid(volteraImages)}
       </div>
       <div className="gallery-wrapper">
         <h1>From the Community</h1>
-        <p className="header-caption">The following projects have been made by members of our community. Visit our forums to join in on the conversation!</p>
+        <p className="pull-center">The following projects have been made by members of our community. Visit our forums to join in on the conversation!</p>
       </div>
       <div className="gallery-grid-wrapper">
         {this.renderGrid(communityImages)}

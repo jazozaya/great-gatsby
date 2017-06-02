@@ -15,7 +15,7 @@ export default class CallToAction extends React.Component {
         <h2>{title}</h2>
         <p>{subtitle}</p>
       </div>
-      <Button label={label} url={url} color="dark"/>
+      <Button label={label} url={url} internal color="dark"/>
     </div>
   </div>);
 }
