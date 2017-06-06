@@ -1,5 +1,6 @@
 import React from 'react'
-import './requestQuote.scss'
+import './common.scss'
+
 import Button from 'components/common/button'
 
 
@@ -119,7 +120,7 @@ export default class QuoteRequest extends React.Component {
       <h1>Request a quote.</h1>
       <form>
         <h3>Contact Information</h3>
-        <div className="wide-wrapper">
+        <div className="wrapper">
           <p className="wide-text">Profile:</p>
           <select className="wide-select" id="profile" name="profile-type">
             <option value="select">Please Select</option>
@@ -139,7 +140,7 @@ export default class QuoteRequest extends React.Component {
           <p>Website: <input className="text-input" id="website" name="website" /></p>
         </div>
         <h3>Shipping Information</h3>
-        <div className="wide-wrapper">
+        <div className="wrapper">
           <p className="wide-text">Street: </p>
           <input className="wide-select" name="ship-address"  id="street"  autoComplete="shipping street-address" />
         </div>
@@ -177,8 +178,8 @@ renderQuoteStatus() {
 
 render() {
   return (
-    <div className="quote-request">
-      <div className="quote-request-wrapper">
+    <div className="request">
+      <div className="request-wrapper">
         {this.renderQuoteStatus()}
       </div>
     </div>);
