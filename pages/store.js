@@ -2,7 +2,6 @@
 // import { Link } from 'react-router'
 // import { prefixLink } from 'gatsby-helpers'
 // import Helmet from 'react-helmet'
-// import DummyHeader from 'components/common/dummyHeader'
 // import ShopifyBuy from 'shopify-buy'
 //
 // var shopClient = ShopifyBuy.buildClient({
@@ -18,8 +17,6 @@
 //   render() {
 //     return (
 //       <div>
-//         <DummyHeader />
-//
 //       </div>
 //     )
 //   }

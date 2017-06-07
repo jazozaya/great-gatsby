@@ -5,6 +5,7 @@ import Helmet from "react-helmet"
 import { config } from "config"
 import Footer from 'components/common/footer'
 import Header from 'components/common/header'
+import DummyHeader from 'components/common/dummyHeader'
 
 import 'css/main.scss'
 
@@ -25,6 +26,7 @@ module.exports = React.createClass({
           ]}
           />
         <Header />
+        <DummyHeader />
         {this.props.children}
         <Footer />
       </div>
