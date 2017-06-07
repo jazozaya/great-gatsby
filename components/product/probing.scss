@@ -1,25 +1,26 @@
 @import 'css/colors';
 
-.software {
+.probing {
+  
   padding: $vertical-padding $horizontal-padding;
   max-width: $max-width;
   margin: auto;
 
   display: flex;
   flex-wrap: wrap;
-  
+
   align-items: center;
   justify-content: center;
 
 }
 
-.software-image {
+.probing-image {
   height: 500px;
   width: 600px;
   flex-shrink: 0;
 }
 
-.software .description {
+.probing .description {
   flex-basis: 500px;
   flex-grow: 1;
   flex-shrink: 1;

@@ -3,7 +3,7 @@
 .hero {
   background-image: url('./../../pages/assets/circuit-board-printer.jpg');
   background-position: bottom;
-  height: 100vh;
+  height: calc(100vh - 75px);
 }
 
 .hero-wrapper {

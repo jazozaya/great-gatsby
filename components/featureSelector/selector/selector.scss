@@ -2,11 +2,6 @@
 
 .selector {
   padding: $vertical-padding $horizontal-padding;
-  border-color: $voltera-green transparent;
-  border-style: solid none;
-  border-width: 1px 0px;
-  background-color: darken($grey-background, 5);
-
 }
 
 .selector .selector-wrapper {
@@ -16,7 +11,6 @@
   justify-content: space-between;
   margin: auto;
   max-width: $max-width;
-
 }
 
 .selector .vertical {

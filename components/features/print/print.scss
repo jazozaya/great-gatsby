@@ -1,0 +1,54 @@
+@import 'css/colors';
+
+.print {
+
+}
+
+.print .mini-hero-wrapper {
+  background-image: url('./printing-ink.jpg');
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: overlay;
+  background-position: center;
+  height: 400px;
+
+  display: flex;
+  justify-content: center;
+
+  h1 {
+    color: $light-font;
+  }
+}
+
+.print .mini-hero {
+
+  margin: auto;
+  max-width: $max-width;
+  color: $light-font;
+}
+
+.print .content {
+  max-width: $max-width;
+  margin: auto;
+  padding: 0px $horizontal-padding;
+}
+
+.print .column-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: $vertical-padding 0px;
+}
+
+.print .column {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.print .description {
+  max-width: 500px;
+}

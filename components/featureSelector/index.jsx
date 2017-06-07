@@ -5,6 +5,8 @@ import Print from './feature/print'
 import Paste from './feature/paste'
 import Software from './feature/software'
 import Platform from './feature/platform'
+import Reflow from './feature/reflow'
+import Experiment from './feature/experiment'
 
 
 import Selector from './selector'
@@ -15,7 +17,8 @@ export default class FeatureSelector extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      featureName: features.print.name
+      featureName: features.print.name,
+      visible: true
     };
     this.handler = this.handler.bind(this)
   }
@@ -23,35 +26,44 @@ export default class FeatureSelector extends React.Component {
   // Callback that will update our state.
   handler(name) {
     this.setState({
-      featureName: name
+      featureName: name,
+      visible: false
     })
   }
 
   renderFeature() {
     // Depending on selection, rende a different feature.
-
     switch(this.state.featureName){
       case features.print.name:
-        return <Print />
+      return <Print />
       case features.reflow.name:
-        return <Paste />
+      return <Reflow />
       case features.paste.name:
-        return <Paste />
+      return <Paste />
       case features.software.name:
-        return <Software />
+      return <Software />
       case features.platform.name:
-        return <Platform />
+      return <Platform />
       case features.experiment.name:
-        return <Paste />
+      return <Experiment />
     }
   }
+
+  componentDidUpdate() {
+    if (!this.state.visible) {
+      setTimeout(() => this.setState( { visible: true}) , 100);
+    }
+  }
+
   render() {
 
-    return (<div className="feature-selector">
-    <div className="feature-selector-wrapper">
+    const visible = this.state.visible ? "visible": "";
+
+    return (<div className="feature-select">
+    <Selector selected={this.state.featureName} handler={this.handler}/>
+    <div className= {`feature-select-wrapper ${visible}`}>
       {this.renderFeature()}
     </div>
-    <Selector selected={this.state.featureName} handler={this.handler}/>
   </div>);
 }
 }
