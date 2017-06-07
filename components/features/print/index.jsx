@@ -1,5 +1,5 @@
 import React from 'react'
-import YouTube from 'components/common/youtube'
+import YouTube from 'components/common/youtubes'
 import './print.scss'
 
 export default class Software extends React.Component {

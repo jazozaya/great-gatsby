@@ -1,5 +1,5 @@
 import React from 'react'
-import YouTube from 'components/common/youtube'
+import YouTube from 'components/common/youtubes'
 import Button from 'components/common/button'
 import './feature.scss'
 
