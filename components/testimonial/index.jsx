@@ -13,7 +13,7 @@ export default class Testimonial extends React.Component {
       </div>
       <div>
         <a href="http://www.dyson.com/community/aboutdyson.aspx" target="_blank">
-          <img width="150" height="150" src="/assets/james-dyson.jpg" />
+          <img width="150" height="150" src="/assets/testimonial/james-dyson.jpg" />
         </a>
       </div>
     </div>
