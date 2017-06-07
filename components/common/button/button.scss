@@ -1,14 +1,17 @@
 @import 'css/colors';
 
+// If you want a dark background.
 .button.dark {
   background-color: $voltera-blue;
 }
 
+// If you want a light background
 .button.light {
   background-color: $voltera-green;
-  color: $voltera-blue;
+  //color: $voltera-blue;
 }
 
+// If you want a clear background
 .button.clear {
   background-color: transparent;
 }
@@ -29,4 +32,5 @@
 .button:hover {
     color:$voltera-blue;
     background-color: $light-font;
+    border-color: $voltera-blue;
   }

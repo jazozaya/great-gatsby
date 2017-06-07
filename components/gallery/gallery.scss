@@ -1,34 +1,25 @@
 @import 'css/colors';
 
 .gallery {
-background-color: $white-background;
-}
-
-.gallery-wrapper {
   margin: auto;
   max-width: $max-width;
   padding: $vertical-padding $horizontal-padding;
-
+  text-align: center;
 }
 
 .gallery-grid-wrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  margin: auto;
-  max-width: $max-width;
-  text-align: center;
-  padding-bottom: $vertical-padding;
+  justify-content:center;
+  padding: $horizontal-padding 0px;
 
 }
 
 .gallery img {
-   // margin: 10px;
    position: relative;
    bottom: 0px;
    cursor: pointer;
    transition: all $t-time ease-in-out 0s;
-   border-radius: 5px;
 }
 
 .gallery img:hover {

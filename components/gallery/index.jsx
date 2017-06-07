@@ -28,22 +28,15 @@ export default class Gallery extends React.Component {
 
     render() {
 
-      return (<div className="gallery">
-      <div className="gallery-wrapper">
-        <h1>Gallery</h1>
-        <p className="pull-center">The V-One is a flexible platform that can help you in every step of development. Just <strong>click on any picture</strong> below to learn more.</p>
-      </div>
-      <div className="gallery-grid-wrapper">
-        {this.renderGrid(volteraImages)}
-      </div>
-      <div className="gallery-wrapper">
-        <h1>From the Community</h1>
-        <p className="pull-center">The following projects have been made by members of our community. Visit our forums to join in on the conversation!</p>
-      </div>
-      <div className="gallery-grid-wrapper">
-        {this.renderGrid(communityImages)}
-      </div>
+      const { title, description, gallery } = this.props;
 
-    </div>);
-  }
-}
+      return (
+        <div className="gallery">
+          <h1>{title}</h1>
+          <p>{description}</p>
+          <div className="gallery-grid-wrapper">
+            {this.renderGrid(gallery)}
+          </div>
+        </div>);
+      }
+    }

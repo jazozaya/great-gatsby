@@ -1,5 +1,4 @@
-
-export const volteraImages = [
+export const printGallery = [
   {
     fileName:"flexible-heater.jpg",
     subtitle:"Create a flexible heater",
@@ -17,7 +16,10 @@ export const volteraImages = [
     subtitle:"My Print 3",
     description: "this is my description 3",
     isVideo: false
-  },
+  }
+]
+
+export const pasteGallery = [
   {
     fileName:"print-preview.jpg",
     subtitle:"My Print Preview",
@@ -36,8 +38,10 @@ export const volteraImages = [
     description: "The V-One is equipped with a 550W heated platform. In this close up we can see the individual solder balls melting into each other and the surface tension of the solder paste pulling the component into place.",
     videoId: "y3RZLiPDljs",
     isVideo: true
-  },
+  }
+]
 
+export const reflowGallery = [
   {
     fileName:"solder-paste-0603.jpg",
     subtitle:"Dispense solder paste with ease.",
@@ -60,6 +64,7 @@ export const volteraImages = [
     isVideo: true
   }
 ]
+
 
 export const communityImages = [
   {
