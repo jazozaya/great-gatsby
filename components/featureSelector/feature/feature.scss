@@ -1,46 +1,24 @@
 @import 'css/colors';
 
-.feature-wrapper {
+.feature {
   max-width: $max-width;
   padding: $vertical-padding 0px;
   margin: auto;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-}
 
-.feature h2 {
-  text-transform: capitalize;
 }
 
 .feature .description {
   padding: 0 30px;
   flex-basis: 500px;
   flex-grow: 1;
+  text-align: justify;
 }
 
-.feature .wrap {
+.feature .button-wrap {
   margin-top: 50px;
   text-align: center;
-}
-
-.feature .highlights {
-text-align: center;
-}
-
-.feature .highlights-wrapper {
-  max-width: $max-width;
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.feature .video-wrapper {
-  width: 640px;
-  height: 360px;
-}
-
-.feature .thumbnail {
-  cursor: pointer;
 }

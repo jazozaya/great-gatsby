@@ -1,11 +1,16 @@
 @import 'css/colors';
 
-.feature-selector {
+.feature-select {
 background-color: $grey-background;
+padding: $vertical-padding $horizontal-padding;
 }
 
-.feature-selector-wrapper {
-  max-width: $max-width;
-  padding: $vertical-padding $horizontal-padding;
-  margin: auto;
+.feature-select-wrapper {
+opacity: 0;
+transition: none;
+
+}
+.feature-select-wrapper.visible {
+transition: all $t-time-opacity ease-in-out 0s;
+opacity: 1;
 }
