@@ -1,37 +1,52 @@
 @import 'css/colors';
 
 .bullet {
-color: $voltera-blue;
-}
-.bullet-wrapper {
+
   display: flex;
   align-items: center;
-  padding: 10px;
-  margin:10px;
-  width: 280px;
-  margin: auto;
+  justify-content: center;
 
-  border-radius: 2px;
+  color: $voltera-blue;
+
+  width: 370px;
+  padding: $horizontal-padding 0px;
+
   cursor: pointer;
+
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  position:relative;
 }
 
-.bullet:hover, .highlight {
-  background-color: $voltera-green;
-  color: $light-font;
-}
 .bullet p {
-  padding-left: 20px;
-  margin: 0px;
-  text-transform: capitalize;
+  text-transform: uppercase;
+  font-weight: 600;
   font-size: 1.0em;
+  margin-left: 15px;
 }
+
+
 .bullet svg {
   width: 50px;
   height: 50px;
 }
+
 .bullet svg path {
   fill: $voltera-blue;
 }
-.bullet:hover svg path, .highlight svg path {
+
+.bullet.highlight {
+  bottom: 5px;
+}
+
+// When I hover or if it is selected.
+.bullet:hover, .highlight {
+  color: $light-font;
+  background-color: $voltera-green;
+  border-color: $voltera-green;
+
+  svg path {
     fill: $light-font;
+  }
 }
