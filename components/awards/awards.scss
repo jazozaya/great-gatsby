@@ -1,7 +1,7 @@
 @import 'css/colors';
 
 .awards {
-background-color: $light-font;
+background-color: $white-background;
 }
 
 .awards-wrapper {
@@ -15,23 +15,22 @@ background-color: $light-font;
 }
 
 .awards img {
-  filter: grayscale(0.9);
   transition: all $t-time ease-in-out 0s;
   margin-left: 10px;
   margin-right: 10px;
+  position: relative;
 }
 
 .awards img:hover {
-  filter: grayscale(0);
+  bottom: 5px;
+
 }
 .awards h3 {
   text-align: center;
-  color: $voltera-green;
-  text-transform: capitalize;
 }
 
 .awards .vertical {
-  background-color: $voltera-green;
+  background-color: $voltera-blue;
   height: 120px;
   width: 1px;
 }
