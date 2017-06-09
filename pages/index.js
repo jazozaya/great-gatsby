@@ -7,6 +7,7 @@ import { config } from 'config'
 import CallToAction from 'components/common/cta';
 import Awards from 'components/awards'
 import FeatureSelector from 'components/featureSelector'
+import BenefitSelector from 'components/benefitSelector'
 
 import Hero from 'components/hero'
 import Testimonial from 'components/testimonial'
@@ -19,9 +20,12 @@ export default class Index extends React.Component {
     return (
       <div>
         <Hero />
-        <Testimonial />
-        <FeatureSelector/>
+        <Awards />
         <CustomerQuotes />
+        <FeatureSelector/>
+        <Testimonial />
+
+        <BenefitSelector/>
         <ul>
           <li>
             <Link to={prefixLink('/specs/')}>Go to page Specs</Link>
@@ -32,14 +36,15 @@ export default class Index extends React.Component {
         </ul>
         <p> TODO: helmet nonesense, SEO links (pre-rendering)
         </p>
-        <Awards />
-        <CallToAction
-          title="Want to request a quote?"
-          subtitle="We can help you with that!"
-          label="Request Quote"
-          url="/requestQuote/"
-        />
+
       </div>
     )
   }
 }
+
+// <CallToAction
+//   title="Want to request a quote?"
+//   subtitle="We can help you with that!"
+//   label="Request Quote"
+//   url="/requestQuote/"
+// />
