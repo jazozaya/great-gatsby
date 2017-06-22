@@ -1,21 +1,23 @@
 @import 'css/colors';
 
-.footer {
+.footer-wrapper {
   background-color: $voltera-blue;
   width: 100%;
+  padding: $medium-padding $small-padding;
+  box-sizing: border-box;
 }
 
-.footer-wrapper {
+.footer {
   display: flex;
-  align-items: flex-start;
   flex-wrap: wrap;
   margin:auto;
   max-width: $max-width;
-  padding: $vertical-padding $horizontal-padding 0px $horizontal-padding;
+  justify-content: space-between;
+
 }
 
 .footer .column {
-  flex: auto;
+  flex-basis: 200px;
 }
 
 .footer .column p {
@@ -51,7 +53,6 @@
   max-width: $max-width;
   text-align: right;
   margin: auto;
-  padding: 0px $horizontal-padding $vertical-padding $horizontal-padding;
 }
 
 .footer-links a {
@@ -60,4 +61,15 @@
 
 .footer-links a:hover {
   color: $voltera-green;
+}
+
+
+@media (max-width: $mobile-threshold) {
+  .footer {
+    justify-content: center;
+
+    .column {
+      padding-top: $medium-padding;
+    }
+  }
 }

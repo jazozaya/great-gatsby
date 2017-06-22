@@ -2,19 +2,19 @@ export const printGallery = [
   {
     fileName:"flexible-heater.jpg",
     subtitle:"Create a flexible heater",
-    description: "The V-One can dispense on a wide variety of surfaces. This pattern was printing on matieral X and was molded to a 3d printed.... .",
+    description: "The V-One can dispense on a wide variety of surfaces. This pattern was printing on a flexible film that was molded to a 3d printed part.",
     isVideo: false
   },
   {
-    fileName:"print-2.jpg",
-    subtitle:"My Print 2",
-    description: "this is my description 2",
+    fileName:"printed-traces.jpg",
+    subtitle: "Under the microscope",
+    description: "Print traces down to 8 mil (200 microns) out of the box. We even offer a 6 mil (150 micron) nozzle for extra fine resolution.",
     isVideo: false
   },
   {
-    fileName:"print-3.jpg",
-    subtitle:"My Print 3",
-    description: "this is my description 3",
+    fileName:"switch-controller.jpg",
+    subtitle:"Through hole or surface mount",
+    description: "Keep designining like you are used to. You can mix surface mount and through hole technologies with no drawbacks.",
     isVideo: false
   }
 ]

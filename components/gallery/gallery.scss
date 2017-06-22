@@ -3,7 +3,7 @@
 .gallery {
   margin: auto;
   max-width: $max-width;
-  padding: $vertical-padding $horizontal-padding;
+  padding: $medium-padding $small-padding;
   text-align: center;
 }
 
@@ -11,7 +11,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content:center;
-  padding: $horizontal-padding 0px;
+  padding: $small-padding 0px;
 
 }
 

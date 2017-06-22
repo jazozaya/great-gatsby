@@ -2,7 +2,6 @@
 
 .cartridge {
 background-position: bottom;
-background-image: url('./cartridges.png');
 background-size: contain;
 height: 500px;
 width: $max-width;
@@ -12,5 +11,5 @@ margin: auto;
 .cartridge-wrapper {
   margin: auto;
   max-width: $max-width;
-  padding: $vertical-padding $horizontal-padding;
+  padding: $medium-padding $small-padding;
 }

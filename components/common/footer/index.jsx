@@ -8,8 +8,8 @@ import { prefixLink } from 'gatsby-helpers'
 export default class Footer extends React.Component {
 
   render() {
-    return (<div className="footer">
-      <div className="footer-wrapper">
+    return (<div className="footer-wrapper">
+      <div className="footer">
         <Logo />
         <div className="column">
           <p>Company</p>
@@ -26,7 +26,7 @@ export default class Footer extends React.Component {
             <li><a href="http://store.voltera.io">Store</a></li>
             <li><a href="http://support.voltera.io">Support</a></li>
             <li><Link to={prefixLink('/faq/')}>FAQ</Link></li>
-            <li><Link to={prefixLink('/gallery/')}>Gallery</Link></li>
+            <li><Link to={prefixLink('/specs/')}>Specifications</Link></li>
           </ul>
         </div>
         <div className="column">

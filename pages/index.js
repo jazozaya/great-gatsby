@@ -7,11 +7,11 @@ import { config } from 'config'
 import CallToAction from 'components/common/cta';
 import Awards from 'components/awards'
 import FeatureSelector from 'components/featureSelector'
-import BenefitSelector from 'components/benefitSelector'
 
 import Hero from 'components/hero'
 import Testimonial from 'components/testimonial'
 import CustomerQuotes from 'components/common/customer'
+import Benefits from 'components/benefits'
 
 import "css/main.scss"
 
@@ -24,27 +24,15 @@ export default class Index extends React.Component {
         <CustomerQuotes />
         <FeatureSelector/>
         <Testimonial />
-
-        <BenefitSelector/>
-        <ul>
-          <li>
-            <Link to={prefixLink('/specs/')}>Go to page Specs</Link>
-          </li>
-          <li>
-            <Link to={prefixLink('/product/')}>Go to page Product</Link>
-          </li>
-        </ul>
-        <p> TODO: helmet nonesense, SEO links (pre-rendering)
-        </p>
-
+        <Benefits />
+        <p> TODO: helmet nonesense, SEO links (pre-rendering)</p>
+        <CallToAction
+          title="Want to schedule a call?"
+          subtitle="Let's find a time to talk!"
+          label="Request Call"
+          url="/requestCall/"
+        />
       </div>
     )
   }
 }
-
-// <CallToAction
-//   title="Want to request a quote?"
-//   subtitle="We can help you with that!"
-//   label="Request Quote"
-//   url="/requestQuote/"
-// />

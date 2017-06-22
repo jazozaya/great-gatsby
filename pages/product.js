@@ -4,7 +4,6 @@ import Helmet from 'react-helmet'
 import Box from 'components/box'
 import Cartridge from 'components/product/cartridge'
 import Software from 'components/product/software'
-import Probing from 'components/product/probing'
 import Heater from 'components/product/heater'
 import Specs from 'components/specs'
 
@@ -16,7 +15,6 @@ export default class MyProduct extends React.Component {
         <Heater />
         <Box />
         <Software />
-        <Probing />
         <Specs />
       </div>
     )

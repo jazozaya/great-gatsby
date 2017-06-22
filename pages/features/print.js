@@ -1,9 +1,8 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 
-import Gallery from 'components/gallery'
 import Print from 'components/features/print'
-import { printGallery } from 'components/gallery/constants'
+import CallToAction from 'components/common/cta';
 
 export default class MyPrint extends React.Component {
 
@@ -11,11 +10,12 @@ export default class MyPrint extends React.Component {
     return (
       <div>
         <Print />
-        <Gallery
-          title="From the Community"
-          description="The following projects have been made by members of our community. Visit our forums to join in on the conversation!"
-          gallery= {printGallery}
-          />
+        <CallToAction
+          title="Want to schedule a call?"
+          subtitle="We can help you with that!"
+          label="Request Call"
+          url="/requestCall/"
+        />
       </div>
     )
   }

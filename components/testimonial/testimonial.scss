@@ -1,23 +1,30 @@
 @import 'css/colors';
 
-.testimonial {
-  background-color: $voltera-green;
+.testimonial-wrapper {
+  background-color: $voltera-blue;
+  padding: $medium-padding $small-padding;
+  color: $light-font;
 }
 
-.testimonial-wrapper {
+.testimonial {
   max-width: $narrow-width;
-  padding: $vertical-padding $horizontal-padding;
+
   margin: auto;
+  align-items: center;
   display: flex;
+
+  h3 {
+    color: $light-font;
+  }
 }
 
 .testimonial img {
   border-radius: 90px;
   filter: grayscale(0.4);
-  border-color: $voltera-blue;
+  border-color: grey;
   border-style: solid;
   border-width: 3px;
-  margin-left: 30px;
+  margin-left: $medium-padding;
 }
 
 .testimonial img:hover {
@@ -31,4 +38,11 @@
 }
 .testimonial .author {
   text-align: right;
+}
+
+@media (max-width: $mobile-threshold) {
+  .testimonial {
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+  }
 }

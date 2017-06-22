@@ -1,17 +1,17 @@
 @import 'css/colors';
 
-.customer {
+.customer-wrapper {
   background-color: $white-background;
   box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
   z-index: 1;
   position: relative;
+  padding: $medium-padding $small-padding;
 
 }
 
-.customer-wrapper {
+.customer {
   max-width: $max-width;
   min-height: 134px;
-  padding: $vertical-padding $horizontal-padding;
   margin: auto;
   display: flex;
   align-items: center;
@@ -45,7 +45,7 @@
   border-color: $voltera-blue;
   cursor: pointer;
   transition: all $t-time ease-in-out 0s;
-  margin: $horizontal-padding;
+  margin: $small-padding;
   flex-shrink: 0;
 }
 

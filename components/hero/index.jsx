@@ -11,7 +11,7 @@ export default class Hero extends React.Component {
         <p>Prototype circuits on your desktop <br /> with the Voltera V-One.</p>
         <div className="buttons">
           <Button label="Learn More" url="/product/" internal color="clear"/>
-          <Button label="Store" url="http://voltera.io/store" color="light" />
+          <Button label="Buy Now" url="https://store.voltera.io/products/voltera-v-one" color="light" />
         </div>
       </div>
   </div>);

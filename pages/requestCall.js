@@ -2,7 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 
 import RequestCall from 'components/request/call'
-import Testimonial from 'components/testimonial'
+import Awards from 'components/awards'
 
 export default class MyQuote extends React.Component {
 
@@ -10,7 +10,7 @@ export default class MyQuote extends React.Component {
     return (
       <div>
         <RequestCall />
-        <Testimonial />
+        <Awards />
       </div>
     )
   }

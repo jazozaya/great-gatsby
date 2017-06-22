@@ -1,5 +1,4 @@
 import React from 'react'
-import './logo.scss'
 import SVGInline from "react-svg-inline"
 import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'

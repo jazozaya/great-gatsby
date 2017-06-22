@@ -7,7 +7,7 @@ background-color: $white-background;
 .box-wrapper {
   margin: auto;
   max-width: $max-width;
-  padding: $vertical-padding $horizontal-padding;
+  padding: $medium-padding $small-padding;
 }
 
 .box h2 {
@@ -22,7 +22,7 @@ background-color: $white-background;
 }
 
 .box .description {
-  padding: 0px $vertical-padding;
+  padding: 0px $medium-padding;
   flex-basis: 500px;
   flex-grow: 1;
   flex-shrink: 1;

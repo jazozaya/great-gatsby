@@ -3,23 +3,20 @@
 .header {
   background-color: $voltera-blue;
   height: $header-height;
-  padding: 0px $horizontal-padding;
-  width: 100%;
+  padding: 0px $small-padding;
   position: fixed;
-  z-index: 1;
-  //box-shadow: 0 1px 10px 0px;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 2;
 }
 
 .header-wrapper {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   margin:auto;
   max-width: $max-width;
   height: 100%;
-}
-
-.header li {
-  display: inline
 }
 
 .header a {
@@ -36,10 +33,6 @@
   color: $voltera-green;
 }
 
-.header .links {
-  padding-right: $horizontal-padding;
-}
-
 .header .store-link {
   padding: 0.7em 1.0em;
   margin-left: 10px;
@@ -49,4 +42,32 @@
 .header .store-link:hover {
   color: $voltera-blue;
   background-color: $light-font;
+}
+
+
+/* CSS for mobile */
+
+.header-wrapper-hamburger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.header .link-panel-wrapper {
+  position: fixed;
+  background-color: $voltera-blue;
+  top: $header-height;
+  left: 0px;
+  bottom: 0px;
+}
+
+.header ul {
+    padding-left: $small-padding;
+    font-size: 1.3em;
+}
+
+.header li {
+  margin: $medium-padding;
+
 }

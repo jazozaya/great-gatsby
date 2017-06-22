@@ -131,8 +131,9 @@ renderFailed(){
 
 renderRequest() {
   return (<div>
-    <h1>Schedule a Call.</h1>
+    <h1>Schedule a Call</h1>
     <form>
+      <p>We'd love to jump on a call with you, simply pick a date and time below.</p>
       <h3>Contact Information</h3>
       <div className="format">
         <p>First Name: <input className="text-input" type="text" id="fname" name="fname" /></p>

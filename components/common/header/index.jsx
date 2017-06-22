@@ -1,16 +1,51 @@
 import React from 'react';
 import Logo from 'components/common/logo';
 import Links from './links';
+import LinksHamburger from './linksHamburger'
 import './header.scss';
 
 export default class Header extends React.Component {
 
-  render() {
-    return (<div className="header">
+  constructor(props) {
+    super(props);
+    this.state = { width: '0', height: '0' };
+    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+  }
+
+  componentDidMount() {
+    this.updateWindowDimensions();
+    window.addEventListener('resize', this.updateWindowDimensions);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateWindowDimensions);
+  }
+
+  updateWindowDimensions() {
+    this.setState({ width: window.innerWidth, height: window.innerHeight });
+  }
+
+  renderHeader() {
+    return (
       <div className="header-wrapper">
         <Logo />
         <Links />
       </div>
-    </div>);
+    );
   }
+
+  renderHamburger() {
+    return (
+      <div className="header-wrapper-hamburger">
+        <LinksHamburger />
+        <Logo />
+      </div>
+    );
+  }
+
+  render() {
+    return (<div className="header">
+    {this.state.width < 600 ? this.renderHamburger() : this.renderHeader()}
+  </div>);
+}
 }

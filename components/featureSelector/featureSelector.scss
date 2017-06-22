@@ -1,8 +1,9 @@
 @import 'css/colors';
 
 .feature-select {
-background-color: $grey-background;
-padding: $vertical-padding $horizontal-padding;
+background-color: $white-background;
+padding: $large-padding $small-padding;
+margin: auto;
 }
 
 .feature-select-wrapper {

@@ -1,28 +1,33 @@
 @import 'css/colors';
 
-.cta {
+.cta-wrapper {
 background-color: $voltera-green;
+padding: $medium-padding $small-padding;
 }
 
-.cta-wrapper {
+.cta {
+
+  margin: auto;
+  max-width: $max-width;
+
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin: auto;
-  max-width: $max-width;
-  padding: $vertical-padding $horizontal-padding;
-}
+  justify-content: space-between;
 
-.cta .title {
-  flex: auto;
 }
 
 .cta h2 {
   margin-bottom: 0px;
-  text-align: left;
 }
 
 .cta p {
   margin-top: 0px;
-  font-size: 18px;
+  font-size: 1.3em;
+}
+
+@media (max-width: $mobile-threshold) {
+  .cta {
+    justify-content: center;
+  }
 }

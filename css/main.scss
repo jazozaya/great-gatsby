@@ -59,3 +59,25 @@ img {
 .dummy-header {
   height: $header-height;
 }
+
+.center-wide {
+  max-width: $max-width;
+  margin: auto;
+}
+
+// Creates a centered flex row.
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}

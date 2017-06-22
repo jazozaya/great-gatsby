@@ -1,17 +1,18 @@
 @import 'css/colors';
 
-.awards {
+.awards-wrapper {
 background-color: $white-background;
+padding: $medium-padding $small-padding;
 }
 
-.awards-wrapper {
+.awards {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   margin: auto;
   max-width: $narrow-width;
-  padding: $vertical-padding $horizontal-padding;
+
 }
 
 .awards img {
@@ -19,6 +20,10 @@ background-color: $white-background;
   margin-left: 10px;
   margin-right: 10px;
   position: relative;
+  bottom: 0px;
+
+  width: 200px;
+  height: 120px;
 }
 
 .awards img:hover {
@@ -33,4 +38,19 @@ background-color: $white-background;
   background-color: $voltera-blue;
   height: 120px;
   width: 1px;
+}
+
+@media (max-width: $mobile-threshold) {
+  .awards {
+    justify-content: space-around;
+
+    h3 {
+      font-size: 0.7em;
+    }
+
+    img {
+      width: 150px;
+      height: auto;
+    }
+  }
 }

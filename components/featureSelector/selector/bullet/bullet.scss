@@ -1,0 +1,52 @@
+@import 'css/colors';
+
+.bullet {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: $voltera-blue;
+
+  width: 370px;
+  padding: $small-padding 0px;
+
+  cursor: pointer;
+
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  position:relative;
+}
+
+.bullet p {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.0em;
+  margin-left: 15px;
+}
+
+
+.bullet svg {
+  width: 50px;
+  height: 50px;
+}
+
+.bullet svg path {
+  fill: $voltera-blue;
+}
+
+.bullet.highlight {
+  bottom: 5px;
+}
+
+// When I hover or if it is selected.
+.bullet:hover, .highlight {
+  color: $light-font;
+  background-color: $voltera-green;
+  border-color: $voltera-green;
+
+  svg path {
+    fill: $light-font;
+  }
+}

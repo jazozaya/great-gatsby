@@ -9,9 +9,9 @@ export default class Award extends React.Component {
     const { imageUrl, linkUrl, label } = this.props;
 
     return (
-    <div className="individual-award">
+    <div>
       <a href={linkUrl} target="_blank">
-        <img width="200" height="120" src={imageUrl} />
+        <img className="individual-award" src={imageUrl} />
       </a>
       <h3>{label}</h3>
     </div>);

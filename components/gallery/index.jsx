@@ -3,8 +3,6 @@ import './gallery.scss'
 
 import Lightbox from './lightbox'
 
-import { volteraImages, communityImages } from './constants';
-
 export default class Gallery extends React.Component {
 
   renderGrid(images) {
@@ -19,12 +17,6 @@ export default class Gallery extends React.Component {
       videoId={currentValue.videoId}
       />)
     }
-
-    //
-    // Under the microscope.
-    // In the lab.
-    // From the community
-    // Fun stuff
 
     render() {
 
