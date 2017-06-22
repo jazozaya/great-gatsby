@@ -8,7 +8,7 @@ export default class Header extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = { width: '0', height: '0' };
+    this.state = { width: 1920 };
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
 
@@ -22,7 +22,7 @@ export default class Header extends React.Component {
   }
 
   updateWindowDimensions() {
-    this.setState({ width: window.innerWidth, height: window.innerHeight });
+    this.setState({ width: window.innerWidth });
   }
 
   renderHeader() {

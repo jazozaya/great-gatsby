@@ -5,6 +5,11 @@ import './awards.scss'
 
 export default class Awards extends React.Component {
 
+  constructor(props){
+    super(props);
+    this.state = { windowWidth: 1920};
+  }
+
   renderMobile() {
 
     return (
@@ -33,12 +38,15 @@ export default class Awards extends React.Component {
             />
         </div>
       </div>);
+    }
 
+    componentDidMount() {
+      this.setState({ windowWidth: window.innerWidth })
     }
 
     render() {
 
-      if (window.innerWidth < 600) {
+      if (this.state.windowWidth < 600) {
         return this.renderMobile();
       }
 
