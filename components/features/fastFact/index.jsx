@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './fastFact.scss'
+import './fastfact.scss'
 
 export default class FastFact extends React.Component {
 
