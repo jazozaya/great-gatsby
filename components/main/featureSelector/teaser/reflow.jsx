@@ -13,7 +13,7 @@ export default class Feature extends React.Component {
           url="/assets/selector/reflow-platform.jpg"
         />
         <div className="description">
-          <h2>Solder everything at once.</h2>
+          <h2>Turn up the heat.</h2>
           <p>The mounting platform doubles as a heated bed. After dispensing paste, you can <strong>place your components on and watch them reflow</strong> right before your eyes.</p>
           <p>With a 550W heater, the V-One can <strong>reach reflow temperatures in under a minute</strong>. Use our recommended heating profile, or manually control the temperature for complete control.</p>
           <div className="button-wrap">

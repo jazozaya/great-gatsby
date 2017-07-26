@@ -11,10 +11,10 @@ export default class MyPrint extends React.Component {
       <div>
         <Print />
         <CallToAction
-          title="Want to schedule a call?"
+          title="Want to request a quote?"
           subtitle="We can help you with that!"
-          label="Request Call"
-          url="/requestCall/"
+          label="Request Quote"
+          url="/requestQuote/"
         />
       </div>
     )

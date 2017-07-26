@@ -10,7 +10,7 @@
 }
 
 .request-wrapper {
-  width: $form-width;
+  max-width: $form-width;
   padding: $small-padding $medium-padding;
   background-color: $white-background;
   border-radius: 10px;
@@ -23,6 +23,11 @@
   border-bottom-width: 1px;
   padding-bottom: 5px;
   margin-top: 40px;
+}
+
+.request img {
+  max-width: 100%;
+  height: auto;
 }
 
 .request .missing {

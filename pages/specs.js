@@ -13,6 +13,7 @@ export default class Spec extends React.Component {
             title="Want to share with your colleagues?"
             subtitle="Download our technical datasheet"
             label="Download"
+            internal={false}
             url="/assets/docs/V-One-Summary.pdf"
           />
       </div>

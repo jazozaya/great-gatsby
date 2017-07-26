@@ -69,5 +69,14 @@
 
 .header li {
   margin: $medium-padding;
+}
 
+.header .hamburger.open svg path {
+  fill: $voltera-green;
+}
+
+@media (max-width: $mobile-threshold) {
+  .header a {
+    font-weight: 300;
+  }
 }

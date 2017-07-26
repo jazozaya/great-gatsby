@@ -8,9 +8,9 @@ export default class Hero extends React.Component {
     return (<div className="hero">
       <div className="hero-wrapper">
         <h1>Build hardware faster.</h1>
-        <p>Prototype circuits on your desktop <br /> with the Voltera V-One.</p>
+        <p>Prototype on your desktop with the<br />Voltera V-One PCB Printer.</p>
         <div className="buttons">
-          <Button label="Learn More" url="/product/" internal color="clear"/>
+          <Button label="Reserve Now" url="/requestReservation/" internal color="clear" />
           <Button label="Buy Now" url="https://store.voltera.io/products/voltera-v-one" color="light" />
         </div>
       </div>

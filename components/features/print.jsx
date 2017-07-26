@@ -6,7 +6,7 @@ import { prefixLink } from 'gatsby-helpers'
 import Gallery from 'components/gallery'
 import { printGallery } from 'components/gallery/constants'
 
-import BuyNow from 'components/buyNow'
+import BuyNow from 'components/features/buyNow'
 
 import './common.scss'
 
@@ -48,7 +48,7 @@ export default class Software extends React.Component {
           </div>
           <img src="/assets/voltera-probe.png"/>
         </div>
-        <BuyNow />
+
         <div className="column-wrapper center-wide">
           <div className="column">
             <img src="/assets/features/conductive-ink-printing.jpg" />
@@ -68,6 +68,7 @@ export default class Software extends React.Component {
             </div>
           </div>
         </div>
+        <BuyNow />
         <Gallery
           title="A platform for all of your needs."
           description="The V-One is a versatile tool that will help you in any stage of development"

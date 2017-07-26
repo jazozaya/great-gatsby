@@ -39,19 +39,19 @@ export default class ReservationRequest extends React.Component {
     // Performs some data validation to make sure everything was filled in.
     const allComplete = requiredFields.every(field => document.getElementById(field).value.length > 0);
 
-    if(!allComplete || this.state.selectedDate.length === 0){
+    if(!allComplete){
       this.setState( { missingFields: true, count: this.state.count + 1 });
       return;
     }
 
     const emailParams = {
-      timestamp: Date(),
       to_email: process.env.NODE_ENV === 'production' ? 'sales@voltera.io' : 'jesus@voltera.io',
-      reply_to: document.getElementById('email').value,
+      reply_to: document.getElementById('email').value, // Not used.
       email: document.getElementById('email').value,
       from_name: `${document.getElementById('fname').value} ${document.getElementById('lname').value}`,
       phone: document.getElementById('phone').value,
       company: document.getElementById('company').value,
+      website: document.getElementById('website').value,
     }
 
     // // Change state to sending.
@@ -105,6 +105,7 @@ renderFailed(){
 renderRequest() {
   return (<div>
     <h1>Place a unit on hold!</h1>
+    <img src="/assets/v-one-in-box-small.png"/>
     <form>
       <p>
         Want a V-One but do not have the budget yet?
@@ -112,7 +113,7 @@ renderRequest() {
       <p>
         Or maybe you need approval from your supervisor, purchasing manager, husband or wife?
       </p>
-      <p>The V-Ones are produced in limited quantities, but you can place a unit on hold.  We will follow up in a few weeks to see how we can help!
+      <p>The V-Ones are produced in limited quantities, but you can place a unit on hold.  We will reach out in a few weeks!
       </p>
 
       <h3>Contact Information</h3>

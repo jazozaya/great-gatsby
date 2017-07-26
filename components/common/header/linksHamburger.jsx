@@ -27,9 +27,10 @@ export default class Links extends React.Component {
   }
 
   render() {
+    const hamburgerState = this.state.open ? "open" : "closed"
     return (
       <div onClick= {() => this.setState({open : !this.state.open})}>
-        <a><SVGInline svg={rawSVG} /></a>
+        <a className={`hamburger ${hamburgerState}`}><SVGInline svg={rawSVG} /></a>
         {this.state.open ? this.renderLinkPanel() : null}
       </div>
     )

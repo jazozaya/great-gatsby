@@ -7,7 +7,7 @@ export default class CallToAction extends React.Component {
 
   render() {
 
-    const { title, subtitle, label, url } = this.props;
+    const { title, subtitle, label, url, internal } = this.props;
 
     return (<div className="cta-wrapper">
     <div className="cta">
@@ -15,8 +15,12 @@ export default class CallToAction extends React.Component {
         <h2>{title}</h2>
         <p>{subtitle}</p>
       </div>
-      <Button label={label} url={url} internal color="dark"/>
+      <Button label={label} url={url} internal={internal} color="dark"/>
     </div>
   </div>);
 }
+}
+
+CallToAction.defaultProps = {
+  internal: true
 }

@@ -9,7 +9,7 @@ export default class Contact extends React.Component {
 
     return (<div className="contact">
     <div className="contact-wrapper">
-      <h1>Contact Voltera</h1>
+      <h1>Contact Us!</h1>
       <p className="pull-center">We are here to help! Please do not hesitate to email or call us. We normally reply within 2 business days.</p>
       <div className="email-wrapper">
         <div className="column">
