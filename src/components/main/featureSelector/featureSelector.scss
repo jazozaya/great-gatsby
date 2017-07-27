@@ -1,0 +1,17 @@
+@import 'src/css/colors';
+
+.feature-select {
+background-color: $white-background;
+padding: $large-padding $small-padding;
+margin: auto;
+}
+
+.feature-select-wrapper {
+opacity: 0;
+transition: none;
+
+}
+.feature-select-wrapper.visible {
+transition: all $t-time-opacity ease-in-out 0s;
+opacity: 1;
+}

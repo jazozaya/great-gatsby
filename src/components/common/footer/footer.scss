@@ -1,0 +1,75 @@
+@import 'src/css/colors';
+
+.footer-wrapper {
+  background-color: $voltera-blue;
+  width: 100%;
+  padding: $medium-padding $small-padding;
+  box-sizing: border-box;
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  margin:auto;
+  max-width: $max-width;
+  justify-content: space-between;
+
+}
+
+.footer .column {
+  flex-basis: 200px;
+}
+
+.footer .column p {
+  margin: 0px;
+  color: $light-font;
+  font-size: 1.2em;
+}
+
+.footer .column ul {
+  list-style: none;
+  padding: 0px;
+  margin-top: 10px;
+}
+
+.footer-wrapper li {
+  color: $soft-grey;
+  font-size: 14px;
+  line-height: 1.8em;
+  font-weight: 400;
+}
+
+.footer-wrapper a {
+  color: $soft-grey;
+}
+
+.footer-wrapper a:hover{
+  color: $voltera-green;
+}
+
+.footer-links {
+  color: $soft-grey;
+  font-size: 0.9em;
+  max-width: $max-width;
+  text-align: right;
+  margin: auto;
+}
+
+.footer-links a {
+  color: $soft-grey;
+}
+
+.footer-links a:hover {
+  color: $voltera-green;
+}
+
+
+@media (max-width: $mobile-threshold) {
+  .footer {
+    justify-content: center;
+
+    .column {
+      padding-top: $medium-padding;
+    }
+  }
+}

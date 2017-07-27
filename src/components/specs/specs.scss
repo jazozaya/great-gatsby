@@ -1,0 +1,46 @@
+@import 'src/css/colors';
+
+.specs {
+background-color: $white-background;
+}
+
+.specs-wrapper {
+  margin: auto;
+  max-width: $narrow-width;
+  padding: $medium-padding $small-padding;
+}
+
+.specs .table {
+    margin: 50px 0px;
+}
+
+.specs .row {
+  display: flex;
+  justify-content: space-between;;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: left;
+}
+
+.specs .row.light {
+  background-color: darken($grey-background, 5);
+}
+
+.specs .category {
+  flex-grow: 1;
+}
+
+.specs h3 {
+  padding-bottom: 2px;
+  margin-bottom: 0px;
+  border-bottom-color: $voltera-green;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+.specs .table p {
+  margin: 5px 0px;
+  text-transform: capitalize;
+  font-size: 0.9em;
+  flex-basis: 280px;
+}

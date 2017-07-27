@@ -1,0 +1,82 @@
+@import 'src/css/colors';
+
+.header {
+  background-color: $voltera-blue;
+  height: $header-height;
+  padding: 0px $small-padding;
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin:auto;
+  max-width: $max-width;
+  height: 100%;
+}
+
+.header a {
+  color: $light-font;
+  text-decoration: none;
+  margin: 10px;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  line-height: 20px;
+  font-weight: 600;
+}
+
+.header a:hover{
+  color: $voltera-green;
+}
+
+.header .store-link {
+  padding: 0.7em 1.0em;
+  margin-left: 10px;
+  background-color: $voltera-green;
+  border-radius: 2px;
+}
+.header .store-link:hover {
+  color: $voltera-blue;
+  background-color: $light-font;
+}
+
+
+/* CSS for mobile */
+
+.header-wrapper-hamburger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.header .link-panel-wrapper {
+  position: fixed;
+  background-color: $voltera-blue;
+  top: $header-height;
+  left: 0px;
+  bottom: 0px;
+}
+
+.header ul {
+    padding-left: $small-padding;
+    font-size: 1.3em;
+}
+
+.header li {
+  margin: $medium-padding;
+}
+
+.header .hamburger.open svg path {
+  fill: $voltera-green;
+}
+
+@media (max-width: $mobile-threshold) {
+  .header a {
+    font-weight: 300;
+  }
+}

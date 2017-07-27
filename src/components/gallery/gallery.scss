@@ -1,0 +1,27 @@
+@import 'src/css/colors';
+
+.gallery {
+  margin: auto;
+  max-width: $max-width;
+  padding: $medium-padding $small-padding;
+  text-align: center;
+}
+
+.gallery-grid-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  padding: $small-padding 0px;
+
+}
+
+.gallery img {
+   position: relative;
+   bottom: 0px;
+   cursor: pointer;
+   transition: all $t-time ease-in-out 0s;
+}
+
+.gallery img:hover {
+   bottom: 3px;
+}

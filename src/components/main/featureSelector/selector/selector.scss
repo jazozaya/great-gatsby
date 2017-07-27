@@ -1,0 +1,11 @@
+@import 'src/css/colors';
+
+.selector {
+  padding: $medium-padding 0px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  max-width: $max-width;
+}

@@ -1,0 +1,36 @@
+@import 'src/css/colors';
+
+.hero {
+  background-image: url('./circuit-board-printer.jpg');
+  background-position: bottom;
+  background-size: cover;
+  height: calc(100vh - 75px);
+}
+
+.hero-wrapper {
+  margin: auto;
+  padding-top: 15vh;
+  padding-left: $small-padding;
+  padding-right: $small-padding;
+  max-width: $max-width;
+  height: 100%;
+}
+
+.hero h1 {
+  color: $light-font;
+  font-size: 3.0em;
+  font-weight: 600;
+  line-height: 50px;
+  margin-bottom: 0px;
+  text-align: left;
+}
+.hero p {
+  font-size: 1.5em;
+  margin-top: 0px;
+  margin-bottom: 40px;
+  color: $light-font;
+}
+
+.hero .button {
+  margin-right: 20px;
+}

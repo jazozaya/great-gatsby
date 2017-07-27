@@ -1,0 +1,28 @@
+@import 'src/css/colors';
+
+
+.mini-hero-wrapper {
+  background-color: rgb(25,25,25);
+  min-height: 400px;
+  padding: 0px $small-padding;
+
+  display: flex;
+  justify-content: center;
+
+  h1 {
+    color: $light-font;
+  }
+}
+
+.mini-hero {
+  margin: auto;
+  max-width: $narrow-width;
+  color: $light-font;
+  text-align: center;
+}
+
+.mini-hero .fast-fact-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
