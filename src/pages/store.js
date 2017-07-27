@@ -1,7 +1,7 @@
-// import React from 'react'
-// import Link from 'gatsby-link'
-// 
-// import Helmet from 'react-helmet'
+import React from 'react'
+import Link from 'gatsby-link'
+
+import Helmet from 'react-helmet'
 // import ShopifyBuy from 'shopify-buy'
 //
 // var shopClient = ShopifyBuy.buildClient({
@@ -9,15 +9,15 @@
 //   domain: 'voltera.myshopify.com',
 //   appId: '6'
 // });
-//
-//
-// export default class Spec extends React.Component {
-//
-//
-//   render() {
-//     return (
-//       <div>
-//       </div>
-//     )
-//   }
-// }
+
+
+export default class Spec extends React.Component {
+
+
+  render() {
+    return (
+      <div>
+      </div>
+    )
+  }
+}

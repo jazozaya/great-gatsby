@@ -4,9 +4,8 @@ exports.modifyWebpackConfig = ({ config, stage }) => {
 
   config.merge({
     resolve: {
-      root: path.resolve('./src')
+      root: [path.resolve('./src')]
     }
   })
-  console.log(config.resolve())
   return config;
 };
