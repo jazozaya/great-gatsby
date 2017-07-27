@@ -1,9 +1,12 @@
+const path = require('path')
+
 exports.modifyWebpackConfig = ({ config, stage }) => {
 
   config.merge({
     resolve: {
-      root: ["C:\\Mio\\VolteraSW\\gatsby-site\\src"]
+      root: path.resolve('./src')
     }
   })
+  console.log(config.resolve())
   return config;
 };
