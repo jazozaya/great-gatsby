@@ -1,0 +1,64 @@
+@import 'src/css/colors';
+
+.banner-wrapper {
+  background-color: $dark-grey;
+  border-bottom-color: $voltera-green;
+  border-bottom-width: thin;
+  border-bottom-style: solid;
+  padding: $large-padding $small-padding;
+}
+.banner {
+  background-image: url('./v-one-clear.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 400px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.banner h1 {
+  color: $light-font;
+  text-align: right;
+}
+
+.banner .description {
+  position: relative;
+  top: 75px;
+  left: 320px;
+  width: 300px;
+  color: $light-font;
+}
+
+.banner .subtitle {
+  position: relative;
+  top: 230px;
+  left: 75px;
+  width: 300px;
+  color: $light-font;
+}
+
+.software {
+  padding: $medium-padding $small-padding;
+  max-width: $max-width;
+  margin: auto;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  align-items: center;
+  justify-content: center;
+
+}
+
+.software-image {
+  height: auto;
+  width: 100%;
+  max-width: 600px;
+}
+
+.software .description {
+  flex-basis: 500px;
+  flex-grow: 1;
+  flex-shrink: 1;
+
+}

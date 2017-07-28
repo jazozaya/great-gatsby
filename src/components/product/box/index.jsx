@@ -16,7 +16,7 @@ const summary = {
   clamps: "clamps"
 }
 
-export default class Product extends React.Component {
+export default class InTheBox extends React.Component {
 
   constructor(props) {
     super(props);
@@ -167,9 +167,9 @@ export default class Product extends React.Component {
   }
 
   render() {
-    return (<div className="box">
-    <div className="box-wrapper">
-      <h1>Meet your new favorite tool.</h1>
+    return (<div className="box-wrapper">
+    <div className="box">
+      <h1>What is in the box?</h1>
       <p className="pull-center">The V-One comes with all the accessories and consumables you need to start building hardware faster.</p>
       <div className="box-content">
         <div className="in-the-box">

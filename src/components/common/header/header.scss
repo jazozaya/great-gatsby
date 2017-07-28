@@ -59,7 +59,7 @@
   background-color: $voltera-blue;
   top: $header-height;
   left: 0px;
-  bottom: 0px;
+  right: 0px;
 }
 
 .header ul {
@@ -68,7 +68,7 @@
 }
 
 .header li {
-  margin: $medium-padding;
+  margin: $small-padding;
 }
 
 .header .hamburger.open svg path {

@@ -1,13 +1,16 @@
 @import 'src/css/colors';
 
-.box {
-background-color: $white-background;
+.box-wrapper {
+background-color: $grey-background;
+box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+z-index: 1;
+position: relative;
+padding: $large-padding $small-padding;
 
 }
-.box-wrapper {
+.box {
   margin: auto;
   max-width: $max-width;
-  padding: $medium-padding $small-padding;
 }
 
 .box h2 {

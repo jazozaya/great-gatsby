@@ -1,6 +1,8 @@
 import React from 'react'
 import MiniHero from 'components/common/minihero'
-import FastFact from 'components/features/fastFact'
+
+import FastFact from './fastFact';
+import Workflow from './workflow';
 
 import Gallery from 'components/gallery'
 import { pasteGallery } from 'components/gallery/constants'
@@ -43,6 +45,8 @@ export default class Software extends React.Component {
             <p>In just a few minutes you can have paste on boards printed by the V-One or traditionally fabricated by a factory.</p>
           </div>
         </div>
+
+        <Workflow workflowType="solder" />
 
         <div className="row-wrapper center-wide">
           <div className="description">

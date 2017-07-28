@@ -20,7 +20,7 @@ export default class Links extends React.Component {
                 <li><Link to='/faq/'>FAQ</Link></li>
                 <li><Link to='/contact/'>Contact</Link></li>
                 <li><a href="http://store.voltera.io">Store</a></li>
-                </ul>
+              </ul>
             </div>)
   }
 

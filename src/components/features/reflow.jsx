@@ -22,7 +22,7 @@ export default class Software extends React.Component {
           label="Watts"
           />
         <FastFact
-          title="4&quot;x5&quot;"
+          title="4&quot; x 5&quot;"
           label="Max. size"
           />
         <FastFact

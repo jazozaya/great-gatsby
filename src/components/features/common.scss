@@ -29,3 +29,11 @@
   margin: $small-padding $small-padding;
   flex-shrink: 1;
 }
+
+
+@media (max-width: $mobile-threshold) {
+  .feature img {
+    width: 100%;
+    height: auto;
+  }
+}

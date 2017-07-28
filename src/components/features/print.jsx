@@ -1,12 +1,13 @@
 import React from 'react'
 import MiniHero from 'components/common/minihero'
-import FastFact from 'components/features/fastFact'
 import Link from 'gatsby-link'
 
 import Gallery from 'components/gallery'
 import { printGallery } from 'components/gallery/constants'
 
-import BuyNow from 'components/features/buyNow'
+import FastFact from './fastFact'
+import BuyNow from './buyNow'
+import Workflow from './workflow'
 
 import './common.scss'
 
@@ -40,6 +41,7 @@ export default class Software extends React.Component {
             <p>The V-One comes equipped with all the consumables and accessories you need to get started. Setup is a breeze and in just minutes you will be printing your very first circuit board.</p>
           </div>
         </div>
+        <Workflow workflowType="print" />
         <div className="row-wrapper center-wide">
           <div className="description">
             <h2>A perfect print every time.</h2>
