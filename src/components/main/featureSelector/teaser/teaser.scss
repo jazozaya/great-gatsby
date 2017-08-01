@@ -1,18 +1,10 @@
 @import 'src/css/colors';
 
 .teaser {
-  max-width: $max-width;
   padding: $medium-padding 0px;
-  margin: auto;
-
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-
 }
 
 .teaser .description {
-  padding: 0 30px;
   flex-basis: 500px;
   flex-grow: 0;
   text-align: justify;

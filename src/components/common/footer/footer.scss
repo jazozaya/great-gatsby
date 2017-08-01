@@ -8,12 +8,9 @@
 }
 
 .footer {
-  display: flex;
-  flex-wrap: wrap;
-  margin:auto;
   max-width: $max-width;
-  justify-content: space-between;
-
+  margin: auto;
+  align-items: flex-start;
 }
 
 .footer .column {

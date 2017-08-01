@@ -9,7 +9,7 @@ export default class Footer extends React.Component {
 
   render() {
     return (<div className="footer-wrapper">
-      <div className="footer">
+      <div className="footer flex-row">
         <Logo />
         <div className="column">
           <p>Company</p>

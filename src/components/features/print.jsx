@@ -2,6 +2,7 @@ import React from 'react'
 import MiniHero from 'components/common/minihero'
 import Link from 'gatsby-link'
 
+import Explore from 'components/common/explore'
 import Gallery from 'components/gallery'
 import { printGallery } from 'components/gallery/constants'
 
@@ -32,26 +33,25 @@ export default class Software extends React.Component {
             title="1 hour"
             label="or less"
             />
-
         </MiniHero>
-        <div className="row-wrapper center-wide">
+        <section className="flex-row">
           <img src="/v-one.png"/>
           <div className="description">
             <h2>Up to two layers.</h2>
             <p>The V-One comes equipped with all the consumables and accessories you need to get started. Setup is a breeze and in just minutes you will be printing your very first circuit board.</p>
           </div>
-        </div>
+        </section>
         <Workflow workflowType="print" />
-        <div className="row-wrapper center-wide">
+        <section className="flex-row">
           <div className="description">
             <h2>A perfect print every time.</h2>
             <p>This high precision probe was developed from the ground up and creates a height map of your substrate. The V-One takes the map into account and makes micro adjustments to ensure a constant printing height of 100 microns. </p>
             <p>We do not need the substrate to be conductive, which means we can dispense on rigid materials like FR4, glass and ceramics, along with flexible substrates like Kapton (Polyimide).</p>
           </div>
           <img src="/voltera-probe.png"/>
-        </div>
+        </section>
 
-        <div className="column-wrapper center-wide">
+        <section className="flex-row column-wrapper">
           <div className="column">
             <img src="/features/conductive-ink-printing.jpg" />
             <div className="description">
@@ -69,13 +69,15 @@ export default class Software extends React.Component {
               <p>Once the ink is printed and cured, you can place your components on and start building!</p>
             </div>
           </div>
-        </div>
-        <BuyNow />
+        </section>
+
         <Gallery
           title="A platform for all of your needs."
           description="The V-One is a versatile tool that will help you in any stage of development"
           gallery= {printGallery}
           />
+        <Explore activePage="print"/>
+          <BuyNow />
       </div>);
     }
   }

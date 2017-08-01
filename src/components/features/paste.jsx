@@ -3,8 +3,10 @@ import MiniHero from 'components/common/minihero'
 
 import FastFact from './fastFact';
 import Workflow from './workflow';
+import BuyNow from './buyNow'
 
 import Gallery from 'components/gallery'
+import Explore from 'components/common/explore'
 import { pasteGallery } from 'components/gallery/constants'
 
 import YouTube from 'components/common/youtube'
@@ -25,15 +27,15 @@ export default class Software extends React.Component {
             label="Min. pad size."
             />
           <FastFact
-            title="RoHS"
-            label="Lead Free."
+            title="Reflow"
+            label="Built-in."
             />
           <FastFact
             title="15 mins"
             label="or less"
             />
         </MiniHero>
-        <div className="row-wrapper center-wide">
+        <section className="flex-row">
           <YouTube
             width="500"
             videoId="s_cjg2BzySg"
@@ -44,26 +46,48 @@ export default class Software extends React.Component {
             <p>Save hundreds of dollars in stencil costs by skipping them altogether. The V-One makes populating your prototype boards a breeze.</p>
             <p>In just a few minutes you can have paste on boards printed by the V-One or traditionally fabricated by a factory.</p>
           </div>
-        </div>
-
-        <Workflow workflowType="solder" />
-
-        <div className="row-wrapper center-wide">
+        </section>
+        <section className="flex-row">
           <div className="description">
-            <h2>The hard parts made easy.</h2>
-            <p>Soldering BGA components by hand is out of the question. Take the guesswork out of the equation and use the V-One.</p>
-            <p>Pads can be as small as 0402 and IC's can have a pitch of 0.5 mm</p>
+            <h2>A built in heated platform.</h2>
+            <p>After placing all of your surface mount components just hit the reflow button and sit back to enjoy the show.</p>
+            <p>With a 550W heater, the V-One can reach reflow temperatures in under a minute. Use our recommended heating profile, or manually control the temperature for complete control.</p>
           </div>
           <YouTube
             width="500"
-            videoId="lbZVRBrdXKU"
-            url="/features/solder-paste-bga.jpg"
+            videoId="y3RZLiPDljs"
+            url="/features/reflow-platform.jpg"
           />
-        </div>
+      </section>
+        <Workflow workflowType="solder" />
+        <section className="flex-row column-wrapper">
+          <div className="column">
+            <YouTube
+              width="500"
+              videoId="lbZVRBrdXKU"
+              url="/features/solder-paste-bga.jpg"
+            />
+            <div className="description">
+              <h2>The hard parts made easy.</h2>
+              <p>Soldering BGA components by hand is out of the question. Take the guesswork out of the equation and use the V-One.</p>
+              <p>Pads can be as small as 0402 and IC's can have a pitch of 0.5 mm</p>
+            </div>
+          </div>
+          <div className="column">
+            <img src="/features/status-led-lights.jpg" />
+            <div className="description">
+              <h2>Status indicators</h2>
+              <p>The unit is equipped with LED indicators that let you know the status of the machine from accross the room.</p>
+              <p>The V-One will glow red when it is reflowing and a cool blue when the cycle has finished and it is safe to touch.</p>
+            </div>
+          </div>
+        </section>
         <Gallery
           title="V-One in action"
           description="The machine is a robust tool"
           gallery= {pasteGallery} />
+        <Explore activePage="paste"/>
+        <BuyNow />
       </div>);
     }
   }

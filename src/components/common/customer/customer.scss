@@ -6,16 +6,10 @@
   z-index: 1;
   position: relative;
   padding: $medium-padding $small-padding;
-
 }
 
 .customer {
-  max-width: $max-width;
   min-height: 134px;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
 .customer .quote {
@@ -50,6 +44,6 @@
 }
 
 .customer .navigation:hover {
-  background-color: $white-background;
-  color: $voltera-blue;
+  background-color: $voltera-blue;
+  color: $light-font;
 }

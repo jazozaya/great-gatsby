@@ -7,7 +7,7 @@ export default class Feature extends React.Component {
 
   render() {
     return (
-      <div className="teaser">
+      <div className="teaser flex-row">
         <YouTube
           videoId="NdJQ5Xl4jkw"
           url="/selector/dispense-solder-paste.jpg"

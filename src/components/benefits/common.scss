@@ -23,38 +23,3 @@
   margin: $small-padding $small-padding;
   flex-shrink: 1;
 }
-
-
-
-.benefit .software-gallery {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: $medium-padding 0px;
-}
-
-.benefit .software-gallery .software-screen {
-  box-shadow: 0px 0px 10px 0px black;
-  transition: all $t-time-opacity  ease-in-out 0s;
-  opacity: 1;
-}
-
-.benefit .software-gallery .software-screen.hidden {
-  opacity: 0;
-  transition: none
-}
-
-.benefit .software-gallery .navigation {
-  border-radius: 100%;
-  padding: 10px;
-  width: 20px;
-  height: 20px;
-  text-align: center;
-  border-width: 1px;
-  border-style: solid;
-  border-color: $voltera-blue;
-  cursor: pointer;
-  transition: all $t-time ease-in-out 0s;
-  margin: $small-padding;
-  flex-shrink: 0;
-}

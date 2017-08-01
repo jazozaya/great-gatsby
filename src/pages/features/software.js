@@ -1,8 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 
-import Software from 'components/benefits/software'
-import CallToAction from 'components/common/cta';
+import Software from 'components/features/software'
 
 
 export default class MySoftware extends React.Component {

@@ -21,10 +21,10 @@ export default class Selector extends React.Component {
 
       const { benefits } = this.props;
       return (
-          <div className="selector">
+          <div className="selector flex-row">
             {this.renderBullet(f.print.name, f.print.iconSvg, f.print.label)}
             {this.renderBullet(f.paste.name, f.paste.iconSvg, f.paste.label)}
-            {this.renderBullet(f.reflow.name, f.reflow.iconSvg, f.reflow.label)}
+            {this.renderBullet(f.software.name, f.software.iconSvg, f.software.label)}
         </div>);
     }
   }

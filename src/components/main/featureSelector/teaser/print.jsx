@@ -8,7 +8,7 @@ export default class Feature extends React.Component {
 
   render() {
     return (
-      <div className="teaser">
+      <div className="teaser flex-row">
           <YouTube
             videoId="PeW1nURJ5ww"
             url="/selector/print-conductive-silver-ink.jpg"

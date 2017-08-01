@@ -10,7 +10,7 @@ export default class CallToAction extends React.Component {
     const { title, subtitle, label, url, internal } = this.props;
 
     return (<div className="cta-wrapper">
-    <div className="cta">
+    <div className="cta flex-row center-wide">
       <div className="title">
         <h2>{title}</h2>
         <p>{subtitle}</p>

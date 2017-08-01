@@ -1,0 +1,26 @@
+@import 'src/css/colors';
+
+.workflow-wrapper {
+  padding: $large-padding $small-padding;
+}
+
+.workflow {
+  max-width: $max-width;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.workflow .step {
+  width: 260px;
+  text-align: center;
+}
+
+.workflow .icon {
+  width: auto;
+  height: 80px;
+}
+.workflow .icon-arrow {
+  width: 60px;
+  height: auto;
+}

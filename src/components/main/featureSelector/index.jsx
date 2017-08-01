@@ -3,7 +3,7 @@ import './featureSelector.scss';
 
 import Print from './teaser/print'
 import Paste from './teaser/paste'
-import Reflow from './teaser/reflow'
+import Software from './teaser/software'
 import Selector from './selector'
 import { buttonDescriptions as f } from './selector/constants'
 
@@ -34,11 +34,11 @@ export default class FeatureSelector extends React.Component {
     // Depending on selection, rende a different feature.
     switch(this.state.featureName){
       case f.print.name:
-      return <Print />
-      case f.reflow.name:
-      return <Reflow />
+        return <Print />
       case f.paste.name:
-      return <Paste />
+        return <Paste />
+      case f.software.name:
+        return <Software />
     }
   }
 
@@ -53,11 +53,13 @@ export default class FeatureSelector extends React.Component {
   }
 
   renderMobile() {
-    return( <div className="feature-select">
+    return(
+      <section>
         <Print />
-        <Reflow />
         <Paste />
-    </div>);
+        <Software />
+      </section>
+    );
   }
 
   render() {
@@ -66,14 +68,15 @@ export default class FeatureSelector extends React.Component {
       return this.renderMobile();
     }
 
-
     const visible = this.state.visible ? "visible": "";
 
-    return (<div className="feature-select">
-    <div className= {`feature-select-wrapper ${visible}`}>
-      {this.renderFeature()}
-    </div>
-    <Selector selected={this.state.featureName} handler={this.handler}/>
-  </div>);
-}
+    return (
+      <section>
+        <div className= {`feature-select ${visible}`}>
+          {this.renderFeature()}
+        </div>
+        <Selector selected={this.state.featureName} handler={this.handler}/>
+      </section>
+    );
+  }
 }
