@@ -1,12 +1,8 @@
 @import 'src/css/colors';
 
 .box-wrapper {
-background-color: $grey-background;
-box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
-z-index: 1;
-position: relative;
-padding: $large-padding $small-padding;
-
+  background-color: $grey-background;
+  padding: $large-padding $small-padding;
 }
 .box {
   margin: auto;

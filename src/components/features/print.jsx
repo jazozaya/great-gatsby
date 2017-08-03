@@ -50,27 +50,27 @@ export default class Software extends React.Component {
           </div>
           <img src="/voltera-probe.png"/>
         </section>
-
-        <section className="flex-row column-wrapper">
-          <div className="column">
-            <img src="/features/conductive-ink-printing.jpg" />
-            <div className="description">
-              <h2>Silver based ink.</h2>
-              <p>Our ink is over 90% silver and has excellent electrical properties, perfect for digital and low power applications. Even high frequency applications up to 5 GHz are possible.</p>
-              <p>A single cartridge can print almost 100 simple circuits. That means 100 unique designs with no lead time.</p>
-              <p>Visit our <Link to='/specs/'>specifications</Link> page to learn more!</p>
+        <div className="shadow-banner">
+          <section className="flex-row column-wrapper">
+            <div className="column">
+              <img src="/features/conductive-ink-printing.jpg" />
+              <div className="description">
+                <h2>Silver based ink.</h2>
+                <p>Our ink is over 90% silver and has excellent electrical properties, perfect for digital and low power applications. Even high frequency applications up to 5 GHz are possible.</p>
+                <p>A single cartridge can print almost 100 simple circuits. That means 100 unique designs with no lead time.</p>
+                <p>Visit our <Link to='/specs/'>specifications</Link> page to learn more!</p>
+              </div>
             </div>
-          </div>
-          <div className="column">
-            <img src="/features/hand-soldering-ink.jpg" />
-            <div className="description">
-              <h2>Solder without compromise.</h2>
-              <p>You don't have to use conductive adhesives or glue to secure your components. Our ink is fully hand solderable with our provided solder wire alloy.</p>
-              <p>Once the ink is printed and cured, you can place your components on and start building!</p>
+            <div className="column">
+              <img src="/features/hand-soldering-ink.jpg" />
+              <div className="description">
+                <h2>Solder without compromise.</h2>
+                <p>You don't have to use conductive adhesives or glue to secure your components. Our ink is fully hand solderable with our provided solder wire alloy.</p>
+                <p>Once the ink is printed and cured, you can place your components on and start building!</p>
+              </div>
             </div>
-          </div>
-        </section>
-
+          </section>
+        </div>
         <Gallery
           title="A platform for all of your needs."
           description="The V-One is a versatile tool that will help you in any stage of development"

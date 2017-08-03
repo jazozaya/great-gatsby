@@ -1,7 +1,7 @@
 @import 'src/css/colors';
 
 .contact {
-  background-color: $white-background;
+  background-color: $white;
 }
 
 .contact-wrapper {
@@ -36,7 +36,7 @@
   flex-wrap: wrap;
   justify-content: center;
   background-color: $voltera-green;
-  color: $light-font;
+  color: $white;
 }
 
 .location-wrapper .address {
@@ -45,7 +45,7 @@
 
 .location-wrapper h2 {
   text-align: left;
-  color: $light-font;
+  color: $white;
 }
 
 .location-wrapper .address-wrapper {

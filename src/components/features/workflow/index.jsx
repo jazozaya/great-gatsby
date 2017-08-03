@@ -61,7 +61,7 @@ export default class Workflow extends React.Component {
         {this.renderArrow()}
         <Step
           icon={solderIcon}
-          description="Mount or components on and reflow, or hand solder away!"
+          description="Mount your components on and reflow, or hand solder away!"
           />
       </div>
     );

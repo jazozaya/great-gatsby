@@ -14,10 +14,10 @@ export default class Links extends React.Component {
   renderLinkPanel() {
     return (<div className="link-panel-wrapper">
               <ul>
-                <li><a href="http://voltera.io/blog">Blog</a></li>
+                <li><Link to='/faq/'>FAQ</Link></li>
                 <li><a href="http://community.voltera.io">Forums</a></li>
                 <li><a href="http://support.voltera.io">Support</a></li>
-                <li><Link to='/faq/'>FAQ</Link></li>
+                <li><a href="http://voltera.io/blog">Blog</a></li>
                 <li><Link to='/contact/'>Contact</Link></li>
                 <li><a href="http://store.voltera.io">Store</a></li>
               </ul>

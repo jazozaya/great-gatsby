@@ -1,7 +1,7 @@
 @import 'src/css/colors';
 
 .request {
-  background-color: $white-background;
+  background-color: $white;
   padding: $medium-padding $small-padding;
   display: flex;
   justify-content: center;
@@ -12,7 +12,7 @@
 .request-wrapper {
   max-width: $form-width;
   padding: $small-padding $medium-padding;
-  background-color: $white-background;
+  background-color: $white;
   border-radius: 10px;
   box-shadow: 0px 0px 15px 0px black;
 }

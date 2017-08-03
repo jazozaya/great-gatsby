@@ -19,28 +19,13 @@ const SoftwareImages = [
   },
   {
     src: '/software/software-outline.jpg',
-    title: "Load your files.",
+    title: "Works with your design tool",
     caption: "We support the Gerber format, so the same files you send to a factory can be used. Design with a program you're already comfortable with (Eagle, Kicad, Altium, etc) and export the Gerbers to get started.  "
   },
   {
     src: '/software/software-priming.jpg',
-    title: "Easy to follow instructions",
+    title: "A flat learning curve",
     caption: "Follow along the step by step instructions and learn how to calibrate your unit to get the perfect print. You'll be a pro in no time."
-  },
-  {
-    src: '/software/software-printing.jpg',
-    title :"my title",
-    caption: "On startup the software automatically connects to the unit and lets you pick your feature"
-  },
-  {
-    src: '/software/software-locate-pad.jpg',
-    title: "Smart board calibration.",
-    caption: "If you are printing a two layer board or dispensing solder paste, you just need to teach the software the location of two points. The software figures out the rest."
-  },
-  {
-   src:'/software/software-locate-pad-2.jpg',
-   title: "my second title",
-   caption: "On startup the software automatically connects to the unit and lets you pick your feature"
   }
 ]
 
@@ -111,12 +96,30 @@ export default class Software extends React.Component {
             <h1>{SoftwareImages[this.state.imgIndex].title}</h1>
             <p className="pull-center test">{SoftwareImages[this.state.imgIndex].caption}</p>
           </div>
-          <div className="screenshot-wrapper">
-            <div className="navigation" onClick={() => this.previousImage()}>&lt;</div>
+          <div className="flex-row screenshot-wrapper">
+            <div className="navigation left" onClick={() => this.previousImage()}>&lt;</div>
             <img className={screenshotClass} src={SoftwareImages[this.state.imgIndex].src} />
-            <div className="navigation" onClick={() => this.nextImage()}>&gt;</div>
+            <div className="navigation right" onClick={() => this.nextImage()}>&gt;</div>
           </div>
         </section>
+          <section className="flex-row column-wrapper">
+            <div className="column">
+              <img src="/software/software-locate-pad.jpg" />
+              <div className="description">
+                <h2>Smart Alignment.</h2>
+                <p>We've developed a unique approach to alignment. Just teach the software the location of 2 key features in your board and it takes care the rest.</p>
+                <p>This alignment method allows you to create two layer boards with ease, or dispense paste on boards that already have components.</p>
+              </div>
+            </div>
+            <div className="column">
+              <img src="/software/software-probing.jpg" />
+              <div className="description">
+                <h2>Automatic Height Compensation.</h2>
+                <p>Before you dispense, the software will measure the height of an array of points on the board.</p>
+                <p>The software uses the height map to compensate for any inconsistencies and irregularities on the surface and makes micro adjustments in real time to ensure a perfect print.</p>
+              </div>
+            </div>
+          </section>
         <section>
           <h1>Learn by watching.</h1>
           <p className="pull-center">Whether you use the V-One once a day or once a month, you will be able to pick up right where you left off. These short video clips are built right into the app and will make the tricky parts easy.</p>

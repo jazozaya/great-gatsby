@@ -1,0 +1,16 @@
+@import 'src/css/colors';
+
+.experiment .description {
+  max-width: 500px;
+  margin: $small-padding $small-padding;
+  flex-shrink: 1;
+  text-align: justify;
+}
+
+.experiment ul {
+  list-style-image: url('./tick.min.svg')
+}
+
+.experiment li {
+  margin: $medium-padding 0px;
+}

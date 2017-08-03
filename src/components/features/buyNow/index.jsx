@@ -16,7 +16,7 @@ export default class Testimonial extends React.Component {
         </div>
         <div className="buttons">
           <Button label="Buy Now" url="https://store.voltera.io/products/voltera-v-one" color="dark" />
-          <Button label="Reserve" url="/requestReservation/" internal color="clear"/>
+          <Button label="Reserve" url="/requestReservation/" internal color="white"/>
         </div>
       </div>
     </div>

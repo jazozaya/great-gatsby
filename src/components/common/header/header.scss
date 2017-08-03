@@ -8,6 +8,10 @@
   width: 100%;
   box-sizing: border-box;
   z-index: 2;
+
+  // border-bottom-style: solid;
+  // border-bottom-color: $voltera-green;
+  // border-bottom-width: 0.5px;
 }
 
 .header-wrapper {
@@ -20,7 +24,7 @@
 }
 
 .header a {
-  color: $light-font;
+  color: $white;
   text-decoration: none;
   margin: 10px;
   text-transform: uppercase;
@@ -41,7 +45,7 @@
 }
 .header .store-link:hover {
   color: $voltera-blue;
-  background-color: $light-font;
+  background-color: $white;
 }
 
 

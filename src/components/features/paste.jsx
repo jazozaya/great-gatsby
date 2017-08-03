@@ -37,7 +37,7 @@ export default class Software extends React.Component {
         </MiniHero>
         <section className="flex-row">
           <YouTube
-            width="500"
+            width="600"
             videoId="s_cjg2BzySg"
             url="/features/paste-on-0603.jpg"
           />
@@ -54,7 +54,7 @@ export default class Software extends React.Component {
             <p>With a 550W heater, the V-One can reach reflow temperatures in under a minute. Use our recommended heating profile, or manually control the temperature for complete control.</p>
           </div>
           <YouTube
-            width="500"
+            width="600"
             videoId="y3RZLiPDljs"
             url="/features/reflow-platform.jpg"
           />
@@ -70,7 +70,7 @@ export default class Software extends React.Component {
             <div className="description">
               <h2>The hard parts made easy.</h2>
               <p>Soldering BGA components by hand is out of the question. Take the guesswork out of the equation and use the V-One.</p>
-              <p>Pads can be as small as 0402 and IC's can have a pitch of 0.5 mm</p>
+              <p>The amount of paste dispensed can be adjusted on the fly with a touch of a button. Pads can be as small as 0402 and IC's can have a pitch of 0.5 mm</p>
             </div>
           </div>
           <div className="column">

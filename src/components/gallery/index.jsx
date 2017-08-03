@@ -23,12 +23,13 @@ export default class Gallery extends React.Component {
       const { title, description, gallery } = this.props;
 
       return (
-        <div className="gallery">
+        <section>
           <h1>{title}</h1>
-          <p>{description}</p>
-          <div className="gallery-grid-wrapper">
+          <p className="pull-center">{description}</p>
+          <div className="flex-row gallery">
             {this.renderGrid(gallery)}
           </div>
-        </div>);
-      }
+        </section>
+      );
     }
+  }

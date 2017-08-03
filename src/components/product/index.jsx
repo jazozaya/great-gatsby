@@ -1,7 +1,11 @@
 import React from 'react'
 
-import Box from './box'
 import Button from 'components/common/button'
+import Explore from 'components/common/explore';
+import CallToAction from 'components/common/cta';
+
+import Box from './box'
+import Specs from './specs';
 
 import './product.scss';
 
@@ -29,6 +33,14 @@ export default class MyProduct extends React.Component {
           <img className="software-image" src="/voltera-software.png" />
         </div>
         <Box />
+        <Specs />
+        <Explore activePage="technology"/>
+        <CallToAction
+          title="Want to schedule a call?"
+          subtitle="Let's find a time to talk!"
+          label="Schedule Call"
+          url="/requestCall/"
+        />
       </div>
     )
   }

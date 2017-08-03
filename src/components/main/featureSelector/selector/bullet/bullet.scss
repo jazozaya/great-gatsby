@@ -42,11 +42,11 @@
 
 // When I hover or if it is selected.
 .bullet:hover, .highlight {
-  color: $light-font;
+  color: $white;
   background-color: $voltera-green;
   border-color: $voltera-green;
 
   svg path {
-    fill: $light-font;
+    fill: $white;
   }
 }

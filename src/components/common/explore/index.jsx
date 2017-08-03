@@ -27,7 +27,7 @@ const f = {
     name: "technology",
     url: "/technology/",
     label: "Technology",
-    iconSvg: require('!raw-loader!./icons/software.min.svg'),
+    iconSvg: require('!raw-loader!./icons/technology.min.svg'),
   },
 }
 

@@ -10,6 +10,11 @@
   background-color: $voltera-green;
 }
 
+.button.white {
+  background-color: $white;
+  color: $voltera-blue;
+  border-color: $voltera-blue;
+}
 // If you want a clear background
 .button.clear {
   background-color: transparent;
@@ -18,9 +23,9 @@
 .button {
   cursor: pointer;
   display: inline;
-  color: $light-font;
+  color: $white;
   border-style: solid;
-  border-color: $light-font;
+  border-color: $white;
   border-width: 1px;
   border-radius: 2px;
   text-transform: uppercase;
@@ -30,6 +35,12 @@
 
 .button:hover {
     color:$voltera-blue;
-    background-color: $light-font;
+    background-color: $white;
     border-color: $voltera-blue;
+  }
+
+  .button.white:hover {
+    color:$white;
+    background-color: $voltera-blue;
+    border-color: $white;
   }

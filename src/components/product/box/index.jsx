@@ -167,29 +167,31 @@ export default class InTheBox extends React.Component {
   }
 
   render() {
-    return (<div className="box-wrapper">
-    <div className="box">
-      <h1>What is in the box?</h1>
-      <p className="pull-center">The V-One comes with all the accessories and consumables you need to start building hardware faster.</p>
-      <div className="box-content">
-        <div className="in-the-box">
-          <div className={this.renderClassName(summary.vOne)} onClick={() => this.setDescription(summary.vOne)}></div>
-          <div className={this.renderClassName(summary.probe)} onClick={() => this.setDescription(summary.probe)}></div>
-          <div className={this.renderClassName(summary.clamps)} onClick={() => this.setDescription(summary.clamps)}></div>
-          <div className={this.renderClassName(summary.burnishingPad)} onClick={() => this.setDescription(summary.burnishingPad)}></div>
-          <div className={this.renderClassName(summary.dispenserInk)} onClick={() => this.setDescription(summary.dispenserInk)}></div>
-          <div className={this.renderClassName(summary.dispenserPaste)} onClick={() => this.setDescription(summary.dispenserPaste)}></div>
-          <div className={this.renderClassName(summary.cartridgePaste)} onClick={() => this.setDescription(summary.cartridgePaste)}></div>
-          <div className={this.renderClassName(summary.cartridgeInk)} onClick={() => this.setDescription(summary.cartridgeInk)}></div>
-          <div className={this.renderClassName(summary.nozzles)} onClick={() => this.setDescription(summary.nozzles)}></div>
-          <div className={this.renderClassName(summary.substrates)} onClick={() => this.setDescription(summary.substrates)}></div>
-          <div className={this.renderClassName(summary.solderWire)} onClick={() => this.setDescription(summary.solderWire)}></div>
-        </div>
-        <div className="description">
-          {this.renderDescription()}
+    return (
+      <div className="box-wrapper shadow-banner">
+        <div className="box">
+          <h1>What is in the box?</h1>
+          <p className="pull-center">The V-One comes with all the accessories and consumables you need to start building hardware faster.</p>
+          <div className="box-content">
+            <div className="in-the-box">
+              <div className={this.renderClassName(summary.vOne)} onClick={() => this.setDescription(summary.vOne)}></div>
+              <div className={this.renderClassName(summary.probe)} onClick={() => this.setDescription(summary.probe)}></div>
+              <div className={this.renderClassName(summary.clamps)} onClick={() => this.setDescription(summary.clamps)}></div>
+              <div className={this.renderClassName(summary.burnishingPad)} onClick={() => this.setDescription(summary.burnishingPad)}></div>
+              <div className={this.renderClassName(summary.dispenserInk)} onClick={() => this.setDescription(summary.dispenserInk)}></div>
+              <div className={this.renderClassName(summary.dispenserPaste)} onClick={() => this.setDescription(summary.dispenserPaste)}></div>
+              <div className={this.renderClassName(summary.cartridgePaste)} onClick={() => this.setDescription(summary.cartridgePaste)}></div>
+              <div className={this.renderClassName(summary.cartridgeInk)} onClick={() => this.setDescription(summary.cartridgeInk)}></div>
+              <div className={this.renderClassName(summary.nozzles)} onClick={() => this.setDescription(summary.nozzles)}></div>
+              <div className={this.renderClassName(summary.substrates)} onClick={() => this.setDescription(summary.substrates)}></div>
+              <div className={this.renderClassName(summary.solderWire)} onClick={() => this.setDescription(summary.solderWire)}></div>
+            </div>
+            <div className="description">
+              {this.renderDescription()}
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>);
-}
+    );
+  }
 }

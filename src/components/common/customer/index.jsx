@@ -8,7 +8,7 @@ const QuoteList = [
   "I want to take the opportunity to thank you guys for having such a great customer support service. Always fast, relevant and helpful answers!",
   "The desktop software was a suprise. Really good and easy to understand. Even for a novice.",
   "If you want to make PCBs on a regular basis, ditch the acid and grab one of these.",
-//  "The results we have been getting so far exceed our expectations."
+  //  "The results we have been getting so far exceed our expectations."
 ]
 
 var intervalId;
@@ -60,16 +60,18 @@ export default class CustomerQuotes extends React.Component {
   render() {
     const quoteClass = `quote ${this.state.quoteOpacity}`
 
-    return (<div className="customer-wrapper">
-    <div className="customer flex-row center-wide">
-      <div className="navigation" onClick={() => this.previousQuote()}>&lt;</div>
-      <div className="quote-wrapper">
-        <p className={quoteClass}>
-          &ldquo;{QuoteList[this.state.quoteIndex]}&rdquo;
-        </p>
+    return (
+      <div className="customer-wrapper shadow-banner">
+        <div className="customer flex-row center-wide">
+          <div className="navigation left" onClick={() => this.previousQuote()}>&lt;</div>
+          <div className="quote-wrapper">
+            <p className={quoteClass}>
+              &ldquo;{QuoteList[this.state.quoteIndex]}&rdquo;
+            </p>
+          </div>
+          <div className="navigation right" onClick={() => this.nextQuote()}>&gt;</div>
+        </div>
       </div>
-      <div className="navigation" onClick={() => this.nextQuote()}>&gt;</div>
-    </div>
-  </div>);
-}
+    );
+  }
 }

@@ -14,57 +14,32 @@ export const printGallery = [
   {
     fileName:"switch-controller.jpg",
     subtitle:"Through hole or surface mount",
-    description: "Keep designining like you are used to. You can mix surface mount and through hole technologies with no drawbacks.",
+    description: "Keep designing like you are used to. You can mix surface mount and through hole technologies with no drawbacks.",
     isVideo: false
   }
 ]
 
 export const pasteGallery = [
   {
-    fileName:"print-preview.jpg",
-    subtitle:"My Print Preview",
-    description: "this is my description 4",
+    fileName:"solder-paste-preview.jpg",
+    subtitle:"Preview before dispensing",
+    description: "Just pick your paste file from your Gerbers and load it into the software to see how the solder paste will be dispensed. ",
     isVideo: false
   },
   {
-    fileName:"flexible-electronics.jpg",
-    subtitle:"Create flexible electronics",
-    description: "Don't let design constraints dicate what you can and cannot do. You are the boss, let the electronics bend for you.",
+  fileName:"fast-reflow.jpg",
+  subtitle:"Reflowing in fast motion.",
+  description: "One of the coolest reflow videos we've seen with the V-One. You can see how the heat radiates from the center of the board outwards. Soldering everything in its path. Blink and you'll miss it! ",
+  videoId: "-yfQR5mc-Y8",
+  isVideo: true
+  },
+  {
+    fileName:"dynamic-paste-adjustment.jpg",
+    subtitle:"Tune your paste on the fly.",
+    description: "Too much or not enough paste can lead to soldering problems. Get your paste coverage just right by adjusting it in real time.",
     isVideo: false
-  },
-  {
-    fileName:"reflow-component.jpg",
-    subtitle:"Reflow right before your eyes.",
-    description: "The V-One is equipped with a 550W heated platform. In this close up we can see the individual solder balls melting into each other and the surface tension of the solder paste pulling the component into place.",
-    videoId: "y3RZLiPDljs",
-    isVideo: true
   }
 ]
-
-export const reflowGallery = [
-  {
-    fileName:"solder-paste-0603.jpg",
-    subtitle:"Dispense solder paste with ease.",
-    description: "Solder paste is being dispensed through a 200 micron nozzle onto 0603 pads. The amount of paste dispensed can be adjusted on the fly with a touch of a button.",
-    videoId: "s_cjg2BzySg",
-    isVideo: true
-  },
-  {
-    fileName:"solder-paste-bga.jpg",
-    subtitle:"Support down to 0.4 mm pitch",
-    description: "Paste dispensing works well even on fine pitch components, all the way down to 0.4 mm. It can even dispense on BGA pads!",
-    videoId: "lbZVRBrdXKU",
-    isVideo: true
-  },
-  {
-    fileName:"fast-reflow.jpg",
-    subtitle:"Reflowing in fast motion.",
-    description: "One of the coolest reflow videos we've seen. You can see how the heat radiates from the center of the board outwards. Soldering everything in its path. Blink and you'll miss it! ",
-    videoId: "-yfQR5mc-Y8",
-    isVideo: true
-  }
-]
-
 
 export const communityImages = [
   {

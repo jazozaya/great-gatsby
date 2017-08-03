@@ -2,8 +2,6 @@ import React from 'react'
 import './lightbox.scss'
 import Youtube from 'react-youtube'
 
-import Picture from 'components/common/picture'
-
 export default class Lightbox extends React.Component {
 
   constructor(props) {
@@ -20,7 +18,12 @@ export default class Lightbox extends React.Component {
   renderNormal() {
     const { fileName, subtitle } = this.props;
     const urlName = `/gallery/thumbnail/${fileName}`
-    return <Picture url={urlName} onClick={() => this.toggleLightbox()} subtitle={subtitle} />
+    return (
+      <div className="no-lightbox">
+        <img src={urlName} onClick={() => this.toggleLightbox()}/>
+        <p><i>{subtitle}</i></p>
+      </div>
+    );
   }
 
   renderVideo(videoId) {
