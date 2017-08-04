@@ -1,12 +1,15 @@
 import React from 'react'
-import MiniHero from 'components/common/minihero'
 import Link from 'gatsby-link'
+
+import FastFact from 'components/common/fastFact'
+import MiniHero from 'components/common/minihero'
+import Subheader from 'components/common/subheader'
+import DummyHeaderMini from 'components/common/dummyHeaderMini';
 
 import Explore from 'components/common/explore'
 import Gallery from 'components/gallery'
 import { printGallery } from 'components/gallery/constants'
 
-import FastFact from './fastFact'
 import BuyNow from './buyNow'
 import Workflow from './workflow'
 
@@ -17,6 +20,8 @@ export default class Software extends React.Component {
   render() {
     return (
       <div className="feature">
+        <DummyHeaderMini />
+        <Subheader selected="print" />
         <MiniHero
           title="Printing circuit boards is easy."
           description="The Voltera V-One uses an additive approach to create circuit boards. Ink is dispensed precisely where it is needed without any waste."
@@ -76,8 +81,7 @@ export default class Software extends React.Component {
           description="The V-One is a versatile tool that will help you in any stage of development"
           gallery= {printGallery}
           />
-        <Explore activePage="print"/>
-          <BuyNow />
+        <BuyNow />
       </div>);
     }
   }

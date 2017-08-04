@@ -3,17 +3,21 @@ import React from 'react'
 import Button from 'components/common/button'
 import Explore from 'components/common/explore';
 import CallToAction from 'components/common/cta';
+import Subheader from 'components/common/subheader'
+import DummyHeaderMini from 'components/common/dummyHeaderMini';
 
 import Box from './box'
 import Specs from './specs';
 
-import './product.scss';
+import './technology.scss';
 
 export default class MyProduct extends React.Component {
 
   render() {
     return (
       <div>
+        <DummyHeaderMini />
+        <Subheader selected="experiment" />
         <div className="banner-wrapper">
           <div className="banner">
               <div className="description">
@@ -34,7 +38,6 @@ export default class MyProduct extends React.Component {
         </div>
         <Box />
         <Specs />
-        <Explore activePage="technology"/>
         <CallToAction
           title="Want to schedule a call?"
           subtitle="Let's find a time to talk!"

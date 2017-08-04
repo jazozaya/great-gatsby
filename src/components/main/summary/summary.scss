@@ -1,0 +1,15 @@
+@import 'src/css/colors';
+
+.summary-wrapper {
+  background-color: $medium-grey;
+}
+.summary h2 {
+  line-height: 2em;
+  color: $white;
+}
+
+@media (max-width: $mobile-threshold) {
+  .summary h2 {
+    font-size: 1.3em;
+  }
+}

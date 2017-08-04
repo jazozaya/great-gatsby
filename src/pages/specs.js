@@ -1,6 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import Specs from 'components/product/specs'
+import Specs from 'components/technology/specs'
 import CallToAction from 'components/common/cta';
 
 export default class Spec extends React.Component {

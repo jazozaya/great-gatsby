@@ -1,15 +1,13 @@
 import React from 'react'
 import './workflow.scss'
 
-import resistorIcon from './resistor.min.svg'
+import cadIcon from './cad.min.svg'
 import machineIcon from './machine.min.svg'
 import solderIcon from './iron.min.svg'
 import factoryIcon from './factory.min.svg'
 import solderedIcon from './soldered.min.svg'
 
 import arrowRight from './arrow-right.min.svg'
-import arrowDown from './arrow-down.min.svg'
-
 
 class Step extends React.Component {
 
@@ -27,38 +25,19 @@ class Step extends React.Component {
 
 export default class Workflow extends React.Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      windowWidth: 1920,
-    };
-  }
-
-  componentDidMount() {
-    this.setState({ windowWidth: window.innerWidth });
-  }
-
-  renderArrow() {
-    if (this.state.windowWidth < 600) {
-      return <img className="icon-arrow" src={arrowDown}></img>
-    }
-    return <img className="icon-arrow" src={arrowRight}></img>
-
-  }
-
   renderPrintWorkflow() {
     return(
-      <div className="workflow">
+      <div className="flex-row center-wide workflow">
         <Step
-          icon={resistorIcon}
+          icon={cadIcon}
           description="Design your circuit with the software you already use."
           />
-        {this.renderArrow()}
+        <img className="icon-arrow" src={arrowRight}></img>
         <Step
           icon={machineIcon}
           description="Load your gerbers in our software and print your circuit"
           />
-        {this.renderArrow()}
+        <img className="icon-arrow" src={arrowRight}></img>
         <Step
           icon={solderIcon}
           description="Mount your components on and reflow, or hand solder away!"
@@ -69,17 +48,17 @@ export default class Workflow extends React.Component {
 
   renderSolderWorkflow() {
     return(
-      <div className="workflow">
+      <div className="flex-row center-wide workflow">
         <Step
           icon={factoryIcon}
           description="Order your boards from a factory or print them on the V-One."
           />
-        {this.renderArrow()}
+        <img className="icon-arrow" src={arrowRight}></img>
         <Step
           icon={machineIcon}
           description="Pop your board on and dispense solder paste in minutes."
           />
-        {this.renderArrow()}
+        <img className="icon-arrow" src={arrowRight}></img>
         <Step
           icon={solderedIcon}
           description="Place your components on and watch them reflow!"
@@ -92,7 +71,7 @@ export default class Workflow extends React.Component {
     const { workflowType } = this.props;
     return (
 
-      <div className="workflow-wrapper">
+      <div className="shadow-banner workflow-wrapper ">
         {workflowType === "print" ? this.renderPrintWorkflow() : this.renderSolderWorkflow() }
       </div>
     );

@@ -11,6 +11,7 @@ import Hero from './hero'
 import Testimonial from './testimonial'
 import FeatureSelector from './featureSelector'
 import BenefitsSelector from './benefitsSelector'
+import Summary from './Summary'
 
 import "css/main.scss"
 
@@ -19,12 +20,13 @@ export default class Index extends React.Component {
     return (
       <div>
         <Hero />
-        <Awards />
-        <CustomerQuotes />
+        <Summary />
         <FeatureSelector/>
         <Testimonial />
         <BenefitsSelector />
         <p> TODO: helmet nonesense, SEO links (pre-rendering)</p>
+        <CustomerQuotes />
+        <Awards />
         <CallToAction
           title="Want to schedule a call?"
           subtitle="Let's find a time to talk!"

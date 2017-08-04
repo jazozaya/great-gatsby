@@ -5,16 +5,6 @@ background-color: $white;
 padding: $medium-padding $small-padding;
 }
 
-.awards {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  margin: auto;
-  max-width: $narrow-width;
-
-}
-
 .awards img {
   transition: all $t-time ease-in-out 0s;
   margin-left: 10px;
@@ -42,7 +32,6 @@ padding: $medium-padding $small-padding;
 
 @media (max-width: $mobile-threshold) {
   .awards {
-    justify-content: space-around;
 
     h3 {
       font-size: 0.7em;

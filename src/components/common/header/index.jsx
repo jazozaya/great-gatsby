@@ -38,7 +38,7 @@ export default class Header extends React.Component {
     return (
       <div className="header-wrapper-hamburger">
         <LinksHamburger />
-        <Logo />
+        <Logo emblem="true" />
       </div>
     );
   }

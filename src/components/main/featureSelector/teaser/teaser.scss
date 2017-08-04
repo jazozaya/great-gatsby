@@ -1,9 +1,5 @@
 @import 'src/css/colors';
 
-.teaser {
-  padding: $medium-padding 0px;
-}
-
 .teaser .description {
   flex-basis: 500px;
   flex-grow: 0;
@@ -13,4 +9,10 @@
 .teaser .button-wrap {
   margin-top: 50px;
   text-align: center;
+}
+
+@media (max-width: $mobile-threshold) {
+  .teaser.paste-reverse {
+    flex-wrap: wrap-reverse;
+  }
 }

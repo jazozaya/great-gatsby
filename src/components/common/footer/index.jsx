@@ -7,10 +7,28 @@ import Link from 'gatsby-link'
 
 export default class Footer extends React.Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      windowWidth: 1920
+    };
+  }
+
+  componentDidMount() {
+    this.setState( {windowWidth: window.innerWidth });
+  }
+
+  renderLogo() {
+    if (this.state.windowWidth > 600) {
+      return <Logo />
+    }
+  }
+
+
   render() {
     return (<div className="footer-wrapper">
       <div className="footer flex-row">
-        <Logo />
+        {this.renderLogo()}
         <div className="column">
           <p>Company</p>
           <ul>

@@ -12,6 +12,7 @@ export default class Feature extends React.Component {
           <YouTube
             videoId="PeW1nURJ5ww"
             url="/selector/print-conductive-silver-ink.jpg"
+            width="600"
           />
           <div className="description">
             <h2>Print your own circuit boards.</h2>

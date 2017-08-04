@@ -11,6 +11,7 @@ export default class Feature extends React.Component {
         <YouTube
           videoId="3oCkXdwWpUY"
           url="/selector/voltera-software.jpg"
+          width="600"
         />
         <div className="description">
           <h2>Software you will love.</h2>

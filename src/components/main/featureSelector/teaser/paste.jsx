@@ -7,11 +7,7 @@ export default class Feature extends React.Component {
 
   render() {
     return (
-      <div className="teaser flex-row">
-        <YouTube
-          videoId="NdJQ5Xl4jkw"
-          url="/selector/dispense-solder-paste.jpg"
-        />
+      <div className="teaser flex-row paste-reverse">
         <div className="description">
           <h2>Skip the soldering iron.</h2>
           <p>Focus on designing, not soldering. Regardless if they came from <strong>from a factory, or from your desk</strong> -  just mount your board on the V-One and off you go.</p>
@@ -20,6 +16,11 @@ export default class Feature extends React.Component {
             <Button label="Learn More" internal url="/features/paste/" color="dark"/>
           </div>
         </div>
+        <YouTube
+          videoId="NdJQ5Xl4jkw"
+          url="/selector/dispense-solder-paste.jpg"
+          width="600"
+        />
       </div>);
     }
   }

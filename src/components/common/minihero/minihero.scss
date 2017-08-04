@@ -2,7 +2,7 @@
 
 
 .mini-hero-wrapper {
-  background-color: $dark-grey;
+  background-color: $medium-grey;
   min-height: 400px;
   padding: 0px $small-padding;
 
@@ -11,7 +11,12 @@
 
   h1 {
     color: $white;
+    font-size: 2.5em;
   }
+  p {
+    font-size: 1.1em;
+  }
+
 }
 
 .mini-hero {
@@ -19,6 +24,8 @@
   max-width: $narrow-width;
   color: $white;
   text-align: center;
+
+
 }
 
 .mini-hero .fast-fact-wrapper{

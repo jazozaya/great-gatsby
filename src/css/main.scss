@@ -38,6 +38,9 @@ a {
     text-decoration: none;
     transition: all $t-time ease-in-out 0s;
 }
+a:hover {
+  text-decoration: underline;
+}
 
 img {
   border-radius: 5px;
@@ -56,6 +59,10 @@ img {
 
 .dummy-header {
   height: $header-height;
+}
+
+.dummy-header-mini {
+  height: 38px;
 }
 
 section {
@@ -96,4 +103,5 @@ section {
   box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
   z-index: 1;
   position: relative;
+  background-color: $light-grey;
 }

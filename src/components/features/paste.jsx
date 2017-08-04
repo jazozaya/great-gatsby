@@ -1,12 +1,15 @@
 import React from 'react'
-import MiniHero from 'components/common/minihero'
 
-import FastFact from './fastFact';
+import MiniHero from 'components/common/minihero'
+import FastFact from 'components/common/fastFact'
+import Subheader from 'components/common/subheader'
+import DummyHeaderMini from 'components/common/dummyHeaderMini';
+import Explore from 'components/common/explore'
+
 import Workflow from './workflow';
 import BuyNow from './buyNow'
 
 import Gallery from 'components/gallery'
-import Explore from 'components/common/explore'
 import { pasteGallery } from 'components/gallery/constants'
 
 import YouTube from 'components/common/youtube'
@@ -18,6 +21,8 @@ export default class Software extends React.Component {
   render() {
     return (
       <div className="feature">
+        <DummyHeaderMini />
+        <Subheader selected="paste" />
         <MiniHero
           title="Assemble your boards in half the time."
           description="Ditch the stencil and the soldering iron. Just mount your boards on the V-One and dispense paste in minutes."
@@ -76,7 +81,7 @@ export default class Software extends React.Component {
           <div className="column">
             <img src="/features/status-led-lights.jpg" />
             <div className="description">
-              <h2>Status indicators</h2>
+              <h2>Status indicators.</h2>
               <p>The unit is equipped with LED indicators that let you know the status of the machine from accross the room.</p>
               <p>The V-One will glow red when it is reflowing and a cool blue when the cycle has finished and it is safe to touch.</p>
             </div>
@@ -86,7 +91,6 @@ export default class Software extends React.Component {
           title="V-One in action"
           description="The machine is a robust tool"
           gallery= {pasteGallery} />
-        <Explore activePage="paste"/>
         <BuyNow />
       </div>);
     }

@@ -1,14 +1,13 @@
 @import 'src/css/colors';
 
 .testimonial-wrapper {
-  background-color: $voltera-blue;
+  background-color: $medium-grey;
   padding: $medium-padding $small-padding;
   color: $white;
 }
 
 .testimonial {
   max-width: $narrow-width;
-
   margin: auto;
   align-items: center;
   display: flex;
@@ -44,5 +43,11 @@
   .testimonial {
     flex-wrap: wrap-reverse;
     justify-content: center;
+  }
+  .testimonial img {
+    margin: 0px;
+  }
+  .testimonial .quote {
+    text-align: center;
   }
 }

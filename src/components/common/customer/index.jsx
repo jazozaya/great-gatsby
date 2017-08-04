@@ -1,5 +1,7 @@
 import React from 'react'
 
+import Dots from './dots'
+
 import './customer.scss'
 
 const QuoteList = [
@@ -62,6 +64,7 @@ export default class CustomerQuotes extends React.Component {
 
     return (
       <div className="customer-wrapper shadow-banner">
+        <h2>What do our customers say?</h2>
         <div className="customer flex-row center-wide">
           <div className="navigation left" onClick={() => this.previousQuote()}>&lt;</div>
           <div className="quote-wrapper">
@@ -71,6 +74,10 @@ export default class CustomerQuotes extends React.Component {
           </div>
           <div className="navigation right" onClick={() => this.nextQuote()}>&gt;</div>
         </div>
+        <Dots
+          selected={this.state.quoteIndex.toString()}
+          total={QuoteList.length.toString()}
+          />
       </div>
     );
   }

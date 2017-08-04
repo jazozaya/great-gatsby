@@ -1,19 +1,7 @@
 @import 'src/css/colors';
 
 .workflow-wrapper {
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
-  z-index: 1;
-  position: relative;
   padding: $medium-padding $small-padding;
-}
-
-.workflow {
-  max-width: $max-width;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
 }
 
 .workflow .step {
@@ -26,8 +14,8 @@
   height: 80px;
 }
 .workflow .icon-arrow {
-  width: 60px;
   height: 30px;
+  width: 30px;
 }
 
 @media (max-width: $mobile-threshold) {
@@ -35,8 +23,8 @@
     flex-direction: column;
   }
   .workflow .icon-arrow {
-    height: 60px;
-    width: 30px;
+    //width: 40px;
     padding: $medium-padding 0px;
+    transform: rotate(90deg);
   }
 }

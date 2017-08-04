@@ -1,13 +1,13 @@
 // Colors in fonts and backgrounds.
 $voltera-blue: #333E48; // For light backgrounds.
 $voltera-green: #79ce00;
-$white: #FFF; // For dark backgrounds
-$soft-grey: #8A9093; // Used in footer
-$dark-grey: rgb(23, 23, 23); //Used in product/feature pages.
+$white: #FFF;
 
-
-// Background colors
-$grey-background: rgb(240,240,240);
+// Background colors (Some colors were taken from http://colorpalettes.net/color-palette-116/)
+$light-grey: rgb(245,245,245); // Almost white, used for shadows.
+$black: #0f0f0f; // Almost black, used in header / footer
+$medium-grey: rgb(40, 40, 40);//#373737; // dark grey used in mini-hero andsome banners.
+$soft-grey: #848388; // Used in footer
 
 // General Dimensions
 $form-width: 550px;

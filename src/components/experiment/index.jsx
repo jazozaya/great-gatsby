@@ -6,7 +6,13 @@ import Helmet from 'react-helmet'
 import CallToAction from 'components/common/cta';
 import Awards from 'components/common/awards'
 import CustomerQuotes from 'components/common/customer'
-import Hero from './heroExperiment'
+import Subheader from 'components/common/subheader'
+import DummyHeaderMini from 'components/common/dummyHeaderMini';
+
+//import Hero from './heroExperiment'
+
+import MiniHero from 'components/common/minihero'
+import FastFact from 'components/common/fastFact'
 
 import './experiment.scss'
 
@@ -14,8 +20,44 @@ export default class Index extends React.Component {
   render() {
     return (
       <div className="experiment">
-        <Hero />
+        <DummyHeaderMini />
+        <Subheader selected="experiment" />
+        <MiniHero
+          title="Leap into the future."
+          description="Experiment with new materials using the Voltera V-One platform. Print with your own inks onto the substrates you want."
+          >
+          <FastFact
+            title="Standard"
+            label="Cartridges"
+            />
+          <FastFact
+            title="Flexibility"
+            label="Built-in"
+            />
+          <FastFact
+            title="240°C"
+            label="Max Temp."
+            />
+        </MiniHero>
         <Awards />
+          <section className="flex-row">
+            <div className="description">
+              <h2>Use your own inks.</h2>
+              <p>The Voltera V-One uses standard 5cc syringes. This means cartridges can be filled with any material you want to dispense with. We even offer UV blocking cartridges for sensitive inks!</p>
+              <p>Our robust dispensing system can handle most high viscosity fluids right out of the box. Contact us today to find how we can help you!</p>
+            </div>
+            <img src="/voltera-probe.png"/>
+          </section>
+
+          <section className="flex-row">
+            <img src="/voltera-probe.png"/>
+            <div className="description">
+              <h2>Use your own inks.</h2>
+              <p>The Voltera V-One uses standard 5cc syringes. This means cartridges can be filled with any material you want to dispense with. We even offer UV blocking cartridges for sensitive inks!</p>
+              <p>Our robust dispensing system can handle most high viscosity fluids right out of the box. Contact us today to find how we can help you!</p>
+            </div>
+          </section>
+
         <section className="flex-row">
           <div className="description">
             <h2>Customize your setup.</h2>
@@ -39,14 +81,12 @@ export default class Index extends React.Component {
         <CustomerQuotes />
         <section className="flex-row">
           <div className="description">
-            <h2>A truly flexible platform.</h2>
-            <p>Our standard substrate is FR4, but that doesn't mean you cannot print on other ridgid materials like glass, ceramics, or even on flexible films like Kapton or PET.  </p>
-            <p>We are constantly experimenting with new inks and materials and aim to expand our ink offering in the future.</p>
-            <p>Scientists all over the world are using the Voltera V-One to help them research faster. Send us an email to talk to our application experts!</p>
+            <h2>A flexible platform.</h2>
+            <p>Our standard substrate is FR4, but that doesn't mean you cannot print on other ridgid materials like glass, ceramics, or even on flexible films like Kapton or PET.</p>
+            <p>Scientists all over the world are using the Voltera V-One to help them experiment faster.</p>
           </div>
           <img src="/experiment/flexible-electronics.jpg"/>
         </section>
-
         <CallToAction
           title="Want to schedule a call?"
           subtitle="Let's find a time to talk!"

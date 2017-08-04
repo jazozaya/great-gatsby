@@ -1,7 +1,7 @@
 @import 'src/css/colors';
 
 .header {
-  background-color: $voltera-blue;
+  background-color: $black;
   height: $header-height;
   padding: 0px $small-padding;
   position: fixed;
@@ -60,7 +60,15 @@
 
 .header .link-panel-wrapper {
   position: fixed;
-  background-color: $voltera-blue;
+  top: $header-height;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+
+.header .link-panel {
+  position: fixed;
+  background-color: $black;
   top: $header-height;
   left: 0px;
   right: 0px;
@@ -69,6 +77,7 @@
 .header ul {
     padding-left: $small-padding;
     font-size: 1.3em;
+    list-style-type: none;
 }
 
 .header li {

@@ -1,13 +1,18 @@
 import React from 'react'
 
-import FastFact from './fastFact'
 import BuyNow from './buyNow'
 import YouTube from 'components/common/youtube'
 
+import FastFact from 'components/common/fastFact'
 import MiniHero from 'components/common/minihero'
 import Explore from 'components/common/explore'
+import Subheader from 'components/common/subheader'
+import DummyHeaderMini from 'components/common/dummyHeaderMini';
+import Dots from 'components/common/customer/dots'
+
 import Gallery from 'components/gallery'
 import { printGallery } from 'components/gallery/constants'
+
 
 import './common.scss'
 
@@ -74,9 +79,11 @@ export default class Software extends React.Component {
     const captionClass =`screenshot-caption ${this.state.screenshot}`;
     return (
       <div className="feature">
+        <DummyHeaderMini />
+        <Subheader selected="software" />
         <MiniHero
           title="Master the software in an afternoon."
-          description="Ditch the instruction manual, our desktop application has been designed for the first time user and will get you printing in minutes."
+          description="Skip the instruction manual, our desktop application has been designed for the first time user and will get you printing in minutes."
           >
           <FastFact
             title="Free"
@@ -101,6 +108,10 @@ export default class Software extends React.Component {
             <img className={screenshotClass} src={SoftwareImages[this.state.imgIndex].src} />
             <div className="navigation right" onClick={() => this.nextImage()}>&gt;</div>
           </div>
+          <Dots
+            selected={this.state.imgIndex.toString()}
+            total={SoftwareImages.length.toString()}
+            />
         </section>
           <section className="flex-row column-wrapper">
             <div className="column">
@@ -138,7 +149,6 @@ export default class Software extends React.Component {
               />
           </div>
         </section>
-        <Explore activePage="software"/>
         <BuyNow />
       </div>);
     }

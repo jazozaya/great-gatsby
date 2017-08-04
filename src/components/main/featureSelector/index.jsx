@@ -63,20 +63,37 @@ export default class FeatureSelector extends React.Component {
   }
 
   render() {
-
-    if (this.state.windowWidth < 600) {
-      return this.renderMobile();
-    }
-
-    const visible = this.state.visible ? "visible": "";
-
     return (
-      <section>
-        <div className= {`feature-select ${visible}`}>
-          {this.renderFeature()}
-        </div>
-        <Selector selected={this.state.featureName} handler={this.handler}/>
-      </section>
+      <div>
+        <section id="print">
+          <Print />
+        </section>
+        <section id="paste">
+          <Paste />
+        </section>
+        <section id="software">
+          <Software />
+        </section>
+
+      </div>
     );
   }
+
+  // render() {
+  //
+  //   if (this.state.windowWidth < 600) {
+  //     return this.renderMobile();
+  //   }
+  //
+  //   const visible = this.state.visible ? "visible": "";
+  //
+  //   return (
+  //     <section>
+  //       <div className= {`feature-select ${visible}`}>
+  //         {this.renderFeature()}
+  //       </div>
+  //       <Selector selected={this.state.featureName} handler={this.handler}/>
+  //     </section>
+  //   );
+  // }
 }

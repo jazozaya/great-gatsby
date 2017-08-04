@@ -1,7 +1,7 @@
 @import 'src/css/colors';
 
 .footer-wrapper {
-  background-color: $voltera-blue;
+  background-color: $black;
   width: 100%;
   padding: $medium-padding $small-padding;
   box-sizing: border-box;
@@ -42,6 +42,7 @@
 
 .footer-wrapper a:hover{
   color: $voltera-green;
+  text-decoration: none;
 }
 
 .footer-links {
@@ -66,7 +67,7 @@
     justify-content: center;
 
     .column {
-      padding-top: $medium-padding;
+      padding-top: $small-padding;
     }
   }
 }
