@@ -1,10 +1,10 @@
 @import 'src/css/colors';
 
-.specs {
+.specs-wrapper {
 background-color: $white;
 }
 
-.specs-wrapper {
+.specs {
   margin: auto;
   max-width: $narrow-width;
   padding: $medium-padding $small-padding;
@@ -16,13 +16,12 @@ background-color: $white;
 
 .specs .row {
   display: flex;
-  justify-content: space-between;;
-  padding-left: 10px;
-  padding-right: 10px;
+  justify-content: space-between;
+  padding: 0px 10px;
   text-align: left;
 }
 
-.specs .row.light {
+.specs .row.dark {
   background-color: darken($light-grey, 10);
 }
 
@@ -43,4 +42,15 @@ background-color: $white;
   text-transform: capitalize;
   font-size: 0.9em;
   flex-basis: 280px;
+}
+
+
+@media (max-width: $mobile-threshold) {
+  .specs .table p {
+    font-size: 0.7em;
+    flex-basis: 120px;
+  }
+  .specs .row {
+    padding: 0px 5px;
+  }
 }
