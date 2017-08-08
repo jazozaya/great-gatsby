@@ -8,6 +8,7 @@ import Awards from 'components/common/awards'
 import CustomerQuotes from 'components/common/customer'
 import Subheader from 'components/common/subheader'
 import DummyHeaderMini from 'components/common/dummyHeaderMini';
+import ExperimentFAQ from 'components/faq/experiment';
 
 //import Hero from './heroExperiment'
 
@@ -23,8 +24,8 @@ export default class Index extends React.Component {
         <DummyHeaderMini />
         <Subheader selected="experiment" />
         <MiniHero
-          title="Leap into the future."
-          description="Experiment with new materials using the Voltera V-One platform. Print with your own inks onto the substrates you want."
+          title="Print anything on everything."
+          description="Experiment with new fluids using the Voltera V-One platform. Print with your own materials onto the substrates you want."
           >
           <FastFact
             title="Standard"
@@ -87,6 +88,7 @@ export default class Index extends React.Component {
           </div>
           <img src="/experiment/flexible-electronics.jpg"/>
         </section>
+        <ExperimentFAQ title="F.A.Q." all />
         <CallToAction
           title="Want to schedule a call?"
           subtitle="Let's find a time to talk!"

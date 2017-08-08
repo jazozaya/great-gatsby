@@ -10,6 +10,8 @@ import Explore from 'components/common/explore'
 import Gallery from 'components/gallery'
 import { printGallery } from 'components/gallery/constants'
 
+import PrintFAQ from 'components/faq/print'
+
 import BuyNow from './buyNow'
 import Workflow from './workflow'
 
@@ -76,6 +78,7 @@ export default class Software extends React.Component {
             </div>
           </section>
         </div>
+        <PrintFAQ title="F.A.Q." all />
         <Gallery
           title="A platform for all of your needs."
           description="The V-One is a versatile tool that will help you in any stage of development"

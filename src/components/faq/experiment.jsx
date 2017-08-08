@@ -3,28 +3,32 @@ import React from 'react'
 import Collapse from 'rc-collapse'
 var Panel = Collapse.Panel;
 
-export default class Experiment extends React.Component {
+import Template from './template'
+
+export default class ExperimentFAQ extends React.Component {
 
   render() {
+    const { title, all } = this.props;
     return (
-      <div>
-        <h2>Experimenting with the V-One</h2>
+      <Template title={title} all={all}>
         <Collapse>
-          <Panel header="What inks can you print with?  Can you print with mine?">
-            <p>
-              The V-One is a very robust systems and is capable of handling a wide variety of high viscosity fluids. Most fluids can be dispensed right out of the box with little to no modifications.
-            </p>
-            <p>
-              If you are interested in dispensing your own fluids please contact us at support@voltera.io. We offer empty cartridges on our store for precisely this reason.  Furthermore, if your inks are UV sensitive, we also have UV blocking cartridges.
-            </p>
+          <Panel header="Can I print with my own inks?">
+            <p>The V-One is a very robust systems and is capable of handling a wide variety of high viscosity fluids. Most fluids can be dispensed right out of the box with little to no modifications.</p>
+            <p>If you are interested in dispensing your own fluids please contact us at <strong>support@voltera.io</strong>. We offer empty cartridges on our store for precisely this reason.  Furthermore, if your inks are UV sensitive, we also have UV blocking cartridges.</p>
           </Panel>
-          <Panel header="What substrates can you print on?  Can you print on mine?">
-            <p>Our ink requires a curing process of 200C, and in general if the substrate is able to withstand that temperature you are likely able to print on it.
-            </p>
-            <p>For rigid substrates we have printed on FR4, glass and ceramics. We have also printed on flex substrates in the past, specifically polyimide (kapton) films. We have made circuits successfully, however the ink will fracture if bent too aggressively, and the resistance will increase over repeated flexing. We are currently looking into inks made specifically for flexible applications.
-            </p>
+          <Panel header="What substrates can I print on?">
+            <p>Our ink requires a curing process of 200C for 30 minutes. In general, if the substrate is able to withstand that temperature then you're likely able to print on it.</p>
+            <p>For rigid substrates we have printed on FR4, glass and ceramics. We have also printed on flex substrates in the past, specifically polyimide (kapton) films.</p>
+          </Panel>
+          <Panel header="Do you have inks for flexible electronics?">
+            <p>Yes! We currently offer one ink specifically for flexible applications in our <a target="_blank" href="https://store.voltera.io/products/flexible-and-stretchable-conductive-ink-cartridge">store</a>. Our R&D team is always exploring new inks, we hope to offer more in the future.</p>
+            <p>Our standard ink is not made for flexible appliactions and will fracture if bent too aggressively, so we don't recommend it for applications that wil undergo repeated flexing.</p>
+          </Panel>
+          <Panel header="Can I get an empty cartridge?">
+            <p>Yes! If you want to fill your own cartridge we have a pack of empty cartridges in our store that come with all the accessories you need to fill them properly.</p>
           </Panel>
         </Collapse>
-      </div>);
-    }
+      </Template>
+    );
   }
+}

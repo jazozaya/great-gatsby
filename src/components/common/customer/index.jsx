@@ -64,7 +64,7 @@ export default class CustomerQuotes extends React.Component {
 
     return (
       <div className="customer-wrapper shadow-banner">
-        <h2>What do our customers say?</h2>
+        <h2>What do our users say?</h2>
         <div className="customer flex-row center-wide">
           <div className="navigation left" onClick={() => this.previousQuote()}>&lt;</div>
           <div className="quote-wrapper">

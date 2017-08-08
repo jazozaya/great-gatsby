@@ -13,6 +13,8 @@ import Dots from 'components/common/customer/dots'
 import Gallery from 'components/gallery'
 import { printGallery } from 'components/gallery/constants'
 
+import SoftwareFAQ from 'components/faq/software'
+
 
 import './common.scss'
 
@@ -82,7 +84,7 @@ export default class Software extends React.Component {
         <DummyHeaderMini />
         <Subheader selected="software" />
         <MiniHero
-          title="Master the software in an afternoon."
+          title="Master the software during your coffee break."
           description="Skip the instruction manual, our desktop application has been designed for the first time user and will get you printing in minutes."
           >
           <FastFact
@@ -113,24 +115,25 @@ export default class Software extends React.Component {
             total={SoftwareImages.length.toString()}
             />
         </section>
-          <section className="flex-row column-wrapper">
-            <div className="column">
-              <img src="/software/software-locate-pad.jpg" />
-              <div className="description">
-                <h2>Smart Alignment.</h2>
-                <p>We've developed a unique approach to alignment. Just teach the software the location of 2 key features in your board and it takes care the rest.</p>
-                <p>This alignment method allows you to create two layer boards with ease, or dispense paste on boards that already have components.</p>
-              </div>
+        <section className="flex-row column-wrapper">
+          <div className="column">
+            <img src="/software/software-locate-pad.jpg" />
+            <div className="description">
+              <h2>Smart Alignment.</h2>
+              <p>We've developed a unique approach to alignment. Just teach the software the location of 2 key features in your board and it takes care the rest.</p>
+              <p>This alignment method allows you to create two layer boards with ease, or dispense paste on boards that already have components.</p>
             </div>
-            <div className="column">
-              <img src="/software/software-probing.jpg" />
-              <div className="description">
-                <h2>Automatic Height Compensation.</h2>
-                <p>Before you dispense, the software will measure the height of an array of points on the board.</p>
-                <p>The software uses the height map to compensate for any inconsistencies and irregularities on the surface and makes micro adjustments in real time to ensure a perfect print.</p>
-              </div>
+          </div>
+          <div className="column">
+            <img src="/software/software-probing.jpg" />
+            <div className="description">
+              <h2>Automatic Height Compensation.</h2>
+              <p>Before you dispense, the software will measure the height of an array of points on the board.</p>
+              <p>The software uses the height map to compensate for any inconsistencies and irregularities on the surface and makes micro adjustments in real time to ensure a perfect print.</p>
             </div>
-          </section>
+          </div>
+        </section>
+        <SoftwareFAQ title="F.A.Q." all />
         <section>
           <h1>Learn by watching.</h1>
           <p className="pull-center">Whether you use the V-One once a day or once a month, you will be able to pick up right where you left off. These short video clips are built right into the app and will make the tricky parts easy.</p>

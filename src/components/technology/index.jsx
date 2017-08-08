@@ -6,6 +6,10 @@ import CallToAction from 'components/common/cta';
 import Subheader from 'components/common/subheader'
 import DummyHeaderMini from 'components/common/dummyHeaderMini';
 
+import MiniHero from 'components/common/minihero'
+import FastFact from 'components/common/fastFact'
+import TechnologyFAQ from 'components/faq/technology'
+
 import Box from './box'
 import Specs from './specs';
 
@@ -17,17 +21,24 @@ export default class MyProduct extends React.Component {
     return (
       <div>
         <DummyHeaderMini />
-        <Subheader selected="experiment" />
-        <div className="banner-wrapper">
-          <div className="banner">
-              <div className="description">
-                <h1>Meet the<br /> Voltera V-One</h1>
-              </div>
-              <div className="subtitle">
-                <p>You favorite prototyping tool.</p>
-              </div>
-          </div>
-        </div>
+        <Subheader selected="technology" />
+        <MiniHero
+          title="Leap into the future."
+          description="Experiment with new materials using the Voltera V-One platform. Print with your own inks onto the substrates you want."
+          >
+          <FastFact
+            title="0 Day"
+            label="Lead time"
+            />
+          <FastFact
+            title="&#x221e;"
+            label="Iterations"
+            />
+          <FastFact
+            title="~5 USD"
+            label="Board cost."
+            />
+        </MiniHero>
         <div className="software">
           <div className="description">
             <h2 className="pull-left">Software you want to use.</h2>
@@ -37,6 +48,7 @@ export default class MyProduct extends React.Component {
           <img className="software-image" src="/voltera-software.png" />
         </div>
         <Box />
+        <TechnologyFAQ title="F.A.Q." all />
         <Specs />
         <CallToAction
           title="Want to schedule a call?"

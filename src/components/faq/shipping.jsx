@@ -3,14 +3,16 @@ import React from 'react'
 import Collapse from 'rc-collapse'
 var Panel = Collapse.Panel;
 
+import Template from './template'
+
 export default class Shipping extends React.Component {
 
   render() {
+    const { title, all } = this.props;
     return (
-      <div>
-        <h2>Shipping to my country</h2>
+      <Template title={title} all={all}>
         <Collapse>
-          <Panel header="Do you ship to my country?  How much does it cost?">
+          <Panel header="What is the cost to ship to my country?">
             <p>It costs <strong>20 USD</strong> per printer to ship to Canada.</p>
             <p>It costs <strong>35 USD</strong> per printer to ship to the USA.</p>
             <p>It costs <strong>150 USD</strong> per printer to ship to:</p>
@@ -23,17 +25,16 @@ export default class Shipping extends React.Component {
             </ul>
             <p>If your country is not listed above, we unfortunately do not ship there.</p>
           </Panel>
-          <Panel header="Who is Voltera's shipping carrier?">
-            We use FedEx to ship within Canada and USA.  We use DHL for everywhere else.  We have worked closely with our fantastic shipping partners to get the best rates for your orders.
-          </Panel>
-
           <Panel header="Can I use my own shipping account?">
-            Yes. Contact <strong>sales@voltera.io</strong> before you place your order.
+            <p>We use FedEx to ship within Canada and DHL for everywhere else.  We have worked closely with our fantastic shipping partners to get the best rates for your orders.</p>
+            <p>If you want to ship with your account or if you have special shipping requirements, please contact <strong>sales@voltera.io</strong> before you place your order.</p>
           </Panel>
-          <Panel header="Does my order contain duties and taxes?  VAT?">
-            No. Since these rates change country by country (and often by region!) all applicable duties and taxes are payable upon receipt of the product.
+          <Panel header="Does my order contain duties and taxes?">
+            <p>No. Since these rates are unique to each country, all applicable duties and taxes are payable upon receipt of the product.</p>
+            <p>Normally when the shipment reaches your country, DHL will contact you to arrange the payment of duties and taxes to clear customs.</p>
           </Panel>
         </Collapse>
-      </div>);
+      </Template>
+    );
     }
   }

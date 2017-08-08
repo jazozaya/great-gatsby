@@ -11,7 +11,6 @@ export default class Faq extends React.Component {
   render() {
     return (
       <div>
-        <h1>THIS PAGE NEEDS TO HAVE PROPER LINKS</h1>
         <FAQ />
         <CallToAction
             title="Can't find what you are looking for?"

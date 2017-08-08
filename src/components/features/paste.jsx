@@ -5,6 +5,7 @@ import FastFact from 'components/common/fastFact'
 import Subheader from 'components/common/subheader'
 import DummyHeaderMini from 'components/common/dummyHeaderMini';
 import Explore from 'components/common/explore'
+import PasteFAQ from 'components/faq/paste'
 
 import Workflow from './workflow';
 import BuyNow from './buyNow'
@@ -87,9 +88,10 @@ export default class Software extends React.Component {
             </div>
           </div>
         </section>
+        <PasteFAQ title="F.A.Q." all />
         <Gallery
-          title="V-One in action"
-          description="The machine is a robust tool"
+          title="You are in good hands."
+          description="We pride "
           gallery= {pasteGallery} />
         <BuyNow />
       </div>);

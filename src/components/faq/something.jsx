@@ -1,28 +1,38 @@
 import React from 'react'
+import Link from 'gatsby-link'
 
 import Collapse from 'rc-collapse'
 var Panel = Collapse.Panel;
 
-export default class Something extends React.Component {
+import Template from './template'
+
+export default class SomethingFAQ extends React.Component {
 
   render() {
+    const { title, all } = this.props;
     return (
-      <div>
-        <h2>It's Something Else</h2>
+      <Template title={title} all={all}>
         <Collapse>
           <Panel header="What is your warranty policy?">
-            We offer a 6 month warranty from date of delivery.  More information can be found here.
+            <p>We offer a 6 month warranty from date of delivery.  More information can be found in our <Link to="/docs/tos">Terms of Service</Link>.</p>
           </Panel>
           <Panel header="Do you offer bulk discounts?">
-            Yes. Contact <strong>sales@voltera.io</strong>.
+            <p>Yes. Contact <strong>sales@voltera.io</strong>.</p>
           </Panel>
-          <Panel header="I'd like to be a reseller for Voltera.  Who do I contact?">
-            We're not working with any resellers or distributors for the V-One at the moment. However, if you send an email to sales@voltera.io with your name, company, and contact information, we will reach out when we are ready to move forward.
+          <Panel header="Do you provide education discounts?">
+            Yes! Since consumables can be used up quickly when many students are using the V-One, we offer a discount on our common consumable materials. Reach out to <strong>sales@voltera.io</strong> to find out more.
           </Panel>
-          <Panel header="What happens if I power my unit up in a different country? ">
-            Check the product label on the back of your unit. If you use a 200-240 VAC unit in a country that supplies 100-120 VAC, then your heater will take twice as long to reach operating temperature because it is receiving half the power it needs.  If you use a 100-120 VAC unit in a country that supplies 200-240 VAC unit it will receive double the power it requires and will damage the printer to the point of no repair!
+          <Panel header="Do you provide an electronics curriculum?">
+            <p>We want to! If you have ideas or are able to help make this dream a reality, please contact <strong>hello@voltera.io</strong>.  Thank you!</p>
+          </Panel>
+          <Panel header="I'm an ink manufacturer. Can you help?">
+            <p>We are always exploring new inks and partnerships. Please contact <strong>support@voltera.io</strong> with your contact information. Thank you!</p>
+          </Panel>
+          <Panel header="I'd like to be a reseller for Voltera.">
+            <p>Please shoot us an email at <strong>sales@voltera.io</strong> with your name and company details. We will be in touch!</p>
           </Panel>
         </Collapse>
-      </div>);
+      </Template>
+    );
     }
   }

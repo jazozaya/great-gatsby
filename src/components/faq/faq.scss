@@ -1,17 +1,13 @@
 @import 'src/css/colors';
 
-.faq {
-background-color: $white;
-
-}
 .faq-wrapper {
-  margin: auto;
-  max-width: $narrow-width;
-  padding: $medium-padding $small-padding;
+  padding: $medium-padding 0px;
 }
 
-.faq h2 {
-  text-align: left;
+.faq-section {
+  max-width: $narrow-width;
+  margin: auto;
+  padding: $medium-padding $small-padding;
 }
 
 .rc-collapse {

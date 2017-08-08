@@ -73,7 +73,7 @@ export default class InTheBox extends React.Component {
   renderSubstrates() {
     return (
       <div>
-        <h2>Printing Substrates</h2>
+        <h2>Substrates</h2>
         <p>Every circuit needs a place to live. Once your design is finished, export the Gerbers and mount your substrate on the V-One to start printing.</p>
         <p>These substrates are standard FR4 boards coated with solder mask to make hand soldering and reflowing easier. We have several sizes to suit your needs, visit our store to see them all!</p>
       </div>

@@ -1,42 +1,5 @@
 @import 'src/css/colors';
 
-.banner-wrapper {
-  background-color: $medium-grey;
-  border-bottom-color: $voltera-green;
-  border-bottom-width: thin;
-  border-bottom-style: solid;
-  padding: $large-padding $small-padding;
-}
-.banner {
-  background-image: url('./v-one-clear.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 400px;
-  max-width: 800px;
-  margin: auto;
-}
-
-.banner h1 {
-  color: $white;
-  text-align: right;
-}
-
-.banner .description {
-  position: relative;
-  top: 75px;
-  left: 320px;
-  width: 300px;
-  color: $white;
-}
-
-.banner .subtitle {
-  position: relative;
-  top: 230px;
-  left: 75px;
-  width: 300px;
-  color: $white;
-}
-
 .software {
   padding: $medium-padding $small-padding;
   max-width: $max-width;
@@ -47,18 +10,4 @@
 
   align-items: center;
   justify-content: center;
-
-}
-
-.software-image {
-  height: auto;
-  width: 100%;
-  max-width: 600px;
-}
-
-.software .description {
-  flex-basis: 500px;
-  flex-grow: 1;
-  flex-shrink: 1;
-
 }
