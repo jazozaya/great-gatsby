@@ -4,7 +4,7 @@ import Logo from 'components/common/logo';
 
 import './desktop.scss'
 
-import { urls } from './constants'
+import { urls, urlArray } from './constants'
 
 export default class Desktop extends React.Component {
 
@@ -24,7 +24,8 @@ export default class Desktop extends React.Component {
   }
 
   componentWillMount() {
-    if (Object.values(urls).includes(this.props.pageName)) {
+
+    if (urlArray.includes(this.props.pageName)) {
       this.setState({subOpen: true})
       return
     }
@@ -35,7 +36,7 @@ export default class Desktop extends React.Component {
     const { pageName } = this.props;
 
     // If url matches the 'feature' pages
-    if (Object.values(urls).includes(nextProps.pageName)) {
+    if (urlArray.includes(nextProps.pageName)) {
       this.setState({subOpen: true})
       return
     }

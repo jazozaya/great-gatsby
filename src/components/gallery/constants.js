@@ -42,7 +42,7 @@ export const pasteGallery = [
   }
 ]
 
-export const experimentImages = [
+export const experimentGallery = [
   {
     fileName:"electronics-on-glass.jpg",
     subtitle: "Dispense on a glass slide.",

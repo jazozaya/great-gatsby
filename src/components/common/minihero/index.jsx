@@ -4,9 +4,18 @@ import './minihero.scss'
 
   export default class MiniHero extends React.Component {
 
+    constructor(props) {
+      super(props);
+      this.state = { windowWidth : 1920 };
+    }
+
+    componentDidMount() {
+        this.setState({ windowWidth: window.innerWidth })
+    }
+
     render() {
       const { title, description } = this.props;
-      const spacer =  window.innerWidth > 600 ? "mini-spacer" : "";
+      const spacer =  this.state.windowWidth > 600 ? "mini-spacer" : "";
 
       return (
         <div className={`mini-hero-wrapper ${spacer}`}>
