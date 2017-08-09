@@ -19,7 +19,7 @@ export default class Feature extends React.Component {
             <p>On your desktop and on your schedule, the Voltera V-One gets you from prototype to production faster than ever before.</p>
             <p>Create <strong>two layer circuit boards</strong> on your desk. Load your Gerber files and watch the dispenser lay down a <strong>silver-based conductive ink</strong> to print your circuit right before your eyes.</p>
             <div className="button-wrap">
-              <Button label="Learn More" internal url="/features/print/" color="dark"/>
+              <Button label="Learn More" internal url="/product/print/" color="dark"/>
             </div>
         </div>
       </div>);

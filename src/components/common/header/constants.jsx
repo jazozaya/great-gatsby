@@ -1,7 +1,7 @@
 export const urls = {
-  print: '/features/print/',
-  paste: '/features/paste/',
-  software: '/features/software/',
-  experiment: '/experiment/',
-  technology: '/technology/'
+  print: '/product/print/',
+  paste: '/product/paste/',
+  software: '/product/software/',
+  experiment: '/product/experiment/',
+  technology: '/product/technology/'
 }

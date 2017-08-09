@@ -13,7 +13,7 @@ export default class Feature extends React.Component {
           <p>Focus on designing, not soldering. Regardless if they came from <strong>from a factory, or from your desk</strong> -  just mount your board on the V-One and off you go.</p>
           <p>Say goodbye to stencils and <strong>cut your assembly time in half.</strong> Assembling boards is easy - it is quick turn PCBA at your desk!</p>
           <div className="button-wrap">
-            <Button label="Learn More" internal url="/features/paste/" color="dark"/>
+            <Button label="Learn More" internal url="/product/paste/" color="dark"/>
           </div>
         </div>
         <YouTube

@@ -7,25 +7,25 @@ import './explore.scss'
 const f = {
   print: {
     name: "print",
-    url: "/features/print/",
+    url: "/product/print/",
     label: "Circuit Printing",
     iconSvg: require('!raw-loader!./icons/circuit.min.svg'),
   },
   paste: {
     name: "paste",
-    url: "/features/paste/",
+    url: "/product/paste/",
     label: "Dispensing Paste",
     iconSvg: require('!raw-loader!./icons/ic.min.svg'),
   },
   software: {
     name: "software",
-    url: "/features/software/",
+    url: "/product/software/",
     label: "Desktop Software",
     iconSvg: require('!raw-loader!./icons/software.min.svg'),
   },
   technology: {
     name: "technology",
-    url: "/technology/",
+    url: "/product/technology/",
     label: "Technology",
     iconSvg: require('!raw-loader!./icons/technology.min.svg'),
   },

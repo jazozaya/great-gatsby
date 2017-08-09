@@ -1,0 +1,74 @@
+@import 'src/css/colors';
+
+.feature .column-wrapper {
+  align-items: flex-start;
+}
+
+.feature .column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.feature .description {
+  max-width: 500px;
+  margin: $small-padding $small-padding;
+  flex-shrink: 1;
+  text-align: justify;
+}
+
+.feature .screenshot-wrapper .screenshot {
+  box-shadow: 0px 0px 10px 0px black;
+  transition: all $t-time-opacity  ease-in-out 0.3s;
+  opacity: 1;
+}
+
+.feature .screenshot-caption {
+  transition: all $t-time-opacity  ease-in-out 0s;
+  opacity: 1;
+  margin-bottom: $medium-padding;
+
+}
+
+.feature .screenshot-wrapper .screenshot.hidden, .feature .screenshot-caption.hidden {
+  opacity: 0;
+  transition: none
+}
+
+.feature .screenshot-wrapper .navigation {
+  border-radius: 100%;
+  padding: 10px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $voltera-blue;
+  cursor: pointer;
+  transition: all $t-time ease-in-out 0s;
+  margin: $small-padding;
+  flex-shrink: 0;
+}
+.feature .screenshot-wrapper .navigation:hover {
+  background-color: $voltera-blue;
+  color: $white;
+}
+
+.feature .clips-wrapper {
+  padding: $medium-padding 0px;
+}
+
+@media (max-width: $mobile-threshold) {
+  .feature img {
+    width: 100%;
+    height: auto;
+  }
+
+  .feature .screenshot-wrapper .navigation.left {
+    transform: rotate(90deg);
+  }
+  .feature .screenshot-wrapper .navigation.right {
+    transform: rotate(90deg);
+  }
+}
