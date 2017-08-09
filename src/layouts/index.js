@@ -22,7 +22,7 @@ module.exports = React.createClass({
             { name: "keywords", content: "sample, something" },
           ]}
           />
-        <Header />
+        <Header pageName={this.props.location.pathname} />
         <DummyHeader />
         {this.props.children()}
         <Footer />

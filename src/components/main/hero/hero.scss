@@ -26,12 +26,18 @@
 .hero p {
   font-size: 1.5em;
   margin-top: 0px;
-  margin-bottom: 40px;
+  margin-bottom: $small-padding;
   color: $white;
+}
+
+.hero .buttons {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .hero .button {
   margin-right: 20px;
+  margin-bottom: 20px;
 }
 
 @media (max-width: $mobile-threshold) {

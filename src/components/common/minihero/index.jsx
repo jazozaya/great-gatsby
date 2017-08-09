@@ -6,8 +6,10 @@ import './minihero.scss'
 
     render() {
       const { title, description } = this.props;
+      const spacer =  window.innerWidth > 600 ? "mini-spacer" : "";
+
       return (
-        <div className="mini-hero-wrapper">
+        <div className={`mini-hero-wrapper ${spacer}`}>
           <div className="mini-hero">
             <h1>{title}</h1>
             <p>{description}</p>

@@ -4,6 +4,10 @@
   padding: $medium-padding 0px;
 }
 
+.faq-wrapper .caption {
+  padding: 0px $small-padding;
+}
+
 .faq-section {
   max-width: $narrow-width;
   margin: auto;
@@ -64,4 +68,10 @@
   border-right: 3px solid transparent;
   border-top: 4px solid $voltera-green;
   margin-right: 6px;
+}
+
+@media (max-width: $mobile-threshold) {
+  .rc-collapse-header {
+    font-size: 0.9em;
+  }
 }

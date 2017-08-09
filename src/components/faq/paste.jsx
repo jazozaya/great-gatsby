@@ -16,6 +16,10 @@ export default class PasteFAQ extends React.Component {
             <p>A single solder paste cartridge will allow you to dispense up to 11,000 0603 solder pads.</p>
             <p>The official shelf life of the solder paste is 10 months from the time of delivery.</p>
           </Panel>
+          <Panel header="[FIX THIS QUESTION!!!] - How long does it take to paste and reflow?">
+            <p>About half the time it takes you now!</p>
+            <p></p>
+          </Panel>
           <Panel header="Can I use my own paste and reflow profile?">
             <p>The heated bed can reach a maximum temperature of 240°C (464°F) in about 2 minutes. If you use your own solder paste you can manually control the temperature to follow your own reflow profile.</p>
             <p>If you want to use the V-One mainly for solder paste dispensing of fabbed boards, we offer a <a target="_blank" href="https://store.voltera.io/products/solder-paste-cartridge-sn60pb40-alloy">special solder alloy</a> for boards with a lead based HASL finish.</p>

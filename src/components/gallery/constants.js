@@ -12,10 +12,11 @@ export const printGallery = [
     isVideo: false
   },
   {
-    fileName:"switch-controller.jpg",
-    subtitle:"Through hole or surface mount",
-    description: "Keep designing like you are used to. You can mix surface mount and through hole technologies with no drawbacks.",
-    isVideo: false
+    fileName:"double-sided-tutorial.jpg",
+    subtitle:"Building a double sided circuit",
+    description: "Follow along as we build a 2 layer LED Matrix using one our Arduino Mega templates.",
+    videoId: "iMqxk5a3u0Q",
+    isVideo: true
   }
 ]
 

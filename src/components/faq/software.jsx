@@ -21,9 +21,9 @@ export default class SoftwareFAQ extends React.Component {
           <Panel header="Does it update automatically?">
             <p>Think of apps on your phone. Your software will automatically update with new features, bug fixes, and user experience upgrades. Many of the updates come directly from our users suggestions. Check out our <a target="_blank" href="https://github.com/VolteraInc/styx/releases">release notes</a> to learn more.</p>
           </Panel>
-          <Panel header="This doesn't look like software I'm used to.">
-            <p>We hate when a perfectly good piece of equipment sits on a shelf collecting dust because no one knows how to operate it.</p>
-            <p>At Voltera we take user experience very seriously and have made sure your first print experience is as smooth as possible. This means anybody in your organization can use it!</p>
+          <Panel header="Is the software complicated to use?">
+            <p>We hate it when a perfectly good piece of equipment sits on a shelf collecting dust because no one knows how to operate it. That won't happen with the V-One.</p>
+            <p>At Voltera, we're obsessed with user experience and take it very seriously. We've gone to great lengths and invested a lot of time in making sure your first print experience is a pleasant one. Whether you're a student, teacher, parent, engineer, or rocket scientist, we made the software friendly and easy for everyone to use.</p>
           </Panel>
         </Collapse>
       </Template>

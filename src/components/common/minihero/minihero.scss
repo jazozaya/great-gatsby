@@ -16,7 +16,6 @@
   p {
     font-size: 1.1em;
   }
-
 }
 
 .mini-hero {
@@ -24,8 +23,10 @@
   max-width: $narrow-width;
   color: $white;
   text-align: center;
+}
 
-
+.mini-spacer {
+  margin-top: $subheader-height;
 }
 
 .mini-hero .fast-fact-wrapper{

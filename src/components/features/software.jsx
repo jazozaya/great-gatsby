@@ -6,8 +6,6 @@ import YouTube from 'components/common/youtube'
 import FastFact from 'components/common/fastFact'
 import MiniHero from 'components/common/minihero'
 import Explore from 'components/common/explore'
-import Subheader from 'components/common/subheader'
-import DummyHeaderMini from 'components/common/dummyHeaderMini';
 import Dots from 'components/common/customer/dots'
 
 import Gallery from 'components/gallery'
@@ -81,8 +79,6 @@ export default class Software extends React.Component {
     const captionClass =`screenshot-caption ${this.state.screenshot}`;
     return (
       <div className="feature">
-        <DummyHeaderMini />
-        <Subheader selected="software" />
         <MiniHero
           title="Master the software during your coffee break."
           description="Skip the instruction manual, our desktop application has been designed for the first time user and will get you printing in minutes."
@@ -115,24 +111,26 @@ export default class Software extends React.Component {
             total={SoftwareImages.length.toString()}
             />
         </section>
-        <section className="flex-row column-wrapper">
-          <div className="column">
-            <img src="/software/software-locate-pad.jpg" />
-            <div className="description">
-              <h2>Smart Alignment.</h2>
-              <p>We've developed a unique approach to alignment. Just teach the software the location of 2 key features in your board and it takes care the rest.</p>
-              <p>This alignment method allows you to create two layer boards with ease, or dispense paste on boards that already have components.</p>
+        <div className="shadow-banner">
+          <section className="flex-row column-wrapper">
+            <div className="column">
+              <img src="/software/software-locate-pad.jpg" />
+              <div className="description">
+                <h2>Smart Alignment.</h2>
+                <p>We've developed a unique approach to alignment. Just teach the software the location of 2 key features in your board and it takes care the rest.</p>
+                <p>This alignment method allows you to create two layer boards with ease, or dispense paste on boards that already have components.</p>
+              </div>
             </div>
-          </div>
-          <div className="column">
-            <img src="/software/software-probing.jpg" />
-            <div className="description">
-              <h2>Automatic Height Compensation.</h2>
-              <p>Before you dispense, the software will measure the height of an array of points on the board.</p>
-              <p>The software uses the height map to compensate for any inconsistencies and irregularities on the surface and makes micro adjustments in real time to ensure a perfect print.</p>
+            <div className="column">
+              <img src="/software/software-probing.jpg" />
+              <div className="description">
+                <h2>Automatic Height Compensation.</h2>
+                <p>Before you dispense, the software will measure the height of an array of points on the board.</p>
+                <p>The software uses the height map to compensate for any inconsistencies and irregularities on the surface and makes micro adjustments in real time to ensure a perfect print.</p>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
         <SoftwareFAQ title="F.A.Q." all />
         <section>
           <h1>Learn by watching.</h1>

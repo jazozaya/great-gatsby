@@ -1,0 +1,79 @@
+@import 'src/css/colors';
+
+.header-wrapper {
+  position: fixed;
+  z-index: 2;
+  left: 0px;
+  right: 0px;
+  user-select: none;
+}
+
+.parent-wrapper {
+  background-color: $black;
+  height: $header-height;
+  padding: 0px $small-padding;
+}
+
+.parent-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin:auto;
+  max-width: $max-width;
+  height: 100%;
+}
+
+.parent-header a {
+  color: $white;
+  text-decoration: none;
+  margin: 10px;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  line-height: 20px;
+  font-weight: 600;
+}
+
+.parent-header a:hover{
+  color: $voltera-green;
+}
+
+.parent-header .store-link {
+  padding: 0.7em 1.0em;
+  margin-left: 10px;
+  background-color: $voltera-green;
+  border-radius: 2px;
+}
+
+.parent-header .store-link:hover {
+  color: $voltera-blue;
+  background-color: $white;
+}
+
+.child-wrapper {
+  background-color: $voltera-blue;
+  padding: 0px $small-padding;
+}
+
+.child-header {
+  margin: auto;
+  max-width: $max-width;
+  height: 100%;
+  text-align: right;
+  padding: 10px 0px;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  font-weight: 600;
+}
+.child-header a {
+  margin: 0px 10px;
+  color: $white;
+}
+
+.child-header a:hover {
+  color: $voltera-green;
+  text-decoration: none;
+}
+
+.child-header .selected {
+  color: $voltera-green;
+}

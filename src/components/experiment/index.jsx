@@ -6,8 +6,6 @@ import Helmet from 'react-helmet'
 import CallToAction from 'components/common/cta';
 import Awards from 'components/common/awards'
 import CustomerQuotes from 'components/common/customer'
-import Subheader from 'components/common/subheader'
-import DummyHeaderMini from 'components/common/dummyHeaderMini';
 import ExperimentFAQ from 'components/faq/experiment';
 
 //import Hero from './heroExperiment'
@@ -21,8 +19,6 @@ export default class Index extends React.Component {
   render() {
     return (
       <div className="experiment">
-        <DummyHeaderMini />
-        <Subheader selected="experiment" />
         <MiniHero
           title="Print anything on everything."
           description="Experiment with new fluids using the Voltera V-One platform. Print with your own materials onto the substrates you want."

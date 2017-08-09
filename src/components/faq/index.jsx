@@ -16,7 +16,7 @@ export default class FAQ extends React.Component {
     return (
       <div className="faq-wrapper">
         <h1>F.A.Q.</h1>
-        <p className="center-narrow pull-center">The section below contains the most common questions we have received. If you have a question that is not answered in this page, feel free to send us an email at <strong>sales@voltera.io</strong> or try clicking the <strong>'chat'</strong> button at the bottom of the page.</p>
+        <p className="center-narrow pull-center caption">The section below contains the most common questions we have received. If you have a question that is not answered in this page, feel free to send us an email at <strong>sales@voltera.io</strong> or try clicking the <strong>'chat'</strong> button at the bottom of the page.</p>
         <TechnologyFAQ title="How does it work?" />
         <PrintFAQ title="Conductive ink and printing"/>
         <PasteFAQ title="Solder paste and reflow"/>

@@ -13,7 +13,6 @@ export default class FeatureSelector extends React.Component {
     super(props);
     this.state = {
       featureName: f.print.name,
-      windowWidth: 1920,
       visible: true
     };
     this.handler = this.handler.bind(this)
@@ -48,10 +47,6 @@ export default class FeatureSelector extends React.Component {
     }
   }
 
-  componentDidMount() {
-    this.setState({ windowWidth: window.innerWidth });
-  }
-
   renderMobile() {
     return(
       <section>
@@ -74,7 +69,6 @@ export default class FeatureSelector extends React.Component {
         <section id="software">
           <Software />
         </section>
-
       </div>
     );
   }

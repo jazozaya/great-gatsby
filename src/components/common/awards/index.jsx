@@ -4,20 +4,10 @@ import './awards.scss'
 
 export default class Awards extends React.Component {
 
-  constructor(props){
-    super(props);
-    this.state = { windowWidth: 1920};
-  }
-
-  componentDidMount() {
-    this.setState({ windowWidth: window.innerWidth })
-  }
-
   renderDivider() {
-    if (this.state.windowWidth < 600) {
-      return null;
+    if (window.innerWidth > 600) {
+      return <div className="vertical"></div>
     }
-    return <div className="vertical"></div>
   }
 
   render() {

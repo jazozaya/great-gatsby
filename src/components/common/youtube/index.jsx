@@ -18,7 +18,6 @@ const opts = {
       super(props);
       this.state = {
         playVideo: false,
-        windowWidth: 1920
       };
     }
 
@@ -28,20 +27,16 @@ const opts = {
     }
 
     renderVideo(width, height) {
-      const { videoId } = this.props;
+      const { videoId, autoplay } = this.props;
       opts.width = width
       opts.height = height
       return <Youtube videoId={videoId} opts={opts}/>
     }
 
-    componentDidMount() {
-      this.setState( {windowWidth: window.innerWidth });
-    }
-
     render() {
 
       const { width } = this.props; // Might be in string or integer form.
-      var width_int = Math.min(this.state.windowWidth - 40, width) // Trim in case of mobile.
+      var width_int = Math.min(window.innerWidth - 40, width) // Trim in case of mobile.
 
       const width_s = width_int.toString() // Ensure we store width as a string.
       const height_s = Math.round(width_int / (640/360)).toString() // Find the corresponding height to preserve the aspect ratio.
@@ -59,7 +54,6 @@ const opts = {
       );
     }
   }
-
 
 YouTube.defaultProps = {
   width: 640

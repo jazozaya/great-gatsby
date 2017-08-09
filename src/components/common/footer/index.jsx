@@ -7,19 +7,8 @@ import Link from 'gatsby-link'
 
 export default class Footer extends React.Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      windowWidth: 1920
-    };
-  }
-
-  componentDidMount() {
-    this.setState( {windowWidth: window.innerWidth });
-  }
-
   renderLogo() {
-    if (this.state.windowWidth > 600) {
+    if (window.innerWidth > 600) {
       return <Logo />
     }
   }
@@ -30,21 +19,21 @@ export default class Footer extends React.Component {
       <div className="footer flex-row">
         {this.renderLogo()}
         <div className="column">
-          <p>Company</p>
-          <ul>
-            <li><Link to='/about/'>About Us</Link></li>
-            <li><Link to='/contact/'>Contact</Link></li>
-            <li><a href="http://voltera.io/blog">Blog</a></li>
-            <li><a href="http://community.voltera.io">Forums</a></li>
-          </ul>
-        </div>
-        <div className="column">
           <p>V-One</p>
           <ul>
             <li><a href="http://store.voltera.io">Store</a></li>
             <li><a href="http://support.voltera.io">Support</a></li>
             <li><Link to='/faq/'>FAQ</Link></li>
             <li><Link to='/specs/'>Specifications</Link></li>
+          </ul>
+        </div>
+        <div className="column">
+          <p>Company</p>
+          <ul>
+            <li><Link to='/about/'>About Us</Link></li>
+            <li><Link to='/contact/'>Contact</Link></li>
+            <li><a href="http://voltera.io/blog">Blog</a></li>
+            <li><a href="http://community.voltera.io">Forums</a></li>
           </ul>
         </div>
         <div className="column">

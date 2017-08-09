@@ -7,7 +7,7 @@ export default class Lightbox extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      lightboxOn: false
+      lightboxOn: false,
     };
   }
 
@@ -27,6 +27,7 @@ export default class Lightbox extends React.Component {
   }
 
   renderVideo(videoId) {
+
     const opts = {
        height: '450',
        width: '800',
@@ -38,6 +39,15 @@ export default class Lightbox extends React.Component {
          autoplay: 1,
        }
      };
+
+     if (window.innerWidth < 600) {
+       var width_int = this.state.windowWidth - 40 // Trim in case of mobile.
+       const width_s = width_int.toString() // Ensure we store width as a string.
+       const height_s = Math.round(width_int / (640/360)).toString() // Find the corresponding height to preserve the aspect ratio.
+       opts.width = width_s;
+       opts.height = height_s;
+     }
+
     return <Youtube videoId={videoId} opts={opts}/>;
   }
 
@@ -50,16 +60,15 @@ export default class Lightbox extends React.Component {
     const { fileName, description, subtitle, videoId, isVideo } = this.props;
     return (
       <div className="lightbox" onClick={() => this.toggleLightbox()}>
-        <div className="lightbox-wrapper">
-          <div className="lightbox-content">
-            {isVideo ? this.renderVideo(videoId) : this.renderImage(fileName)}
-             <h1>{subtitle}</h1>
-            <p>{description}</p>
-          </div>
+        <div className="lightbox-content">
+          {isVideo ? this.renderVideo(videoId) : this.renderImage(fileName)}
+           <h1>{subtitle}</h1>
+          <p>{description}</p>
         </div>
       </div>
     );
   }
+
   render() {
     return this.state.lightboxOn ? this.renderLightbox(): this.renderNormal()
   }

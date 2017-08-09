@@ -3,8 +3,7 @@ import Link from 'gatsby-link'
 
 import FastFact from 'components/common/fastFact'
 import MiniHero from 'components/common/minihero'
-import Subheader from 'components/common/subheader'
-import DummyHeaderMini from 'components/common/dummyHeaderMini';
+import YouTube from 'components/common/youtube'
 
 import Explore from 'components/common/explore'
 import Gallery from 'components/gallery'
@@ -22,8 +21,6 @@ export default class Software extends React.Component {
   render() {
     return (
       <div className="feature">
-        <DummyHeaderMini />
-        <Subheader selected="print" />
         <MiniHero
           title="Printing circuit boards is easy."
           description="The Voltera V-One uses an additive approach to create circuit boards. Ink is dispensed precisely where it is needed without any waste."
@@ -42,21 +39,14 @@ export default class Software extends React.Component {
             />
         </MiniHero>
         <section className="flex-row">
-          <img src="/v-one.png"/>
+          <img src="/features/double-sided-printing.jpg"/>
           <div className="description">
-            <h2>Up to two layers.</h2>
+            <h2>Single and double layer circuits.</h2>
+            <p>Create a single or two layer board and keep designing like you're used to. You can mix surface mount and through hole technologies with no difficulty.</p>
             <p>The V-One comes equipped with all the consumables and accessories you need to get started. Setup is a breeze and in just minutes you will be printing your very first circuit board.</p>
           </div>
         </section>
         <Workflow workflowType="print" />
-        <section className="flex-row">
-          <div className="description">
-            <h2>A perfect print every time.</h2>
-            <p>This high precision probe was developed from the ground up and creates a height map of your substrate. The V-One takes the map into account and makes micro adjustments to ensure a constant printing height of 100 microns. </p>
-            <p>We do not need the substrate to be conductive, which means we can dispense on rigid materials like FR4, glass and ceramics, along with flexible substrates like Kapton (Polyimide).</p>
-          </div>
-          <img src="/voltera-probe.png"/>
-        </section>
         <div className="shadow-banner">
           <section className="flex-row column-wrapper">
             <div className="column">

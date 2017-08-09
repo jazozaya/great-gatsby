@@ -29,7 +29,7 @@ export default class SomethingFAQ extends React.Component {
             <p>We are always exploring new inks and partnerships. Please contact <strong>support@voltera.io</strong> with your contact information. Thank you!</p>
           </Panel>
           <Panel header="I'd like to be a reseller for Voltera.">
-            <p>Please shoot us an email at <strong>sales@voltera.io</strong> with your name and company details. We will be in touch!</p>
+            <p>We love resellers! Please shoot us an email at <strong>sales@voltera.io</strong> with your name and company details. We will be in touch!</p>
           </Panel>
         </Collapse>
       </Template>

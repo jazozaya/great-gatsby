@@ -2,8 +2,6 @@ import React from 'react'
 
 import MiniHero from 'components/common/minihero'
 import FastFact from 'components/common/fastFact'
-import Subheader from 'components/common/subheader'
-import DummyHeaderMini from 'components/common/dummyHeaderMini';
 import Explore from 'components/common/explore'
 import PasteFAQ from 'components/faq/paste'
 
@@ -22,8 +20,6 @@ export default class Software extends React.Component {
   render() {
     return (
       <div className="feature">
-        <DummyHeaderMini />
-        <Subheader selected="paste" />
         <MiniHero
           title="Assemble your boards in half the time."
           description="Ditch the stencil and the soldering iron. Just mount your boards on the V-One and dispense paste in minutes."
@@ -90,8 +86,8 @@ export default class Software extends React.Component {
         </section>
         <PasteFAQ title="F.A.Q." all />
         <Gallery
-          title="You are in good hands."
-          description="We pride "
+          title="Simplify your life."
+          description="The V-One cuts your development in half and gets you to market faster."
           gallery= {pasteGallery} />
         <BuyNow />
       </div>);

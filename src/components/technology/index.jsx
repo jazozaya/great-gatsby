@@ -3,8 +3,6 @@ import React from 'react'
 import Button from 'components/common/button'
 import Explore from 'components/common/explore';
 import CallToAction from 'components/common/cta';
-import Subheader from 'components/common/subheader'
-import DummyHeaderMini from 'components/common/dummyHeaderMini';
 
 import MiniHero from 'components/common/minihero'
 import FastFact from 'components/common/fastFact'
@@ -20,33 +18,31 @@ export default class MyProduct extends React.Component {
   render() {
     return (
       <div>
-        <DummyHeaderMini />
-        <Subheader selected="technology" />
         <MiniHero
-          title="Leap into the future."
-          description="Experiment with new materials using the Voltera V-One platform. Print with your own inks onto the substrates you want."
+          title="How does it work?"
+          description="The Voltera V-One dispenses conductive ink and solder paste onto FR4, but really... you can use it for whatever you want."
           >
           <FastFact
             title="0 Day"
             label="Lead time"
             />
           <FastFact
-            title="&#x221e;"
-            label="Iterations"
+            title="100's"
+            label="Of iterations"
             />
           <FastFact
             title="~5 USD"
             label="Board cost."
             />
         </MiniHero>
-        <div className="software">
+        <section className="flex-row">
           <div className="description">
-            <h2 className="pull-left">Software you want to use.</h2>
-            <p>The software has been designed with you in mind. A minimal interface and instructional videos guide you every step of the way.</p>
-            <p>It processes Gerber files - the same files you would send to a factory - so you can use a program that you're already comfortable with. (Eagle, Kicad, Altium, etc). Just generate your Gerbers to get started.</p>
+            <h2>A perfect print every time.</h2>
+            <p>This high precision probe was developed from the ground up and creates a height map of your substrate. The V-One takes the map into account and makes micro adjustments to ensure a constant printing height of 100 microns. </p>
+            <p>We do not need the substrate to be conductive, which means we can dispense on rigid materials like FR4, glass and ceramics, along with flexible substrates like Kapton (Polyimide).</p>
           </div>
-          <img className="software-image" src="/voltera-software.png" />
-        </div>
+          <img src="/voltera-probe.png"/>
+        </section>
         <Box />
         <TechnologyFAQ title="F.A.Q." all />
         <Specs />

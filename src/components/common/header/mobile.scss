@@ -1,0 +1,76 @@
+@import 'src/css/colors';
+
+/* CSS for mobile */
+.header-mobile {
+  position: fixed;
+  z-index: 2;
+  left: 0px;
+  right: 0px;
+  height: $header-height;
+  user-select: none;
+  background-color: $black;
+
+  padding: 0px $small-padding;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// Used for catching offscreen taps so that it is minimized.
+.header-mobile .link-panel-wrapper {
+  position: fixed;
+  top: $header-height;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+
+.header-mobile .link-panel {
+  position: fixed;
+  background-color: $black;
+  top: $header-height;
+  left: 0px;
+  right: 0px;
+}
+
+
+.header-mobile a {
+  color: $white;
+  text-decoration: none;
+  margin: 10px;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  line-height: 20px;
+  font-weight: 600;
+}
+
+.header-mobile .sub-header a {
+  font-size: 0.8em;
+}
+.header-mobile .sub-header li {
+  margin: 10px $small-padding;
+}
+
+.header-mobile a:hover{
+  color: $voltera-green;
+}
+
+.header-mobile ul {
+    padding-left: $small-padding;
+    list-style-type: none;
+}
+
+.header-mobile li {
+  margin: $small-padding;
+}
+
+.header-mobile .hamburger.open svg path {
+  fill: $voltera-green;
+}
+
+@media (max-width: $mobile-threshold) {
+  .header-mobile a {
+    font-weight: 300;
+  }
+}
