@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import Link from 'components/common/linkWrapper'
 
 export default class Template extends React.Component {
 

@@ -2,7 +2,7 @@ import React from 'react';
 import Logo from 'components/common/logo';
 import './footer.scss';
 
-import Link from 'gatsby-link'
+import Link from 'components/common/linkWrapper'
 
 
 export default class Footer extends React.Component {
@@ -34,6 +34,7 @@ export default class Footer extends React.Component {
             <li><a href="http://support.voltera.io">Support</a></li>
             <li><Link to='/faq/'>FAQ</Link></li>
             <li><Link to='/specs/'>Specifications</Link></li>
+            <li><a href="http://voltera.io/downloads">Downloads</a></li>
           </ul>
         </div>
         <div className="column">

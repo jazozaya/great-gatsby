@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'gatsby-link'
+import Link from 'components/common/linkWrapper'
 import Logo from 'components/common/logo';
 
 import './desktop.scss'
@@ -50,6 +50,8 @@ export default class Desktop extends React.Component {
 
   }
 
+  // TODO - Change all of these to Link from gatsby-link
+
   renderChild() {
     const { pageName } = this.props;
 
@@ -75,7 +77,7 @@ export default class Desktop extends React.Component {
           <div className="parent-header">
             <Logo />
             <div className="links">
-              <Link to='/faq/'>FAQ</Link>
+              <Link to="/faq/">FAQ</Link>
               <a onClick={() => this.setState({subOpen: true})}>Product</a>
               <a href="http://community.voltera.io">Forums</a>
               <a href="http://support.voltera.io">Support</a>

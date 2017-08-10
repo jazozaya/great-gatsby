@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import Link from 'components/common/linkWrapper'
 
 import Collapse from 'rc-collapse'
 var Panel = Collapse.Panel;

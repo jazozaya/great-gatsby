@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Desktop from './desktop2'
-import Mobile from './mobile2'
+import Desktop from './desktop'
+import Mobile from './mobile'
 
 export default class Header extends React.Component {
 

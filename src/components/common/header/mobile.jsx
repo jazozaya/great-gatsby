@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'gatsby-link'
+import Link from 'components/common/linkWrapper'
 import SVGInline from "react-svg-inline"
 import Logo from 'components/common/logo';
 
@@ -21,7 +21,6 @@ export default class Mobile extends React.Component {
   }
 
   renderSubheader() {
-
     if (this.state.subOpen) {
       return(
         <ul className="sub-header">
@@ -36,15 +35,12 @@ export default class Mobile extends React.Component {
   }
 
   catchProduct(event) {
-
     event.stopPropagation();
-    this.setState({
-      subOpen: !this.state.subOpen,
-    })
-
+    this.setState({ subOpen: !this.state.subOpen })
   }
 
   renderLinkPanel() {
+
     return (
       <div onClick= {() => this.setState({open : false})} className="link-panel-wrapper">
         <div className="link-panel">

@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import Link from 'components/common/linkWrapper'
 
 import Collapse from 'rc-collapse'
 var Panel = Collapse.Panel;
@@ -7,6 +7,7 @@ var Panel = Collapse.Panel;
 import Template from './template'
 
 export default class TechnologyFAQ extends React.Component {
+
   render() {
     const { title, all } = this.props;
     return (
