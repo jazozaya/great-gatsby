@@ -12,7 +12,7 @@ import Box from './box'
 
 import './common.scss'
 
-export default class MyProduct extends React.Component {
+export default class Technology extends React.Component {
 
   render() {
     return (

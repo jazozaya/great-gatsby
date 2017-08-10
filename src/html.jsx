@@ -32,10 +32,8 @@ export default class HTML extends React.Component {
           />
           {this.props.headComponents}
           <link rel="shortcut icon" href={favicon} />
-          <link href="https://fonts.googleapis.com/css?family=Raleway:300,600" rel="stylesheet"/>
-          <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet"/>
+
           {css}
-          <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
         </head>
         <body>
           <div
@@ -43,6 +41,9 @@ export default class HTML extends React.Component {
             dangerouslySetInnerHTML={{ __html: this.props.body }}
           />
           {this.props.postBodyComponents}
+          <link href="https://fonts.googleapis.com/css?family=Raleway:300,600" rel="stylesheet"/>
+          <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet"/>
+          <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
         </body>
       </html>
     );

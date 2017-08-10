@@ -25,7 +25,8 @@ export default class Desktop extends React.Component {
 
   componentWillMount() {
 
-    if (urlArray.includes(this.props.pageName)) {
+    // Apparently Array.includes() is not supported in I.E, so can't use it.
+    if (urlArray.indexOf(this.props.pageName) !== -1) {
       this.setState({subOpen: true})
       return
     }
@@ -36,7 +37,7 @@ export default class Desktop extends React.Component {
     const { pageName } = this.props;
 
     // If url matches the 'feature' pages
-    if (urlArray.includes(nextProps.pageName)) {
+    if (urlArray.indexOf(nextProps.pageName) !== -1) {
       this.setState({subOpen: true})
       return
     }

@@ -6,10 +6,6 @@ import Paste from 'components/product/paste'
 export default class MyPaste extends React.Component {
 
   render() {
-    return (
-      <div>
-        <Paste />
-      </div>
-    )
+    return <Paste />
   }
 }

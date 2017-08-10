@@ -6,10 +6,6 @@ import Print from 'components/product/print'
 export default class MyPrint extends React.Component {
 
   render() {
-    return (
-      <div>
-        <Print />
-      </div>
-    )
+    return <Print />;
   }
 }

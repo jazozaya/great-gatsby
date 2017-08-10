@@ -6,7 +6,6 @@ import PrintFAQ from './print'
 import PasteFAQ from './paste'
 import ShippingFAQ from './shipping'
 import ExperimentFAQ from './experiment'
-//import EducateFAQ from './educate'
 import SomethingFAQ from './something'
 import SoftwareFAQ from './software'
 

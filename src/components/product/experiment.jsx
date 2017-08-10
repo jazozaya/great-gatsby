@@ -17,7 +17,7 @@ import { experimentGallery } from 'components/gallery/constants'
 
 import './common.scss'
 
-export default class Index extends React.Component {
+export default class Experiment extends React.Component {
   render() {
     return (
       <div className="feature">

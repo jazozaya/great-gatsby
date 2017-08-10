@@ -5,7 +5,6 @@ import FastFact from 'components/common/fastFact'
 import MiniHero from 'components/common/minihero'
 import YouTube from 'components/common/youtube'
 
-import Explore from 'components/common/explore'
 import Gallery from 'components/gallery'
 import { printGallery } from 'components/gallery/constants'
 
@@ -16,7 +15,7 @@ import Workflow from './workflow'
 
 import './common.scss'
 
-export default class Software extends React.Component {
+export default class Print extends React.Component {
 
   render() {
     return (
