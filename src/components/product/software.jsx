@@ -1,4 +1,5 @@
 import React from 'react'
+import Bowser from 'bowser'
 
 import BuyNow from './buyNow'
 import YouTube from 'components/common/youtube'
@@ -9,6 +10,7 @@ import Explore from 'components/common/explore'
 import Dots from 'components/common/customer/dots'
 
 import SoftwareFAQ from 'components/faq/software'
+
 
 
 import './common.scss'
@@ -32,15 +34,35 @@ const SoftwareImages = [
 ]
 
 
+
 class Clip extends React.Component {
+
+  // I couldn't get the videos to properly embed in EDGE or IE so I fallback to displaying image.
+
+  renderImage() {
+    return <img width="370" height="208" src={`${this.props.src}.jpg`} />
+  }
+
+  renderVideo() {
+    return  (
+      <video width="370" height="208" autoPlay loop>
+        <source src={`${this.props.src}.mp4`} type='video/mp4' />
+      </video>
+    )
+  }
+
+  renderContent() {
+    if (Bowser.msedge || Bowser.msie) {
+      return this.renderImage()
+    }
+    return this.renderVideo();
+  }
+
   render() {
-    const { src, subtitle }  = this.props;
+    const { subtitle }  = this.props;
     return(
       <div className="clip">
-        <video width="370" height="208" autoPlay loop>
-          <source src={src} type="video/webm" />
-          Your browser does not support the video tag.
-        </video>
+        {this.renderContent()}
         <p><i>{subtitle}</i></p>
       </div>
     );
@@ -133,16 +155,17 @@ export default class Software extends React.Component {
           <h1>Learn by watching.</h1>
           <p className="pull-center">Whether you use the V-One once a day or once a month, you will be able to pick up right where you left off. These short video clips are built right into the app and will make the tricky parts easy.</p>
           <div className="flex-row clips-wrapper">
+
             <Clip
-              src="/product/MountDispenser.webm"
+              src="/product/MountDispenser"
               subtitle="Mount the dispenser"
               />
             <Clip
-              src="/product/PrintPaste.webm"
+              src="/product/PrintPaste"
               subtitle="Select your pads"
               />
             <Clip
-              src="/product/Outline.webm"
+              src="/product/Outline"
               subtitle="Position your print"
               />
           </div>

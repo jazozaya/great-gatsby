@@ -50,8 +50,6 @@ export default class Desktop extends React.Component {
 
   }
 
-  // TODO - Change all of these to Link from gatsby-link
-
   renderChild() {
     const { pageName } = this.props;
 
