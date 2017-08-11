@@ -16,6 +16,10 @@
   height: 100%;
 }
 
+.hero .price {
+  color: $voltera-green;
+}
+
 .hero h1 {
   color: $white;
   font-size: 3.0em;
@@ -25,8 +29,7 @@
 }
 .hero p {
   font-size: 1.5em;
-  margin-top: 0px;
-  margin-bottom: $small-padding;
+  margin: 0px;
   color: $white;
 }
 
@@ -36,8 +39,7 @@
 }
 
 .hero .button {
-  margin-right: 20px;
-  margin-bottom: 20px;
+  margin: $small-padding $small-padding 0px 0px;
 }
 
 @media (max-width: $mobile-threshold) {
