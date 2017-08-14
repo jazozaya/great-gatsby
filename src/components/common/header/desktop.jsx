@@ -79,7 +79,7 @@ export default class Desktop extends React.Component {
               <a onClick={() => this.setState({subOpen: true})}>Product</a>
               <a href="http://community.voltera.io">Forums</a>
               <a href="http://support.voltera.io">Support</a>
-              <a href="http://voltera.io/blog">Blog</a>
+              <Link to="/contact/">Contact</Link>
               <a className="store-link" href="http://store.voltera.io">Store</a>
             </div>
           </div>

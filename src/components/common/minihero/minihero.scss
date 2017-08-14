@@ -3,7 +3,7 @@
 
 .mini-hero-wrapper {
   background-color: $medium-grey;
-  height: 400px;
+  min-height: 400px;
   padding: 0px $small-padding;
 
   display: flex;

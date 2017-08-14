@@ -39,11 +39,11 @@ export default class Experiment extends React.Component {
         <Awards />
         <section className="flex-row">
           <div className="description">
-            <h2>Use your own inks.</h2>
+            <h2>Use your own materials.</h2>
             <p>The Voltera V-One uses standard 5cc syringes. This means cartridges can be filled with any material you want to dispense with. We even offer UV blocking cartridges for sensitive inks!</p>
             <p>Our robust dispensing system can handle most high viscosity fluids right out of the box. Contact us today to find how we can help you!</p>
           </div>
-          <img src="/voltera-probe.png"/>
+          <img src="/product/cartridges.png"/>
         </section>
         <section className="flex-row">
           <img src="/product/flexible-electronics.jpg"/>

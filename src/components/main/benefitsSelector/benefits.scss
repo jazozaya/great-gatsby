@@ -1,40 +1,24 @@
 @import 'src/css/colors';
-.benefits-selector-wrapper {
-  background-color: $white;
-  padding: $medium-padding $small-padding;
+
+
+.benefits-wrapper {
+  max-width: 1000px;
+  margin: auto;
+  padding: $large-padding $small-padding;
+  justify-content: space-around;
 }
 
-.benefits-selector {
-  max-width: $max-width;
-  margin: auto;
+.benefits {
+  flex-basis: 370px;
+  text-align: center;
+  padding: $small-padding 0px;
+}
 
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+.benefits .button-wrap {
+  padding: $medium-padding 0px;
+}
 
-  .benefit-teaser {
-    flex-basis: 400px;
-    text-align: center;
-    padding: $medium-padding $small-padding;
-    box-sizing: border-box;
-  }
-
-  .benefit-teaser .description {
-    text-align: justify;
-  }
-
-  .benefit-teaser .button-wrap {
-    padding: $medium-padding 0px;
-  }
-
-  .benefit-teaser img {
+.benefits img {
     width: 60px;
     height: 60px;
-  }
-}
-
-@media (max-width:$mobile-threshold) {
-  .benefits-selector {
-    justify-content: center;
-  }
 }

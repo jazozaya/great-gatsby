@@ -21,8 +21,13 @@ export default class InTheBox extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      description: summary.vOne
+      description: summary.vOne,
+      windowWidth: 1920
     };
+  }
+
+  componentDidMount() {
+      this.setState({ windowWidth: window.innerWidth })
   }
 
   setDescription(name) {
@@ -166,13 +171,35 @@ export default class InTheBox extends React.Component {
     }
   }
 
-  render() {
-    return (
-      <div className="box-wrapper shadow-banner">
-        <div className="box">
+  renderMobile() {
+    return(
+        <div className="box-wrapper shadow-banner">
           <h1>What is in the box?</h1>
           <p className="pull-center">The V-One comes with all the accessories and consumables you need to start building hardware faster.</p>
-          <div className="box-content">
+          <img src="/v-one-box.png" />
+          <div className="mobile-contents">
+            <p><strong>1 - Voltera V-One</strong>.<br />A protoyping tool that can fit on your desk.</p>
+            <p><strong>1 - Probe</strong>.<br />A sensor that maps the height of your board.</p>
+            <p><strong>2 - Clamps</strong>.<br />Hold your board in place while dispensing</p>
+            <p><strong>1 - Burnishing pad</strong>.<br />Scrub your board to see the traces turn silver!</p>
+            <p><strong>2 - Dispensers</strong>.<br />Pop the cartridges in and start dispensing! </p>
+            <p><strong>1 - Conductive ink</strong>.<br />Over 90% silver and fully solderable.</p>
+            <p><strong>1 - Solder paste</strong>.<br />Lead free paste that makes assembly a breeze.</p>
+            <p><strong>1 - Solder wire spool</strong>.<br />A special alloy to attach your components.</p>
+            <p><strong>10 - Small substrates</strong>.<br />Every circuit needs a place to live!</p>
+            <p><strong>6 - Large substrates</strong>.<br />To help you protoype larger circuits.</p>
+          </div>
+      </div>
+    );
+  }
+
+  renderDesktop() {
+    return (
+      <div className="box-wrapper shadow-banner">
+        <div className="center-wide">
+          <h1>What is in the box?</h1>
+          <p className="pull-center">The V-One comes with all the accessories and consumables you need to start building hardware faster.</p>
+          <div className="flex-row">
             <div className="in-the-box">
               <div className={this.renderClassName(summary.vOne)} onClick={() => this.setDescription(summary.vOne)}></div>
               <div className={this.renderClassName(summary.probe)} onClick={() => this.setDescription(summary.probe)}></div>
@@ -193,5 +220,11 @@ export default class InTheBox extends React.Component {
         </div>
       </div>
     );
+  }
+  render() {
+    if (this.state.windowWidth < 600) {
+      return this.renderMobile()
+    }
+    return this.renderDesktop()
   }
 }

@@ -62,13 +62,14 @@ export default class Lightbox extends React.Component {
   }
 
   renderLightbox() {
-    const { fileName, description, subtitle, videoId, isVideo } = this.props;
+    const { fileName, description, subtitle, videoId, isVideo, source } = this.props;
     return (
       <div className="lightbox" onClick={() => this.toggleLightbox()}>
         <div className="lightbox-content">
           {isVideo ? this.renderVideo(videoId) : this.renderImage(fileName)}
            <h1>{subtitle}</h1>
           <p>{description}</p>
+          {source ? <p><a target="_blank" href={source}>(Source)</a></p> : null}
         </div>
       </div>
     );

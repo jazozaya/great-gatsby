@@ -29,6 +29,10 @@ export default class Shipping extends React.Component {
             <p>We use FedEx to ship within Canada and DHL for everywhere else.  We have worked closely with our fantastic shipping partners to get the best rates for your orders.</p>
             <p>If you want to ship with your account or if you have special shipping requirements, please contact <strong>sales@voltera.io</strong> before you place your order.</p>
           </Panel>
+          <Panel header="How can I pay?">
+            <p>If you want to pay with credit card, you can do so directly on our <a href="http://voltera.io/store">store</a>.</p>
+            <p>If you want to pay with a bank transfer, please send your PO to sales@voltera.io and we'll provide you our banking details.</p>
+          </Panel>
           <Panel header="Are taxes and duties included?">
             <p>No. Since these rates are unique to each country, all applicable duties and taxes are payable upon receipt of the product.</p>
             <p>Normally when the shipment reaches your country, DHL will contact you to arrange the payment of duties and taxes to clear customs.</p>

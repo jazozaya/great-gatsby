@@ -15,6 +15,7 @@ export default class Gallery extends React.Component {
       description={currentValue.description}
       isVideo={currentValue.isVideo}
       videoId={currentValue.videoId}
+      source={currentValue.source}
       />)
     }
 

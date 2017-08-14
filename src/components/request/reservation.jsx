@@ -105,7 +105,7 @@ renderFailed(){
 renderRequest() {
   return (<div>
     <h1>Place a unit on hold!</h1>
-    <img src="/v-one-in-box-small.png"/>
+    <img src="/v-one-box.png"/>
     <form>
       <p>
         Want a V-One but do not have the budget yet?
