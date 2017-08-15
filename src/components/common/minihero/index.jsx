@@ -1,22 +1,14 @@
 import React from 'react'
+import Bowser from 'bowser'
 
 import './minihero.scss'
 
   export default class MiniHero extends React.Component {
 
-    constructor(props) {
-      super(props);
-      this.state = { windowWidth : 1920 };
-    }
-
-    componentDidMount() {
-        this.setState({ windowWidth: window.innerWidth })
-    }
-
     render() {
       const { title, description } = this.props;
-      const spacer =  this.state.windowWidth > 600 ? "mini-spacer" : "";
-
+      const spacer =  !Bowser.mobile ? "mini-spacer" : "";
+      
       return (
         <div className={`mini-hero-wrapper ${spacer}`}>
           <div className="mini-hero">

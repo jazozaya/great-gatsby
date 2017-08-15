@@ -1,4 +1,5 @@
 import React from 'react'
+import Bowser from 'bowser'
 import Row from './row'
 import Button from 'components/common/button'
 
@@ -17,17 +18,12 @@ export default class Specs extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      windowWidth: 1920,
       metric: true
     };
   }
 
-  componentDidMount() {
-    this.setState( {windowWidth: window.innerWidth });
-  }
-
   renderUnitChange(units) {
-    if (this.state.windowWidth < 600) {
+    if (Bowser.mobile) {
       return <p>Units: <strong>{units}</strong><br /><a onClick={() => this.setState({metric: !this.state.metric})}>Change...</a></p>
     }
   }
@@ -35,7 +31,7 @@ export default class Specs extends React.Component {
   render() {
 
     var units = "both";
-    if (this.state.windowWidth < 600) {
+    if (Bowser.mobile) {
       if (this.state.metric){
         units = "Metric";
       }
@@ -48,10 +44,10 @@ export default class Specs extends React.Component {
       <div id="specs" className="specs-wrapper">
         <div className="specs">
           <h1>Technical Specifications</h1>
-          <p className="pull-center">Find the most up to date specifications about the Voltera V-One here. If you can't find what you are looking for, send us an email at <strong>support@voltera.io</strong> with your question.</p>
+          <p className="pull-center">Find the most up to date specifications about the Voltera V-One here. Send us an email if you cannot find what you are looking for.</p>
           {this.renderUnitChange(units)}
           <div className="table">
-            <h3>Printing Specifications</h3>
+            <h3>Printing</h3>
             <Row units={units}>
               <p>Minimum trace width</p>
               <p>0.2mm</p>
@@ -63,26 +59,21 @@ export default class Specs extends React.Component {
               <p>0402</p>
             </Row>
             <Row units={units}>
-              <p>Minimum pin-to-pin pitch (Conductive ink)</p>
+              <p>Minimum pin-to-pin pitch</p>
               <p>0.65mm</p>
               <p>32 mil</p>
             </Row>
             <Row units={units} dark>
-              <p>Minimum pin-to-pin pitch (Solder Paste)</p>
-              <p>0.5mm</p>
-              <p>20 mil</p>
-            </Row>
-            <Row units={units}>
               <p>Resistivity</p>
               <p>	>12mΩ/sq @ 70um height</p>
               <p>	>12mΩ/sq @ 3mil height</p>
             </Row>
-            <Row units={units} dark>
+            <Row units={units}>
               <p>Supplied Substrate material</p>
               <p>FR4</p>
               <p>FR4</p>
             </Row>
-            <Row units={units}>
+            <Row units={units} dark>
               <p>Maximum board thickness</p>
               <p>3mm</p>
               <p>0.125”</p>
@@ -90,18 +81,23 @@ export default class Specs extends React.Component {
           </div>
 
           <div className="table">
-            <h3>Soldering Specifications</h3>
+            <h3>Soldering</h3>
             <Row units={units}>
+              <p>Minimum Pin-to-Pin pitch</p>
+              <p>0.5mm</p>
+              <p>20 mil</p>
+            </Row>
+            <Row units={units} dark>
               <p>Solder Paste Alloy</p>
               <p>Sn42/Bi57.6/Ag0.4</p>
               <p>	Sn42/Bi57.6/Ag0.4</p>
             </Row>
-            <Row units={units} dark>
+            <Row units={units}>
               <p>Solder wire alloy</p>
               <p>SnBiAg1</p>
               <p>SnBiAg1</p>
             </Row>
-            <Row units={units}>
+            <Row units={units} dark>
               <p>Soldering Iron Temperature</p>
               <p>180-210°C</p>
               <p>355-410°F</p>

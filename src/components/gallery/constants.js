@@ -7,7 +7,7 @@ export const printGallery = [
   {
     fileName:"voltera-photon-shield.jpg",
     subtitle:"Compatible with your Photon!",
-    description: "Take advantage of our templates! We offer Arduino, Raspberry Pi and Photon templates to help you build faster. This particular board was used to automate a chicken coop door! Yes. IoT for chickens. ",
+    description: "We offer Arduino, Raspberry Pi and Photon templates to help you build faster. This particular board was used to automate a chicken coop door! Yes. IoT for chickens. ",
     source: "https://www.facebook.com/robotchickenworkshop/"
   },
   {
@@ -15,7 +15,6 @@ export const printGallery = [
     subtitle:"Building a double sided circuit",
     description: "Follow along as we build a 2 layer LED Matrix using one our Arduino Mega templates.",
     videoId: "iMqxk5a3u0Q",
-    isVideo: true
   }
 ]
 
@@ -27,17 +26,40 @@ export const pasteGallery = [
   },
   {
   fileName:"fast-reflow.jpg",
-  subtitle:"Reflowing in fast motion.",
+  subtitle:"Positioning your print.",
   description: "One of the coolest reflow videos we've seen with the V-One. You can see how the heat radiates from the center of the board outwards. Soldering everything in its path. Blink and you'll miss it! ",
-  videoId: "-yfQR5mc-Y8",
-  isVideo: true,
-  source: "https://twitter.com/GenerLink/status/796104966683365377"
+  videoId: "CYf2HrWt7bw",
   },
   {
     fileName:"dynamic-paste-adjustment.jpg",
     subtitle:"Tune your paste on the fly.",
     description: "Too much or not enough paste can lead to soldering problems. Get your paste coverage just right by adjusting it in real time.",
   }
+]
+
+
+export const softwareGallery = [
+  {
+  fileName:"outline-board.jpg",
+  subtitle:"Position your print.",
+  description: "The first step of a print is to let the software know where the board is located.",
+  videoId: "CYf2HrWt7bw",
+  maxWidth: "360"
+  },
+  {
+  fileName:"selective-print.jpg",
+  subtitle:"Print what you need.",
+  description: "The software allows customize what you want to print. You can also uses this to print a section multiple times.",
+  videoId: "FpS8v_-SfKI",
+  maxWidth: "360"
+  },
+  {
+  fileName:"mount-the-dispenser.jpg",
+  subtitle:"Mount the dispenser",
+  description: "Mounting the dispenser is a breeze. All of our attachments have magnets so you can swap them without any special tools.",
+  videoId: "KMVpMnKNyb4",
+  maxWidth: "360"
+  },
 ]
 
 export const experimentGallery = [

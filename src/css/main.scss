@@ -93,6 +93,10 @@ section {
   .flex-row {
     justify-content: center;
   }
+
+  .reverse-wrap {
+    flex-direction: column-reverse;
+  }
 }
 
 .shadow-banner {

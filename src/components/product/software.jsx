@@ -11,6 +11,8 @@ import Dots from 'components/common/customer/dots'
 
 import SoftwareFAQ from 'components/faq/software'
 
+import Gallery from 'components/gallery'
+import { softwareGallery } from 'components/gallery/constants'
 
 
 import './common.scss'
@@ -32,42 +34,6 @@ const SoftwareImages = [
     caption: "Follow along the step by step instructions and learn how to calibrate your unit to get the perfect print. You'll be a pro in no time."
   }
 ]
-
-
-
-class Clip extends React.Component {
-
-  // I couldn't get the videos to properly embed in EDGE or IE so I fallback to displaying image.
-
-  renderImage() {
-    return <img width="370" height="208" src={`${this.props.src}.jpg`} />
-  }
-
-  renderVideo() {
-    return  (
-      <video width="370" height="208" autoPlay loop>
-        <source src={`${this.props.src}.mp4`} type='video/mp4' />
-      </video>
-    )
-  }
-
-  renderContent() {
-    if (Bowser.msedge || Bowser.msie) {
-      return this.renderImage()
-    }
-    return this.renderVideo();
-  }
-
-  render() {
-    const { subtitle }  = this.props;
-    return(
-      <div className="clip">
-        {this.renderContent()}
-        <p><i>{subtitle}</i></p>
-      </div>
-    );
-  }
-}
 
 export default class Software extends React.Component {
 
@@ -151,42 +117,12 @@ export default class Software extends React.Component {
           </section>
         </div>
         <SoftwareFAQ title="F.A.Q." all />
-        <section>
-          <h1>Learn by watching.</h1>
-          <p className="pull-center">Whether you use the V-One once a day or once a month, you will be able to pick up right where you left off. These short video clips are built right into the app and will make the tricky parts easy.</p>
-          <div className="flex-row clips-wrapper">
-
-            <Clip
-              src="/product/MountDispenser"
-              subtitle="Mount the dispenser"
-              />
-            <Clip
-              src="/product/PrintPaste"
-              subtitle="Select your pads"
-              />
-            <Clip
-              src="/product/Outline"
-              subtitle="Position your print"
-              />
-          </div>
-        </section>
+        <Gallery
+          title="Learn by watching."
+          description="Whether you use the V-One once a day or once a month, you will be able to pick up right where you left off. These short video clips are built right into the app and will make the tricky parts easy"
+          gallery= {softwareGallery}
+          />
         <BuyNow />
       </div>);
     }
   }
-
-
-  // Big Title with a big image.
-  // - Built in videos in the app. | Extremely easy to learn
-  // - Link to our community forums | Follow along with the conversation
-  // - Print preview focus shot | Loads your Gerber files (list compatible cad tools)
-
-
-  // focuse on 3 main things
-  // - Extremely easy to Learn
-  // -- Step by step instructions
-  // -- Guided videos.
-  //
-  // -- Calibration for 2 sided boards is easy.
-  //
-  // - automatic updates.

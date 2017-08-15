@@ -52,7 +52,7 @@
   margin: 10px $small-padding;
 }
 
-.header-mobile a:hover{
+.header-mobile a:hover, .header-mobile .selected{
   color: $voltera-green;
 }
 

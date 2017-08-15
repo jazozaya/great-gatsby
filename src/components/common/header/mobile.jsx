@@ -8,8 +8,6 @@ import { urls } from './constants'
 
 var rawSVG = require('!raw-loader!./hamburger.min.svg');
 
-
-
 export default class Mobile extends React.Component {
 
   constructor(props) {
@@ -20,15 +18,24 @@ export default class Mobile extends React.Component {
     };
   }
 
+  // Small class that determines if we should highlight link.
+  getClass(currentPage, pageName) {
+    if(currentPage === pageName) {
+      return "selected"
+    }
+  }
+
   renderSubheader() {
+    const { pageName } = this.props;
+
     if (this.state.subOpen) {
       return(
         <ul className="sub-header">
-          <li><Link to={urls.technology}>How it works</Link></li>
-          <li><Link to={urls.print}>Circuit Printing </Link></li>
-          <li><Link to={urls.paste}>Paste Dispensing</Link></li>
-          <li><Link to={urls.software}>Desktop Software</Link></li>
-          <li><Link to={urls.experiment}>Experiment</Link></li>
+          <li><Link className={this.getClass(pageName, urls.technology)} to={urls.technology}>How it works</Link></li>
+          <li><Link className={this.getClass(pageName, urls.print)} to={urls.print}>Circuit Printing </Link></li>
+          <li><Link className={this.getClass(pageName, urls.paste)} to={urls.paste}>Paste Dispensing</Link></li>
+          <li><Link className={this.getClass(pageName, urls.software)} to={urls.software}>Desktop Software</Link></li>
+          <li><Link className={this.getClass(pageName, urls.experiment)} to={urls.experiment}>Experiment</Link></li>
         </ul>
       );
     }

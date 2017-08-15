@@ -34,7 +34,7 @@ export default class Technology extends React.Component {
             label="Board cost."
             />
         </MiniHero>
-        <section className="flex-row">
+        <section className="flex-row reverse-wrap">
           <div className="description">
             <h2>A perfect print every time.</h2>
             <p>This high precision probe was developed from the ground up and creates a height map of your substrate. The V-One takes the map into account and makes micro adjustments to ensure a constant printing height of 100 microns. </p>

@@ -1,4 +1,5 @@
 import React from 'react';
+import Bowser from 'bowser'
 import Logo from 'components/common/logo';
 import './footer.scss';
 
@@ -7,21 +8,11 @@ import Link from 'components/common/linkWrapper'
 
 export default class Footer extends React.Component {
 
-  constructor(props) {
-    super(props);
-    this.state = { windowWidth : 1920 };
-  }
-
-  componentDidMount() {
-      this.setState({ windowWidth: window.innerWidth })
-  }
-
   renderLogo() {
-    if (this.state.windowWidth > 600) {
+    if (!Bowser.mobile) {
       return <Logo />
     }
   }
-
 
   render() {
     return (<div className="footer-wrapper">

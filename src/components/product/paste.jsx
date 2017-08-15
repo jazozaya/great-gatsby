@@ -49,7 +49,7 @@ export default class Paste extends React.Component {
             <p>In just a few minutes you can have paste on boards printed by the V-One or traditionally fabricated by a factory.</p>
           </div>
         </section>
-        <section className="flex-row">
+        <section className="flex-row reverse-wrap">
           <div className="description">
             <h2>A built in heated platform.</h2>
             <p>After placing all of your surface mount components just hit the reflow button and sit back to enjoy the show.</p>

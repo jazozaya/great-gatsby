@@ -1,4 +1,5 @@
 import React from 'react'
+import Bowser from 'bowser'
 import './box.scss'
 
 const summary = {
@@ -22,12 +23,7 @@ export default class InTheBox extends React.Component {
     super(props);
     this.state = {
       description: summary.vOne,
-      windowWidth: 1920
     };
-  }
-
-  componentDidMount() {
-      this.setState({ windowWidth: window.innerWidth })
   }
 
   setDescription(name) {
@@ -222,7 +218,7 @@ export default class InTheBox extends React.Component {
     );
   }
   render() {
-    if (this.state.windowWidth < 600) {
+    if (Bowser.mobile) {
       return this.renderMobile()
     }
     return this.renderDesktop()

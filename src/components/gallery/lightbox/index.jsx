@@ -1,4 +1,5 @@
 import React from 'react'
+import Bowser from 'bowser'
 import './lightbox.scss'
 import Youtube from 'react-youtube'
 
@@ -12,7 +13,7 @@ export default class Lightbox extends React.Component {
     };
   }
 
-  componentDidMount() {
+  componentWillMount() {
       this.setState({ windowWidth: window.innerWidth })
   }
 
@@ -31,7 +32,9 @@ export default class Lightbox extends React.Component {
     );
   }
 
-  renderVideo(videoId) {
+
+  renderVideo() {
+    const { videoId, maxWidth } = this.props;
 
     const opts = {
        height: '450',
@@ -45,29 +48,36 @@ export default class Lightbox extends React.Component {
        }
      };
 
-     if (this.state.windowWidth < 600) {
-       var width_int = this.state.windowWidth - 40 // Trim in case of mobile.
-       const width_s = width_int.toString() // Ensure we store width as a string.
-       const height_s = Math.round(width_int / (640/360)).toString() // Find the corresponding height to preserve the aspect ratio.
-       opts.width = width_s;
-       opts.height = height_s;
+     // For certain videos, we don't want them fullscreen (this could be cleaned up, but I was being lazy)
+     if (maxWidth) {
+       const height = Math.round(parseInt(maxWidth) / (640/360))
+       opts.width = maxWidth.toString();
+       opts.height = height.toString();
+     }
+
+     if (Bowser.mobile) {
+       const width =  this.state.windowWidth - 40 // Trim in case of mobile.
+       const height = Math.round(width / (640/360)) // Find the corresponding height to preserve the default aspect ratio.
+       opts.width = width.toString();
+       opts.height = height.toString();
      }
 
     return <Youtube videoId={videoId} opts={opts}/>;
   }
 
-  renderImage(fileName) {
+  renderImage() {
+    const { fileName } = this.props;
     const urlName = `/gallery/large/${fileName}`
     return <img src={urlName} onClick={() => this.toggleLightbox()} />
   }
 
   renderLightbox() {
-    const { fileName, description, subtitle, videoId, isVideo, source } = this.props;
+    const { description, subtitle, source, videoId } = this.props;
     return (
       <div className="lightbox" onClick={() => this.toggleLightbox()}>
         <div className="lightbox-content">
-          {isVideo ? this.renderVideo(videoId) : this.renderImage(fileName)}
-           <h1>{subtitle}</h1>
+          {videoId ? this.renderVideo() : this.renderImage()}
+          <h2>{subtitle}</h2>
           <p>{description}</p>
           {source ? <p><a target="_blank" href={source}>(Source)</a></p> : null}
         </div>

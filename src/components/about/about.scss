@@ -3,5 +3,12 @@
 .about-image {
   background-image: url('/v-one-assembly.jpg');
   background-position: center;
+  background-size: cover;
   height: 500px;
+}
+
+@media (max-width: $mobile-threshold) {
+  .about-image {
+    height: 200px;
+  }
 }

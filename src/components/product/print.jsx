@@ -45,7 +45,7 @@ export default class Print extends React.Component {
             <p>The V-One comes equipped with all the consumables and accessories you need to get started. Setup is a breeze and in just minutes you will be printing your very first circuit board.</p>
           </div>
         </section>
-        <section className="flex-row">
+        <section className="flex-row reverse-wrap">
           <div className="description">
             <h2>Works with your favorite platform.</h2>
             <p>Development platforms have become the easiest starting point for many projects. Take your breadboard projects to the next level with your own personal shields.</p>

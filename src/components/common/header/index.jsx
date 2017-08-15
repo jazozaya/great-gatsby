@@ -1,23 +1,15 @@
 import React from 'react';
+import Bowser from 'bowser';
 
 import Desktop from './desktop'
 import Mobile from './mobile'
 
 export default class Header extends React.Component {
 
-  constructor(props) {
-    super(props);
-    this.state = { windowWidth : 1920 };
-  }
-
-  componentDidMount() {
-      this.setState({ windowWidth: window.innerWidth })
-  }
-
   render() {
-    if (this.state.windowWidth < 600) {
-      return <Mobile />;
+    if (Bowser.mobile) {
+      return <Mobile pageName={this.props.pageName} />;
     }
-    return  <Desktop {...this.props} />;
+    return  <Desktop pageName={this.props.pageName} />;
   }
 }

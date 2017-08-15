@@ -1,4 +1,5 @@
 import React from 'react'
+import Bowser from 'bowser'
 import Youtube from 'react-youtube'
 
 // Simple Wrapper so we don't have to keep including the opts.
@@ -12,7 +13,7 @@ const opts = {
   }
 }
 
-  export default class YouTube extends React.Component {
+export default class YouTube extends React.Component {
 
     constructor(props) {
       super(props);
@@ -22,25 +23,39 @@ const opts = {
       };
     }
 
-    componentDidMount() {
+    componentWillMount() {
         this.setState({ windowWidth: window.innerWidth })
     }
 
     renderStaticImage(width, height) {
       const { url } = this.props;
-      return <a><img width={width} height={height} onClick={() => this.setState({ playVideo: true})} src={url}></img></a>
+      return (
+        <a>
+          <img width={width} height={height} onClick={() => this.setState({ playVideo: true})} src={url}></img>
+        </a>
+      );
     }
 
     renderVideo(width, height) {
-      const { videoId, autoplay } = this.props;
+      const { videoId } = this.props;
       opts.width = width
       opts.height = height
       return <Youtube videoId={videoId} opts={opts}/>
     }
 
+    renderContent(width, height) {
+
+      // Mobile devices don't autoplay, so load the youtube video from the start.
+      if (Bowser.mobile || this.state.playVideo) {
+        return this.renderVideo(width, height);
+      }
+
+      return this.renderStaticImage(width, height);
+    }
+
     render() {
 
-      const { width } = this.props; // Might be in string or integer form.
+      const { width } = this.props;
       var width_int = Math.min(this.state.windowWidth - 40, width) // Trim in case of mobile.
 
       const width_s = width_int.toString() // Ensure we store width as a string.
@@ -54,7 +69,7 @@ const opts = {
 
       return (
         <div className="youtube-wrapper" style={divStyle}>
-          {this.state.playVideo ? this.renderVideo(width_s, height_s) : this.renderStaticImage(width_s, height_s)}
+          {this.renderContent(width_s, height_s)}
         </div>
       );
     }
