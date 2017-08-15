@@ -23,7 +23,7 @@ export default class YouTube extends React.Component {
       };
     }
 
-    componentWillMount() {
+    componentDidMount() {
         this.setState({ windowWidth: window.innerWidth })
     }
 

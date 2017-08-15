@@ -13,7 +13,7 @@ export default class Lightbox extends React.Component {
     };
   }
 
-  componentWillMount() {
+  componentDidMount() {
       this.setState({ windowWidth: window.innerWidth })
   }
 
