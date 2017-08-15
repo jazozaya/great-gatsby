@@ -8,6 +8,8 @@ export default class Awards extends React.Component {
     if (!Bowser.mobile) {
       return <div className="vertical"></div>
     }
+
+    return null;
   }
 
   render() {

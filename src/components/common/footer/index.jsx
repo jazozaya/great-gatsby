@@ -12,6 +12,7 @@ export default class Footer extends React.Component {
     if (!Bowser.mobile) {
       return <Logo />
     }
+    return null;
   }
 
   render() {

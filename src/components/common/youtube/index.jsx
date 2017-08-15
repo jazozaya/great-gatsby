@@ -49,7 +49,6 @@ export default class YouTube extends React.Component {
       if (Bowser.mobile || this.state.playVideo) {
         return this.renderVideo(width, height);
       }
-
       return this.renderStaticImage(width, height);
     }
 

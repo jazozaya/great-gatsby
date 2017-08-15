@@ -26,6 +26,7 @@ export default class Specs extends React.Component {
     if (Bowser.mobile) {
       return <p>Units: <strong>{units}</strong><br /><a onClick={() => this.setState({metric: !this.state.metric})}>Change...</a></p>
     }
+    return null;
   }
 
   render() {
