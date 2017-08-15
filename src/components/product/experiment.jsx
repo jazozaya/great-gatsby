@@ -40,7 +40,7 @@ export default class Experiment extends React.Component {
             <p>The Voltera V-One uses standard 5cc syringes. This means cartridges can be filled with any material you want to dispense with. We even offer UV blocking cartridges for sensitive inks!</p>
             <p>Our robust dispensing system can handle most high viscosity fluids right out of the box. Contact us today to find how we can help you!</p>
           </div>
-          <img src="/product/cartridges.png"/>
+          <img src="/product/cartridges-min.png"/>
         </section>
         <section className="flex-row">
           <img src="/product/flexible-electronics.jpg"/>
@@ -56,7 +56,7 @@ export default class Experiment extends React.Component {
             <p>The mounting platform doubles as a heated bed. With a 550W heater, the bed can reach a maximum temperature of 240°C (464°F) in about a minute.</p>
             <p>The temperature profile can also be customized, so you are able to thermally cure all sorts of materials and substrates</p>
           </div>
-          <img src="/product/heated-platform.png"/>
+          <img src="/product/heated-platform-min.png"/>
         </section>
         <ExperimentFAQ title="F.A.Q." all />
         <Gallery

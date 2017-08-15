@@ -172,7 +172,7 @@ export default class InTheBox extends React.Component {
         <div className="box-wrapper shadow-banner">
           <h1>What is in the box?</h1>
           <p className="pull-center">The V-One comes with all the accessories and consumables you need to start building hardware faster.</p>
-          <img src="/v-one-box.png" />
+          <img src="/v-one-box-min.png" />
           <div className="mobile-contents">
             <p><strong>1 - Voltera V-One</strong>.<br />A protoyping tool that can fit on your desk.</p>
             <p><strong>1 - Probe</strong>.<br />A sensor that maps the height of your board.</p>
