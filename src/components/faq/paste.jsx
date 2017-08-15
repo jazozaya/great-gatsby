@@ -16,9 +16,9 @@ export default class PasteFAQ extends React.Component {
             <p>A single solder paste cartridge will allow you to dispense up to 11,000 0603 solder pads.</p>
             <p>The official shelf life of the solder paste is 10 months from the time of delivery.</p>
           </Panel>
-          <Panel header="[FIX THIS QUESTION!!!] - How long does it take to paste and reflow?">
-            <p>About half the time it takes you now!</p>
-            <p></p>
+          <Panel header="How long does it take to paste and reflow?">
+            <p>Once you teach the software where the board is mounted, the V-One will take about 5-10 minutes to dispense paste.</p>
+            <p>Components need to be placed by hand, but once they are placed, reflowing the board only takes about 2 or 3 minutes.</p>
           </Panel>
           <Panel header="Can I use my own paste and reflow profile?">
             <p>The heated bed can reach a maximum temperature of 240°C (464°F) in about 2 minutes. If you use your own solder paste you can manually control the temperature to follow your own reflow profile.</p>

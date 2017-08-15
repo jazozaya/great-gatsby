@@ -1,0 +1,21 @@
+@import 'src/css/colors';
+
+.help-me {
+  align-items: flex-start;
+  padding-top: $small-padding;
+
+  .reason {
+    max-width: 390px;
+    text-align: center;
+  }
+
+  img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .description {
+  text-align: justify;
+  }
+
+}

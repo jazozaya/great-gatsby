@@ -9,6 +9,7 @@ import FastFact from 'components/common/fastFact'
 
 import TechnologyFAQ from 'components/faq/technology'
 import Box from './box'
+import HelpMe from './helpMe'
 
 import './common.scss'
 
@@ -34,6 +35,8 @@ export default class Technology extends React.Component {
             label="Board cost."
             />
         </MiniHero>
+
+        <Box />
         <section className="flex-row reverse-wrap">
           <div className="description">
             <h2>A perfect print every time.</h2>
@@ -42,7 +45,7 @@ export default class Technology extends React.Component {
           </div>
           <img src="/voltera-probe.png"/>
         </section>
-        <Box />
+        <HelpMe />
         <TechnologyFAQ title="F.A.Q." all />
         <Specs />
         <CallToAction

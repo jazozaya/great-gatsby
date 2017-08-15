@@ -96,7 +96,6 @@ export default class Software extends React.Component {
             total={SoftwareImages.length.toString()}
             />
         </section>
-        <div className="shadow-banner">
           <section className="flex-row column-wrapper">
             <div className="column">
               <img src="/software/software-locate-pad.jpg" />
@@ -115,7 +114,6 @@ export default class Software extends React.Component {
               </div>
             </div>
           </section>
-        </div>
         <SoftwareFAQ title="F.A.Q." all />
         <Gallery
           title="Learn by watching."

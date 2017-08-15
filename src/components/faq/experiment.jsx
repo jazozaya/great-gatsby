@@ -17,7 +17,7 @@ export default class ExperimentFAQ extends React.Component {
             <p>If you are interested in dispensing your own fluids please contact us at <strong>support@voltera.io</strong>. We offer empty cartridges on our store for precisely this reason.  Furthermore, if your inks are UV sensitive, we also have UV blocking cartridges.</p>
           </Panel>
           <Panel header="What substrates can I print on?">
-            <p>Our ink requires a curing process of 200C for 30 minutes. In general, if the substrate is able to withstand that temperature then you're likely able to print on it.</p>
+            <p>Our conductive ink requires a curing process of 200C for 30 minutes. In general, if the substrate is able to withstand that temperature then probably able to print on it.</p>
             <p>For rigid substrates we have printed on FR4, glass and ceramics. We have also printed on flex substrates in the past, specifically polyimide (kapton) films.</p>
           </Panel>
           <Panel header="Do you have inks for flexible electronics?">

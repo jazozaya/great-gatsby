@@ -54,7 +54,6 @@ export default class Print extends React.Component {
           <img src="/product/prototyping-platform.jpg"/>
         </section>
         <Workflow workflowType="print" />
-        <div className="shadow-banner">
           <section className="flex-row column-wrapper">
             <div className="column">
               <img src="/product/conductive-ink-printing.jpg" />
@@ -74,7 +73,6 @@ export default class Print extends React.Component {
               </div>
             </div>
           </section>
-        </div>
         <PrintFAQ title="F.A.Q." all />
         <Gallery
           title="A platform for all of your needs."

@@ -2,7 +2,6 @@ import React from 'react'
 import Helmet from 'react-helmet'
 
 import CallToAction from 'components/common/cta';
-import Awards from 'components/common/awards'
 import CustomerQuotes from 'components/common/customer'
 import ExperimentFAQ from 'components/faq/experiment';
 
@@ -36,7 +35,6 @@ export default class Experiment extends React.Component {
             label="Max Temp."
             />
         </MiniHero>
-        <Awards />
         <section className="flex-row">
           <div className="description">
             <h2>Use your own materials.</h2>
@@ -54,18 +52,18 @@ export default class Experiment extends React.Component {
           </div>
         </section>
         <section className="flex-row">
-          <img src="/product/flexible-electronics.jpg"/>
           <div className="description">
-            <h2>A flexible platform.</h2>
-            <p>Our standard substrate is FR4, but that doesn't mean you cannot print on other ridgid materials like glass, ceramics, or even on flexible films like Kapton or PET.</p>
-            <p>Scientists all over the world are using the Voltera V-One to help them experiment faster.</p>
+            <h2>Thermally cure your materials.</h2>
+            <p>The mounting platform doubles as a heated bed. With a 550W heater, the bed can reach a maximum temperature of 240°C (464°F) in about a minute.</p>
+            <p>The temperature profile can also be customized, so you are able to thermally cure all sorts of materials and substrates</p>
           </div>
+          <img src="/product/flexible-electronics.jpg"/>
         </section>
         <CustomerQuotes />
         <ExperimentFAQ title="F.A.Q." all />
         <Gallery
-          title="Simplify your life."
-          description="The V-One cuts your development in half and gets you to market faster."
+          title="Experiment without restrictions."
+          description="The V-One may help lower any barriers to entry you're experiencing."
           gallery= {experimentGallery} />
         <CallToAction
           title="Want to schedule a call?"
@@ -78,19 +76,8 @@ export default class Experiment extends React.Component {
   }
 }
 
-// Experiment page
-// - Refillable Cartridges (UV Blocking) (cartridge switching)
-// - Finer Printing (150 microns)
-// - Heated bed, not just for reflow.
-// - Custom Substrates (and substrates with pre-defined features)
+// Ideally we can get a mini case study/testimonial of a known research center and how they are using it. (profile pic, area of research)
+// maybe use the one from Nina ???
 
-
-// - Need to get another quote, maybe use the one from Nina ???
 // - Logo's of universities that have used the V-One.
 //// Harvard, MIT, Oxford University, Stanford.
-
-// Mini case study about how a researcher is using it.
-//// Profile pic, area of research
-
-// - Picture of multiple inks on multiple substrates.
-// - Mention that we can print on flexible ink

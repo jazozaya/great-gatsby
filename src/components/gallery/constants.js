@@ -70,6 +70,12 @@ export const experimentGallery = [
 
   },
   {
+    fileName:"irregular-surface.jpg",
+    subtitle:"Works with warped surfaces.",
+    description: "An extreme example of how irregular surfaces are handled. The software is capable of measuring a very tight array of points to get good height mapping.",
+    videoId: "ar6ioZEefSU",
+  },
+  {
     fileName:"printed-traces.jpg",
     subtitle: "Under the microscope",
     description: "Print traces down to 8 mil (200 microns) out of the box. We even offer a 6 mil (150 micron) nozzle for extra fine resolution.",

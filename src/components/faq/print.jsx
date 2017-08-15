@@ -17,7 +17,7 @@ export default class PrintFAQ extends React.Component {
             <p>The official shelf life of the ink is 6 months from time of delivery.</p>
           </Panel>
           <Panel header="How does double sided printing work?">
-            We created a video that walks you through this process!
+            We created a <a target="_blank" href="https://www.youtube.com/watch?v=iMqxk5a3u0Q">video</a> that walks you through this process!
           </Panel>
           <Panel header="Can you hand solder to the ink?">
             Yes! We have a comprehensive user guide on soldering to conductive ink for through-hole components and connectors. <a target="_blank" href="http://voltera.io/handsoldering">Take a look!</a>
