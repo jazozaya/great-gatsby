@@ -14,7 +14,7 @@ export default class PasteFAQ extends React.Component {
         <Collapse>
           <Panel header="How long does a paste cartridge last?">
             <p>A single solder paste cartridge will allow you to dispense up to 11,000 0603 solder pads.</p>
-            <p>The official shelf life of the solder paste is 10 months from the time of delivery.</p>
+            <p>The solder paste cartridge has a an official shelf life of 10 months and should be stored in the refridgerator when not used.</p>
           </Panel>
           <Panel header="How long does it take to paste and reflow?">
             <p>Once you teach the software where the board is mounted, the V-One will take about 5-10 minutes to dispense paste.</p>

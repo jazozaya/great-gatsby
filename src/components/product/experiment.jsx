@@ -2,7 +2,6 @@ import React from 'react'
 import Helmet from 'react-helmet'
 
 import CallToAction from 'components/common/cta';
-import CustomerQuotes from 'components/common/customer'
 import ExperimentFAQ from 'components/faq/experiment';
 
 
@@ -57,9 +56,8 @@ export default class Experiment extends React.Component {
             <p>The mounting platform doubles as a heated bed. With a 550W heater, the bed can reach a maximum temperature of 240°C (464°F) in about a minute.</p>
             <p>The temperature profile can also be customized, so you are able to thermally cure all sorts of materials and substrates</p>
           </div>
-          <img src="/product/flexible-electronics.jpg"/>
+          <img src="/product/heated-platform.png"/>
         </section>
-        <CustomerQuotes />
         <ExperimentFAQ title="F.A.Q." all />
         <Gallery
           title="Experiment without restrictions."

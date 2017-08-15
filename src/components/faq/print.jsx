@@ -14,7 +14,7 @@ export default class PrintFAQ extends React.Component {
         <Collapse>
           <Panel header="How long does an ink cartridge last?">
             <p>A single ink cartridge will allow you to print up to 85 "Hello World" boards. This also equates to 100 m of conductive trace at 8 mil width, or 200 cm2 of solid pour.  The number of boards you are able to print will depend on size and complexity of the circuits you are building.</p>
-            <p>The official shelf life of the ink is 6 months from time of delivery.</p>
+            <p>The ink cartridge has a an official shelf life of 6 months and should be stored in the refridgerator when not used.</p>
           </Panel>
           <Panel header="How does double sided printing work?">
             We created a <a target="_blank" href="https://www.youtube.com/watch?v=iMqxk5a3u0Q">video</a> that walks you through this process!

@@ -65,7 +65,7 @@ export default class Software extends React.Component {
     return (
       <div className="feature">
         <MiniHero
-          title="Master the software during your coffee break."
+          title="Master the software during a coffee break."
           description="Skip the instruction manual, our desktop application has been designed for the first time user and will get you printing in minutes."
           >
           <FastFact

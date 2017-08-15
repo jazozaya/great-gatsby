@@ -37,6 +37,14 @@ export default class Technology extends React.Component {
         </MiniHero>
 
         <Box />
+        <section className="flex-row">
+          <img src="/voltera-dispenser.png"/>
+          <div className="description">
+            <h2>Anyone can use it.</h2>
+            <p>The ink cartridge is installed in the dispenser, and the dispenser is mounted on the V-One. All of our attachments are magnetically mounted, so you do not need any special tools to swap them.</p>
+            <p>During a print, the dispenser gear will rotate to apply and relieve pressure to accurately control the ink flow. With the click of a few buttons you can be printing 8 mil (200 micron) traces, but don't worry the software will guide you every step of the way.</p>
+          </div>
+        </section>
         <section className="flex-row reverse-wrap">
           <div className="description">
             <h2>A perfect print every time.</h2>

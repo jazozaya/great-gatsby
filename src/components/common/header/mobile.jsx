@@ -39,6 +39,7 @@ export default class Mobile extends React.Component {
         </ul>
       );
     }
+    return null;
   }
 
   catchProduct(event) {

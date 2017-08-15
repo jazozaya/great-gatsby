@@ -66,6 +66,8 @@ export default class Desktop extends React.Component {
         </div>
       );
     }
+
+    return null;
   }
 
   render() {
