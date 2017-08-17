@@ -80,108 +80,115 @@ export default class QuoteRequest extends React.Component {
     this.setState({ quoteStatus: quoteStatus.sent});
   }
   emailFailure(err) {
-      console.log("FAILED. error=", err);
-      this.setState({ quoteStatus: quoteStatus.failed});
+    console.log("FAILED. error=", err);
+    this.setState({ quoteStatus: quoteStatus.failed});
   }
 
   renderQuoteSending() {
-    return (<div>
-      <h1>Please Wait</h1>
-      <p className="pull-center">We are processing your request.</p>
-      <div className="loader-wrapper">
-        <div className="loader"></div>
+    return (
+      <div>
+        <h1>Please Wait</h1>
+        <p className="pull-center">We are processing your request.</p>
+        <div className="loader-wrapper">
+          <div className="loader"></div>
+        </div>
+        <p className="pull-center">Thank you for filling out your information.</p>
       </div>
-      <p className="pull-center">Thank you for filling out your information.</p>
-    </div>)
+    )
   }
 
   renderQuoteSent() {
-    return (<div className="pull-center">
-      <h1>Success!</h1>
-      <p>We have received your request. We will be in touch soon!</p>
-      <div className="button-wrapper">
-        <Button label="Return" url={"/"} color="dark" internal/>
+    return (
+      <div className="pull-center">
+        <h1>Success!</h1>
+        <p>We have received your request. We will be in touch soon!</p>
+        <div className="button-wrapper">
+          <Button label="Return" url={"/"} color="dark" internal/>
+        </div>
       </div>
-    </div>);
+    );
   }
 
   renderQuoteFailed(){
-    return (<div className="pull-center">
+    return (
+      <div className="pull-center">
         <h1>Uh Oh!</h1>
         <p>We are sorry, there was an issue processing your request. Please try again later or email <strong>sales@voltera.io</strong></p>
         <div className="button-wrapper">
           <Button label="Return" url={"/"} color="dark" internal/>
         </div>
-    </div>);
+      </div>
+    );
   }
 
   renderQuoteRequest() {
-    return (<div>
-      <h1>Request a quote.</h1>
-      <form>
-        <h3>Contact Information</h3>
-        <div className="wrapper">
-          <p className="wide-text">Profile:</p>
-          <select className="wide-select" id="profile" name="profile-type">
-            <option value="select">Please Select</option>
-            <option value="researcher">Academic Researcher</option>
-            <option value="educator">Educator</option>
-            <option value="business">Business</option>
-            <option value="hobbyist">Hobbyist</option>
-            <option value="makerspace">Makerspace / Fablab</option>
-          </select>
+    return (
+      <div>
+        <h1>Request a quote.</h1>
+        <form>
+          <h3>Contact Information</h3>
+          <div className="wrapper">
+            <p className="wide-text">Profile:</p>
+            <select className="wide-select" id="profile" name="profile-type">
+              <option value="select">Please Select</option>
+              <option value="researcher">Academic Researcher</option>
+              <option value="educator">Educator</option>
+              <option value="business">Business</option>
+              <option value="hobbyist">Hobbyist</option>
+              <option value="makerspace">Makerspace / Fablab</option>
+            </select>
+          </div>
+          <div className="format">
+            <p>First Name: <input className="text-input" type="text" id="fname" name="fname" /></p>
+            <p>Last Name: <input className="text-input" type="text" id="lname" name="lname" /></p>
+            <p>Email: <input className="text-input" type="email"  id="email" name="email"  autoComplete="email" /></p>
+            <p>Phone: <input className="text-input" type="tel" id="phone" name="phone" autoComplete="tel" /></p>
+            <p>Company: <input className="text-input" id="company" name="company" autoComplete="company" /></p>
+            <p>Website: <input className="text-input" id="website" name="website" /></p>
+          </div>
+          <h3>Shipping Information</h3>
+          <div className="wrapper">
+            <p className="wide-text">Street: </p>
+            <input className="wide-select" name="ship-address"  id="street"  autoComplete="shipping street-address" />
+          </div>
+          <div className="format">
+            <p>City: <input className="text-input" name="ship-city" id="city"  autoComplete="shipping locality" /></p>
+            <p>State/Region: <input className="text-input" name="ship-state" id="state"  autoComplete="shipping region" /></p>
+            <p>Postal Code: <input className="text-input" name="ship-zip" id="postal"  autoComplete="shipping postal-code" /></p>
+            <p>Country: <input className="text-input" name="ship-country" id="country"  autoComplete="shipping country" /></p>
+          </div>
+          <h3>Extra Information</h3>
+          <p>Would you like to add anything else to your order?</p><textarea placeholder="(Optional)" id="additional-item"/>
+          <p>Any additional data you require on the quote?</p><textarea  placeholder="(Optional)" id="additional-comment"/>
+          <p>How did you find out about the Voltera V-One?</p><textarea id="find-out"/>
+        </form>
+        {this.state.missingFields ? <p className="missing">Please fill out of all of the required fields! ({this.state.count})</p> : null}
+        <div className="button-wrapper">
+          <Button label="Submit" color="dark" onClick={this.sendQuoteRequest.bind(this)}/>
         </div>
-        <div className="format">
-          <p>First Name: <input className="text-input" type="text" id="fname" name="fname" /></p>
-          <p>Last Name: <input className="text-input" type="text" id="lname" name="lname" /></p>
-          <p>Email: <input className="text-input" type="email"  id="email" name="email"  autoComplete="email" /></p>
-          <p>Phone: <input className="text-input" type="tel" id="phone" name="phone" autoComplete="tel" /></p>
-          <p>Company: <input className="text-input" id="company" name="company" autoComplete="company" /></p>
-          <p>Website: <input className="text-input" id="website" name="website" /></p>
-        </div>
-        <h3>Shipping Information</h3>
-        <div className="wrapper">
-          <p className="wide-text">Street: </p>
-          <input className="wide-select" name="ship-address"  id="street"  autoComplete="shipping street-address" />
-        </div>
-        <div className="format">
-          <p>City: <input className="text-input" name="ship-city" id="city"  autoComplete="shipping locality" /></p>
-          <p>State/Region: <input className="text-input" name="ship-state" id="state"  autoComplete="shipping region" /></p>
-          <p>Postal Code: <input className="text-input" name="ship-zip" id="postal"  autoComplete="shipping postal-code" /></p>
-          <p>Country: <input className="text-input" name="ship-country" id="country"  autoComplete="shipping country" /></p>
-        </div>
-        <h3>Extra Information</h3>
-        <p>Would you like to add anything else to your order?</p><textarea placeholder="(Optional)" id="additional-item"/>
-        <p>Any additional data you require on the quote?</p><textarea  placeholder="(Optional)" id="additional-comment"/>
-        <p>How did you find out about the Voltera V-One?</p><textarea id="find-out"/>
-      </form>
-      {this.state.missingFields ? <p className="missing">Please fill out of all of the required fields! ({this.state.count})</p> : null}
-      <div className="button-wrapper">
-        <Button label="Submit" color="dark" onClick={this.sendQuoteRequest.bind(this)}/>
       </div>
-    </div>
-  );
-}
-
-renderQuoteStatus() {
-  switch(this.state.quoteStatus) {
-    case quoteStatus.ready:
-    return this.renderQuoteRequest();
-    case quoteStatus.sending:
-    return this.renderQuoteSending();
-    case quoteStatus.sent:
-    return this.renderQuoteSent();
-    case quoteStatus.failed:
-    return this.renderQuoteFailed();
+    );
   }
-}
 
-render() {
-  return (
-    <div className="request">
-      <div className="request-wrapper">
-        {this.renderQuoteStatus()}
-      </div>
-    </div>);
+  renderQuoteStatus() {
+    switch(this.state.quoteStatus) {
+      case quoteStatus.ready:
+      return this.renderQuoteRequest();
+      case quoteStatus.sending:
+      return this.renderQuoteSending();
+      case quoteStatus.sent:
+      return this.renderQuoteSent();
+      case quoteStatus.failed:
+      return this.renderQuoteFailed();
+    }
   }
-}
+
+  render() {
+    return (
+      <div className="request">
+        <div className="request-wrapper">
+          {this.renderQuoteStatus()}
+        </div>
+      </div>);
+    }
+  }

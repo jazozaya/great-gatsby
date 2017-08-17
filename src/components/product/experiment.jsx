@@ -8,8 +8,8 @@ import ExperimentFAQ from 'components/faq/experiment';
 import MiniHero from 'components/common/minihero'
 import FastFact from 'components/common/fastFact'
 
-import Gallery from 'components/gallery'
-import { experimentGallery } from 'components/gallery/constants'
+import Gallery from 'components/common/gallery'
+import { experimentGallery } from 'components/common/gallery/constants'
 
 import './common.scss'
 

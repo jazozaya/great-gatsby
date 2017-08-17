@@ -71,88 +71,92 @@ export default class ReservationRequest extends React.Component {
   }
 
   renderSending() {
-    return (<div>
-      <h1>Please Wait</h1>
-      <p className="pull-center">We are processing your request.</p>
-      <div className="loader-wrapper">
-        <div className="loader"></div>
+    return (
+      <div>
+        <h1>Please Wait</h1>
+        <p className="pull-center">We are processing your request.</p>
+        <div className="loader-wrapper">
+          <div className="loader"></div>
+        </div>
+        <p className="pull-center">Thank you for the interest in Voltera!</p>
       </div>
-      <p className="pull-center">Thank you for the interest in Voltera!</p>
-    </div>)
+    )
   }
 
   renderSent() {
+    return (
+      <div className="pull-center">
+        <h1>Congratulations!</h1>
+        <p>You have reserved a unit. We will follow up in a few weeks to see how we can help!</p>
+        <div className="button-wrapper">
+          <Button label="Return" url={"/"} color="dark" internal/>
+        </div>
+      </div>);
+    }
 
-    return (<div className="pull-center">
-    <h1>Congratulations!</h1>
-    <p>You have reserved a unit. We will follow up in a few weeks to see how we can help!</p>
-    <div className="button-wrapper">
-      <Button label="Return" url={"/"} color="dark" internal/>
-    </div>
-  </div>);
-}
+    renderFailed(){
+      return (
+        <div className="pull-center">
+          <h1>Uh Oh!</h1>
+          <p>We are sorry, there was an issue processing your request. Please try again later or email <strong>sales@voltera.io</strong></p>
+          <div className="button-wrapper">
+            <Button label="Return" url={"/"} color="dark" internal/>
+          </div>
+        </div>
+      );
+    }
 
-renderFailed(){
-  return (<div className="pull-center">
-  <h1>Uh Oh!</h1>
-  <p>We are sorry, there was an issue processing your request. Please try again later or email <strong>sales@voltera.io</strong></p>
-  <div className="button-wrapper">
-    <Button label="Return" url={"/"} color="dark" internal/>
-  </div>
-</div>);
-}
+    renderRequest() {
+      return (<div>
+        <h1>Place a unit on hold!</h1>
+        <img src="/v-one-box-min.png"/>
+        <form>
+          <p>
+            Want a V-One but do not have the budget yet?
+          </p>
+          <p>
+            Or maybe you need approval from your supervisor, purchasing manager, husband or wife?
+          </p>
+          <p>The V-Ones are produced in limited quantities, but you can place a unit on hold.  We will reach out in a few weeks!
+          </p>
 
-renderRequest() {
-  return (<div>
-    <h1>Place a unit on hold!</h1>
-    <img src="/v-one-box-min.png"/>
-    <form>
-      <p>
-        Want a V-One but do not have the budget yet?
-      </p>
-      <p>
-        Or maybe you need approval from your supervisor, purchasing manager, husband or wife?
-      </p>
-      <p>The V-Ones are produced in limited quantities, but you can place a unit on hold.  We will reach out in a few weeks!
-      </p>
-
-      <h3>Contact Information</h3>
-      <div className="format">
-        <p>First Name: <input className="text-input" type="text" id="fname" name="fname" /></p>
-        <p>Last Name: <input className="text-input" type="text" id="lname" name="lname" /></p>
-        <p>Email: <input className="text-input" type="email"  id="email" name="email"  autoComplete="email" /></p>
-        <p>Phone: <input className="text-input" type="tel" id="phone" name="phone" autoComplete="tel" /></p>
-        <p>Company: <input className="text-input" id="company" name="company" autoComplete="company" /></p>
-        <p>Website: <input className="text-input" id="website" name="website" /></p>
+          <h3>Contact Information</h3>
+          <div className="format">
+            <p>First Name: <input className="text-input" type="text" id="fname" name="fname" /></p>
+            <p>Last Name: <input className="text-input" type="text" id="lname" name="lname" /></p>
+            <p>Email: <input className="text-input" type="email"  id="email" name="email"  autoComplete="email" /></p>
+            <p>Phone: <input className="text-input" type="tel" id="phone" name="phone" autoComplete="tel" /></p>
+            <p>Company: <input className="text-input" id="company" name="company" autoComplete="company" /></p>
+            <p>Website: <input className="text-input" id="website" name="website" /></p>
+          </div>
+        </form>
+        {this.state.missingFields ? <p className="missing">Please fill out all of the form fields! ({this.state.count})</p> : null}
+        <div className="button-wrapper">
+          <Button label="Reserve Unit" color="dark" onClick={this.sendRequest.bind(this)}/>
+        </div>
       </div>
-    </form>
-    {this.state.missingFields ? <p className="missing">Please fill out all of the form fields! ({this.state.count})</p> : null}
-    <div className="button-wrapper">
-      <Button label="Reserve Unit" color="dark" onClick={this.sendRequest.bind(this)}/>
-    </div>
-  </div>
-);
-}
-
-renderStatus() {
-  switch(this.state.status) {
-    case status.ready:
-    return this.renderRequest();
-    case status.sending:
-    return this.renderSending();
-    case status.sent:
-    return this.renderSent();
-    case status.failed:
-    return this.renderFailed();
+    );
   }
-}
 
-render() {
-  return (
-    <div className="request">
-      <div className="request-wrapper">
-        {this.renderStatus()}
-      </div>
-    </div>);
+  renderStatus() {
+    switch(this.state.status) {
+      case status.ready:
+      return this.renderRequest();
+      case status.sending:
+      return this.renderSending();
+      case status.sent:
+      return this.renderSent();
+      case status.failed:
+      return this.renderFailed();
+    }
   }
-}
+
+  render() {
+    return (
+      <div className="request">
+        <div className="request-wrapper">
+          {this.renderStatus()}
+        </div>
+      </div>);
+    }
+  }

@@ -1,5 +1,4 @@
 import React from 'react';
-import favicon from './favicon.ico';
 
 let inlinedStyles = '';
 if (process.env.NODE_ENV === 'production') {
@@ -22,17 +21,9 @@ export default class HTML extends React.Component {
       );
     }
     return (
-
       <html lang="en">
         <head>
-          <meta charSet="utf-8" />
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0"
-          />
           {this.props.headComponents}
-          <link rel="shortcut icon" href={favicon} />
-
           {css}
         </head>
         <body>
@@ -41,9 +32,6 @@ export default class HTML extends React.Component {
             dangerouslySetInnerHTML={{ __html: this.props.body }}
           />
           {this.props.postBodyComponents}
-          <link href="https://fonts.googleapis.com/css?family=Raleway:300,600" rel="stylesheet"/>
-          <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet"/>
-          <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
         </body>
       </html>
     );

@@ -11,8 +11,8 @@ import Dots from 'components/common/customer/dots'
 
 import SoftwareFAQ from 'components/faq/software'
 
-import Gallery from 'components/gallery'
-import { softwareGallery } from 'components/gallery/constants'
+import Gallery from 'components/common/gallery'
+import { softwareGallery } from 'components/common/gallery/constants'
 
 
 import './common.scss'

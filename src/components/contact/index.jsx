@@ -23,10 +23,6 @@ export default class Contact extends React.Component {
             <li><a href="mailto:support@voltera.io">support@voltera.io</a></li>
             <li>+1 888-381-3332 ext: 2</li>
           </ul>
-          <ul>
-            <h4>Shipping Issues</h4>
-            <li><a href="mailto:shipping@voltera.io">shipping@voltera.io</a></li>
-          </ul>
         </div>
         <div className="column">
           <ul>

@@ -5,8 +5,8 @@ import FastFact from 'components/common/fastFact'
 import MiniHero from 'components/common/minihero'
 import YouTube from 'components/common/youtube'
 
-import Gallery from 'components/gallery'
-import { printGallery } from 'components/gallery/constants'
+import Gallery from 'components/common/gallery'
+import { printGallery } from 'components/common/gallery/constants'
 
 import PrintFAQ from 'components/faq/print'
 

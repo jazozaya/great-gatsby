@@ -4,8 +4,8 @@ import MiniHero from 'components/common/minihero'
 import FastFact from 'components/common/fastFact'
 import YouTube from 'components/common/youtube'
 
-import Gallery from 'components/gallery'
-import { pasteGallery } from 'components/gallery/constants'
+import Gallery from 'components/common/gallery'
+import { pasteGallery } from 'components/common/gallery/constants'
 
 import PasteFAQ from 'components/faq/print'
 
