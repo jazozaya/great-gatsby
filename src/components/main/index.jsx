@@ -22,7 +22,6 @@ export default class Index extends React.Component {
         <FeatureSelector/>
         <Testimonial />
         <BenefitsSelector />
-        <p> TODO: helmet nonesense, SEO links (pre-rendering)</p>
         <CustomerQuotes />
         <Awards />
         <CallToAction
