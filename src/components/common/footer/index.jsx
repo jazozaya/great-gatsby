@@ -3,6 +3,10 @@ import Bowser from 'bowser'
 import Logo from 'components/common/logo';
 import './footer.scss';
 
+import twitterIcon from './twitter-icon.min.svg'
+import facebookIcon from './facebook-icon.min.svg'
+import instagramIcon from './instagram-icon.min.svg'
+
 import Link from 'components/common/linkWrapper'
 
 
@@ -44,6 +48,11 @@ export default class Footer extends React.Component {
             <li>sales@voltera.io</li>
             <li>+1 888-381-3332 ext 1</li>
           </ul>
+          <div>
+            <a target="_blank" href="https://www.facebook.com/voltera.io/"><img className="social-icon" src={facebookIcon}/></a>
+            <a target="_blank" href="https://twitter.com/voltera_io"><img className="social-icon" src={twitterIcon}/></a>
+            <a target="_blank" href="https://www.instagram.com/voltera.io/"><img className="social-icon" src={instagramIcon}/></a>
+          </div>
         </div>
       </div>
       <div className="footer-links">

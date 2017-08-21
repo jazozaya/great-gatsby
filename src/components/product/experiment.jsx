@@ -35,7 +35,7 @@ export default class Experiment extends React.Component {
             label="Max Temp."
             />
         </MiniHero>
-        <section className="flex-row">
+        <section className="flex-row reverse-wrap">
           <div className="description">
             <h2>Use your own materials.</h2>
             <p>The Voltera V-One uses standard 5cc syringes. This means cartridges can be filled with any material you want to dispense with. We even offer UV blocking cartridges for sensitive inks!</p>

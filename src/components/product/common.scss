@@ -65,6 +65,10 @@
     height: auto;
   }
 
+  .feature .column {
+    padding: $small-padding 0px;
+  }
+
   .feature .screenshot-wrapper .navigation.left {
     transform: rotate(90deg);
   }

@@ -71,7 +71,7 @@ export const experimentGallery = [
   },
   {
     fileName:"irregular-surface.jpg",
-    subtitle:"Works with warped surfaces.",
+    subtitle:"Works with curved surfaces.",
     description: "An extreme example of how irregular surfaces are handled. The software is capable of measuring a very tight array of points to get good height mapping.",
     videoId: "ar6ioZEefSU",
   },

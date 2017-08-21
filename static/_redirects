@@ -1,7 +1,12 @@
-
+# General Redirects.
 /store https://store.voltera.io/
+/forums https://community.voltera.io/
 /blog https://medium.com/@voltera
 
+#Social
+/twitter https://twitter.com/voltera_io/
+/facebook https://www.facebook.com/voltera.io/
+/instagram https://www.instagram.com/voltera.io/
 
 # Redirects to Zendesk support
 /start https://support.voltera.io/hc/en-us/articles/115004160628
@@ -9,6 +14,7 @@
 /downloads https://support.voltera.io/hc/en-us/articles/115004264687
 /msds https://support.voltera.io/hc/en-us/articles/115004414348
 /handsoldering https://support.voltera.io/hc/en-us/articles/115005823107
+/maintenance https://support.voltera.io/hc/en-us/articles/115004414408
 
 # Links used in the app
 /app-link/simple-vs-aligned https://support.voltera.io/hc/en-us/articles/115005825187
@@ -19,5 +25,6 @@
 /app-link/calibrating-the-solder-dispenser https://support.voltera.io/hc/en-us/articles/115004414848#calibrating-the-solder-dispenser
 /app-link/priming-the-dispenser https://support.voltera.io/hc/en-us/articles/115004294268#priming-the-dispenser
 
-
+# Feature Set.
 /summary /docs/V-One-Summary.pdf
+/techsheet /docs/Voltera-Conductive-Ink.pdf

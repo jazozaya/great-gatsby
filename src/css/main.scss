@@ -89,6 +89,13 @@ section {
   justify-content: space-between;
 }
 
+.shadow-banner {
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+  z-index: 1;
+  position: relative;
+  background-color: $light-grey;
+}
+
 @media (max-width: $mobile-threshold) {
   .flex-row {
     justify-content: center;
@@ -97,11 +104,8 @@ section {
   .reverse-wrap {
     flex-wrap: wrap-reverse;
   }
-}
 
-.shadow-banner {
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
-  z-index: 1;
-  position: relative;
-  background-color: $light-grey;
+  section {
+    padding: $large-mobile-padding $small-padding;
+  }
 }
