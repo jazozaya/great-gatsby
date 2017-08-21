@@ -120,7 +120,7 @@ export default class Software extends React.Component {
           gallery= {softwareGallery}
           />
         <CallToAction
-          title="Ready to build hardware faster?"
+          title="Ready to build faster?"
           subtitle="We can help with that."
           buttonOne={
             {

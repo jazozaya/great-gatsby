@@ -89,7 +89,7 @@ export default class Paste extends React.Component {
           description="The V-One cuts your development in half and gets you to market faster."
           gallery= {pasteGallery} />
         <CallToAction
-          title="Ready to build hardware faster?"
+          title="Ready to build faster?"
           subtitle="We can help with that."
           buttonOne={
             {

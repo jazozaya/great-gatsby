@@ -80,7 +80,7 @@ export default class Print extends React.Component {
           gallery= {printGallery}
           />
           <CallToAction
-            title="Ready to build hardware faster?"
+            title="Ready to build faster?"
             subtitle="We can help with that."
             buttonOne={
               {
