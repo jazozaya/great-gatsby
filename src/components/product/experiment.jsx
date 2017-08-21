@@ -51,7 +51,7 @@ export default class Experiment extends React.Component {
             <p>Scientists all over the world are using the Voltera V-One to help them experiment faster.</p>
           </div>
         </section>
-        <section className="flex-row">
+        <section className="flex-row reverse-wrap">
           <div className="description">
             <h2>Thermally cure your materials.</h2>
             <p>The mounting platform doubles as a heated bed. With a 550W heater, the bed can reach a maximum temperature of 240°C (464°F) in about a minute.</p>
