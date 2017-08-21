@@ -24,7 +24,12 @@ export default class Specs extends React.Component {
 
   renderUnitChange(units) {
     if (Bowser.mobile) {
-      return <p>Units: <strong>{units}</strong><br /><a onClick={() => this.setState({metric: !this.state.metric})}>Change...</a></p>
+      return(
+        <div className="units-wrapper">
+          <a onClick={() => this.setState({metric: true})} className={units === "Metric" ? "units dark" : "units clear"}>Metric</a>
+          <a onClick={() => this.setState({metric: false})} className={units === "Imperial" ? "units dark" : "units clear"}>Imperial</a>
+        </div>
+      )
     }
     return null;
   }

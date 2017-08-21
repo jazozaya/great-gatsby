@@ -58,8 +58,8 @@ export default class Mobile extends React.Component {
             {this.renderSubheader()}
             <li><a href="http://community.voltera.io">Forums</a></li>
             <li><a href="http://support.voltera.io">Support</a></li>
-            <li><a href="http://voltera.io/blog">Blog</a></li>
-            <li><a href="http://store.voltera.io">Store</a></li>
+            <li><Link to='/contact/'>Contact</Link></li>
+            <li><a href="https://store.voltera.io/">Store</a></li>
           </ul>
         </div>
       </div>

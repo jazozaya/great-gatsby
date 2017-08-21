@@ -3,7 +3,7 @@ import Helmet from 'react-helmet'
 
 import CallToAction from 'components/common/cta';
 import ExperimentFAQ from 'components/faq/experiment';
-
+import Link from 'components/common/linkWrapper'
 
 import MiniHero from 'components/common/minihero'
 import FastFact from 'components/common/fastFact'
@@ -15,6 +15,7 @@ import './common.scss'
 
 export default class Experiment extends React.Component {
   render() {
+
     return (
       <div className="feature">
         <MiniHero
@@ -38,7 +39,7 @@ export default class Experiment extends React.Component {
           <div className="description">
             <h2>Use your own materials.</h2>
             <p>The Voltera V-One uses standard 5cc syringes. This means cartridges can be filled with any material you want to dispense with. We even offer UV blocking cartridges for sensitive inks!</p>
-            <p>Our robust dispensing system can handle most high viscosity fluids right out of the box. Contact us today to find how we can help you!</p>
+            <p>Our robust dispensing system can handle most high viscosity fluids right out of the box. <Link to="/contact/">Contact us</Link> today to find how we can help you!</p>
           </div>
           <img src="/product/cartridges-min.png"/>
         </section>
@@ -66,8 +67,11 @@ export default class Experiment extends React.Component {
         <CallToAction
           title="Want to schedule a call?"
           subtitle="Let's find a time to talk!"
-          label="Schedule Call"
-          url="/requestCall/"
+          buttonOne={{
+            label: "Book a Call",
+            url: "/request/call/",
+            internal: true
+          }}
           />
       </div>
     )

@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'components/common/linkWrapper'
 
+import CallToAction from 'components/common/cta'
 import FastFact from 'components/common/fastFact'
 import MiniHero from 'components/common/minihero'
 import YouTube from 'components/common/youtube'
@@ -10,7 +11,6 @@ import { printGallery } from 'components/common/gallery/constants'
 
 import PrintFAQ from 'components/faq/print'
 
-import BuyNow from './buyNow'
 import Workflow from './workflow'
 
 import './common.scss'
@@ -79,7 +79,24 @@ export default class Print extends React.Component {
           description="The V-One is a versatile tool that will help you in any stage of development"
           gallery= {printGallery}
           />
-        <BuyNow />
+          <CallToAction
+            title="Ready to build hardware faster?"
+            subtitle="We can help with that."
+            buttonOne={
+              {
+                label: "Buy Now",
+                url: "https://store.voltera.io/products/voltera-v-one",
+                internal: false
+              }
+            }
+            buttonTwo={
+              {
+                label: "Reserve",
+                url: "/request/reservation/",
+                internal: true
+              }
+            }
+            />
       </div>);
     }
   }

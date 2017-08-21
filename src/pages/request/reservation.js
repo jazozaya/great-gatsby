@@ -10,7 +10,7 @@ export default class MyCall extends React.Component {
     return (
       <div>
         <Helmet>
-          <title>Voltera | Request a unit</title>
+          <title>Voltera | Reserve a unit</title>
           <meta name="description" content="Fill out this form to reserve your unit and put it on hold!" />
         </Helmet>
         <RequestReservation />

@@ -1,9 +1,8 @@
 import React from 'react'
 import Bowser from 'bowser'
 
-import BuyNow from './buyNow'
 import YouTube from 'components/common/youtube'
-
+import CallToAction from 'components/common/cta'
 import FastFact from 'components/common/fastFact'
 import MiniHero from 'components/common/minihero'
 import Explore from 'components/common/explore'
@@ -120,7 +119,24 @@ export default class Software extends React.Component {
           description="Whether you use the V-One once a day or once a month, you will be able to pick up right where you left off. These short video clips are built right into the app and will make the tricky parts easy"
           gallery= {softwareGallery}
           />
-        <BuyNow />
+        <CallToAction
+          title="Ready to build hardware faster?"
+          subtitle="We can help with that."
+          buttonOne={
+            {
+              label: "Buy Now",
+              url: "https://store.voltera.io/products/voltera-v-one",
+              internal: false
+            }
+          }
+          buttonTwo={
+            {
+              label: "Reserve",
+              url: "/request/reservation/",
+              internal: true
+            }
+          }
+          />
       </div>);
     }
   }

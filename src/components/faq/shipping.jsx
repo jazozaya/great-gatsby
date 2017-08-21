@@ -30,7 +30,7 @@ export default class Shipping extends React.Component {
             <p>If you want to ship with your account or if you have special shipping requirements, please contact <strong>sales@voltera.io</strong> before you place your order.</p>
           </Panel>
           <Panel header="How can I pay?">
-            <p>If you want to pay with credit card, you can do so directly on our <a href="http://voltera.io/store">store</a>.</p>
+            <p>If you want to pay with credit card, you can do so directly on our <a href="https://store.voltera.io/">store</a>.</p>
             <p>If you want to pay with a bank transfer, please send your PO to sales@voltera.io and we'll provide you our banking details.</p>
           </Panel>
           <Panel header="Are taxes and duties included?">

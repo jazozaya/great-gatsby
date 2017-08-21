@@ -7,13 +7,15 @@ import Mobile from './mobile'
 export default class Header extends React.Component {
 
   track() {
-    window.google_trackConversion({
-      google_conversion_id: 933031938,
-      google_custom_params: {
-        hiMakan: 'how are you?'
-      },
-      google_remarketing_only: true
-    });
+
+    if (process.env.NODE_ENV === 'production') {
+      window.google_trackConversion({
+        google_conversion_id: 933031938,
+        google_custom_params: {
+        },
+        google_remarketing_only: true
+      });
+    }
   }
 
   componentDidUpdate() {

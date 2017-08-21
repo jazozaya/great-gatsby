@@ -3,13 +3,12 @@ import React from 'react'
 import MiniHero from 'components/common/minihero'
 import FastFact from 'components/common/fastFact'
 import YouTube from 'components/common/youtube'
-
+import CallToAction from 'components/common/cta'
 import Gallery from 'components/common/gallery'
 import { pasteGallery } from 'components/common/gallery/constants'
 
 import PasteFAQ from 'components/faq/print'
 
-import BuyNow from './buyNow'
 import Workflow from './workflow'
 
 
@@ -89,7 +88,24 @@ export default class Paste extends React.Component {
           title="Simplify your life."
           description="The V-One cuts your development in half and gets you to market faster."
           gallery= {pasteGallery} />
-        <BuyNow />
+        <CallToAction
+          title="Ready to build hardware faster?"
+          subtitle="We can help with that."
+          buttonOne={
+            {
+              label: "Buy Now",
+              url: "https://store.voltera.io/products/voltera-v-one",
+              internal: false
+            }
+          }
+          buttonTwo={
+            {
+              label: "Reserve",
+              url: "/request/reservation/",
+              internal: true
+            }
+          }
+          />
       </div>
     );
     }

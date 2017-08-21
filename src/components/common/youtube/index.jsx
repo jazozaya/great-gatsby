@@ -19,12 +19,7 @@ export default class YouTube extends React.Component {
       super(props);
       this.state = {
         playVideo: false,
-        windowWidth: 1920
       };
-    }
-
-    componentDidMount() {
-        this.setState({ windowWidth: window.innerWidth })
     }
 
     renderStaticImage(width, height) {
@@ -53,24 +48,28 @@ export default class YouTube extends React.Component {
     }
 
     render() {
-
       const { width } = this.props;
-      var width_int = Math.min(this.state.windowWidth - 40, width) // Trim in case of mobile.
 
-      const width_s = width_int.toString() // Ensure we store width as a string.
-      const height_s = Math.round(width_int / (640/360)).toString() // Find the corresponding height to preserve the aspect ratio.
+      // Need to check window size in case of mobile. But window is undefined during compilation.
+      if (typeof(window) !== 'undefined') {
 
-      // We apply the css dynamically since we do not know width ahead of time.
-      var divStyle = {
-        width: `${width_s}px`,
-        height: `${height_s}px`
-      };
+        var width_int = Math.min(window.innerWidth - 40, width) // Trim in case of mobile.
+        const width_s = width_int.toString() // Ensure we store width as a string.
+        const height_s = Math.round(width_int / (640/360)).toString() // Find the corresponding height to preserve the aspect ratio.
 
-      return (
-        <div className="youtube-wrapper" style={divStyle}>
-          {this.renderContent(width_s, height_s)}
-        </div>
-      );
+        // We apply the css dynamically since we do not know width ahead of time.
+        var divStyle = {
+          width: `${width_s}px`,
+          height: `${height_s}px`
+        };
+
+        return (
+          <div className="youtube-wrapper" style={divStyle}>
+            {this.renderContent(width_s, height_s)}
+          </div>
+        );
+      }
+      return null; // Should never happen.
     }
   }
 

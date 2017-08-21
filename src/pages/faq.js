@@ -7,6 +7,19 @@ import FAQ from 'components/faq'
 export default class Faq extends React.Component {
 
   render() {
+
+    const buttonOne = {
+      label: "Book a Call",
+      url: "/request/call/",
+      internal: true
+    }
+
+    const buttonTwo = {
+      label: "Get A Quote",
+      url: "/request/quote/",
+      internal: true
+    }
+
     return (
       <div>
         <Helmet>
@@ -15,11 +28,11 @@ export default class Faq extends React.Component {
         </Helmet>
         <FAQ />
         <CallToAction
-            title="Can't find what you are looking for?"
-            subtitle="Let's book a time to talk."
-            label="Schedule Call"
-            url="/requestCall"
-          />
+          title="Want to get in touch?"
+          subtitle="Let's find a time to talk!"
+          buttonOne={buttonOne}
+          buttonTwo={buttonTwo}
+        />
       </div>
     )
   }

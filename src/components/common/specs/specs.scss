@@ -44,13 +44,39 @@ background-color: $white;
   flex-basis: 280px;
 }
 
+.specs .units {
+  cursor: pointer;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding:0.9em 1.8em;
+  font-weight: 600;
+}
+
+.specs .units-wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.specs .units.dark {
+  color: $white;
+  background-color: $voltera-blue;
+  border-color: $white;
+}
+.specs .units.clear {
+  color: $voltera-blue;
+  border-color: $voltera-blue;
+}
 
 @media (max-width: $mobile-threshold) {
   .specs .table p {
-    font-size: 0.7em;
+    font-size: 0.8em;
     flex-basis: 200px;
   }
   .specs .row {
     padding: 0px 5px;
   }
+
 }

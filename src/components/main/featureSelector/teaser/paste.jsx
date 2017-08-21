@@ -7,7 +7,7 @@ export default class Feature extends React.Component {
 
   render() {
     return (
-      <div className="teaser flex-row paste-reverse">
+      <div className="teaser flex-row reverse-wrap">
         <div className="description">
           <h2>Skip the soldering iron.</h2>
           <p>Focus on designing, not soldering. Regardless if they came from <strong>from a factory, or from your desk</strong> -  just mount your board on the V-One and off you go.</p>

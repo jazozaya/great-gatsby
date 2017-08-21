@@ -12,7 +12,6 @@ export default class Desktop extends React.Component {
     super(props);
     this.state = {
       subOpen: false,
-      pageName: '/'
     };
   }
 
@@ -28,26 +27,17 @@ export default class Desktop extends React.Component {
     // Apparently Array.includes() is not supported in I.E, so can't use it.
     if (urlArray.indexOf(this.props.pageName) !== -1) {
       this.setState({subOpen: true})
-      return
     }
   }
 
   componentWillReceiveProps(nextProps) {
 
-    const { pageName } = this.props;
-
     // If url matches the 'feature' pages
     if (urlArray.indexOf(nextProps.pageName) !== -1) {
       this.setState({subOpen: true})
-      return
-    }
-
-    // If loading a brand new page, start with it off.
-    if (nextProps.pageName !== pageName) {
+    } else {
       this.setState({subOpen: false})
-      return
     }
-
   }
 
   renderChild() {
@@ -78,11 +68,11 @@ export default class Desktop extends React.Component {
             <Logo />
             <div className="links">
               <Link to="/faq/">FAQ</Link>
-              <a onClick={() => this.setState({subOpen: true})}>Product</a>
+              <Link to={urls.technology}>Product</Link>
               <a href="http://community.voltera.io">Forums</a>
               <a href="http://support.voltera.io">Support</a>
               <Link to="/contact/">Contact</Link>
-              <a className="store-link" href="http://store.voltera.io">Store</a>
+              <a className="store-link" href="https://store.voltera.io/">Store</a>
             </div>
           </div>
         </div>

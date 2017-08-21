@@ -6,10 +6,25 @@ padding: $medium-padding $small-padding;
 }
 
 .cta h2 {
-  margin-bottom: 0px;
+  margin: 0px;
 }
 
 .cta p {
-  margin-top: 0px;
+  margin: 0px;
   font-size: 1.3em;
+}
+
+.cta .buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.cta .button {
+  margin-left: $small-padding;
+}
+
+@media (max-width: $mobile-threshold) {
+  .cta .button {
+    margin-top: $small-padding;
+  }
 }

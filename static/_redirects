@@ -1,0 +1,23 @@
+
+/store https://store.voltera.io/
+/blog https://medium.com/@voltera
+
+
+# Redirects to Zendesk support
+/start https://support.voltera.io/hc/en-us/articles/115004160628
+/support https://support.voltera.io/hc/en-us
+/downloads https://support.voltera.io/hc/en-us/articles/115004264687
+/msds https://support.voltera.io/hc/en-us/articles/115004414348
+/handsoldering https://support.voltera.io/hc/en-us/articles/115005823107
+
+# Links used in the app
+/app-link/simple-vs-aligned https://support.voltera.io/hc/en-us/articles/115005825187
+/app-link/connection-troubleshooting https://support.voltera.io/hc/en-us/articles/115005850847
+/app-link/outlining-the-circuit https://support.voltera.io/hc/en-us/articles/115004294268#outlining-the-circuit
+/app-link/hand-soldering https://support.voltera.io/hc/en-us/articles/115005823107
+/app-link/calibrating-the-ink-dispenser https://support.voltera.io/hc/en-us/articles/115004294268#calibrating-the-ink-dispenser
+/app-link/calibrating-the-solder-dispenser https://support.voltera.io/hc/en-us/articles/115004414848#calibrating-the-solder-dispenser
+/app-link/priming-the-dispenser https://support.voltera.io/hc/en-us/articles/115004294268#priming-the-dispenser
+
+
+/summary /docs/V-One-Summary.pdf

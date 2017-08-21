@@ -10,9 +10,3 @@
   margin-top: 50px;
   text-align: center;
 }
-
-@media (max-width: $mobile-threshold) {
-  .teaser.paste-reverse {
-    flex-wrap: wrap-reverse;
-  }
-}

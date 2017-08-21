@@ -9,12 +9,7 @@ export default class Lightbox extends React.Component {
     super(props);
     this.state = {
       lightboxOn: false,
-      windowWidth: 1920
     };
-  }
-
-  componentDidMount() {
-      this.setState({ windowWidth: window.innerWidth })
   }
 
   toggleLightbox() {
@@ -55,8 +50,9 @@ export default class Lightbox extends React.Component {
        opts.height = height.toString();
      }
 
-     if (Bowser.mobile) {
-       const width =  this.state.windowWidth - 40 // Trim in case of mobile.
+     // Trim down if it's mobile.
+     if (Bowser.mobile && typeof(window) !== 'undefined') {
+       const width =  window.innerWidth - 40
        const height = Math.round(width / (640/360)) // Find the corresponding height to preserve the default aspect ratio.
        opts.width = width.toString();
        opts.height = height.toString();

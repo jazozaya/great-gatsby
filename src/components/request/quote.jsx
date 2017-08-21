@@ -1,10 +1,10 @@
 import React from 'react'
-import './common.scss'
-
+import { Redirect } from 'react-router'
 import Button from 'components/common/button'
 
+import './common.scss'
 
-const quoteStatus = {
+const status = {
   ready: "ready",
   sending: "sending",
   sent: "sent",
@@ -29,14 +29,13 @@ export default class QuoteRequest extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      quoteStatus: quoteStatus.ready,
+      status: status.ready,
       missingFields: false,
       count: 0,
-
     };
   }
 
-  sendQuoteRequest() {
+  sendRequest() {
 
     // Performs some data validation to make sure everything was filled in.
     const allComplete = requiredFields.every(field => document.getElementById(field).value.length > 0);
@@ -66,9 +65,8 @@ export default class QuoteRequest extends React.Component {
       additional_comment: document.getElementById('additional-comment').value
     }
 
-    // Change state to senting.
-    this.setState({quoteStatus: quoteStatus.sending});
-
+    // Change state to sending.
+    this.setState({status: status.sending});
     window.emailjs.init("user_a6VUHHdymj1y3WbePDyCm")
     window.emailjs.send("gmail","quote_request", emailParams)
     .then((response) => this.emailSuccess(response), (err) => this.emailFailure(err));
@@ -77,14 +75,14 @@ export default class QuoteRequest extends React.Component {
 
   emailSuccess(response) {
     console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
-    this.setState({ quoteStatus: quoteStatus.sent});
+    this.setState({ status: status.sent});
   }
   emailFailure(err) {
     console.log("FAILED. error=", err);
-    this.setState({ quoteStatus: quoteStatus.failed});
+    this.setState({ status: status.failed});
   }
 
-  renderQuoteSending() {
+  renderSending() {
     return (
       <div>
         <h1>Please Wait</h1>
@@ -97,19 +95,11 @@ export default class QuoteRequest extends React.Component {
     )
   }
 
-  renderQuoteSent() {
-    return (
-      <div className="pull-center">
-        <h1>Success!</h1>
-        <p>We have received your request. We will be in touch soon!</p>
-        <div className="button-wrapper">
-          <Button label="Return" url={"/"} color="dark" internal/>
-        </div>
-      </div>
-    );
+  renderSent() {
+    return <Redirect push to="/request/thankyou/" />
   }
 
-  renderQuoteFailed(){
+  renderFailed(){
     return (
       <div className="pull-center">
         <h1>Uh Oh!</h1>
@@ -121,7 +111,7 @@ export default class QuoteRequest extends React.Component {
     );
   }
 
-  renderQuoteRequest() {
+  renderRequest() {
     return (
       <div>
         <h1>Request a quote.</h1>
@@ -164,22 +154,22 @@ export default class QuoteRequest extends React.Component {
         </form>
         {this.state.missingFields ? <p className="missing">Please fill out of all of the required fields! ({this.state.count})</p> : null}
         <div className="button-wrapper">
-          <Button label="Submit" color="dark" onClick={this.sendQuoteRequest.bind(this)}/>
+          <Button label="Submit" color="dark" onClick={this.sendRequest.bind(this)}/>
         </div>
       </div>
     );
   }
 
-  renderQuoteStatus() {
-    switch(this.state.quoteStatus) {
-      case quoteStatus.ready:
-      return this.renderQuoteRequest();
-      case quoteStatus.sending:
-      return this.renderQuoteSending();
-      case quoteStatus.sent:
-      return this.renderQuoteSent();
-      case quoteStatus.failed:
-      return this.renderQuoteFailed();
+  renderStatus() {
+    switch(this.state.status) {
+      case status.ready:
+      return this.renderRequest();
+      case status.sending:
+      return this.renderSending();
+      case status.sent:
+      return this.renderSent();
+      case status.failed:
+      return this.renderFailed();
     }
   }
 
@@ -187,7 +177,7 @@ export default class QuoteRequest extends React.Component {
     return (
       <div className="request">
         <div className="request-wrapper">
-          {this.renderQuoteStatus()}
+          {this.renderStatus()}
         </div>
       </div>);
     }

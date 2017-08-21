@@ -59,9 +59,12 @@ export default class Technology extends React.Component {
         <CallToAction
           title="Want to schedule a call?"
           subtitle="Let's find a time to talk!"
-          label="Schedule Call"
-          url="/requestCall/"
-        />
+          buttonOne={{
+            label: "Book a Call",
+            url: "/request/call/",
+            internal: true
+          }}
+          />
       </div>
     )
   }
