@@ -100,7 +100,7 @@ export default class Software extends React.Component {
               <img src="/software/software-locate-pad.jpg" />
               <div className="description">
                 <h2>Smart Alignment.</h2>
-                <p>We've developed a unique approach to alignment. Just teach the software the location of 2 key features in your board and it takes care the rest.</p>
+                <p>We've developed a unique approach to alignment. Just tell the software the location of 2 key features in your board and it takes care the rest.</p>
                 <p>This alignment method allows you to create two layer boards with ease, or dispense paste on boards that already have components.</p>
               </div>
             </div>
@@ -116,7 +116,7 @@ export default class Software extends React.Component {
         <SoftwareFAQ title="F.A.Q." all />
         <Gallery
           title="Learn by watching."
-          description="Whether you use the V-One once a day or once a month, you will be able to pick up right where you left off. These short video clips are built right into the app and will make the tricky parts easy"
+          description="Whether you use the V-One once a day or once a month, you will be able to pick up right where you left off. These short video clips are built right into the app and will make the tricky parts easy."
           gallery= {softwareGallery}
           />
         <CallToAction

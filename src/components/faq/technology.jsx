@@ -25,7 +25,7 @@ export default class TechnologyFAQ extends React.Component {
             <p>The V-One currently does not drill holes.  We recommend you use a small drill press or Dremel press with an inexpensive rotary tool collet and a PCB drill bit set to help you drill a variety of sizes for vias and through-hole pads.</p>
           </Panel>
           <Panel header="Does the V-One pick-and-place components?">
-            <p>The V-One currently does not have an integrated pick-and-place, so components must be placed by hand. The V-One has been designed to fab 1-20 boards.  At these volumes setting up a pick and place machine can take more time and effort than manual placement.</p>
+            <p>The V-One currently does not have an integrated pick-and-place, so components must be placed by hand. The V-One has been designed to be a prototyping tool.  At these volumes setting up a pick and place machine can take more time and effort than manual placement.</p>
           </Panel>
           <Panel header="Can it print more than 2 layers?">
             <p>We're working hard to expand the functionality of the V-One.  Currently we only support 2 layer boards.</p>

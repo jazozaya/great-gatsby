@@ -42,7 +42,7 @@ export default class Print extends React.Component {
           <div className="description">
             <h2>Single and double layer circuits.</h2>
             <p>Create a single or two layer board and keep designing like you're used to. You can mix surface mount and through hole technologies with no difficulty.</p>
-            <p>The V-One comes equipped with all the consumables and accessories you need to get started. Setup is a breeze and in just minutes you will be printing your very first circuit board.</p>
+            <p>The V-One comes equipped with all the consumables and accessories you need to get started. Setup is a breeze and in just minutes you will be printing your very first circuit board on the V-One.</p>
           </div>
         </section>
         <section className="flex-row reverse-wrap">

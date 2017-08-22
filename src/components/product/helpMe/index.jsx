@@ -29,9 +29,9 @@ export default class HelpMe extends React.Component {
       <section className="help-me-wrapper">
         <h2>I design electronics. How does this help me?</h2>
         <div className="flex-row help-me">
-          <Reason iconSrc={timeIcon} title="Design at your own pace.">
+          <Reason iconSrc={timeIcon} title="Design at your own pace">
             <p>You don't need to contact a factory across the world to get a few boards made.</p>
-            <p>It's easy, just load your files and click print. No lead time, no stencils, no hassle, no hassle.</p>
+            <p>It's easy, just load your files and click print. No lead time, no stencils, no hassle.</p>
           </Reason>
           <Reason iconSrc={moneyIcon} title="Reduce the cost of a mistake">
             <p>Have you ever waited weeks for a board to arrive only to find out you made a mistake?</p>
@@ -39,7 +39,7 @@ export default class HelpMe extends React.Component {
           </Reason>
           <Reason iconSrc={ecoIcon} title="No nasty chemicals">
             <p>Stop using toxic and corrosive chemicals that cannot be flushed down the toilet.</p>
-            <p>We use a completely additive technology and only deposit material exactly where we need it.</p>
+            <p>We use a completely additive approach and only deposit material exactly where we need it.</p>
           </Reason>
         </div>
       </section>

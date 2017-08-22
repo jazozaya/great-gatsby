@@ -56,7 +56,7 @@ export const softwareGallery = [
   },
   {
   fileName:"mount-the-dispenser.jpg",
-  subtitle:"Mount the dispenser",
+  subtitle:"Mount the dispenser.",
   description: "Mounting the dispenser is a breeze. All of our attachments have magnets so you can swap them without any special tools.",
   videoId: "KMVpMnKNyb4",
   maxWidth: "360"
@@ -78,7 +78,7 @@ export const experimentGallery = [
   },
   {
     fileName:"printed-traces.jpg",
-    subtitle: "Under the microscope",
+    subtitle: "Under the microscope.",
     description: "Print traces down to 8 mil (200 microns) out of the box. We even offer a 6 mil (150 micron) nozzle for extra fine resolution.",
   },
 

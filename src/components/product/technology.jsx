@@ -49,7 +49,7 @@ export default class Technology extends React.Component {
           <div className="description">
             <h2>A perfect print every time.</h2>
             <p>This high precision probe was developed from the ground up and creates a height map of your substrate. The V-One takes the map into account and makes micro adjustments to ensure a constant printing height of 100 microns. </p>
-            <p>We do not need the substrate to be conductive, which means we can dispense on rigid materials like FR4, glass and ceramics, along with flexible substrates like Kapton (Polyimide).</p>
+            <p>Since we do not need the substrate to be conductive, we can dispense on rigid materials like FR4, glass and ceramics, along with flexible substrates like Kapton (Polyimide).</p>
           </div>
           <img src="/voltera-probe-min.png"/>
         </section>

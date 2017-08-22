@@ -48,14 +48,14 @@ export default class Experiment extends React.Component {
           <div className="description">
             <h2>A flexible platform.</h2>
             <p>Our standard substrate is FR4, but that doesn't mean you cannot print on other ridgid materials like glass, ceramics, or even on flexible films like Kapton or PET.</p>
-            <p>Scientists all over the world are using the Voltera V-One to help them experiment faster.</p>
+            <p>Scientists all over the world are using the Voltera V-One to accelerate their research.</p>
           </div>
         </section>
         <section className="flex-row reverse-wrap">
           <div className="description">
             <h2>Thermally cure your materials.</h2>
             <p>The mounting platform doubles as a heated bed. With a 550W heater, the bed can reach a maximum temperature of 240°C (464°F) in about a minute.</p>
-            <p>The temperature profile can also be customized, so you are able to thermally cure all sorts of materials and substrates</p>
+            <p>The temperature profile can also be customized, so you are able to thermally cure all sorts of materials and substrates.</p>
           </div>
           <img src="/product/heated-platform-min.png"/>
         </section>

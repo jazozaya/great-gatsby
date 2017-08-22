@@ -37,7 +37,7 @@ export default class InTheBox extends React.Component {
       <div>
         <h2>The Voltera V-One</h2>
         <p>The V-One is a 3 axis machine, it is about the same size as a laptop and can fit on your desk. </p>
-        <p>It is equipped with a heated platform to used to cure conductive ink and to reflow solder paste. </p>
+        <p>It is equipped with a heated platform used to cure conductive ink and to reflow solder paste. </p>
       </div>
     )
   }

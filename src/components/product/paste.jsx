@@ -52,7 +52,7 @@ export default class Paste extends React.Component {
           <div className="description">
             <h2>A built in heated platform.</h2>
             <p>After placing all of your surface mount components just hit the reflow button and sit back to enjoy the show.</p>
-            <p>With a 550W heater, the V-One can reach reflow temperatures in under a minute. Use our recommended heating profile, or manually control the temperature for complete control.</p>
+            <p>With a 550W heater, the V-One can reach reflow temperatures in under a minute. Use our recommended heating profile, or manually adjust the temperature for complete control.</p>
           </div>
           <YouTube
             width="600"
