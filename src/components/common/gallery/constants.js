@@ -28,7 +28,8 @@ export const pasteGallery = [
   fileName:"fast-reflow.jpg",
   subtitle:"Positioning your print.",
   description: "One of the coolest reflow videos we've seen with the V-One. You can see how the heat radiates from the center of the board outwards. Soldering everything in its path. Blink and you'll miss it! ",
-  videoId: "CYf2HrWt7bw",
+  videoId: "-yfQR5mc-Y8",
+  source: "https://twitter.com/GenerLink/status/796104966683365377"
   },
   {
     fileName:"dynamic-paste-adjustment.jpg",

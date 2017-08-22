@@ -56,7 +56,7 @@ export default class Footer extends React.Component {
         </div>
       </div>
       <div className="footer-links">
-        <a target="_blank" href="/docs/V-One-Summary.pdf">Privacy Policy</a>
+        <Link to="/privacy/">Privacy Policy</Link>
       </div>
     </div>);
   }

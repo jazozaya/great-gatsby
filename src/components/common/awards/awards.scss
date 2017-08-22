@@ -5,6 +5,9 @@ background-color: $white;
 padding: $medium-padding $small-padding;
 }
 
+.awards {
+  padding-top: $small-padding;
+}
 .awards img {
   transition: all $t-time ease-in-out 0s;
   margin-left: 10px;
