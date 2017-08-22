@@ -6,6 +6,7 @@ import './footer.scss';
 import twitterIcon from './twitter-icon.min.svg'
 import facebookIcon from './facebook-icon.min.svg'
 import instagramIcon from './instagram-icon.min.svg'
+import youtubeIcon from './youtube-icon.min.svg'
 
 import Link from 'components/common/linkWrapper'
 
@@ -52,6 +53,7 @@ export default class Footer extends React.Component {
             <a target="_blank" href="https://www.facebook.com/voltera.io/"><img className="social-icon" src={facebookIcon}/></a>
             <a target="_blank" href="https://twitter.com/voltera_io"><img className="social-icon" src={twitterIcon}/></a>
             <a target="_blank" href="https://www.instagram.com/voltera.io/"><img className="social-icon" src={instagramIcon}/></a>
+            <a target="_blank" href="https://www.youtube.com/channel/UCHANd33WPReNyQcsHPRgYjw/videos"><img className="social-icon" src={youtubeIcon}/></a>
           </div>
         </div>
       </div>
