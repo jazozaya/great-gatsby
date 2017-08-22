@@ -61,6 +61,12 @@ img {
   height: $header-height;
 }
 
+.not-found {
+  min-height: 50vh;
+  max-width: $form-width;
+  text-align: center;
+}
+
 section {
   max-width: $max-width;
   margin: auto;
