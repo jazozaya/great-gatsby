@@ -3,6 +3,9 @@
 /forums https://community.voltera.io/
 /blog https://medium.com/@voltera
 
+#From old website
+/v-one /product/technology/
+
 #Social
 /twitter https://twitter.com/voltera_io/
 /facebook https://www.facebook.com/voltera.io/
@@ -25,6 +28,6 @@
 /app-link/calibrating-the-solder-dispenser https://support.voltera.io/hc/en-us/articles/115004414848#calibrating-the-solder-dispenser
 /app-link/priming-the-dispenser https://support.voltera.io/hc/en-us/articles/115004294268#priming-the-dispenser
 
-# Feature Set.
+# Documents
 /summary /docs/V-One-Summary.pdf
 /techsheet /docs/Voltera-Conductive-Ink.pdf
