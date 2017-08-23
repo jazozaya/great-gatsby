@@ -50,9 +50,6 @@ module.exports = React.createClass({
           <meta property="article:author" content="" />
 
           <link rel="shortcut icon" href={favicon} />
-          <link href="https://fonts.googleapis.com/css?family=Raleway:600" rel="stylesheet"/>
-          <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet"/>
-          <script defer="defer" type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
           <script defer="defer" type="text/javascript" src="https://www.googleadservices.com/pagead/conversion_async.js" charset="utf-8"></script>
         </Helmet>
         <Header pageName={this.props.location.pathname} />

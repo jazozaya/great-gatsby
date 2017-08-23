@@ -32,6 +32,8 @@ export default class HTML extends React.Component {
             dangerouslySetInnerHTML={{ __html: this.props.body }}
           />
           {this.props.postBodyComponents}
+          <link href="https://fonts.googleapis.com/css?family=Raleway:600" rel="stylesheet"/>
+          <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet"/>
         </body>
       </html>
     );

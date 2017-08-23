@@ -12,6 +12,7 @@ export default class MyCall extends React.Component {
         <Helmet>
           <title>Voltera | Request a Quote</title>
           <meta name="description" content="Fill out this form to request a formal quotation." />
+          <script defer="defer" type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
         </Helmet>
         <RequestQuote />
         <CustomerQuotes />
