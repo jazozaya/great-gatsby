@@ -14,16 +14,48 @@ module.exports = React.createClass({
     }
   },
 
-  componentDidMount() {
-
-    try{
+  trackRemarketing() {
+    // Anna's add blocker interfered with this function,
+    // it said google_trackConversion was not defined.
+    // And crashed other things. Hence try catch.
+    try {
       if (process.env.NODE_ENV === 'production') {
-        window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(e){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var e=this.createElement("script");n&&(this.domain=n),e.id="js-iframe-async",e.src="https://assets.zendesk.com/embeddable_framework/main.js",this.t=+new Date,this.zendeskHost="voltera.zendesk.com",this.zEQueue=a,this.body.appendChild(e)},o.write('<body onload="document._l();">'),o.close()}();
+        window.google_trackConversion({
+            google_conversion_id: 933031938,
+            google_custom_params: {},
+            google_remarketing_only: true
+          });
       }
     } catch(e) {
-      console.log(e)
+      console.error(e)
+    }
+  },
+
+  trackZopim() {
+    // Since this is a SPA, Zopim Chat doesn't see visitor URL and Title.
+    // Need to manually set it.
+    if (process.env.NODE_ENV === 'production' && typeof(zE) !== 'undefined') {
+      zE(function() {
+        $zopim(function() {
+          $zopim.livechat.sendVisitorPath();
+        });
+      });
+    }
+  },
+
+  componentDidUpdate() {
+    // Wait a bit for react helmet to kick in, then update URL (Not bulletproof)
+    setTimeout(this.trackZopim, 500);
+    setTimeout(this.trackRemarketing, 500);
+  },
+
+  componentDidMount() {
+    if (process.env.NODE_ENV === 'production') {
+      window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(e){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var e=this.createElement("script");n&&(this.domain=n),e.id="js-iframe-async",e.src="https://assets.zendesk.com/embeddable_framework/main.js",this.t=+new Date,this.zendeskHost="voltera.zendesk.com",this.zEQueue=a,this.body.appendChild(e)},o.write('<body onload="document._l();">'),o.close()}();
     }
 
+    // Wait a little bit to ensure deferred script has finished loading. (Not bulletproof)
+    setTimeout(this.trackRemarketing, 500);
   },
 
   render() {
