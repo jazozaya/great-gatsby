@@ -14,12 +14,12 @@ export default class Spec extends React.Component {
         </Helmet>
         <Specs />
         <CallToAction
-          title="Want to share with your colleagues?"
-          subtitle="Download our technical datasheet"
+          title="Share with your colleagues"
+          subtitle="Download our feature summary."
           buttonOne={
             {
             label: "Download",
-            url: "/docs/V-One-Summary.pdf",
+            url: "/pdfs/V-One-Summary.pdf",
             internal: false
             }
           }

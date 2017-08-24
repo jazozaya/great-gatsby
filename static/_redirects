@@ -3,13 +3,17 @@
 /forums https://community.voltera.io/
 /blog https://medium.com/@voltera
 
-#From old website
+#From old website (404's)
 /v-one /product/technology/
+/assets/pdf/Altium-Gerber-Drill-File-Guide.pdf https://support.voltera.io/hc/article_attachments/115001926373/Altium-Gerber-Drill-Export-Guide.pdf
+/assets/pdf/KiCAD%20Gerber_Drill%20File%20Export%20Guide.pdf https://support.voltera.io/hc/article_attachments/115001926393/KiCAD-Gerber-Drill-Export-Guide.pdf
+/assets/images/backgrounds/V-One-Feature-Set.pdf /pdfs/V-One-Summary.pdf
 
 #Social
 /twitter https://twitter.com/voltera_io/
 /facebook https://www.facebook.com/voltera.io/
 /instagram https://www.instagram.com/voltera.io/
+/youtube https://www.youtube.com/channel/UCHANd33WPReNyQcsHPRgYjw/videos
 
 # Redirects to Zendesk support
 /start https://support.voltera.io/hc/en-us/articles/115004160628
@@ -29,5 +33,5 @@
 /app-link/priming-the-dispenser https://support.voltera.io/hc/en-us/articles/115004294268#priming-the-dispenser
 
 # Documents
-/summary /docs/V-One-Summary.pdf
-/techsheet /docs/Voltera-Conductive-Ink.pdf
+/summary /pdfs/V-One-Summary.pdf
+/techsheet /pdfs/Voltera-Conductive-Ink.pdf

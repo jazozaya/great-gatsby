@@ -43,12 +43,15 @@
   <loc>http://www.voltera.io/about/</loc>
 </url>
 <url>
-  <loc>http://www.voltera.io/privacy/</loc>
+  <loc>http://www.voltera.io/docs/privacy/</loc>
+</url>
+<url>
+  <loc>http://www.voltera.io/docs/tos/</loc>
 </url>
 <url>
   <loc>http://www.voltera.io/request/reservation/</loc>
 </url>
 <url>
-  <loc>http://www.voltera.io/docs/V-One-Summary.pdf</loc>
+  <loc>http://www.voltera.io/pdfs/V-One-Summary.pdf</loc>
 </url>
 </urlset>

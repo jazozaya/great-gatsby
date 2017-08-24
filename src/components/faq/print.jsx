@@ -20,7 +20,7 @@ export default class PrintFAQ extends React.Component {
             We created a <a target="_blank" href="https://www.youtube.com/watch?v=iMqxk5a3u0Q">video</a> that walks you through this process!
           </Panel>
           <Panel header="Can you hand solder to the ink?">
-            Yes! We have a comprehensive user guide on soldering to conductive ink for through-hole components and connectors. <a target="_blank" href="http://voltera.io/handsoldering">Take a look!</a>
+            Yes! We have a comprehensive user guide on soldering to conductive ink for through-hole components and connectors. <a target="_blank" href="http://www.voltera.io/handsoldering">Take a look!</a>
           </Panel>
           <Panel header="Are there frequency or current limitations?">
             <p>An 8 month research partnership with the University of Alberta demonstrated the ink will perform on par with standard copper up to 5 GHz!</p>

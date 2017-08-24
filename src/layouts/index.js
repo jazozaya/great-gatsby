@@ -40,10 +40,10 @@ module.exports = React.createClass({
           <meta name="twitter:card" content="summary" />
           <meta name="twitter:site" content="@voltera_io" />
 
-          <meta property="og:url" content="https://voltera.io" />
+          <meta property="og:url" content="https://www.voltera.io" />
           <meta property="og:type" content="website" />
           <meta property="og:title" content="Voltera | Build Hardware Faster" />
-          <meta property="og:image" content="https://voltera.io/v-one-box-min.png" />
+          <meta property="og:image" content="https://www.voltera.io/v-one-box-min.png" />
           <meta property="og:description" content="Prototype on your desktop with the Voltera V-One PCB Printer" />
           <meta property="og:site_name" content="Voltera V-One. Prototyping tool." />
           <meta property="og:locale" content="en_US" />

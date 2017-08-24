@@ -26,7 +26,7 @@ export default class PasteFAQ extends React.Component {
           </Panel>
           <Panel header="Does the solder paste contain lead?">
             <p>Nope! Elemental analysis of our solder paste alloy shows a 0.01% trace amount of lead. This is well below the maximum of 0.07% required by IPC J-STD-006-B for lead-free solder.</p>
-            <p>The conductive ink and solder wire are also lead free. Download the <a target="_blank" href="http://voltera.io/msds">MSDS</a> to learn more.</p>
+            <p>The conductive ink and solder wire are also lead free. Download the <a target="_blank" href="http://www.voltera.io/msds">MSDS</a> to learn more.</p>
           </Panel>
           <Panel header="Am I limited in what components I can use?">
             <p>We can dispense solder paste down to 0402 components and although we officially support a 0.5 mm pin to pin pitch, some of our users have dispensed on 0.4 mm pitch IC's without difficulty. We have also dispensed on BGA components reliably.</p>

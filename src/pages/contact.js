@@ -10,7 +10,7 @@ export default class MyContact extends React.Component {
       <div>
         <Helmet>
           <title>Voltera | Contact Us</title>
-          <meta name="description" content="Contact information for technical inquiries and customer support. We normally respond within 2 business days." />
+          <meta name="description" content="Contact information for technical inquiries and customer support. We normally respond within 1 business day." />
         </Helmet>
         <Contact />
       </div>

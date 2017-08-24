@@ -13,7 +13,7 @@ export default class SoftwareFAQ extends React.Component {
       <Template title={title} all={all}>
         <Collapse>
           <Panel header="Is the software free?">
-            <p>Yep! The software is required to operate the V-One. You can download a copy of it at <a target="_blank" href="http://voltera.io/downloads">here</a>.</p>
+            <p>Yep! The software is required to operate the V-One. You can download a copy of it at <a target="_blank" href="http://www.voltera.io/downloads">here</a>.</p>
           </Panel>
           <Panel header="Do I have to learn a new CAD tool?">
             <p>The Voltera software allows you to use whatever CAD tool you are already comfortable with! You can use EAGLE, Altium, KiCad, Mentor Graphics, Cadence, DipTrace and more! Just export your designs as Gerbers and upload to our software. Easy as that!</p>

@@ -1,13 +1,12 @@
 import React from 'react'
+import './common.scss'
 
-import Helmet from 'react-helmet'
-
-export default class Spec extends React.Component {
+export default class MyTOS extends React.Component {
 
 
   render() {
     return (
-      <section className="privacy">
+      <section className="docs">
         <h1>Privacy policy</h1>
         <p>At Voltera Inc. (“Voltera”), your right to privacy is very important to us.  During the course of providing you with our products, we may become exposed to your personal information.  Because we are committed to protecting your privacy rights and the information you provide to us, we have developed this privacy policy. It explains how we will protect your information and describes how we will use and share it.</p>
         <p>This policy is concerned with the protection of your personal information only. Personal information includes any data that can be used to identify you as an individual, including your name, income, personal opinion, interests, home contact information, identification numbers, user IDs, passwords, ethnic origin, and age. Under Canadian law, in a business context, personal information does not include the name, job title, business address, or business telephone number of any employee in an organization.</p>
