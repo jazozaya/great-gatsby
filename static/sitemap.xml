@@ -7,51 +7,83 @@
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 <url>
-  <loc>http://www.voltera.io/</loc>
+  <loc>https://www.voltera.io/</loc>
+  <changefreq>weekly</changefreq>
+  <priority>1.00</priority>
 </url>
 <url>
-  <loc>http://www.voltera.io/faq/</loc>
+  <loc>https://www.voltera.io/faq/</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.voltera.io/product/technology/</loc>
+  <loc>https://www.voltera.io/product/technology/</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.voltera.io/contact/</loc>
+  <loc>https://www.voltera.io/contact/</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.voltera.io/product/experiment/</loc>
+  <loc>https://www.voltera.io/product/experiment/</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.voltera.io/product/print/</loc>
+  <loc>https://www.voltera.io/product/print/</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.voltera.io/product/paste/</loc>
+  <loc>https://www.voltera.io/product/paste/</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.voltera.io/product/software/</loc>
+  <loc>https://www.voltera.io/product/software/</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.voltera.io/request/call/</loc>
+  <loc>https://www.voltera.io/request/call/</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.voltera.io/request/quote/</loc>
+  <loc>https://www.voltera.io/request/quote/</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.voltera.io/specs/</loc>
+  <loc>https://www.voltera.io/specs/</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.voltera.io/about/</loc>
+  <loc>https://www.voltera.io/about/</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.voltera.io/docs/privacy/</loc>
+  <loc>https://www.voltera.io/docs/privacy/</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.voltera.io/docs/tos/</loc>
+  <loc>https://www.voltera.io/docs/tos</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.voltera.io/request/reservation/</loc>
+  <loc>https://www.voltera.io/request/reservation/</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://www.voltera.io/pdfs/V-One-Summary.pdf</loc>
+  <loc>https://www.voltera.io/pdfs/V-One-Summary.pdf</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
 </url>
 </urlset>

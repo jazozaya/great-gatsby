@@ -91,7 +91,7 @@ export default class Print extends React.Component {
             }
             buttonTwo={
               {
-                label: "Reserve",
+                label: "Reserve Unit",
                 url: "/request/reservation/",
                 internal: true
               }

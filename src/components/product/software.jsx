@@ -131,7 +131,7 @@ export default class Software extends React.Component {
           }
           buttonTwo={
             {
-              label: "Reserve",
+              label: "Reserve Unit",
               url: "/request/reservation/",
               internal: true
             }

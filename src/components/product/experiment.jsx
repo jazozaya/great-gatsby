@@ -72,6 +72,11 @@ export default class Experiment extends React.Component {
             url: "/request/call/",
             internal: true
           }}
+          buttonTwo={{
+            label: "Get A Quote",
+            url: "/request/quote/",
+            internal: true
+          }}
           />
       </div>
     )
