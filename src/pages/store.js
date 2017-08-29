@@ -1,21 +1,18 @@
 import React from 'react'
-
 import Helmet from 'react-helmet'
-// import ShopifyBuy from 'shopify-buy'
-//
-// var shopClient = ShopifyBuy.buildClient({
-//   accessToken: '349df796683b8ac51137cbe5f43dbcfc',
-//   domain: 'voltera.myshopify.com',
-//   appId: '6'
-// });
-
+import Store from 'components/store'
 
 export default class Spec extends React.Component {
 
-
   render() {
+    console.log(this.props)
     return (
       <div>
+        <Helmet>
+          <title>Voltera | Store</title>
+          <meta name="description" content="All the tools and accessories you need to prototype with the V-One." />
+        </Helmet>
+        <Store search={this.props.location.search}/>
       </div>
     )
   }

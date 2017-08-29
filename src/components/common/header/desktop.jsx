@@ -72,7 +72,7 @@ export default class Desktop extends React.Component {
               <a href="http://community.voltera.io">Forums</a>
               <a href="http://support.voltera.io">Support</a>
               <Link to="/contact/">Contact</Link>
-              <a className="store-link" href="https://store.voltera.io/">Store</a>
+              <Link className="store-link" to="/store/">Store</Link>
             </div>
           </div>
         </div>

@@ -1,0 +1,16 @@
+@import 'src/css/colors';
+
+.store {
+
+}
+
+.store-wrapper .collection-tab {
+   margin: auto;
+   max-width: $narrow-width;
+   display: flex;
+   justify-content: space-around;
+
+}
+
+.store-wrapper .collection-tab:hover{
+}
