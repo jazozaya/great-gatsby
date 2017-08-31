@@ -46,9 +46,10 @@ export default class Contact extends React.Component {
           <h2>Office Location</h2>
           <ul>
             <li>Voltera Inc</li>
-            <li>151 Charles St W. Suite 199</li>
+            <li>113 Breithaupt St, Suite 100</li>
             <li>Kitchener, Ontario</li>
             <li>Canada</li>
+            <li>N2H 5G9</li>
           </ul>
         </div>
       </div>
