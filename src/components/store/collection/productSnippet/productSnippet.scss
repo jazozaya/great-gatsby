@@ -1,0 +1,29 @@
+@import 'src/css/colors';
+
+.product-snippet {
+  max-width: 240px;
+  border-radius: 10px;
+  margin: $small-padding 10px;
+  padding: $small-padding $small-padding;
+}
+
+.product-snippet:hover {
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+}
+
+.product-snippet .price {
+  color: $voltera-green;
+}
+
+.product-snippet .description {
+  color: $soft-grey;
+  font-size: 0.8em;
+}
+
+.product-snippet a{
+  text-decoration: none;
+}
+.product-snippet img {
+  height: 160px;
+  width: auto;
+}

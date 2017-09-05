@@ -1,16 +1,23 @@
 @import 'src/css/colors';
 
-.store {
-
-}
-
 .store-wrapper .collection-tab {
-   margin: auto;
-   max-width: $narrow-width;
    display: flex;
    justify-content: space-around;
-
+   padding: $small-padding 0px;
+   border-bottom-style: solid;
+   border-bottom-color: $voltera-blue;
+   border-bottom-width: 1px;
 }
 
 .store-wrapper .collection-tab:hover{
+}
+
+.store-wrapper .collection-title {
+  padding: $medium-padding $small-padding;
+}
+
+.store .product {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
