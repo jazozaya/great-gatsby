@@ -4,23 +4,26 @@ import Bowser from 'bowser'
 import './common.scss'
 
 
-export default class QuoteRequest extends React.Component {
+export default class ChatRequest extends React.Component {
 
   componentWillMount() {
     // https://developer.zendesk.com/embeddables/docs/widget/zesettings#general-settings
-    window.zESettings = {
-      webWidget: {
-        chat: {
-          suppress: true
-        },
-        helpCenter: {
-          suppress: true
-        },
-        contactForm: {
-          suppress: true
+
+    if typeof(window) !== 'undefined') {
+      window.zESettings = {
+        webWidget: {
+          chat: {
+            suppress: true
+          },
+          helpCenter: {
+            suppress: true
+          },
+          contactForm: {
+            suppress: true
+          }
         }
-      }
-    };
+      };
+    }
   }
 
   renderIframe() {
