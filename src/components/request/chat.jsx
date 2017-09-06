@@ -9,7 +9,7 @@ export default class ChatRequest extends React.Component {
   componentWillMount() {
     // https://developer.zendesk.com/embeddables/docs/widget/zesettings#general-settings
 
-    if typeof(window) !== 'undefined') {
+    if (typeof(window) !== 'undefined') {
       window.zESettings = {
         webWidget: {
           chat: {
