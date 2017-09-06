@@ -175,8 +175,8 @@ export default class QuoteRequest extends React.Component {
 
   render() {
     return (
-      <div className="request">
-        <div className="request-wrapper">
+      <div className="request-wrapper">
+        <div className="request">
           {this.renderStatus()}
         </div>
       </div>);

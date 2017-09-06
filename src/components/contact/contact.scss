@@ -1,12 +1,8 @@
 @import 'src/css/colors';
 
 .contact {
-  background-color: $white;
-}
-
-.contact-wrapper {
   margin: auto;
-  max-width: $max-width;
+  max-width: $narrow-width;
   padding: $medium-padding $small-padding;
 }
 
@@ -20,10 +16,7 @@
 
 .email-wrapper {
   display: flex;
-}
-
-.email-wrapper .column {
-  flex: auto;
+  justify-content: space-around;
 }
 
 .email-wrapper h4 {
@@ -35,8 +28,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: $voltera-green;
   color: $white;
+  background-color: $voltera-green;
 }
 
 .location-wrapper .address {

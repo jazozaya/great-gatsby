@@ -1,0 +1,16 @@
+@import 'src/css/colors';
+
+.in-touch .action {
+  max-width: 300px;
+  text-align: center;
+  padding: $medium-padding 0px;
+}
+
+.in-touch .button-wrap {
+  padding: $small-padding 0px;
+}
+
+.in-touch img {
+    width: 60px;
+    height: 60px;
+}

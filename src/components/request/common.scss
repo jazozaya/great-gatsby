@@ -1,6 +1,14 @@
 @import 'src/css/colors';
 
-.request {
+.chat-wrapper {
+  margin-top: $medium-padding;
+}
+
+.chat-wrapper iframe {
+  border-style: none;
+}
+
+.request-wrapper {
   background-color: $white;
   padding: $medium-padding $small-padding;
   display: flex;
@@ -9,7 +17,7 @@
   min-height: 500px;
 }
 
-.request-wrapper {
+.request {
   width: $form-width;
   padding: $small-padding $medium-padding;
   background-color: $white;
