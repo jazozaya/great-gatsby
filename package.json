@@ -12,7 +12,6 @@
     "gatsby-plugin-sass": "^1.0.1",
     "google-map-react": "^0.24.0",
     "moment": "^2.18.1",
-    "rc-collapse": "^1.7.6",
     "react": "^15.6.1",
     "react-datepicker": "^0.48.0",
     "react-favicon": "0.0.5",
