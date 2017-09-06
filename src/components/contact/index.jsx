@@ -1,7 +1,7 @@
 import React from 'react'
 import './contact.scss'
 
-import InTouch from './intouch'
+import InTouch from './inTouch'
 import GoogleMap from './googleMap'
 
 export default class Contact extends React.Component {
