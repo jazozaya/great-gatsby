@@ -1,1 +1,11 @@
 @import 'src/css/colors';
+
+.product-wrapper img {
+  height: auto;
+  max-width: 600px;
+}
+
+.product-wrapper .information {
+  display: flex;
+
+}

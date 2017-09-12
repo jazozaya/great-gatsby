@@ -68,10 +68,8 @@ module.exports = React.createClass({
           <meta name="description" content="Prototype on your desktop with the Voltera V-One PCB Printer" />
           <meta name="keywords" content="pcb, printer, circuit, board, 3d, factory" />
           <meta name="author" content="Jesus Zozaya" />
-
           <meta name="twitter:card" content="summary" />
           <meta name="twitter:site" content="@voltera_io" />
-
           <meta property="og:url" content="https://www.voltera.io" />
           <meta property="og:type" content="website" />
           <meta property="og:title" content="Voltera | Build Hardware Faster" />

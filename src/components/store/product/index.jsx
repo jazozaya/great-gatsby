@@ -1,25 +1,55 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+import queryString from 'query-string'
 
-import { strip } from '../common'
+import CollectionTab from 'components/store/utils/collectionTab'
+import ProductSnippet from 'components/store/collection/productSnippet'
+
+import { fetchProduct } from 'components/store/common'
+
 import './product.scss'
-import { CookiesProvider, withCookies, Cookies } from 'react-cookie';
 
-class Product extends React.Component {
-  // The challenge is transmitting information between views.
-  // Ideally we can have 1 source of knowledge so we aren't pulling everytime.
-  // Almost like a a cache? Will the browser do that auomatically?
-  componentWillMount() {
-    const { cookies } = this.props;
-    console.log(cookies.get('test'))
+export default class Collection extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      product: null
+    };
+
   }
+
+  componentWillMount() {
+    const id = queryString.parse(this.props.query).id
+    fetchAllCollections().then((collections) => this.setState({collections: collections}))
+    fetchProduct(id).then((product) => this.setState({product: product}))
+  }
+
+
+  renderCollectionTitle() {
+    const { collections, collection_id } = this.state;
+  }
+
   render() {
 
+    console.log(this.state)
+    const { product } = this.state
+
+    if (!product) {
+      return null;
+    }
+
     return (
-
-      <h1>This is my product page!</h1>
-
+      <section className="product-wrapper">
+        <div className="information">
+          <img src={product.image}/>
+          <div>
+            <h1>{product.title}</h1>
+            <p>{product.price}</p>
+            <p></p>
+          </div>
+        </div>
+      </section>
     );
   }
 }
-
-export default withCookies(Product);

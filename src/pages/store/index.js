@@ -1,7 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import Store from 'components/store'
-import { CookiesProvider } from 'react-cookie'
 
 export default class Spec extends React.Component {
 
@@ -12,9 +11,7 @@ export default class Spec extends React.Component {
           <title>Voltera | Store</title>
           <meta name="description" content="All the tools and accessories you need to prototype with the V-One." />
         </Helmet>
-        <CookiesProvider>
-          <Store search={this.props.location.search}/>
-        </CookiesProvider>
+        <Store query={this.props.location.search}/>
       </div>
     )
   }
