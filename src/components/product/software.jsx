@@ -25,7 +25,7 @@ const SoftwareImages = [
   {
     src: '/software/software-outline.jpg',
     title: "Works with your design tool",
-    caption: "We support the Gerber format, so the same files you send to a factory can be used. Design with a program you're already comfortable with (Eagle, Kicad, Altium, etc) and export the Gerbers to get started.  "
+    caption: "We support the Gerber format, so the same files you send to a factory can be used. Design with a program you're already comfortable with (EAGLE, Kicad, Altium, etc) and export the Gerbers to get started.  "
   },
   {
     src: '/software/software-priming.jpg',

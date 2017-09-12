@@ -48,11 +48,9 @@ export default class Contact extends React.Component {
             <div className="address-wrapper">
               <h2>Office Location</h2>
               <p>
-                Voltera Inc<br />
                 113 Breithaupt St, Suite 100<br />
-                Kitchener, Ontario<br />
+                Kitchener, ON, N2H 5G9<br />
                 Canada<br />
-                N2H 5G9
               </p>
             </div>
           </div>
