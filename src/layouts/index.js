@@ -21,37 +21,60 @@ module.exports = React.createClass({
     try {
       if (process.env.NODE_ENV === 'production') {
         window.google_trackConversion({
-            google_conversion_id: 933031938,
-            google_custom_params: {},
-            google_remarketing_only: true
-          });
+          google_conversion_id: 933031938,
+          google_custom_params: {},
+          google_remarketing_only: true
+        });
       }
     } catch(e) {
       console.error(e)
     }
   },
 
-  trackZopim() {
-    // Since this is a SPA, Zopim Chat doesn't see visitor URL and Title.
-    // Need to manually set it.
-    if (process.env.NODE_ENV === 'production' && typeof(zE) !== 'undefined') {
-      zE(function() {
-        $zopim(function() {
-          $zopim.livechat.sendVisitorPath();
-        });
-      });
-    }
-  },
-
   componentDidUpdate() {
     // Wait a bit for react helmet to kick in, then update URL (Not bulletproof)
-    setTimeout(this.trackZopim, 500);
     setTimeout(this.trackRemarketing, 500);
+    window.Intercom("update");
   },
 
   componentDidMount() {
-    if (process.env.NODE_ENV === 'production') {
-      window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(e){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var e=this.createElement("script");n&&(this.domain=n),e.id="js-iframe-async",e.src="https://assets.zendesk.com/embeddable_framework/main.js",this.t=+new Date,this.zendeskHost="voltera.zendesk.com",this.zEQueue=a,this.body.appendChild(e)},o.write('<body onload="document._l();">'),o.close()}();
+
+    if(process.env.NODE_ENV === 'production') {
+      var w = window;
+      var ic = w.Intercom;
+      if (typeof ic === "function") {
+        ic('reattach_activator');
+        ic('update', intercomSettings);
+      } else {
+        var d = document;
+        var i = function() {
+          i.c(arguments)
+        };
+        i.q = [];
+        i.c = function(args) {
+          i.q.push(args)
+        };
+        w.Intercom = i;
+
+        function l() {
+          var s = d.createElement('script');
+          s.type = 'text/javascript';
+          s.async = true;
+          s.src = 'https://widget.intercom.io/widget/p4hz4ihv';
+          var x = d.getElementsByTagName('script')[0];
+          x.parentNode.insertBefore(s, x);
+        }
+        if (w.attachEvent) {
+          w.attachEvent('onload', l);
+        } else {
+          w.addEventListener('load', l, false);
+        }
+      }
+
+      window.Intercom("boot", {
+        app_id: "p4hz4ihv",
+      });
+
     }
 
     // Wait a little bit to ensure deferred script has finished loading. (Not bulletproof)
@@ -83,6 +106,7 @@ module.exports = React.createClass({
 
           <link rel="shortcut icon" href={favicon} />
           <script defer="defer" type="text/javascript" src="https://www.googleadservices.com/pagead/conversion_async.js" charset="utf-8"></script>
+
         </Helmet>
         <Header pageName={this.props.location.pathname} />
         <DummyHeader />
