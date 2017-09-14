@@ -7,6 +7,7 @@ import Link from 'components/common/linkWrapper'
 
 import MiniHero from 'components/common/minihero'
 import FastFact from 'components/common/fastFact'
+import YouTube from 'components/common/youtube'
 
 import Gallery from 'components/common/gallery'
 import { experimentGallery } from 'components/common/gallery/constants'
@@ -35,10 +36,21 @@ export default class Experiment extends React.Component {
             label="Max Temp."
             />
         </MiniHero>
+        <section>
+            <h2>An affordable dispensing system.</h2>
+            <p className="pull-center">The Voltera V-One is a precision dispensing system for viscous inks and pastes. This experimental platform brings your novel applications to life.</p>
+            <div className="promo">
+            <YouTube
+              width="800"
+              videoId="Iwt_QdkDTbk"
+              url="/product/dispensing-system.jpg"
+            />
+          </div>
+        </section>
         <section className="flex-row reverse-wrap">
           <div className="description">
             <h2>Use your own materials.</h2>
-            <p>The Voltera V-One uses standard 5cc syringes. This means cartridges can be filled with any material you want to dispense with. We even offer UV blocking cartridges for sensitive inks!</p>
+            <p>The system uses standard 5cc syringes. This means cartridges can be filled with any material you want to dispense with. We even offer UV blocking cartridges for sensitive inks!</p>
             <p>Our robust dispensing system can handle most high viscosity fluids right out of the box. <Link to="/contact/">Contact us</Link> today to find how we can help you!</p>
           </div>
           <img src="/product/cartridges-min.png"/>

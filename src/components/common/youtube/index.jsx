@@ -60,7 +60,7 @@ export default class YouTube extends React.Component {
         // We apply the css dynamically since we do not know width ahead of time.
         var divStyle = {
           width: `${width_s}px`,
-          height: `${height_s}px`
+          height: `${height_s}px`,
         };
 
         return (
