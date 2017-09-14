@@ -45,7 +45,7 @@ export function fetchAllCollections() {
   return new Promise(function(resolve, reject) {
 
     // Try fetching from cookies first, otherwise query http.
-    const cookieName = 'collection_labels5'
+    const cookieName = 'collection_labels7'
     var collections = getCookie(cookieName)
     if (collections) {
       console.log('Collections retrieved from cookies!')
@@ -58,7 +58,7 @@ export function fetchAllCollections() {
       var skinnyCollections = filteredCol.map(function(collection) {
         return {
           description: strip(collection.attrs.body_html),
-          collection_id: collection.attrs.collection_id.toString(),
+          collectionId: collection.attrs.collection_id.toString(),
           handle: collection.attrs.handle,
           title: collection.attrs.title
         }
@@ -69,17 +69,17 @@ export function fetchAllCollections() {
   });
 }
 
-export function fetchProducts(collection_id){
+export function fetchProductSnippets(collectionId){
   return new Promise(function(resolve, reject) {
 
-  const cookieName = `collection_${collection_id}`
+  const cookieName = `collection_${collectionId}`
   var products = getCookie(cookieName)
   if (products) {
     console.log('Products retrieved from cookies!')
     return resolve(products)
   }
 
-  shopClient.fetchQueryProducts({ collection_id: collection_id}).then(function (products) {
+  shopClient.fetchQueryProducts({ collection_id: collectionId}).then(function (products) {
       // Extract useful information for each product.
       var i, skinnyProducts = []
       for (i = 0; i < products.length; i ++ ){
@@ -100,13 +100,6 @@ export function fetchProducts(collection_id){
 export function fetchProduct(product_id) {
   return new Promise(function(resolve, reject) {
 
-    const cookieName = `product_${product_id}`
-    var product = getCookie(cookieName)
-    if (product) {
-      console.log("Single Product retrieved from cookie!")
-      return resolve(product)
-    }
-
     shopClient.fetchProduct(product_id).then(function (product) {
       const skinnyProduct = {
         id: product.id.toString(),
@@ -115,7 +108,6 @@ export function fetchProduct(product_id) {
         image: product.images[0].src,
         selectedVariant: product.selectedVariant
       }
-      setCookie(cookieName, skinnyProduct)
       return resolve(skinnyProduct)
     })
   });

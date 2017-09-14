@@ -1,23 +1,42 @@
 @import 'src/css/colors';
 
-.store-wrapper .collection-tab {
-   display: flex;
-   justify-content: space-around;
-   padding: $small-padding 0px;
-   border-bottom-style: solid;
-   border-bottom-color: $voltera-blue;
-   border-bottom-width: 1px;
-}
+.store-wrapper {
 
-.store-wrapper .collection-tab:hover{
-}
+  .collection-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
 
-.store-wrapper .collection-title {
-  padding: $medium-padding $small-padding;
-}
+  .product-snippet {
+    max-width: 230px;
+    border-radius: 10px;
+    margin: $small-padding 10px;
+    padding: $small-padding $small-padding;
 
-.store-wrapper .product {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .product-snippet:hover {
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+    text-decoration: none;
+  }
+
+  .product-snippet .price {
+    color: $voltera-green;
+    margin: 0px;
+  }
+
+  .product-snippet .description {
+    color: $soft-grey;
+    font-size: 0.8em;
+  }
+
+  .product-snippet img {
+    flex-grow: 0;
+    max-width: 240px;
+    max-height: 160px;
+  }
+
 }

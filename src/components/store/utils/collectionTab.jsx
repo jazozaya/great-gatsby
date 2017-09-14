@@ -1,16 +1,17 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import Link from 'components/common/linkWrapper'
+
+import './collectionTab.scss'
 
 export default class collectionTab extends React.Component {
 
   renderLinks() {
-    const { collections } = this.props;
-    const cb = this.props.cb || function(){} //Use function if a cb wasn't defined.
+    const { collections, cb } = this.props;
 
     return collections.map((collection, index) =>
       <Link key={index}
-            onClick={() => cb(`/store/collection/?handle=${collection.handle}&collection_id=${collection.collection_id}`, collection.collection_id)}
-            to={`/store/collection/?handle=${collection.handle}&collection_id=${collection.collection_id}`}>
+            onClick={() => cb(`/store/?handle=${collection.handle}&collectionId=${collection.collectionId}`, collection.collectionId)}
+            to={`/store/?handle=${collection.handle}&collectionId=${collection.collectionId}`}>
         <h3>{collection.title}</h3>
       </Link>
     )

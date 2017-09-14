@@ -1,16 +1,16 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import Link from 'components/common/linkWrapper'
 
-import { strip } from 'components/store/common'
-import './productSnippet.scss'
+import 'components/store/store.scss'
 
 export default class ProductSnippet extends React.Component {
 
   render() {
-    const { product } = this.props;
-
+    const { product, collectionId, cb } = this.props;
+    const destination = `/store/?product=${product.title}&productId=${product.id}&collectionId=${collectionId}`
+    
     return (
-      <Link className="product-snippet" to={`/store/product?title=${product.title}&id=${product.id}`}>
+      <Link className="product-snippet" onClick={() => cb(destination, product.id)} to={destination}>
         <div className="pull-center">
           <img src={product.image} />
         </div>
@@ -18,6 +18,6 @@ export default class ProductSnippet extends React.Component {
         <p className="price">{product.price}</p>
         <p className="description">{product.description}</p>
       </Link>
-    );
+    )
   }
 }
