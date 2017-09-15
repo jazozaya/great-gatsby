@@ -84,7 +84,7 @@ export function fetchProductSnippets(collectionId){
       var i, skinnyProducts = []
       for (i = 0; i < products.length; i ++ ){
           skinnyProducts.push({
-          id: products[i].id,
+          id: products[i].id.toString(),
           title: products[i].title,
           price: products[i].selectedVariant.formattedPrice,
           description: strip(products[i].description).substr(0,150)+"...",

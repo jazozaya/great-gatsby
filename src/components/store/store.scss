@@ -34,9 +34,51 @@
   }
 
   .product-snippet img {
-    flex-grow: 0;
-    max-width: 240px;
-    max-height: 160px;
+    width: 100%;
+    height: auto;
   }
 
+}
+
+
+.product-wrapper {
+  max-width: 1000px;
+
+  .information{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .information img {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+  }
+
+  .information .details {
+    width: 500px;
+  }
+
+  .information .price {
+    color: $voltera-green;
+  }
+
+  .information .sub-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: $small-padding 0px;
+  }
+
+  .information .quantity-input {
+    padding: 5px;
+    border-radius: 5px;
+    border-style: groove;
+  }
+}
+
+@media (max-width: $mobile-threshold) {
+  .product-wrapper .information {
+    flex-wrap: wrap-reverse;
+  }
 }

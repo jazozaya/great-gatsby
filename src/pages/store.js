@@ -1,4 +1,5 @@
 import React from 'react'
+import {withRouter} from "react-router-dom";
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import queryString from 'query-string'
@@ -9,7 +10,7 @@ import CollectionTab from 'components/store/utils/collectionTab'
 
 import { fetchAllCollections } from 'components/store/api'
 
-export default class MyStore extends React.Component {
+class MyStore extends React.Component {
 
   // On startup
   // - Get collections
@@ -33,19 +34,26 @@ export default class MyStore extends React.Component {
     }).isRequired
   }
 
+  static defaultProps = {
+    location: PropTypes.object.isRequired
+   }
+
   constructor(props) {
     super(props);
     this.state = {
-      collections: [],
-      collectionId: null,
-      productId: null,
+      collections: [], // All the collections
+      collectionId: null, // Id of selected collection
+      products: [], // Producs within the collection
+      productId: null, // Selected product id.
     };
 
     this.onProductSelection = this.onProductSelection.bind(this)
     this.onCollectionSelection = this.onCollectionSelection.bind(this)
+    this.setProducts = this.setProducts.bind(this)
   }
 
   componentWillMount() {
+    console.log('store mounting')
     const query = queryString.parse(this.props.location.search);
 
     fetchAllCollections().then((collections) => {
@@ -59,27 +67,39 @@ export default class MyStore extends React.Component {
   }
 
   renderCollection() {
-    return <Collection collectionId={this.state.collectionId} collections={this.state.collections} cb={this.onProductSelection} />
+    return <Collection collectionId={this.state.collectionId} collections={this.state.collections} products={this.state.products} cb={this.onProductSelection} setProducts={this.setProducts} />
   }
 
   renderProduct() {
-    return <Product collectionId={this.state.collectionId} collections={this.state.collections} productId={this.state.productId} />
+    return <Product collectionId={this.state.collectionId} products={this.state.products} productId={this.state.productId} cb={this.onProductSelection} setProducts={this.setProducts} />
   }
 
   onCollectionSelection(query, collectionId) {
     const { history } = this.context.router
-    this.setState({collectionId: collectionId, productId: null})
-    history.push(query)
+    //this.props.history.push(query)
+    //debugger;
+
+    //history.push(query,{"hello":true})
+    //this.setState({collectionId: collectionId, productId: null})
+    //history.push(query)
+
+  }
+
+  componentWillReceiveProps() {
+    debugger;
   }
 
   onProductSelection(query, productId) {
-    debugger;
     const { history } = this.context.router
     this.setState({productId: productId})
-    history.push(query)
+  }
+
+  setProducts(products) {
+    this.setState({products: products})
   }
 
   render() {
+    console.log('re-rendering store')
     return (
       <section className="store-wrapper">
         <Helmet>
@@ -94,3 +114,5 @@ export default class MyStore extends React.Component {
     )
   }
 }
+
+export default withRouter(MyStore);

@@ -5,25 +5,19 @@ import { fetchAllCollections, fetchProductSnippets } from 'components/store/api'
 
 export default class Collection extends React.Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      products: [], // Array of products in current collection.
-    };
-  }
   componentWillMount() {
-    const { collectionId } = this.props;
+    const { collectionId, setProducts } = this.props;
     // Occurs when a blank collection or direct URL is loaded.
     if (collectionId) {
-      fetchProductSnippets(collectionId).then((products) => this.setState({products: products}))
+      fetchProductSnippets(collectionId).then(setProducts)
     }
   }
 
   componentWillReceiveProps(nextProps) {
-    const { collectionId } = nextProps;
+    const { collectionId, setProducts } = nextProps;
     // When a navigate from one collection to another.
-    if (collectionId) {
-      fetchProductSnippets(collectionId).then((products) => this.setState({products: products}))
+    if (this.props.collectionId !== collectionId) {
+      fetchProductSnippets(collectionId).then(setProducts)
     }
   }
 
@@ -53,7 +47,7 @@ export default class Collection extends React.Component {
       <section>
         {this.renderCollectionTitle()}
         <div className="collection-gallery">
-          {this.state.products.map((product, index) => <ProductSnippet key={index} collectionId={this.props.collectionId} product={product} cb={this.props.cb}/>)}
+          {this.props.products.map((product, index) => <ProductSnippet key={index} collectionId={this.props.collectionId} product={product} cb={this.props.cb}/>)}
         </div>
       </section>
     );
