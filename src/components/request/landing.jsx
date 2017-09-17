@@ -35,9 +35,9 @@ export default class LandingRequest extends React.Component {
     // Update Intercom with their user data.
     if (process.env.NODE_ENV === 'production' && typeof(window.Intercom) !== 'undefined') {
       window.Intercom("update", {
-        name: this.state.name, // Full name
-        email: this.state.email, // Email address
-        type: "contact"
+        name:  `${this.props.firstName} ${this.props.lastName}`,
+        email: this.props.email,
+        "landing_page": "true"
       });
       clearInterval(this.state.intervalId)
     } else {
@@ -45,11 +45,8 @@ export default class LandingRequest extends React.Component {
     }
   }
   componentWillMount(){
-      const { firstName, lastName, email } = queryString.parse(this.props.query)
-      const intervalId = setInterval(this.updateIntercom, 1000)
-      this.state.intervalId = intervalId
-      this.state.name = firstName ? `${firstName} ${lastName}`: ""
-      this.state.email =  email
+    const intervalId = setInterval(this.updateIntercom, 1000)
+    this.state.intervalId = intervalId
   }
 
   sendRequest() {
@@ -119,14 +116,16 @@ export default class LandingRequest extends React.Component {
   }
 
   renderRequest() {
+    const nameDefault = this.props.firstName ? `${this.props.firstName} ${this.props.lastName}` : ""
+    const emailDefault = this.props.email
     return (
       <div>
         <h2>Request a quote.</h2>
         <form>
           <h3>Contact Information</h3>
           <div className="format">
-            <p>Name: <input className="text-input" type="text" id="name" name="name" defaultValue={this.state.name}/></p>
-            <p>Email: <input className="text-input" type="email"  id="email" name="email"  autoComplete="email" defaultValue={this.state.email}/></p>
+            <p>Name: <input className="text-input" type="text" id="name" name="name" defaultValue={nameDefault}/></p>
+            <p>Email: <input className="text-input" type="email"  id="email" name="email"  autoComplete="email" defaultValue={emailDefault}/></p>
             <p>Phone: <input className="text-input" type="tel" id="phone" name="phone" autoComplete="tel" /></p>
             <p>Country: <input className="text-input" name="ship-country" id="country"  autoComplete="shipping country" /></p>
           </div>
@@ -169,12 +168,10 @@ export default class LandingRequest extends React.Component {
   }
 
   render() {
-    const { firstName } = queryString.parse(this.props.query)
-
     return (
       <div className="landing-wrapper">
         <div className="request">
-          <h1>Hi {firstName ? firstName : "there"}!</h1>
+          <h1>Hi {this.props.firstName || "there"}!</h1>
           <p className="pull-center">We thought you might be interested in this. Let us know what you think!</p>
           {this.renderVideo()}
           {this.renderStatus()}
