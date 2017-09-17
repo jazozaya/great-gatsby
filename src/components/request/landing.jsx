@@ -32,7 +32,8 @@ export default class LandingRequest extends React.Component {
   }
 
   updateIntercom() {
-    // Update Intercom with their user data.
+
+    // Check if intercome is ready, and update the user data.
     if (process.env.NODE_ENV === 'production' && typeof(window.Intercom) !== 'undefined') {
       window.Intercom("update", {
         name:  `${this.props.firstName} ${this.props.lastName}`,
@@ -45,6 +46,14 @@ export default class LandingRequest extends React.Component {
     }
   }
   componentWillMount(){
+    const { firstName, lastName, email } = this.props;
+
+    // Check if we have good data.
+    if (!(firstName && lastName && email)) {
+      console.warn("Landing Page: No valid parameters received, will not register with Intercom.");
+      return
+    }
+
     const intervalId = setInterval(this.updateIntercom, 1000)
     this.state.intervalId = intervalId
   }
