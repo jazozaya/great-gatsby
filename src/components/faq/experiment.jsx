@@ -11,10 +11,10 @@ export default class ExperimentFAQ extends React.Component {
       <Template title={title} all={all}>
         <Question underline title="Can I print with my own inks?">
           <p>The V-One is a very robust systems and is capable of handling a wide variety of high viscosity fluids. Most fluids can be dispensed right out of the box with little to no modifications.</p>
-          <p>If you are interested in dispensing your own fluids please contact us at <strong>support@voltera.io</strong>. We offer empty cartridges on our store for precisely this reason.  Furthermore, if your inks are UV sensitive, we also have UV blocking cartridges.</p>
+          <p>If you are interested in dispensing your own fluids please contact us at <strong>support@voltera.io</strong>. We offer empty cartridges on our store for precisely this reason. If your inks are UV sensitive, we also have UV blocking cartridges.</p>
         </Question>
         <Question underline title="What substrates can I print on?">
-          <p>Our conductive ink requires a curing process of 200C for 30 minutes. In general, if the substrate is able to withstand that temperature then probably able to print on it.</p>
+          <p>Our conductive ink requires a curing process of 200C for 30 minutes. In general, if the substrate can withstand that temperature then you're probably able to print on it.</p>
           <p>For rigid substrates we have printed on FR4, glass and ceramics. We have also printed on flex substrates in the past, specifically polyimide (kapton) films.</p>
         </Question>
         <Question underline title="Do you have inks for flexible electronics?">
