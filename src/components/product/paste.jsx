@@ -100,8 +100,8 @@ export default class Paste extends React.Component {
           }
           buttonTwo={
             {
-              label: "Reserve Unit",
-              url: "/request/reservation/",
+              label: "Get a Quote",
+              url: "/request/quote/",
               internal: true
             }
           }

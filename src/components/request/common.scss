@@ -9,12 +9,17 @@
 }
 
 .request-wrapper {
-  background-color: $white;
   padding: $medium-padding $small-padding;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 500px;
+}
+
+.landing-wrapper {
+  padding: $medium-padding $small-padding;
+  display: flex;
+  justify-content: center;
 }
 
 .request {

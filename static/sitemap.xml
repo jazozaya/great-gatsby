@@ -77,11 +77,6 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.voltera.io/request/reservation/</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
   <loc>https://www.voltera.io/pdfs/V-One-Summary.pdf</loc>
   <changefreq>weekly</changefreq>
   <priority>0.64</priority>
