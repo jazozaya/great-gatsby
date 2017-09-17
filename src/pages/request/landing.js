@@ -1,11 +1,13 @@
 import React from 'react'
 import Helmet from 'react-helmet'
+import queryString from 'query-string'
 
 import RequestLanding from 'components/request/landing'
 
 export default class MyLanding extends React.Component {
 
   render() {
+    const { firstName, lastName, email } = queryString.parse(this.props.location.search)
     return (
       <div>
         <Helmet>
@@ -15,7 +17,7 @@ export default class MyLanding extends React.Component {
           <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
           <script defer="defer" type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
         </Helmet>
-        <RequestLanding query={this.props.location.search}/>
+        <RequestLanding firstName={firstName} lastName={lastName} email={email}/>
       </div>
     )
   }
