@@ -150,8 +150,8 @@ export default class LandingRequest extends React.Component {
   renderVideo() {
     if (typeof(window) !== 'undefined') {
 
-      var width = Math.min(window.innerWidth - 120, 620) // Trim in case of mobile.
-      var height = Math.round(width / (620/349)) // Find the corresponding height to preserve the aspect ratio.
+      var width = Math.min(window.innerWidth - 120, 601) // Trim in case of mobile.
+      var height = Math.round(width / (640/360)) // Find the corresponding height to preserve the aspect ratio.
 
       // We apply the css dynamically since we do not know width ahead of time.
       const style = {
