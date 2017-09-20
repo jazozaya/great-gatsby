@@ -158,7 +158,7 @@ export default class LandingRequest extends React.Component {
         height: `${height}px`,
       };
 
-      return <div className={`wistia_embed wistia_async_${this.pros.wistiaId}`} style={style}>&nbsp;</div>
+      return <div className={`wistia_embed wistia_async_${this.props.wistiaId}`} style={style}>&nbsp;</div>
     }
   }
 
