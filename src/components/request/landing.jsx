@@ -149,8 +149,7 @@ export default class LandingRequest extends React.Component {
 
   renderVideo() {
     if (typeof(window) !== 'undefined') {
-
-      var width = Math.min(window.innerWidth - 120, 601) // Trim in case of mobile.
+      var width = Math.min(window.innerWidth -100, 601) // Trim in case of mobile.
       var height = Math.round(width / (640/360)) // Find the corresponding height to preserve the aspect ratio.
 
       // We apply the css dynamically since we do not know width ahead of time.
@@ -159,7 +158,7 @@ export default class LandingRequest extends React.Component {
         height: `${height}px`,
       };
 
-      return <div className="wistia_embed wistia_async_nlmo66xcfu" style={style}>&nbsp;</div>
+      return <div className={`wistia_embed wistia_async_${this.pros.wistiaId}`} style={style}>&nbsp;</div>
     }
   }
 
@@ -181,7 +180,7 @@ export default class LandingRequest extends React.Component {
       <div className="landing-wrapper">
         <div className="request">
           <h1>Hi {this.props.firstName || "there"}!</h1>
-          <p className="pull-center">We thought you might be interested in this. Let us know what you think!</p>
+          <p className="pull-center">We thought you might be interested in this video. Let us know what you think!</p>
           {this.renderVideo()}
           {this.renderStatus()}
         </div>
