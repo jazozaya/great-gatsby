@@ -1,36 +1,38 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import ProductSnippet from 'components/store/utils/productSnippet'
 
-import { fetchAllCollections, fetchProductSnippets } from 'components/store/api'
+import { fetchCollection, fetchProductSnippets } from 'components/store/api'
 
 export default class Collection extends React.Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      products:[],
+      collection: null
+    }
+  }
+
   componentWillMount() {
-    const { collectionId, setProducts } = this.props;
-    // Occurs when a blank collection or direct URL is loaded.
+    const { collectionId } = this.props;
+
     if (collectionId) {
-      fetchProductSnippets(collectionId).then(setProducts)
+      const obj = {}
+      const chainOne = fetchProductSnippets(collectionId).then(products => obj.products = products)
+      const chainTwo = fetchCollection(collectionId).then(collection => obj.collection = collection)
+
+      // Wait for all the data to arrive, then update state.
+      Promise.all([chainOne, chainTwo]).then(() => this.setState({...obj}))
     }
   }
 
-  componentWillReceiveProps(nextProps) {
-    const { collectionId, setProducts } = nextProps;
-    // When a navigate from one collection to another.
-    if (this.props.collectionId !== collectionId) {
-      fetchProductSnippets(collectionId).then(setProducts)
-    }
-  }
+  renderTitle() {
+    const { collection} = this.state;
 
-  renderCollectionTitle() {
-    const { collections, collectionId } = this.props;
-
-    // Early exit if a collection was not defined.
-    if (!collectionId || !collections.length){
+    if (!collection){
       return null
     }
-
-    // Extract title and collection from the collection Id.
-    const collection = collections.find((collection) => collection.collectionId === collectionId)
 
     return (
       <div>
@@ -40,14 +42,28 @@ export default class Collection extends React.Component {
     )
   }
 
-  render() {
+  renderHelmet() {
+    const { collection } = this.state
 
-    console.log('Collection - ', this.state, this.props)
+    if(!collection) {
+      return null
+    }
+
+    return (
+      <Helmet>
+        <title>Voltera | {collection.title}</title>
+        <meta name="description" content={collection.description} />
+      </Helmet>
+    )
+  }
+
+  render() {
     return (
       <section>
-        {this.renderCollectionTitle()}
+        {this.renderHelmet()}
+        {this.renderTitle()}
         <div className="collection-gallery">
-          {this.props.products.map((product, index) => <ProductSnippet key={index} collectionId={this.props.collectionId} product={product} cb={this.props.cb}/>)}
+          {this.state.products.map((product, index) => <ProductSnippet key={index} collectionId={this.props.collectionId} product={product}/>)}
         </div>
       </section>
     );

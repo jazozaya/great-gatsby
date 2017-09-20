@@ -40,6 +40,28 @@ function strip(html){
   return tmp.textContent || tmp.innerText || "";
 }
 
+export function fetchCollection(collectionId) {
+  return new Promise(function(resolve, reject) {
+
+    // Try fetching from cookie first. Otherwise query http:
+    const cookieName = `collection_${collectionId}`
+    var collection = getCookie(cookieName)
+    if (collection) {
+      console.log("Collection retrived from cookies!")
+      return resolve(collection)
+    }
+    shopClient.fetchCollection(collectionId).then(function (collection) {
+      const skinnyCollection =  {
+        description: strip(collection.attrs.body_html),
+        collectionId: collection.attrs.collection_id.toString(),
+        handle: collection.attrs.handle,
+        title: collection.attrs.title
+      }
+      setCookie(cookieName, skinnyCollection)
+      return resolve(skinnyCollection)
+    })
+  });
+}
 
 export function fetchAllCollections() {
   return new Promise(function(resolve, reject) {
@@ -48,7 +70,7 @@ export function fetchAllCollections() {
     const cookieName = 'collection_labels7'
     var collections = getCookie(cookieName)
     if (collections) {
-      console.log('Collections retrieved from cookies!')
+      console.log('All Collections retrieved from cookies!')
       return resolve(collections)
     }
 
@@ -69,13 +91,14 @@ export function fetchAllCollections() {
   });
 }
 
+// Return product snippets from a given collection.
 export function fetchProductSnippets(collectionId){
   return new Promise(function(resolve, reject) {
 
-  const cookieName = `collection_${collectionId}`
+  const cookieName = `collection_products_${collectionId}`
   var products = getCookie(cookieName)
   if (products) {
-    console.log('Products retrieved from cookies!')
+    console.log('Product Snippets retrieved from cookies!')
     return resolve(products)
   }
 
@@ -97,6 +120,7 @@ export function fetchProductSnippets(collectionId){
   });
 }
 
+// Individual products are not stored in cookies.
 export function fetchProduct(product_id) {
   return new Promise(function(resolve, reject) {
 
@@ -110,5 +134,29 @@ export function fetchProduct(product_id) {
       }
       return resolve(skinnyProduct)
     })
+  });
+}
+
+
+// Don't store cart in cookie. Just retrieve from shopify to avoid mismatches.
+export function fetchCart() {
+  return new Promise(function(resolve, reject) {
+
+    const cookieName = 'cart_id'
+    const cartId = getCookie(cookieName)
+
+    if (cartId) {
+      shopClient.fetchCart(cartId).then(cart => {
+        console.log("Cart successfully retrieved from shopify by ID!")
+        return resolve(cart)
+      })
+
+    } else {
+      shopClient.createCart().then(cart => {
+        console.log("New Cart created")
+        setCookie(cookieName, cart.id)
+        return resolve(cart);
+      })
+    }
   });
 }

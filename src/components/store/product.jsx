@@ -13,52 +13,31 @@ export default class Collection extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      products: [], // Snippets of our relatedProducts
       product: null, // Instance of our product.
       quantity: 1
     };
   }
 
   componentWillMount() {
-    const { productId, collectionId, setProducts } = this.props
-    if (productId){
-      fetchProduct(productId).then((product) => this.setState({product: product}))
-    }
+    const { productId, collectionId } = this.props
+    if (productId && collectionId){
+      const obj = {}
+      const chainOne = fetchProduct(productId).then(product => obj.product = product)
+      const chainTwo = fetchProductSnippets(collectionId).then(products => obj.products = products)
 
-    // Occurs when a direct URL is loaded.
-    if (collectionId) {
-      fetchProductSnippets(collectionId).then(setProducts)
+      // Wait for all data to be collected.
+      Promise.all([chainOne, chainTwo]).then(() => this.setState({product: obj.product, products: obj.products}))
     }
-  }
-
-  componentWillReceiveProps(nextProps) {
-    const { productId } = nextProps
-    if (this.state.productId !== productId) {
-      fetchProduct(productId).then((product) => this.setState({product: product}))
-    }
-  }
-
-  componentDidUpdate() {
-    // Bring the view up.
-    setTimeout( function () {
-      const div = document.getElementById("product-wrapper")
-      if (div) {
-        div.scrollIntoView()
-      }
-      else {
-        window.scrollTo(0,0)
-      }
-    }, 100)
   }
 
   relatedProducts() {
-    // First take out our current product.
-    const { productId, products } = this.props
-    const filteredProd = products.filter(product => product.id !== productId)
-    return filteredProd.slice(0,3)
+    const { productId } = this.props
+    const filteredProd = this.state.products.filter(product => product.id !== productId)
+    return filteredProd.slice(0,3) // Only return 3 products max.
   }
 
   render() {
-
     const { product } = this.state
 
     if (!product) {
@@ -79,9 +58,9 @@ export default class Collection extends React.Component {
           </div>
         </div>
         <div className="description" dangerouslySetInnerHTML={{ __html: product.description }}/>
-        <h3>More from this collection:</h3>
+        <h2 className="pull-left">More from this collection:</h2>
         <div className="collection-gallery">
-            {this.relatedProducts().map((product, index) => <ProductSnippet key={index} collectionId={this.props.collectionId} product={product} cb={this.props.cb}/>)}
+            {this.relatedProducts().map((product, index) => <ProductSnippet key={index} collectionId={this.props.collectionId} product={product}/>)}
         </div>
       </section>
     );
