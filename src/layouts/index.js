@@ -5,7 +5,7 @@ import Header from 'components/common/header'
 import DummyHeader from 'components/common/dummyHeader'
 import favicon from 'favicon.ico';
 
-import { loadIntercom } from './api'
+import { loadIntercom, loadHeap } from './api'
 
 import 'css/main.scss'
 
@@ -42,6 +42,11 @@ module.exports = React.createClass({
   componentDidMount() {
 
     if(process.env.NODE_ENV === 'production') {
+
+      // Load HEAP
+      loadHeap();
+
+      // Load Intercom
       loadIntercom()
       window.Intercom("boot", {
         app_id: "p4hz4ihv",
@@ -50,8 +55,6 @@ module.exports = React.createClass({
       // Wait a little bit to ensure deferred script has finished loading. (Not bulletproof)
       setTimeout(this.trackRemarketing, 500);
     }
-
-
   },
 
   render() {
@@ -79,7 +82,6 @@ module.exports = React.createClass({
 
           <link rel="shortcut icon" href={favicon} />
           <script defer="defer" type="text/javascript" src="https://www.googleadservices.com/pagead/conversion_async.js" charset="utf-8"></script>
-
         </Helmet>
         <Header pageName={this.props.location.pathname} />
         <DummyHeader />
