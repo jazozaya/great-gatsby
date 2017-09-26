@@ -5,7 +5,7 @@ import Header from 'components/common/header'
 import DummyHeader from 'components/common/dummyHeader'
 import favicon from 'favicon.ico';
 
-import { loadIntercom } from './api'
+import { loadIntercom, loadHeap } from './api'
 
 import 'css/main.scss'
 
@@ -42,6 +42,11 @@ module.exports = React.createClass({
   componentDidMount() {
 
     if(process.env.NODE_ENV === 'production') {
+
+      // Load HEAP
+      loadHeap();
+
+      // Load Intercom
       loadIntercom()
       window.Intercom("boot", {
         app_id: "p4hz4ihv",
@@ -50,12 +55,6 @@ module.exports = React.createClass({
       // Wait a little bit to ensure deferred script has finished loading. (Not bulletproof)
       setTimeout(this.trackRemarketing, 500);
     }
-
-
-    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(r?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","removeEventProperty","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
-    heap.load("2791463426");
-
-
   },
 
   render() {
