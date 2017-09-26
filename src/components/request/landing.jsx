@@ -129,7 +129,7 @@ export default class LandingRequest extends React.Component {
     const emailDefault = this.props.email
     return (
       <div>
-        <h2>Request a quote.</h2>
+        <h2>Want to know more?</h2>
         <form>
           <h3>Contact Information</h3>
           <div className="format">
