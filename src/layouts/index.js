@@ -5,7 +5,7 @@ import Header from 'components/common/header'
 import DummyHeader from 'components/common/dummyHeader'
 import favicon from 'favicon.ico';
 
-import { loadIntercom, loadHeap } from './api'
+import { loadIntercom, loadHeap, loadHotjar } from './api'
 
 import 'css/main.scss'
 
@@ -45,6 +45,7 @@ module.exports = React.createClass({
 
       // Load HEAP
       loadHeap();
+      loadHotjar();
 
       // Load Intercom
       loadIntercom()
