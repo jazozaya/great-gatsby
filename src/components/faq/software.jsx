@@ -6,9 +6,9 @@ import Template from './utils/template'
 export default class SoftwareFAQ extends React.Component {
 
   render() {
-    const { title, all } = this.props;
+    const { title, all, id } = this.props;
     return (
-      <Template title={title} all={all}>
+      <Template id={id} title={title} all={all}>
         <Question underline title="Is the software free?">
           <p>Yep! The software is required to operate the V-One. You can download a copy of it at <a target="_blank" href="http://www.voltera.io/downloads">here</a>.</p>
         </Question>

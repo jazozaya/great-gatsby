@@ -6,9 +6,9 @@ import Template from './utils/template'
 export default class PasteFAQ extends React.Component {
 
   render() {
-    const { title, all } = this.props;
+    const { title, all, id } = this.props;
     return (
-      <Template title={title} all={all}>
+      <Template id={id} title={title} all={all}>
         <Question underline title="How long does a paste cartridge last?">
           <p>A single solder paste cartridge will allow you to dispense up to 11,000 0603 solder pads.</p>
           <p>The solder paste cartridge has an official shelf life of 10 months and should be stored in the refrigerator when not used.</p>

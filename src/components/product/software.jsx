@@ -113,7 +113,7 @@ export default class Software extends React.Component {
               </div>
             </div>
           </section>
-        <SoftwareFAQ title="F.A.Q." all />
+        <SoftwareFAQ id="faq" title="F.A.Q." all />
         <Gallery
           title="Learn by watching."
           description="Whether you use the V-One once a day or once a month, you will be able to pick up right where you left off. These short video clips are built right into the app and will make the tricky parts easy."

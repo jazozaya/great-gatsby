@@ -83,7 +83,7 @@ export default class Paste extends React.Component {
             </div>
           </div>
         </section>
-        <PasteFAQ title="F.A.Q." all />
+        <PasteFAQ id="faq" title="F.A.Q." all />
         <Gallery
           title="Simplify your life."
           description="The V-One cuts your development in half and gets you to market faster."

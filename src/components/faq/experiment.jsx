@@ -6,9 +6,9 @@ import Template from './utils/template'
 export default class ExperimentFAQ extends React.Component {
 
   render() {
-    const { title, all } = this.props;
+    const { title, all, id } = this.props;
     return (
-      <Template title={title} all={all}>
+      <Template id={id} title={title} all={all}>
         <Question underline title="Can I print with my own inks?">
           <p>The V-One is a very robust systems and is capable of handling a wide variety of high viscosity fluids. Most fluids can be dispensed right out of the box with little to no modifications.</p>
           <p>If you are interested in dispensing your own fluids please contact us at <strong>support@voltera.io</strong>. We offer empty cartridges on our store for precisely this reason. If your inks are UV sensitive, we also have UV blocking cartridges.</p>

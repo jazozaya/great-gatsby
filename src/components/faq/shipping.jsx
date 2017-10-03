@@ -6,9 +6,9 @@ import Template from './utils/template'
 export default class Shipping extends React.Component {
 
   render() {
-    const { title, all } = this.props;
+    const { title, all, id } = this.props;
     return (
-      <Template title={title} all={all}>
+      <Template id={id} title={title} all={all}>
         <Question underline title="What is the cost to ship to my country?">
           <p>It costs <strong>20 USD</strong> per printer to ship to Canada.</p>
           <p>It costs <strong>35 USD</strong> per printer to ship to the USA.</p>

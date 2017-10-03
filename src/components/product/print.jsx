@@ -73,7 +73,7 @@ export default class Print extends React.Component {
               </div>
             </div>
           </section>
-        <PrintFAQ title="F.A.Q." all />
+        <PrintFAQ id="faq" title="F.A.Q." all />
         <Gallery
           title="A platform for all of your needs."
           description="The V-One is a versatile tool that will help you in any stage of development"

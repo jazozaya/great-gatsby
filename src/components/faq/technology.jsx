@@ -7,9 +7,9 @@ import Template from './utils/template'
 export default class TechnologyFAQ extends React.Component {
 
   render() {
-    const { title, all } = this.props;
+    const { title, all, id } = this.props;
     return (
-      <Template title={title} all={all}>
+      <Template id={id} title={title} all={all}>
         <Question underline title="How long does it take to make a board?">
           <p>It's very quick!</p>
           <p>A simple board like the <strong>Hello World</strong> will take about 5 minutes to print, 30 minutes to bake (the ink needs to be dried), and depending on how fast you place your components about 10-15 minutes to dispense solder paste and reflow.</p>

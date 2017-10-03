@@ -4,9 +4,9 @@ import Link from 'components/common/linkWrapper'
 export default class Template extends React.Component {
 
   render() {
-    const { title, all } = this.props;
+    const { title, all, id } = this.props;
     return (
-      <div className="faq-section">
+      <div id={id} className="faq-section">
         <h2 className="pull-left">{title}</h2>
         {this.props.children}
         <div className="pull-right">

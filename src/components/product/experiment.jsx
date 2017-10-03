@@ -71,7 +71,7 @@ export default class Experiment extends React.Component {
           </div>
           <img src="/product/heated-platform-min.png"/>
         </section>
-        <ExperimentFAQ title="F.A.Q." all />
+        <ExperimentFAQ id="faq" title="F.A.Q." all />
         <Gallery
           title="Experiment without restrictions."
           description="The V-One may help lower any barriers to entry you're experiencing."

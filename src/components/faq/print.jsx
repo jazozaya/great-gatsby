@@ -6,9 +6,9 @@ import Template from './utils/template'
 export default class PrintFAQ extends React.Component {
 
   render() {
-    const { title, all } = this.props;
+    const { title, all, id } = this.props;
     return (
-      <Template title={title} all={all}>
+      <Template id={id} title={title} all={all}>
           <Question underline title="How long does an ink cartridge last?">
             <p>A single ink cartridge will allow you to print up to 85 <strong>Hello World</strong> boards. This also equates to 100 m of conductive trace at 8 mil width, or 200 cm2 of solid pour.  The number of boards you are able to print will depend on size and complexity of the circuits you are building.</p>
             <p>The ink cartridge has an official shelf life of 6 months and should be stored in the refrigerator when not used.</p>

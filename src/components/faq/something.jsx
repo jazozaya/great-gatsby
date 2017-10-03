@@ -6,9 +6,9 @@ import Template from './utils/template'
 export default class SomethingFAQ extends React.Component {
 
   render() {
-    const { title, all } = this.props;
+    const { title, all, id } = this.props;
     return (
-      <Template title={title} all={all}>
+      <Template id={id} title={title} all={all}>
         <Question underline title="What is your warranty policy?">
           <p>We offer a 6 month warranty from date of delivery.  More information can be found in our <a href="/docs/tos">Terms of Service</a>.</p>
         </Question>
