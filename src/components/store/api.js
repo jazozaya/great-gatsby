@@ -31,7 +31,11 @@ function setCookie(name, object) {
   if (cookieLength > 4000){
     console.error(`Cookie ${name} is too long! ${cookieLength}`)
   }
-  cookies.set(name, object)
+  cookies.set(name, object, {path: '/'})
+}
+
+function removeCookie(name) {
+  cookies.remove(name, { path: '/'})
 }
 
 function strip(html){
@@ -67,7 +71,7 @@ export function fetchAllCollections() {
   return new Promise(function(resolve, reject) {
 
     // Try fetching from cookies first, otherwise query http.
-    const cookieName = 'collection_labels7'
+    const cookieName = 'collection_labels'
     var collections = getCookie(cookieName)
     if (collections) {
       console.log('All Collections retrieved from cookies!')
@@ -139,24 +143,10 @@ export function fetchProduct(product_id) {
 
 
 // Don't store cart in cookie. Just retrieve from shopify to avoid mismatches.
-export function fetchCart() {
+export function fetchRecentCart() {
   return new Promise(function(resolve, reject) {
-
-    const cookieName = 'cart_id'
-    const cartId = getCookie(cookieName)
-
-    if (cartId) {
-      shopClient.fetchCart(cartId).then(cart => {
-        console.log("Cart successfully retrieved from shopify by ID!")
-        return resolve(cart)
-      })
-
-    } else {
-      shopClient.createCart().then(cart => {
-        console.log("New Cart created")
-        setCookie(cookieName, cart.id)
-        return resolve(cart);
-      })
-    }
+    shopClient.fetchRecentCart().then( cart => {
+      return resolve(cart)
+    })
   });
 }

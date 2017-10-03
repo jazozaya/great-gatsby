@@ -2,6 +2,13 @@
 
 .store-wrapper {
 
+  .quantity-input {
+    padding: 5px;
+    border-radius: 5px;
+    border-style: groove;
+    height: 20px;
+  }
+
   .collection-gallery {
     display: flex;
     flex-wrap: wrap;
@@ -69,11 +76,64 @@
     justify-content: space-around;
     padding: $small-padding 0px;
   }
+}
 
-  .information .quantity-input {
-    padding: 5px;
-    border-radius: 5px;
-    border-style: groove;
+.cart-wrapper {
+  .cart-headers {
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: solid 1px $soft-grey;
+
+    h3 {
+      text-align: right;
+      min-width: 150px;
+    }
+  }
+  .cart-row {
+    display: flex;
+    align-items: center;
+    padding: $small-padding 0px;
+    border-bottom: solid 1px $soft-grey;
+
+    img {
+      height: auto;
+      max-width: 150px;
+      margin-right: $small-padding;
+    }
+
+    .cart-row-details {
+      flex-grow: 1;
+      p {
+        margin: 5px;
+      }
+      .title {
+        font-size: 1.2em;
+      }
+      .remove {
+        font-size: 0.9em;
+      }
+    }
+    .cart-row-numbers {
+      display: flex;
+      align-items: center;
+      text-align: right;
+      p {
+        min-width: 150px;
+      }
+    }
+  }
+  .subtotal {
+    font-size: 1.2em;
+    color: $voltera-green;
+    font-weight: 600;
+  }
+
+  .cart-buttons {
+    margin-top: $small-padding;
+
+    .button {
+      margin-left: 5px;
+    }
   }
 }
 

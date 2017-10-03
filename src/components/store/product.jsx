@@ -1,47 +1,71 @@
 import React from 'react'
+import { Redirect } from 'react-router'
 import PropTypes from 'prop-types'
-import queryString from 'query-string'
 
-import CollectionTab from 'components/store/utils/collectionTab'
 import ProductSnippet from 'components/store/utils/productSnippet'
 import Button from 'components/common/button'
 
-import { fetchProduct, fetchProductSnippets } from 'components/store/api'
+import { fetchProduct, fetchProductSnippets, fetchRecentCart } from 'components/store/api'
 
-export default class Collection extends React.Component {
+export default class Product extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      products: [], // Snippets of our relatedProducts
       product: null, // Instance of our product.
-      quantity: 1
+      products: [], // Snippets of our relatedProducts
+      quantity: 1,
     };
   }
 
   componentWillMount() {
     const { productId, collectionId } = this.props
-    if (productId && collectionId){
-      const obj = {}
-      const chainOne = fetchProduct(productId).then(product => obj.product = product)
-      const chainTwo = fetchProductSnippets(collectionId).then(products => obj.products = products)
+    if (productId){
+      fetchProduct(productId).then(product => this.setState({product: product}))
+    }
 
-      // Wait for all data to be collected.
-      Promise.all([chainOne, chainTwo]).then(() => this.setState({product: obj.product, products: obj.products}))
+    if (collectionId){
+      fetchProductSnippets(collectionId).then(products => this.setState({products: products}))
     }
   }
 
-  relatedProducts() {
-    const { productId } = this.props
+  addToCart() {
+    const { product, quantity } = this.state
+    fetchRecentCart().then(cart => cart.createLineItemsFromVariants({variant: product.selectedVariant, quantity: quantity})).then(cart => this.setState({addedToCart: true}))
+  }
+
+  onQuantityChange(event) {
+    this.setState({quantity: Math.round(event.target.value)})
+  }
+
+  renderRelatedProducts() {
+    const { productId, collectionId } = this.props;
+
+    if (!collectionId){
+      return null
+    }
+
     const filteredProd = this.state.products.filter(product => product.id !== productId)
-    return filteredProd.slice(0,3) // Only return 3 products max.
+
+    return (
+      <div>
+        <h2 className="pull-left">More from this collection:</h2>
+        <div className="collection-gallery">
+            {filteredProd.slice(0,3).map((product, index) => <ProductSnippet key={index} collectionId={this.props.collectionId} product={product} external={true}/>)}
+        </div>
+      </div>
+    )
   }
 
   render() {
-    const { product } = this.state
+    const { product, addedToCart, quantity } = this.state
 
     if (!product) {
       return null;
+    }
+
+    if (addedToCart) {
+      return <Redirect push to="/store/cart/"/>
     }
 
     return (
@@ -52,16 +76,13 @@ export default class Collection extends React.Component {
             <h1>{product.title}</h1>
             <h2 className="price">{product.selectedVariant.formattedPrice}</h2>
             <div className="sub-details">
-              <p><strong>Quantity:</strong> <input className="quantity-input" id="number" type="number" defaultValue="1" min="1" max="5" onInput={(quantity) => this.setState({quantity: quantity})}/></p>
-              <Button label="Add to cart" onClick={this.addToCart} color="light"/>
+              <p><strong>Quantity:</strong> <input className="quantity-input" id="number" type="number" value={quantity} min="1" max="100" onChange={(event) =>this.onQuantityChange(event)}/></p>
+              <Button label="Add to cart" onClick={() =>this.addToCart()} color="light"/>
             </div>
           </div>
         </div>
         <div className="description" dangerouslySetInnerHTML={{ __html: product.description }}/>
-        <h2 className="pull-left">More from this collection:</h2>
-        <div className="collection-gallery">
-            {this.relatedProducts().map((product, index) => <ProductSnippet key={index} collectionId={this.props.collectionId} product={product}/>)}
-        </div>
+        {this.renderRelatedProducts()}
       </section>
     );
   }

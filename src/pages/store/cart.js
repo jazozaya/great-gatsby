@@ -1,6 +1,5 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import CollectionTab from 'components/store/utils/collectionTab'
 import Cart from 'components/store/cart'
 import queryString from 'query-string'
 
@@ -9,8 +8,6 @@ export default class MyCart extends React.Component {
   render() {
     return (
       <section className="store-wrapper">
-        <CollectionTab/>
-        <h1>Your Cart</h1>
         <Cart />
       </section>
     )
