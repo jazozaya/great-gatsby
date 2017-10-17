@@ -29,4 +29,7 @@ export const collections = {
     handle: "swag",
     id: 298518977
   },
+  vOne: {
+    title: "V-One",
+  }
 }
