@@ -19,7 +19,7 @@ export default class PasteFAQ extends React.Component {
         </Question>
         <Question underline title="Can I use my own paste and reflow profile?">
           <p>The heated bed can reach a maximum temperature of 240°C (464°F) in about 2 minutes. If you use your own solder paste you can manually control the temperature to follow your own reflow profile.</p>
-          <p>If you want to use the V-One mainly for solder paste dispensing of fabbed boards, we offer a <a target="_blank" href="https://store.voltera.io/products/solder-paste-cartridge-sn60pb40-alloy">special solder alloy</a> for boards with a lead based HASL finish.</p>
+          <p>If you want to use the V-One mainly for solder paste dispensing of fabbed boards, we offer a special solder alloy for boards with a lead based HASL finish.</p>
         </Question>
         <Question underline title="Does the solder paste contain lead?">
           <p>Nope! Elemental analysis of our solder paste alloy shows a 0.01% trace amount of lead. This is well below the maximum of 0.07% required by IPC J-STD-006-B for lead-free solder.</p>

@@ -125,8 +125,8 @@ export default class Software extends React.Component {
           buttonOne={
             {
               label: "Buy Now",
-              url: "https://store.voltera.io/products/voltera-v-one",
-              internal: false
+              url: "/store/",
+              internal: true
             }
           }
           buttonTwo={

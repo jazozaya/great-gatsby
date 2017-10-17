@@ -5,8 +5,10 @@ import Logo from 'components/common/logo';
 
 import './mobile.scss'
 import { urls } from './constants'
+import { collections as c } from 'components/store/constants'
 
-var rawSVG = require('!raw-loader!./hamburger.min.svg');
+var rawSVGHamburger = require('!raw-loader!./hamburger.min.svg');
+var rawSVGCart = require('!raw-loader!./cart.min.svg');
 
 export default class Mobile extends React.Component {
 
@@ -14,7 +16,8 @@ export default class Mobile extends React.Component {
     super(props);
     this.state = {
       open: false,
-      subOpen: false
+      openSubProduct: false,
+      openSubStore: false,
     };
   }
 
@@ -25,26 +28,57 @@ export default class Mobile extends React.Component {
     }
   }
 
-  renderSubheader() {
+  renderSubheaderProduct() {
     const { pageName } = this.props;
 
-    if (this.state.subOpen) {
-      return(
-        <ul className="sub-header">
-          <li><Link className={this.getClass(pageName, urls.technology)} to={urls.technology}>How it works</Link></li>
-          <li><Link className={this.getClass(pageName, urls.print)} to={urls.print}>Circuit Printing </Link></li>
-          <li><Link className={this.getClass(pageName, urls.paste)} to={urls.paste}>Paste Dispensing</Link></li>
-          <li><Link className={this.getClass(pageName, urls.software)} to={urls.software}>Desktop Software</Link></li>
-          <li><Link className={this.getClass(pageName, urls.experiment)} to={urls.experiment}>Experiment</Link></li>
-        </ul>
-      );
+    if (!this.state.openSubProduct) {
+      return null
     }
-    return null;
+
+    return(
+      <ul className="sub-header">
+        <li><Link className={this.getClass(pageName, urls.technology)} to={urls.technology}>How it works</Link></li>
+        <li><Link className={this.getClass(pageName, urls.print)} to={urls.print}>Circuit Printing </Link></li>
+        <li><Link className={this.getClass(pageName, urls.paste)} to={urls.paste}>Paste Dispensing</Link></li>
+        <li><Link className={this.getClass(pageName, urls.software)} to={urls.software}>Desktop Software</Link></li>
+        <li><Link className={this.getClass(pageName, urls.experiment)} to={urls.experiment}>Experiment</Link></li>
+      </ul>
+    );
+  }
+
+  renderSubheaderStore() {
+    const { pageName } = this.props;
+
+    if (!this.state.openSubStore) {
+      return null
+    }
+    return(
+      <ul className="sub-header">
+          <li><Link className={pageName === "/store/" ? "selected" : null} to={'/store/'}>{c.vOne.title}</Link></li>
+          <li><Link className={this.getClass(pageName, c.bundles.handle)} to={`/store/collection/${c.bundles.handle}/`}>{c.bundles.title}</Link></li>
+          <li><Link className={this.getClass(pageName, c.accessories.handle)} to={`/store/collection/${c.accessories.handle}/`}>{c.accessories.title}</Link></li>
+          <li><Link className={this.getClass(pageName, c.inks.handle)} to={`/store/collection/${c.inks.handle}/`}>{c.inks.title}</Link></li>
+          <li><Link className={this.getClass(pageName, c.solder.handle)} to={`/store/collection/${c.solder.handle}/`}>{c.solder.title}</Link></li>
+          <li><Link className={this.getClass(pageName, c.substrates.handle)} to={`/store/collection/${c.substrates.handle}/`}>{c.substrates.title}</Link></li>
+          <li><Link className={this.getClass(pageName, c.swag.handle)} to={`/store/collection/${c.swag.handle}/`}>{c.swag.title}</Link></li>
+          <li><Link className={this.getClass(pageName, 'cart')} to={`/store/cart/`}><SVGInline className="cart-icon" svg={rawSVGCart} />Cart</Link></li>
+      </ul>
+    );
   }
 
   catchProduct(event) {
     event.stopPropagation();
-    this.setState({ subOpen: !this.state.subOpen })
+    this.setState({
+      openSubProduct: !this.state.openSubProduct,
+      openSubStore: false
+     })
+  }
+  cathStore(event) {
+    event.stopPropagation();
+    this.setState({
+      openSubProduct: false,
+      openSubStore: !this.state.openSubStore
+     })
   }
 
   renderLinkPanel() {
@@ -55,11 +89,12 @@ export default class Mobile extends React.Component {
           <ul>
             <li><Link to='/faq/'>FAQ</Link></li>
             <li><a onClick={(event) => this.catchProduct(event)}>Product</a></li>
-            {this.renderSubheader()}
+            {this.renderSubheaderProduct()}
             <li><a href="http://community.voltera.io">Forums</a></li>
             <li><a href="http://support.voltera.io">Support</a></li>
             <li><Link to='/contact/'>Contact</Link></li>
-            <li><a href="https://store.voltera.io/">Store</a></li>
+            <li><a onClick={(event) => this.cathStore(event)}>Store</a></li>
+            {this.renderSubheaderStore()}
           </ul>
         </div>
       </div>
@@ -71,7 +106,7 @@ export default class Mobile extends React.Component {
     return (
       <div className="header-mobile">
         <div>
-          <a onClick= {() => this.setState({open : !this.state.open})} className={`hamburger ${hamburgerState}`}><SVGInline svg={rawSVG} /></a>
+          <a onClick= {() => this.setState({open : !this.state.open})} className={`hamburger ${hamburgerState}`}><SVGInline svg={rawSVGHamburger} /></a>
           {this.state.open ? this.renderLinkPanel() : null}
         </div>
         <Logo emblem="true" />

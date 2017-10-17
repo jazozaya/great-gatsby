@@ -3,6 +3,8 @@ import React from 'react'
 import Question from './utils/question'
 import Template from './utils/template'
 
+import Link from 'components/common/linkWrapper'
+
 export default class Shipping extends React.Component {
 
   render() {
@@ -27,7 +29,7 @@ export default class Shipping extends React.Component {
           <p>If you want to ship with your account or if you have special shipping requirements, please contact <strong>sales@voltera.io</strong> before you place your order.</p>
         </Question>
         <Question underline title="How can I pay?">
-          <p>If you want to pay with credit card, you can do so directly on our <a href="https://store.voltera.io/">store</a>.</p>
+          <p>If you want to pay with credit card, you can do so directly on our <Link to="/store/">store</Link>.</p>
           <p>If you want to pay with a bank transfer, please send your PO to sales@voltera.io and we'll provide you our banking details.</p>
         </Question>
         <Question title="Are taxes and duties included?">

@@ -69,6 +69,12 @@
   fill: $voltera-green;
 }
 
+
+.header-mobile .cart-icon {
+  margin-right: 5px;
+}
+
+
 @media (max-width: $mobile-threshold) {
   .header-mobile a {
     font-weight: 300;

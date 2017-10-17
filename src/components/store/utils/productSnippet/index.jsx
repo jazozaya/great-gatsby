@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'components/common/linkWrapper'
 
-import 'components/store/store.scss'
+import './productSnippet.scss'
 
 export default class ProductSnippet extends React.Component {
 
@@ -33,7 +33,11 @@ export default class ProductSnippet extends React.Component {
 
   render() {
     const { product, collectionId, external } = this.props;
-    const destination = `/store/product/?title=${product.title}&productId=${product.id}&collectionId=${collectionId}`
+    // A collection ID might not have been passed in.
+    var destination = `/store/product/?title=${product.title}&productId=${product.id}`
+    if (collectionId) {
+      destination = `${destination}&collectionId=${collectionId}`
+    }
 
     return external ? this.renderExternal(product, destination) : this.renderInternal(product, destination)
   }

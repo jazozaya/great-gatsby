@@ -36,6 +36,17 @@ export default class Paste extends React.Component {
             label="or less"
             />
         </MiniHero>
+        <section>
+            <h2>Skip the soldering iron.</h2>
+            <p className="pull-center">Focus on designing, not soldering. Regardless if your boards come from a factory, or from your desk - just mount them on the V-One and off you go.</p>
+            <div className="promo">
+            <YouTube
+              width="800"
+              videoId="NdJQ5Xl4jkw"
+              url="/selector/dispense-solder-paste.jpg"
+            />
+          </div>
+        </section>
         <section className="flex-row">
           <YouTube
             width="600"
@@ -94,8 +105,8 @@ export default class Paste extends React.Component {
           buttonOne={
             {
               label: "Buy Now",
-              url: "https://store.voltera.io/products/voltera-v-one",
-              internal: false
+              url: "/store/",
+              internal: true
             }
           }
           buttonTwo={

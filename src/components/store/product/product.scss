@@ -1,0 +1,58 @@
+@import 'src/css/colors';
+
+.product-wrapper {
+  max-width: 1000px;
+  margin-top: $subheader-height;
+
+  .information{
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: $medium-padding;
+    border-bottom: solid 1px $divider;
+  }
+
+  .information .details {
+    width: 400px;
+  }
+
+  .information .price {
+    color: $voltera-green;
+  }
+
+  .information .long {
+    width: 100%;
+    border-radius: 25px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .information .select {
+    margin: 0px 0px $small-padding $small-padding;
+    width: 130px;
+    padding: 10px;
+    border-radius: 25px;
+    outline: none;
+    border: solid 1px $divider;
+    text-align: center;
+    box-sizing: border-box;
+    font-weight: 600;
+  }
+
+  .relevant-products {
+    margin-top: $large-padding;
+    border-top: solid 1px $divider;
+  }
+
+  .relevant-gallery {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: $mobile-threshold) {
+  .product-wrapper .information {
+    flex-wrap: wrap-reverse;
+  }
+}

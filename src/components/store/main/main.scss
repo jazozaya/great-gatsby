@@ -1,0 +1,14 @@
+@import 'src/css/colors';
+
+.collection-separator {
+  border-top: solid 1px $divider;
+  max-width: $max-width;
+  margin: auto;
+}
+
+
+@media (max-width: $mobile-threshold) {
+  .collection-separator {
+    margin: 0px $small-padding;
+  }
+}

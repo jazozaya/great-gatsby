@@ -1,5 +1,6 @@
 import React from 'react'
 
+import YouTube from 'components/common/youtube'
 import Button from 'components/common/button'
 import Explore from 'components/common/explore';
 import CallToAction from 'components/common/cta';
@@ -35,8 +36,17 @@ export default class Technology extends React.Component {
             label="Board cost."
             />
         </MiniHero>
-
-        <Box />
+        <section>
+            <h2>A prototyping platform for electronics.</h2>
+            <p className="pull-center">On your desktop and on your schedule, the Voltera V-One gets you from prototype to production faster than ever before.</p>
+            <div className="promo">
+            <YouTube
+              width="800"
+              videoId="PeW1nURJ5ww"
+              url="/selector/print-conductive-silver-ink.jpg"
+            />
+          </div>
+        </section>
         <section className="flex-row">
           <img src="/voltera-dispenser-min.png"/>
           <div className="description">
@@ -54,6 +64,9 @@ export default class Technology extends React.Component {
           <img src="/voltera-probe-min.png"/>
         </section>
         <HelpMe />
+        <section>
+          <Box />
+        </section>
         <TechnologyFAQ id="faq" title="F.A.Q." all />
         <Specs />
         <CallToAction

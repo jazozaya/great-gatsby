@@ -8,6 +8,7 @@ import moment from 'moment';
 import './common.scss'
 
 import Button from 'components/common/button'
+import SpinnerLoader from 'components/common/spinnerLoader'
 import 'react-datepicker/dist/react-datepicker.css';
 
 const status = {
@@ -104,9 +105,7 @@ export default class QuoteRequest extends React.Component {
     return (<div>
       <h1>Please Wait</h1>
       <p className="pull-center">We are processing your request.</p>
-      <div className="loader-wrapper">
-        <div className="loader"></div>
-      </div>
+      <SpinnerLoader />
       <p className="pull-center">Thank you for the interest in Voltera!</p>
     </div>)
   }

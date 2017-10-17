@@ -18,7 +18,7 @@ export default class ExperimentFAQ extends React.Component {
           <p>For rigid substrates we have printed on FR4, glass and ceramics. We have also printed on flex substrates in the past, specifically polyimide (kapton) films.</p>
         </Question>
         <Question underline title="Do you have inks for flexible electronics?">
-          <p>Yes! We currently offer one ink specifically for flexible applications in our <a target="_blank" href="https://store.voltera.io/products/flexible-and-stretchable-conductive-ink-cartridge">store</a>. Our R&D team is always exploring new inks, we hope to offer more in the future.</p>
+          <p>Yes! We currently offer one ink specifically for flexible applications in our store. Our R&D team is always exploring new inks, we hope to offer more in the future.</p>
           <p>Our standard ink is not made for flexible applications and will fracture if bent too aggressively, so we don't recommend it for applications that wil undergo repeated flexing.</p>
         </Question>
         <Question title="Can I get an empty cartridge?">

@@ -1,11 +1,13 @@
 import React from 'react';
 import Link from 'components/common/linkWrapper'
 import Logo from 'components/common/logo';
-import cartIcon from './cart.min.svg'
-
+import SVGInline from "react-svg-inline"
 import './desktop.scss'
 
-import { urls, urlArray } from './constants'
+var rawSVG = require('!raw-loader!./cart.min.svg');
+
+
+import { urls } from './constants'
 import { collections as c } from 'components/store/constants'
 
 export default class Desktop extends React.Component {
@@ -35,14 +37,15 @@ export default class Desktop extends React.Component {
     return(
       <div className="child-wrapper">
         <div className="child-header">
+          <Link className={pageName === "/store/" ? "selected" : null} to={'/store/'}>{c.vOne.title}</Link>
           <Link className={this.getClass(pageName, c.bundles.handle)} to={`/store/collection/${c.bundles.handle}/`}>{c.bundles.title}</Link>
-          <Link className={this.getClass(pageName, c.solder.handle)} to={`/store/collection/${c.solder.handle}/`}>{c.solder.title}</Link>
           <Link className={this.getClass(pageName, c.accessories.handle)} to={`/store/collection/${c.accessories.handle}/`}>{c.accessories.title}</Link>
           <Link className={this.getClass(pageName, c.inks.handle)} to={`/store/collection/${c.inks.handle}/`}>{c.inks.title}</Link>
+          <Link className={this.getClass(pageName, c.solder.handle)} to={`/store/collection/${c.solder.handle}/`}>{c.solder.title}</Link>
           <Link className={this.getClass(pageName, c.substrates.handle)} to={`/store/collection/${c.substrates.handle}/`}>{c.substrates.title}</Link>
           <Link className={this.getClass(pageName, c.swag.handle)} to={`/store/collection/${c.swag.handle}/`}>{c.swag.title}</Link>
           <div className="divider"></div>
-          <Link className={this.getClass(pageName, 'cart')} to={`/store/cart/`}><img className="cart-icon" src={cartIcon} />Cart</Link>
+          <Link className={this.getClass(pageName, 'cart')} to={`/store/cart/`}><SVGInline className="cart-icon" svg={rawSVG} />Cart</Link>
         </div>
       </div>
     )

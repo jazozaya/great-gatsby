@@ -1,0 +1,114 @@
+@import 'src/css/colors';
+
+.cart-wrapper {
+
+// Common Items to both desktop and mobile
+  .quantity-input {
+    padding: 5px;
+    border-radius: 5px;
+    border-style: groove;
+    height: 20px;
+  }
+  .quantity-input:focus {
+    outline: none;
+  }
+
+  .subtotal {
+    font-size: 1.2em;
+    color: $voltera-green;
+    font-weight: 600;
+  }
+
+  .cart-buttons {
+    margin-top: $small-padding;
+
+    .button {
+      margin-left: 5px;
+    }
+  }
+
+
+
+  // DESKTOP HEADERS //
+  .cart-headers {
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: solid 1px $soft-grey;
+
+    h3 {
+      text-align: right;
+      min-width: 150px;
+    }
+  }
+  .cart-row {
+    display: flex;
+    align-items: center;
+    padding: $small-padding 0px;
+    border-bottom: solid 1px $soft-grey;
+
+    img {
+      height: auto;
+      max-width: 150px;
+      margin-right: $small-padding;
+    }
+
+    .cart-row-details {
+      flex-grow: 1;
+      p {
+        margin: 5px;
+      }
+      .title {
+        font-size: 1.2em;
+      }
+      .remove {
+        font-size: 0.9em;
+      }
+    }
+    .cart-row-numbers {
+      display: flex;
+      align-items: center;
+      text-align: right;
+      p {
+        min-width: 150px;
+      }
+    }
+  }
+
+  // MOBILE HEADERS //
+  .cart-headers-mobile {
+      display: flex;
+      justify-content: space-around;
+      border-bottom: solid 1px $soft-grey;
+      h3 {
+        flex-basis: 70px;
+        text-align: initial;
+        min-width: initial;
+    }
+  }
+
+  .cart-row-mobile {
+    display: flex;
+    flex-direction: column;
+    padding: $small-padding 0px;
+    border-bottom: solid 1px $soft-grey;
+
+    .cart-row-details {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      img {
+        height: auto;
+        max-width: 100px;
+        margin-right: $small-padding;
+      }
+    }
+    .cart-row-numbers {
+      display: flex;
+      justify-content: space-around;
+      p {
+        flex-basis: 70px;
+      }
+    }
+  }
+}

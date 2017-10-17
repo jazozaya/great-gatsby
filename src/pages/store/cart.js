@@ -1,15 +1,18 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import Cart from 'components/store/cart'
-import queryString from 'query-string'
 
 export default class MyCart extends React.Component {
 
   render() {
     return (
-      <section className="store-wrapper">
+      <div>
+        <Helmet>
+          <title>Voltera | Cart</title>
+          <meta name="description" content="Your shopping cart. Are you ready to checkout?" />
+        </Helmet>
         <Cart />
-      </section>
+      </div>
     )
   }
 }

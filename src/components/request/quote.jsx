@@ -1,6 +1,7 @@
 import React from 'react'
 import { Redirect } from 'react-router'
 import Button from 'components/common/button'
+import SpinnerLoader from 'components/common/spinnerLoader'
 
 import './common.scss'
 
@@ -87,9 +88,7 @@ export default class QuoteRequest extends React.Component {
       <div>
         <h1>Please Wait</h1>
         <p className="pull-center">We are processing your request.</p>
-        <div className="loader-wrapper">
-          <div className="loader"></div>
-        </div>
+        <SpinnerLoader />
         <p className="pull-center">Thank you for filling out your information.</p>
       </div>
     )

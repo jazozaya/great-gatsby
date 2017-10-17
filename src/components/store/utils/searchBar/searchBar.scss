@@ -1,0 +1,40 @@
+@import 'src/css/colors';
+
+.search-bar-wrapper {
+  padding: $small-padding 0px;
+}
+
+
+.search-bar {
+  padding: 15px;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-style: none;
+  min-width: 250px;
+
+  border-top: solid 1px $voltera-green;
+  border-left: solid 1px $voltera-green;
+  border-bottom: solid 1px $voltera-green;
+}
+
+.search-bar:focus, .search-button:focus {
+  outline: none
+}
+
+.search-button {
+  padding: 15px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-style: none;
+  background-color: $voltera-green;
+  color: $white;
+
+  border-top: solid 1px $voltera-green;
+  border-right: solid 1px $voltera-green;
+  border-bottom: solid 1px $voltera-green;
+
+}
+
+.search-button:hover {
+  cursor: pointer;
+}

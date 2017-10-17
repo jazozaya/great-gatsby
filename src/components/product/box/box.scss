@@ -1,8 +1,6 @@
 @import 'src/css/colors';
 
 .box-wrapper {
-  padding: $large-padding $small-padding;
-
   h2 {
     text-align: left;
   }
@@ -10,6 +8,21 @@
 
 .box-wrapper .mobile-contents p {
   line-height: 1.4em;
+}
+
+.box-wrapper .description {
+  max-width: 500px;
+}
+
+.box-wrapper .try-me {
+  background-image: url('./try-me-min.png');
+  background-position: bottom;
+  width: 600px;
+  height: 400px;
+}
+
+.box-wrapper .try-me:hover {
+  cursor: pointer;
 }
 
 .in-the-box {
@@ -45,6 +58,7 @@
   height: 287px;
 }
 
+
 .in-the-box .burnishing-pad {
   background-image: url('./burnishing-pad.min.svg');
   left: 127px;
@@ -52,6 +66,7 @@
   width: 99px;
   height: 89px;
 }
+
 
 .in-the-box .nozzles {
   background-image: url('./nozzles.min.svg');
@@ -122,4 +137,11 @@
   left: 292px;
   width: 190px;
   height: 59px;
+}
+
+@media (max-width: $mobile-threshold) {
+  .box-wrapper img {
+    width: 100%;
+    height: auto;
+  }
 }
