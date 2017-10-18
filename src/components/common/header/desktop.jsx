@@ -14,7 +14,7 @@ export default class Desktop extends React.Component {
 
   // Small class that determines if we should highlight link.
   getClass(currentPage, pageName) {
-    if(currentPage.includes(pageName)) {
+    if(currentPage.indexOf(pageName) !== -1) { //IE does not support includes...
       return "selected"
     }
   }
@@ -65,18 +65,19 @@ export default class Desktop extends React.Component {
   }
 
   render() {
+    const { pageName } = this.props;
     return (
       <div className="header-wrapper">
         <div className="parent-wrapper">
           <div className="parent-header">
             <Logo />
             <div className="links">
-              <Link to="/faq/">FAQ</Link>
-              <Link to={urls.technology}>Product</Link>
+              <Link className={this.getClass(pageName, "/faq/")} to="/faq/">FAQ</Link>
+              <Link className={this.getClass(pageName, "/product/")} to={urls.technology}>Product</Link>
               <a href="http://community.voltera.io">Forums</a>
               <a href="http://support.voltera.io">Support</a>
-              <Link to="/contact/">Contact</Link>
-              <Link className="store-link" to="/store/">Store</Link>
+              <Link className={this.getClass(pageName, "/contact/")}to="/contact/">Contact</Link>
+              <Link className={`store-link ${this.getClass(pageName,"/store/")}`} to="/store/">Store</Link>
             </div>
           </div>
         </div>

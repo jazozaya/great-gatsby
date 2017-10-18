@@ -120,10 +120,10 @@ export function fetchAllProducts(search) {
       // need to compare all lower case.
       const lowerSearch = search.toLowerCase()
       const filteredProducts = products.filter(product => {
-        if(product.title.toLowerCase().includes(lowerSearch)) {
+        if(product.title.toLowerCase().indexOf(lowerSearch) !== -1) {
           return true
         }
-        if(product.description.toLowerCase().includes(lowerSearch)) {
+        if(product.description.toLowerCase().indexOf(lowerSearch) !== -1) {
           return true
         }
         return false

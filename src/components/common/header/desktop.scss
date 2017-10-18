@@ -33,7 +33,7 @@
   font-weight: 600;
 }
 
-.parent-header a:hover{
+.parent-header a:hover, .parent-header .selected{
   color: $voltera-green;
 }
 
@@ -44,7 +44,7 @@
   border-radius: 2px;
 }
 
-.parent-header .store-link:hover {
+.parent-header .store-link:hover, .parent-header .store-link.selected {
   color: $voltera-blue;
   background-color: $white;
 }
@@ -52,6 +52,7 @@
 .child-wrapper {
   background-color: $voltera-blue;
   padding: 0px $small-padding;
+  height: $subheader-height;
 }
 
 .child-header {

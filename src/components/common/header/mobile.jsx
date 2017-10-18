@@ -23,7 +23,7 @@ export default class Mobile extends React.Component {
 
   // Small class that determines if we should highlight link.
   getClass(currentPage, pageName) {
-    if(currentPage === pageName) {
+    if(currentPage.indexOf(pageName) !== -1){
       return "selected"
     }
   }
@@ -73,7 +73,7 @@ export default class Mobile extends React.Component {
       openSubStore: false
      })
   }
-  cathStore(event) {
+  catchStore(event) {
     event.stopPropagation();
     this.setState({
       openSubProduct: false,
@@ -82,18 +82,19 @@ export default class Mobile extends React.Component {
   }
 
   renderLinkPanel() {
+    const { pageName } = this.props;
 
     return (
       <div onClick= {() => this.setState({open : false})} className="link-panel-wrapper">
         <div className="link-panel">
           <ul>
-            <li><Link to='/faq/'>FAQ</Link></li>
-            <li><a onClick={(event) => this.catchProduct(event)}>Product</a></li>
+            <li><Link className={this.getClass(pageName, "/faq/")} to='/faq/'>FAQ</Link></li>
+            <li><a className={this.getClass(pageName, "/product/")} onClick={(event) => this.catchProduct(event)}>Product</a></li>
             {this.renderSubheaderProduct()}
             <li><a href="http://community.voltera.io">Forums</a></li>
             <li><a href="http://support.voltera.io">Support</a></li>
             <li><Link to='/contact/'>Contact</Link></li>
-            <li><a onClick={(event) => this.cathStore(event)}>Store</a></li>
+            <li><a className={this.getClass(pageName, "/store/")} onClick={(event) => this.catchStore(event)}>Store</a></li>
             {this.renderSubheaderStore()}
           </ul>
         </div>
