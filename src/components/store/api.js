@@ -1,5 +1,6 @@
 import ShopifyBuy from 'shopify-buy'
 import Cookies from 'universal-cookie'
+import 'whatwg-fetch'
 
 var shopClient = ShopifyBuy.buildClient({
   accessToken: '349df796683b8ac51137cbe5f43dbcfc',

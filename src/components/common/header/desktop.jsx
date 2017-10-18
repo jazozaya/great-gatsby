@@ -14,7 +14,7 @@ export default class Desktop extends React.Component {
 
   // Small class that determines if we should highlight link.
   getClass(currentPage, pageName) {
-    if(currentPage.indexOf(pageName) !== -1) { //IE does not support includes...
+    if(currentPage.indexOf(pageName) === 0) { //IE does not support includes...
       return "selected"
     }
   }
@@ -54,11 +54,11 @@ export default class Desktop extends React.Component {
   renderChild() {
     const { pageName } = this.props;
 
-    if (pageName.startsWith('/product/')){
+    if (pageName.indexOf("/product/") === 0) {
       return this.renderProductLinks(pageName)
     }
 
-    if (pageName.startsWith('/store/')) {
+    if (pageName.indexOf("/store/") === 0) {
       return this.renderStoreLinks(pageName)
     }
     return null;

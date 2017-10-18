@@ -23,7 +23,7 @@ export default class Mobile extends React.Component {
 
   // Small class that determines if we should highlight link.
   getClass(currentPage, pageName) {
-    if(currentPage.indexOf(pageName) !== -1){
+    if(currentPage.indexOf(pageName) === 0){
       return "selected"
     }
   }

@@ -1,6 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import ProductSnippet from 'components/store/utils/productSnippet'
+import SpinnerLoader from 'components/common/spinnerLoader'
 
 import { fetchCollectionDetails, fetchProductSnippets } from 'components/store/api'
 
@@ -19,10 +20,10 @@ export default class Collection extends React.Component {
   componentWillMount() {
     const { collectionId } = this.props;
 
-    const obj = {}
-    const chainOne = fetchProductSnippets(collectionId).then(products => obj.products = products)
-    const chainTwo = fetchCollectionDetails(collectionId).then(collection => obj.collection = collection)
-    Promise.all([chainOne, chainTwo]).then(() => this.setState({...obj})) // Wait for all the data to arrive, then update state.
+    fetchCollectionDetails(collectionId).then(collection => this.setState({collection: collection}))
+    fetchProductSnippets(collectionId).then(products => this.setState({products: products}))
+
+    //Promise.all([chainOne, chainTwo]).then(() => this.setState({...obj})) // Wait for all the data to arrive, then update state.
   }
 
   renderHelmet(collection) {
@@ -41,7 +42,12 @@ export default class Collection extends React.Component {
     const { collection } = this.state;
 
     if(!collection) {
-      return <section className="collection-wrapper" />
+      return(
+        <section className="collection-wrapper">
+          <h1>Loading...</h1>
+          <SpinnerLoader />
+        </section>
+      )
     }
 
     return (

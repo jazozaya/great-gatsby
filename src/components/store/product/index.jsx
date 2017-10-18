@@ -1,6 +1,7 @@
 import React from 'react'
 import { Redirect } from 'react-router'
 
+import SpinnerLoader from 'components/common/spinnerLoader'
 import ProductSnippet from 'components/store/utils/productSnippet'
 import ProductPictures from 'components/store/utils/productPictures'
 import Button from 'components/common/button'
@@ -89,7 +90,12 @@ export default class Product extends React.Component {
     const { product, addedToCart, quantity } = this.state
 
     if (!product) {
-      return null;
+      return (
+        <section className="product-wrapper">
+          <h1>Loading...</h1>
+            <SpinnerLoader />
+        </section>
+      )
     }
 
     if (addedToCart) {
