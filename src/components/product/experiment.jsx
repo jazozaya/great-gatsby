@@ -3,7 +3,7 @@ import Helmet from 'react-helmet'
 
 import CallToAction from 'components/common/cta';
 import ExperimentFAQ from 'components/faq/experiment';
-import Link from 'components/common/linkWrapper'
+import Link from 'gatsby-link'
 
 import MiniHero from 'components/common/minihero'
 import FastFact from 'components/common/fastFact'

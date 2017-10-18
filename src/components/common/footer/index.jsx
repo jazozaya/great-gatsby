@@ -8,7 +8,7 @@ import facebookIcon from './facebook-icon.min.svg'
 import instagramIcon from './instagram-icon.min.svg'
 import youtubeIcon from './youtube-icon.min.svg'
 
-import Link from 'components/common/linkWrapper'
+import Link from 'gatsby-link'
 
 
 export default class Footer extends React.Component {

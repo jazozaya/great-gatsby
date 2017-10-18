@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'components/common/linkWrapper'
+import Link from 'gatsby-link'
 import SVGInline from "react-svg-inline"
 import Logo from 'components/common/logo';
 

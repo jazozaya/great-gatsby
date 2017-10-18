@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'components/common/linkWrapper'
+import Link from 'gatsby-link'
 
 import Question from './utils/question'
 import Template from './utils/template'

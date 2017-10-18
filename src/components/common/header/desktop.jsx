@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'components/common/linkWrapper'
+import Link from 'gatsby-link'
 import Logo from 'components/common/logo';
 import SVGInline from "react-svg-inline"
 import './desktop.scss'

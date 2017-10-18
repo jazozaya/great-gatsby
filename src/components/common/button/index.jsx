@@ -1,7 +1,7 @@
 import React from 'react';
 import './button.scss';
 
-import Link from 'components/common/linkWrapper'
+import Link from 'gatsby-link'
 
 export default class Button extends React.Component {
 
