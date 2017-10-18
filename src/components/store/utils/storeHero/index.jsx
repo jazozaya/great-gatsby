@@ -11,7 +11,7 @@ export default class StoreHero extends React.Component {
     return (
       <div className={`store-hero-wrapper ${spacer}`}>
         <div className="store-hero">
-          <h1>Welcome to our HeroStore</h1>
+          <h1>Welcome to our Store</h1>
           <p className='pull-center'>From Arduino templates to empty ink cartridges, you will find everything you need to build hardware faster here.</p>
           <SearchBar />
         </div>

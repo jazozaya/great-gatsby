@@ -2,7 +2,6 @@
 
 .product-wrapper {
   max-width: 1000px;
-  margin-top: $subheader-height;
 
   .information{
     display: flex;
@@ -47,12 +46,21 @@
 
   .relevant-gallery {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 }
 
 @media (max-width: $mobile-threshold) {
-  .product-wrapper .information {
-    flex-wrap: wrap-reverse;
+  .product-wrapper{
+    margin-top: 0px;
+    
+    .information {
+      flex-wrap: wrap-reverse;
+
+      .details {
+      padding-bottom: $medium-padding;
+      }
+    }
   }
 }

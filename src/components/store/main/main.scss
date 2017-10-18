@@ -1,14 +1,17 @@
 @import 'src/css/colors';
 
-.collection-separator {
+.store-wrapper .collection-separator {
   border-top: solid 1px $divider;
   max-width: $max-width;
   margin: auto;
 }
 
+.store-wrapper .no-top {
+  padding-top: 0px;
+}
 
 @media (max-width: $mobile-threshold) {
-  .collection-separator {
+  .store-wrapper .collection-separator {
     margin: 0px $small-padding;
   }
 }

@@ -27,7 +27,7 @@ export default class Cart extends React.Component {
     this.state.cart.removeLineItem(id).then(cart => this.setState({cart: cart}))
   }
   updateLineItem(id, event) {
-    this.state.cart.updateLineItem(id, Math.round(event.target.value)).then(cart => this.setState({cart: cart}))
+    this.state.cart.updateLineItem(id, Math.max(1,Math.round(event.target.value))).then(cart => this.setState({cart: cart}))
   }
 
   renderItem(product, index) {

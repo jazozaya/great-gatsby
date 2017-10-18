@@ -14,11 +14,11 @@ export default class Main extends React.Component {
   render() {
 
     return (
-      <div>
+      <div className="store-wrapper">
         <Product productId={449665985} noRelevant/>
-        <div className="center-wide">
+        <section className="no-top">
           <Box />
-        </div>
+        </section>
         <div className="collection-separator"/>
         <LazyLoad height={500} offset={200} once >
           <Collection collectionId={c.bundles.id} noHelmet/>

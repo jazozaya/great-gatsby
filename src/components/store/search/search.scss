@@ -9,3 +9,9 @@
     justify-content: flex-start;
   }
 }
+
+@media (max-width: $mobile-threshold) {
+  .search-wrapper .results-gallery {
+    justify-content: center;
+  }
+}
