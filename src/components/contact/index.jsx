@@ -1,8 +1,10 @@
 import React from 'react'
-import './contact.scss'
+import Bowser from 'bowser'
 
 import InTouch from './inTouch'
 import GoogleMap from './googleMap'
+
+import './contact.scss'
 
 export default class Contact extends React.Component {
 
@@ -44,8 +46,8 @@ export default class Contact extends React.Component {
         </div>
         <InTouch />
         <div className="location-wrapper">
-          <div className="address">
-            <div className="address-wrapper">
+          <div className="address-wrapper">
+            <div className="address">
               <h2>Office Location</h2>
               <p>
                 113 Breithaupt St, Suite 100<br />
@@ -54,7 +56,7 @@ export default class Contact extends React.Component {
               </p>
             </div>
           </div>
-          <GoogleMap />
+          {Bowser.msie ? <div className="our-location"/> : <GoogleMap />}
         </div>
       </div>
     );

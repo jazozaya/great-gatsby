@@ -30,18 +30,25 @@
   justify-content: center;
   color: $white;
   background-color: $voltera-green;
-}
 
-.location-wrapper .address {
-  flex-grow: 1;
-}
-
-.location-wrapper h2 {
-  text-align: left;
-  color: $white;
-}
-
-.location-wrapper .address-wrapper {
+  h2 {
+    text-align: left;
+    color: $white;
+  }
+  .address-wrapper {
+    flex-grow: 1;
+  }
+  .address {
     margin: auto;
     width: 240px;
+  }
+
+  .our-location {
+    background-image: url('./our-location.jpg');
+    background-position: bottom;
+    height: 40vh;
+    flex-grow: 2;
+    flex-basis: 300px;
+  }
+
 }
