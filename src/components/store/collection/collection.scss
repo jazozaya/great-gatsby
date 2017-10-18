@@ -1,7 +1,11 @@
 @import 'src/css/colors';
 
-.collection-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.collection-wrapper {
+  min-height: 500px; // NEEDED FOR LAZY LOAD TO WORK PROPERLY!
+
+  .collection-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }

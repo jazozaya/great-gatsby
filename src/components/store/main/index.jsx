@@ -20,27 +20,23 @@ export default class Main extends React.Component {
           <Box />
         </section>
         <div className="collection-separator"/>
-        <LazyLoad height={500} offset={200} once >
+        <LazyLoad height={500} offset={200} once>
           <Collection collectionId={c.bundles.id} noHelmet/>
         </LazyLoad>
         <div className="collection-separator"/>
-        <LazyLoad height={500} offset={200} once >
+        <LazyLoad height={500} offset={200} once>
           <Collection collectionId={c.accessories.id} noHelmet/>
         </LazyLoad>
         <div className="collection-separator"/>
-        <LazyLoad height={500} offset={200} once >
+        <LazyLoad height={500} offset={200} once>
           <Collection collectionId={c.inks.id} noHelmet/>
         </LazyLoad>
         <div className="collection-separator"/>
-        <LazyLoad height={500} offset={200} once >
+        <LazyLoad height={500} offset={200} once>
           <Collection collectionId={c.solder.id} noHelmet/>
         </LazyLoad>
         <div className="collection-separator"/>
-        <LazyLoad height={500} offset={200} once >
-          <Collection collectionId={c.substrates.id} noHelmet/>
-        </LazyLoad>
-        <div className="collection-separator"/>
-        <LazyLoad height={500} offset={200} once >
+        <LazyLoad height={500} offset={200} once>
           <Collection collectionId={c.swag.id} noHelmet/>
         </LazyLoad>
       </div>

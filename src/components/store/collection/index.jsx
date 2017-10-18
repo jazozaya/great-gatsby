@@ -29,7 +29,7 @@ export default class Collection extends React.Component {
     if (this.props.noHelmet) {
       return null
     }
-    
+
     return (
       <Helmet>
         <title>Voltera | {collection.title}</title>
@@ -41,11 +41,11 @@ export default class Collection extends React.Component {
     const { collection } = this.state;
 
     if(!collection) {
-      return null
+      return <section className="collection-wrapper" />
     }
 
     return (
-      <section>
+      <section className="collection-wrapper">
         {this.renderHelmet(collection)}
         <h2>{collection.title}</h2>
         <p className="pull-center">{collection.description}</p>
