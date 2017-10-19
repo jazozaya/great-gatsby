@@ -27,6 +27,11 @@
   <priority>0.80</priority>
 </url>
 <url>
+  <loc>https://www.voltera.io/store/</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
   <loc>https://www.voltera.io/product/experiment/</loc>
   <changefreq>weekly</changefreq>
   <priority>0.80</priority>
@@ -75,6 +80,41 @@
   <loc>https://www.voltera.io/docs/tos</loc>
   <changefreq>weekly</changefreq>
   <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.voltera.io/store/collection/bundles/</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.voltera.io/store/collection/accessories/</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.voltera.io/store/collection/conductive-inks/</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.voltera.io/store/collection/solder/</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.voltera.io/store/collection/standard-substrates/</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.voltera.io/store/collection/swag/</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.voltera.io/store/cart/</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.voltera.io/pdfs/V-One-Summary.pdf</loc>

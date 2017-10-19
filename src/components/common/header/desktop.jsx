@@ -54,11 +54,11 @@ export default class Desktop extends React.Component {
   renderChild() {
     const { pageName } = this.props;
 
-    if (pageName.indexOf("/product/") === 0) {
+    if (pageName.indexOf("/product") === 0) {
       return this.renderProductLinks(pageName)
     }
 
-    if (pageName.indexOf("/store/") === 0) {
+    if (pageName.indexOf("/store") === 0) {
       return this.renderStoreLinks(pageName)
     }
     return null;

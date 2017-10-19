@@ -22,12 +22,16 @@ export default class Mobile extends React.Component {
   }
 
   // Small class that determines if we should highlight link.
-  getClass(currentPage, pageName) {
-    if(currentPage.indexOf(pageName) === 0){
+  startsWith(currentPage, query) {
+    if(currentPage.indexOf(query) === 0){
       return "selected"
     }
   }
-
+  includes(currentPage, query) {
+    if(currentPage.indexOf(query) !== -1){
+      return "selected"
+    }
+  }
   renderSubheaderProduct() {
     const { pageName } = this.props;
 
@@ -37,11 +41,11 @@ export default class Mobile extends React.Component {
 
     return(
       <ul className="sub-header">
-        <li><Link className={this.getClass(pageName, urls.technology)} to={urls.technology}>How it works</Link></li>
-        <li><Link className={this.getClass(pageName, urls.print)} to={urls.print}>Circuit Printing </Link></li>
-        <li><Link className={this.getClass(pageName, urls.paste)} to={urls.paste}>Paste Dispensing</Link></li>
-        <li><Link className={this.getClass(pageName, urls.software)} to={urls.software}>Desktop Software</Link></li>
-        <li><Link className={this.getClass(pageName, urls.experiment)} to={urls.experiment}>Experiment</Link></li>
+        <li><Link className={this.startsWith(pageName, urls.technology)} to={urls.technology}>How it works</Link></li>
+        <li><Link className={this.startsWith(pageName, urls.print)} to={urls.print}>Circuit Printing </Link></li>
+        <li><Link className={this.startsWith(pageName, urls.paste)} to={urls.paste}>Paste Dispensing</Link></li>
+        <li><Link className={this.startsWith(pageName, urls.software)} to={urls.software}>Desktop Software</Link></li>
+        <li><Link className={this.startsWith(pageName, urls.experiment)} to={urls.experiment}>Experiment</Link></li>
       </ul>
     );
   }
@@ -54,14 +58,14 @@ export default class Mobile extends React.Component {
     }
     return(
       <ul className="sub-header">
-          <li><Link className={pageName === "/store/" ? "selected" : null} to={'/store/'}>{c.vOne.title}</Link></li>
-          <li><Link className={this.getClass(pageName, c.bundles.handle)} to={`/store/collection/${c.bundles.handle}/`}>{c.bundles.title}</Link></li>
-          <li><Link className={this.getClass(pageName, c.accessories.handle)} to={`/store/collection/${c.accessories.handle}/`}>{c.accessories.title}</Link></li>
-          <li><Link className={this.getClass(pageName, c.inks.handle)} to={`/store/collection/${c.inks.handle}/`}>{c.inks.title}</Link></li>
-          <li><Link className={this.getClass(pageName, c.solder.handle)} to={`/store/collection/${c.solder.handle}/`}>{c.solder.title}</Link></li>
-          <li><Link className={this.getClass(pageName, c.substrates.handle)} to={`/store/collection/${c.substrates.handle}/`}>{c.substrates.title}</Link></li>
-          <li><Link className={this.getClass(pageName, c.swag.handle)} to={`/store/collection/${c.swag.handle}/`}>{c.swag.title}</Link></li>
-          <li><Link className={this.getClass(pageName, 'cart')} to={`/store/cart/`}><SVGInline className="cart-icon" svg={rawSVGCart} />Cart</Link></li>
+          <li><Link className={pageName === "/store" || pageName === "/store/" ? "selected" : null} to={'/store/'}>{c.vOne.title}</Link></li>
+          <li><Link className={this.includes(pageName, c.bundles.handle)} to={`/store/collection/${c.bundles.handle}/`}>{c.bundles.title}</Link></li>
+          <li><Link className={this.includes(pageName, c.accessories.handle)} to={`/store/collection/${c.accessories.handle}/`}>{c.accessories.title}</Link></li>
+          <li><Link className={this.includes(pageName, c.inks.handle)} to={`/store/collection/${c.inks.handle}/`}>{c.inks.title}</Link></li>
+          <li><Link className={this.includes(pageName, c.solder.handle)} to={`/store/collection/${c.solder.handle}/`}>{c.solder.title}</Link></li>
+          <li><Link className={this.includes(pageName, c.substrates.handle)} to={`/store/collection/${c.substrates.handle}/`}>{c.substrates.title}</Link></li>
+          <li><Link className={this.includes(pageName, c.swag.handle)} to={`/store/collection/${c.swag.handle}/`}>{c.swag.title}</Link></li>
+          <li><Link className={this.includes(pageName, '/cart')} to={`/store/cart/`}><SVGInline className="cart-icon" svg={rawSVGCart} />Cart</Link></li>
       </ul>
     );
   }
@@ -88,13 +92,13 @@ export default class Mobile extends React.Component {
       <div onClick= {() => this.setState({open : false})} className="link-panel-wrapper">
         <div className="link-panel">
           <ul>
-            <li><Link className={this.getClass(pageName, "/faq/")} to='/faq/'>FAQ</Link></li>
-            <li><a className={this.getClass(pageName, "/product/")} onClick={(event) => this.catchProduct(event)}>Product</a></li>
+            <li><Link className={this.startsWith(pageName, "/faq")} to='/faq/'>FAQ</Link></li>
+            <li><a className={this.startsWith(pageName, "/product")} onClick={(event) => this.catchProduct(event)}>Product</a></li>
             {this.renderSubheaderProduct()}
             <li><a href="http://community.voltera.io">Forums</a></li>
             <li><a href="http://support.voltera.io">Support</a></li>
             <li><Link to='/contact/'>Contact</Link></li>
-            <li><a className={this.getClass(pageName, "/store/")} onClick={(event) => this.catchStore(event)}>Store</a></li>
+            <li><a className={this.startsWith(pageName, "/store")} onClick={(event) => this.catchStore(event)}>Store</a></li>
             {this.renderSubheaderStore()}
           </ul>
         </div>
