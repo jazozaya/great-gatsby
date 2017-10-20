@@ -55,7 +55,7 @@ export default class InTheBox extends React.Component {
     return (
       <div>
         <h2>Dispensing Nozzles</h2>
-        <p>With an inner diameter of 200 microns (9 mil), these stainless steel dispensing tips are crucial for accurate deposition of ink and solder paste. Do you want ultra fine resolution? Visit our store for even smaller nozzles.</p>
+        <p>With an inner diameter of ~230 microns (9 mil), these stainless steel dispensing tips are crucial for accurate deposition of ink and solder paste. Do you want ultra fine resolution? Visit our store for even smaller nozzles.</p>
         <p>They are installed directly on the cartridges and should be treated with care. The V-One ships with 2 extra nozzles in case you need them. </p>
         <i>4 nozzles included</i>
       </div>
@@ -111,7 +111,7 @@ export default class InTheBox extends React.Component {
         <h2>Solder Paste Cartridge</h2>
         <p>Whether you got the circuit boards from a factory or you made them with the V-One, this lead free solder paste cartridge will make board assembly a breeze.</p>
         <p>A single cartridge is able to populate over 10,000 0603 pads, that is more than plenty for a small batch of PCBA.</p>
-        <i>1 solder paste cartrdige included</i>
+        <i>1 solder paste cartridge included</i>
       </div>
     )
   }
