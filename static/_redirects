@@ -4,6 +4,11 @@
 https://store.voltera.io https://www.voltera.io/store/
 http://store.voltera.io https://www.voltera.io/store/
 
+# Catch everything from the old store.
+https://store.voltera.io/* https://www.voltera.io/store/
+http://store.voltera.io/* https://www.voltera.io/store/
+
+
 #From old website (404's)
 /v-one /product/technology/
 /assets/downloads/Voltera_DRC.dru https://support.voltera.io/hc/article_attachments/115001926453/Voltera_DRC.dru
