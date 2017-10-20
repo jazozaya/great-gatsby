@@ -1,8 +1,8 @@
 # General Redirects.
 /forums https://community.voltera.io/
 /blog https://medium.com/@voltera
-http://test.voltera.io https://www.voltera.io/store/
-https://test.voltera.io https://www.voltera.io/store/ 
+https://test.voltera.io/* https://www.voltera.io/store/:splat 301!
+http://test.voltera.io/* https://www.voltera.io/store/:splat 301!
 
 #From old website (404's)
 /v-one /product/technology/
