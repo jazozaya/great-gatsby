@@ -4,7 +4,6 @@
   padding: $small-padding 0px;
 }
 
-
 .search-bar {
   padding: 15px;
   border-top-left-radius: 25px;
@@ -37,4 +36,10 @@
 
 .search-button:hover {
   cursor: pointer;
+}
+
+@media (max-width: $mobile-threshold) {
+  .search-bar {
+      min-width: 180px;
+  }
 }
