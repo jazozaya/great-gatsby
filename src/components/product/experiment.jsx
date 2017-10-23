@@ -1,10 +1,10 @@
 import React from 'react'
 import Helmet from 'react-helmet'
+import Link from 'gatsby-link'
 
 import CallToAction from 'components/common/cta';
 import ExperimentFAQ from 'components/faq/experiment';
-import Link from 'gatsby-link'
-
+import AskUs from 'components/common/askUs'
 import MiniHero from 'components/common/minihero'
 import FastFact from 'components/common/fastFact'
 import YouTube from 'components/common/youtube'
@@ -47,6 +47,7 @@ export default class Experiment extends React.Component {
             />
           </div>
         </section>
+        <AskUs example="Eg - What viscosity range you dispense?"/>
         <section className="flex-row reverse-wrap">
           <div className="description">
             <h2>Use your own materials.</h2>

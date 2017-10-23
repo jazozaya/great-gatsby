@@ -1,0 +1,55 @@
+@import 'src/css/colors';
+
+.ask-us-wrapper {
+  text-align: center;
+  padding: 0px $small-padding;
+
+  .ask-us-caption {
+      color: $soft-grey;
+      font-size: 0.9em;
+      padding-top: $small-padding;
+      text-align: center;
+  }
+
+  .ask-us-input.email {
+    min-width: 100px;
+  }
+
+  .ask-us-input {
+    padding: 15px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-style: none;
+    min-width: 350px;
+    outline: none;
+
+    border-top: solid 1px $voltera-green;
+    border-left: solid 1px $voltera-green;
+    border-bottom: solid 1px $voltera-green;
+  }
+
+  .ask-us-button {
+    padding: 15px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-style: none;
+    background-color: $voltera-green;
+    color: $white;
+    outline: none;
+
+    border-top: solid 1px $voltera-green;
+    border-right: solid 1px $voltera-green;
+    border-bottom: solid 1px $voltera-green;
+  }
+
+  .ask-us-button:hover {
+    cursor: pointer;
+  }
+
+}
+
+@media (max-width: $mobile-threshold) {
+  .ask-us-wrapper .ask-us-input {
+      min-width: 180px;
+  }
+}

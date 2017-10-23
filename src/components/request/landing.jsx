@@ -82,7 +82,7 @@ export default class LandingRequest extends React.Component {
     // Change state to sending.
     this.setState({status: status.sending});
     window.emailjs.init("user_a6VUHHdymj1y3WbePDyCm")
-    window.emailjs.send("gmail","quick_quote", emailParams)
+    window.emailjs.send("gmail","quick_question", emailParams)
     .then((response) => this.emailSuccess(response), (err) => this.emailFailure(err));
 
   }
@@ -124,16 +124,14 @@ export default class LandingRequest extends React.Component {
   }
 
   renderRequest() {
-    const nameDefault = this.props.firstName ? `${this.props.firstName} ${this.props.lastName}` : ""
-    const emailDefault = this.props.email
     return (
       <div>
         <h2>Want to know more?</h2>
         <form>
           <h3>Contact Information</h3>
           <div className="format">
-            <p>Name: <input className="text-input" type="text" id="name" name="name" defaultValue={nameDefault}/></p>
-            <p>Email: <input className="text-input" type="email"  id="email" name="email"  autoComplete="email" defaultValue={emailDefault}/></p>
+            <p>Name: <input className="text-input" type="text" id="name" name="name"/></p>
+            <p>Email: <input className="text-input" type="email"  id="email" name="email"  autoComplete="email"/></p>
             <p>Phone: <input className="text-input" type="tel" id="phone" name="phone" autoComplete="tel" /></p>
             <p>Country: <input className="text-input" name="ship-country" id="country"  autoComplete="shipping country" /></p>
           </div>

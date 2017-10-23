@@ -19,15 +19,12 @@ const status = {
 }
 
 const requiredFields = [
-  'fname',
-  'lname',
+  'name',
   'email',
   'company',
-  'website',
   'phone',
   'time',
   'timezone'
-
 ];
 
 export default class QuoteRequest extends React.Component {
@@ -73,14 +70,12 @@ export default class QuoteRequest extends React.Component {
       to_email: process.env.NODE_ENV === 'production' ? 'sales@voltera.io' : 'jesus@voltera.io',
       reply_to: document.getElementById('email').value,
       email: document.getElementById('email').value,
-      from_name: `${document.getElementById('fname').value} ${document.getElementById('lname').value}`,
+      from_name: document.getElementById('name').value,
       phone: document.getElementById('phone').value,
       company: document.getElementById('company').value,
-
       time: document.getElementById('time').value,
       timezone: document.getElementById('timezone').value,
       date: this.state.selectedDate,
-
       additional_item: document.getElementById('additional-item').value
 
     }
@@ -212,12 +207,10 @@ export default class QuoteRequest extends React.Component {
         <p>We'd love to jump on a call with you, simply pick a date and time below.</p>
         <h3>Contact Information</h3>
         <div className="format">
-          <p>First Name: <input className="text-input" type="text" id="fname" name="fname" /></p>
-          <p>Last Name: <input className="text-input" type="text" id="lname" name="lname" /></p>
+          <p>Name: <input className="text-input" type="text" id="name" name="name" /></p>
           <p>Email: <input className="text-input" type="email"  id="email" name="email"  autoComplete="email" /></p>
           <p>Phone: <input className="text-input" type="tel" id="phone" name="phone" autoComplete="tel" /></p>
           <p>Company: <input className="text-input" id="company" name="company" autoComplete="company" /></p>
-          <p>Website: <input className="text-input" id="website" name="website" /></p>
         </div>
         <h3>Pick a Date</h3>
         <p>Choose an upcoming date and time that meets your schedule. </p>

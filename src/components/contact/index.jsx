@@ -3,6 +3,7 @@ import Bowser from 'bowser'
 
 import InTouch from './inTouch'
 import GoogleMap from './googleMap'
+import AskUs from 'components/common/askUs'
 
 import './contact.scss'
 
@@ -13,7 +14,7 @@ export default class Contact extends React.Component {
     return (
       <div className="contact-wrapper">
         <div className="contact">
-          <h1>Contact Us!</h1>
+          <h1>Contact us!</h1>
           <p className="pull-center">We are here to help! Please do not hesitate to email or call us. We normally reply within 1 business day.</p>
           <div className="email-wrapper">
             <div className="column">
@@ -44,6 +45,7 @@ export default class Contact extends React.Component {
             </div>
           </div>
         </div>
+        <AskUs example="Eg - How much does it cost to ship to my country?" />
         <InTouch />
         <div className="location-wrapper">
           <div className="address-wrapper">

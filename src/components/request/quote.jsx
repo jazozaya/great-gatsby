@@ -15,7 +15,12 @@ const status = {
 const requiredFields = [
   "name",
   "email",
-  //"phone",
+  "phone",
+  "company",
+  "street",
+  "city",
+  "state",
+  "postal",
   "country",
 ];
 
@@ -48,6 +53,11 @@ export default class QuoteRequest extends React.Component {
       email: document.getElementById('email').value,
       from_name: document.getElementById('name').value,
       phone: document.getElementById('phone').value,
+      company: document.getElementById('company').value,
+      street: document.getElementById('street').value,
+      city: document.getElementById('city').value,
+      state: document.getElementById('state').value,
+      postal: document.getElementById('postal').value,
       country: document.getElementById('country').value,
       additional_comment: document.getElementById('additional-comment').value
     }
@@ -100,17 +110,27 @@ export default class QuoteRequest extends React.Component {
     return (
       <div>
         <h1>Request a quote.</h1>
-        <p className="pull-center">The Voltera V-One comes with all the consumables you need to get started.</p>
         <form>
           <h3>Contact Information</h3>
           <div className="format">
             <p>Name: <input className="text-input" type="text" id="name" name="name" /></p>
             <p>Email: <input className="text-input" type="email"  id="email" name="email"  autoComplete="email" /></p>
             <p>Phone: <input className="text-input" type="tel" id="phone" name="phone" autoComplete="tel" /></p>
+            <p>Company: <input className="text-input" id="company" name="company" autoComplete="company" /></p>
+          </div>
+          <h3>Shipping Information</h3>
+          <div className="wrapper">
+            <p className="wide-text">Street: </p>
+            <input className="wide-select" name="ship-address"  id="street"  autoComplete="shipping street-address" />
+          </div>
+          <div className="format">
+            <p>City: <input className="text-input" name="ship-city" id="city"  autoComplete="shipping locality" /></p>
+            <p>State/Region: <input className="text-input" name="ship-state" id="state"  autoComplete="shipping region" /></p>
+            <p>Postal Code: <input className="text-input" name="ship-zip" id="postal"  autoComplete="shipping postal-code" /></p>
             <p>Country: <input className="text-input" name="ship-country" id="country"  autoComplete="shipping country" /></p>
           </div>
           <h3>Extra Information</h3>
-          <p>Is there anything you'd like to tell us?</p><textarea  placeholder="(Optional)" id="additional-comment"/>
+          <p>Is there anything you want to tell us?</p><textarea  placeholder="(Optional)" id="additional-comment"/>
         </form>
         {this.state.missingFields ? <p className="missing">Please fill out of all of the required fields! ({this.state.count})</p> : null}
         <div className="button-wrapper">

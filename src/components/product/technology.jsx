@@ -7,6 +7,7 @@ import CallToAction from 'components/common/cta';
 import Specs from 'components/common/specs';
 import MiniHero from 'components/common/minihero'
 import FastFact from 'components/common/fastFact'
+import AskUs from 'components/common/askUs'
 
 import TechnologyFAQ from 'components/faq/technology'
 import Box from './box'
@@ -55,6 +56,7 @@ export default class Technology extends React.Component {
             <p>During a print, the dispenser gear will rotate to apply and relieve pressure to accurately control the ink flow. With the click of a few buttons you can be printing 8 mil (200 micron) traces, but don't worry the software will guide you every step of the way.</p>
           </div>
         </section>
+        <AskUs example="Eg - What is the print area of the V-One?" />
         <section className="flex-row reverse-wrap">
           <div className="description">
             <h2>A perfect print every time.</h2>
