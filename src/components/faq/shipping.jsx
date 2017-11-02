@@ -27,6 +27,7 @@ export default class Shipping extends React.Component {
         <Question underline title="Can I use my own shipping account?">
           <p>We use FedEx to ship within Canada and DHL for everywhere else.  We have worked closely with our fantastic shipping partners to get the best rates for your orders.</p>
           <p>If you want to ship with your account or if you have special shipping requirements, please contact <strong>sales@voltera.io</strong> before you place your order.</p>
+          <p>The V-One ships as two boxes: A large one (19 &times; 13 &times; 11 in, 9.1 Kg) and a small one. (5 &times; 3 &times; 2 in, 100 g)</p>
         </Question>
         <Question underline title="How can I pay?">
           <p>If you want to pay with credit card, you can do so directly on our <Link to="/store/">store</Link>.</p>
