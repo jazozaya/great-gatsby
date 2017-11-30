@@ -59,7 +59,7 @@ export default class Footer extends React.Component {
           </div>
         </div>
         <div className="footer-links">
-          <a href="/docs/privacy/">Privacy Policy</a> | <a href="/docs/tos">Terms of Service</a>
+            <Link to="/docs/refund/">Refunds </Link> | <Link to="/docs/privacy/">Privacy</Link> | <Link to="/docs/tos">Terms of Service</Link>
         </div>
       </div>);
     }

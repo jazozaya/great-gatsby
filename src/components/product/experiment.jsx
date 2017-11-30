@@ -47,7 +47,7 @@ export default class Experiment extends React.Component {
             />
           </div>
         </section>
-        <AskUs example="Eg - What viscosity range you dispense?"/>
+        <AskUs example="Eg - What viscosity range can you dispense?"/>
         <section className="flex-row reverse-wrap">
           <div className="description">
             <h2>Use your own materials.</h2>

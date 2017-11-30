@@ -45,7 +45,7 @@ module.exports = React.createClass({
 
       // Load HEAP
       loadHeap();
-      loadHotjar();
+      //loadHotjar();
 
       // Load Intercom
       loadIntercom()

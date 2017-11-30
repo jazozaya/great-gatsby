@@ -9,7 +9,7 @@ export default class MyTOS extends React.Component {
       <div>
         <Helmet>
           <title>Voltera | Terms of Service</title>
-          <meta name="description" content="Learn about our warranty, our return policy and our terms & conditions." />
+          <meta name="description" content="Learn about our warranty and our terms & conditions." />
         </Helmet>
         <Privacy />
       </div>

@@ -67,7 +67,7 @@ export default class QuoteRequest extends React.Component {
 
     const emailParams = {
       timestamp: Date(),
-      to_email: process.env.NODE_ENV === 'production' ? 'sales@voltera.io' : 'jesus@voltera.io',
+      to_email: process.env.NODE_ENV === 'production' ? 'forms@voltera.io' : 'jesus@voltera.io',
       reply_to: document.getElementById('email').value,
       email: document.getElementById('email').value,
       from_name: document.getElementById('name').value,

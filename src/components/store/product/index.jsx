@@ -108,7 +108,7 @@ export default class Product extends React.Component {
           <ProductPictures images={product.images} />
           <div className="details">
             <h1 className="pull-left">{product.title}</h1>
-            <h2 className="pull-left price">{product.selectedVariant.formattedPrice}</h2>
+            <h2 className="pull-left price">{product.selectedVariant.formattedPrice} USD</h2>
             {this.renderVariantSelection()}
             {this.renderQuantitySelection()}
             <Button label="Add to cart" onClick={() => this.addToCart()} color="light long"/>
