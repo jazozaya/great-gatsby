@@ -21,6 +21,11 @@ export default class Footer extends React.Component {
   }
 
   render() {
+
+    let style = {
+      position: "absolute",
+      left: "-5000px",
+    }
     return (
       <div className="footer-wrapper">
         <div className="footer flex-row">
@@ -56,10 +61,18 @@ export default class Footer extends React.Component {
               <a target="_blank" href="https://www.instagram.com/voltera.io/"><img className="social-icon" src={instagramIcon}/></a>
               <a target="_blank" href="https://www.youtube.com/channel/UCHANd33WPReNyQcsHPRgYjw/videos"><img className="social-icon" src={youtubeIcon}/></a>
             </div>
+            <form action="https://voltera.us7.list-manage.com/subscribe/post?u=5e2801d5f399b19d163b280f7&amp;id=4ab4eb46aa" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="form" target="_blank" noValidate>
+              {/*-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->*/}
+              <div style={style} aria-hidden="true">
+                <input type="text" name="b_5e2801d5f399b19d163b280f7_4ab4eb46aa" tabIndex="-1" value=""/>
+              </div>
+              <input className="form-email"type="email" defaultValue="" name="EMAIL"  id="mce-EMAIL" placeholder="Email address" required/>
+              <input className="form-button" type="submit" value="Sign Up!" name="subscribe" id="mc-embedded-subscribe" />
+            </form>
           </div>
         </div>
         <div className="footer-links">
-            <Link to="/docs/refund/">Refunds </Link> | <Link to="/docs/privacy/">Privacy</Link> | <Link to="/docs/tos">Terms of Service</Link>
+          <Link to="/docs/refund/">Refunds </Link> | <Link to="/docs/privacy/">Privacy</Link> | <Link to="/docs/tos">Terms of Service</Link>
         </div>
       </div>);
     }
