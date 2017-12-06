@@ -1,0 +1,88 @@
+@import 'src/css/colors';
+
+.signup-wrapper {
+  background-color: rgba(0, 0, 0, 0.85);
+  position: fixed;
+  top: $header-height;
+  left: 0px;
+  width: 100%;
+  height: calc(100vh - 75px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: $small-padding $small-padding;
+  box-sizing: border-box;
+  z-index: 2;
+
+}
+
+.signup {
+  padding: $large-padding;
+  background-color: $white;
+  border-radius: 2px;
+  text-align: center;
+  position: relative;
+
+  h1 { margin-top: 0px; }
+
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    font-size: 1.3em;
+    width: 35px;
+    height: 35px;
+    line-height: 1.7em;
+    margin: 0px;
+
+    border-radius: 25px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: $voltera-blue;
+
+    color: $voltera-blue;
+    cursor: pointer;
+    transition: all $t-time ease-in-out 0s;
+  }
+
+  .close:hover {
+    background-color: $voltera-blue;
+    color: $white;
+  }
+
+  .spam-field {
+    position: absolute;
+    left: -5000px;
+  }
+
+  .form-email {
+    padding: 15px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-style: none;
+    min-width: 250px;
+    outline: none;
+    border-top: solid 1px #79ce00;
+    border-left: solid 1px #79ce00;
+    border-bottom: solid 1px #79ce00;
+  }
+  .form-button {
+    padding: 15px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-style: none;
+    background-color: #79ce00;
+    color: #FFF;
+    outline: none;
+    border-top: solid 1px #79ce00;
+    border-right: solid 1px #79ce00;
+    border-bottom: solid 1px #79ce00;
+  }
+
+  .form-button:hover {
+    cursor: pointer;
+  }
+
+}
