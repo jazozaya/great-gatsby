@@ -71,8 +71,8 @@ export default class Specs extends React.Component {
             </Row>
             <Row units={units} dark>
               <p>Resistivity</p>
-              <p>	>12mΩ/sq @ 70um height</p>
-              <p>	>12mΩ/sq @ 3mil height</p>
+              <p>12mΩ/sq @ 70um height</p>
+              <p>12mΩ/sq @ 3mil height</p>
             </Row>
             <Row units={units}>
               <p>Supplied Substrate material</p>

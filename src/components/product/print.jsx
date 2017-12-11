@@ -29,7 +29,7 @@ export default class Print extends React.Component {
             label="Min. width"
             />
           <FastFact
-            title="0.5 mm"
+            title="0.65 mm"
             label="Pin pitch"
             />
           <FastFact
