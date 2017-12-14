@@ -113,11 +113,14 @@
     }
   }
   .promo {
+
     text-align: center;
-    font-size: 1.1em;
+    padding: 5px 0px;
+    background-color: $light-grey;
+    margin-bottom: $small-padding;
 
     .green {
-      color: $voltera-green
+      color: $voltera-green;
     }
   }
 
