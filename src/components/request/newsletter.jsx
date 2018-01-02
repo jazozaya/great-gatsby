@@ -28,34 +28,6 @@ export default class LandingRequest extends React.Component {
       missingFields: false,
       count: 0,
     };
-    this.updateIntercom = this.updateIntercom.bind(this);
-  }
-
-  updateIntercom() {
-
-    // Check if intercome is ready, and update the user data.
-    if (process.env.NODE_ENV === 'production' && typeof(window.Intercom) !== 'undefined') {
-      window.Intercom("update", {
-        name:  `${this.props.firstName} ${this.props.lastName}`,
-        email: this.props.email,
-        "landing_page": "true"
-      });
-      clearInterval(this.state.intervalId)
-    } else {
-      console.log("Intercom Not Ready!")
-    }
-  }
-  componentWillMount(){
-    const { firstName, lastName, email } = this.props;
-
-    // Check if we have good data.
-    if (!(firstName && lastName && email)) {
-      console.warn("Landing Page: No valid parameters received, will not register with Intercom.");
-      return
-    }
-
-    const intervalId = setInterval(this.updateIntercom, 1000)
-    this.state.intervalId = intervalId
   }
 
   sendRequest() {
@@ -175,8 +147,8 @@ export default class LandingRequest extends React.Component {
     return (
       <div className="landing-wrapper">
         <div className="request">
-          <h1>Hi {this.props.firstName || "there"}!</h1>
-          <p className="pull-center">We thought you might be interested in this video. Let us know what you think!</p>
+          <h1>Hi there!</h1>
+          <p className="pull-center"><strong>Hole</strong>-y smokes we're launching a new add-on!  We'll be <strong>drilling</strong> down to the details next month!</p>
           {this.renderVideo()}
           {this.renderStatus()}
         </div>
