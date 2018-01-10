@@ -37,7 +37,7 @@ export default class Technology extends React.Component {
             label="Board cost."
             />
         </MiniHero>
-        <section>
+        <section className="movie-time">
             <h2>A prototyping platform for electronics.</h2>
             <p className="pull-center">On your desktop and on your schedule, the Voltera V-One gets you from prototype to production faster than ever before.</p>
             <div className="promo">
