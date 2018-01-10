@@ -1,71 +1,83 @@
 @import 'src/css/colors';
 
-.feature .column-wrapper {
-  align-items: flex-start;
-}
+.feature {
 
-.feature .column {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+  .column-wrapper {
+    align-items: flex-start;
+  }
 
-.feature .description {
-  max-width: 500px;
-  margin: 0px $small-padding;
-  flex-shrink: 1;
-  text-align: justify;
-}
+  .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
-.feature .screenshot-wrapper .screenshot {
-  box-shadow: 0px 0px 10px 0px black;
-  transition: all $t-time-opacity  ease-in-out 0.3s;
-  opacity: 1;
-}
+  .description {
+    max-width: 500px;
+    margin: 0px $small-padding;
+    flex-shrink: 1;
+    text-align: justify;
+  }
 
-.feature .screenshot-caption {
-  transition: all $t-time-opacity  ease-in-out 0s;
-  opacity: 1;
-  margin-bottom: $medium-padding;
+  .screenshot-wrapper .screenshot {
+    box-shadow: 0px 0px 10px 0px black;
+    transition: all $t-time-opacity  ease-in-out 0.3s;
+    opacity: 1;
+  }
+
+  .screenshot-caption {
+    transition: all $t-time-opacity  ease-in-out 0s;
+    opacity: 1;
+    margin-bottom: $medium-padding;
+
+  }
+
+  .screenshot-wrapper .screenshot.hidden, .screenshot-caption.hidden {
+    opacity: 0;
+    transition: none
+  }
+
+  .screenshot-wrapper .navigation {
+    user-select: none;
+    border-radius: 100%;
+    padding: 10px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border-width: 1px;
+    border-style: solid;
+    border-color: $voltera-blue;
+    cursor: pointer;
+    transition: all $t-time ease-in-out 0s;
+    margin: $small-padding;
+    flex-shrink: 0;
+  }
+  .screenshot-wrapper .navigation:hover {
+    background-color: $voltera-blue;
+    color: $white;
+  }
+
+  .clips-wrapper {
+    padding: $medium-padding 0px;
+  }
+
+  .promo {
+    margin: auto;
+    padding-top: $medium-padding;
+    max-width: 800px;
+  }
+
+  .movie-time {
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+1,000000+100&1+0,0.15+100 */
+      background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,0.99) 1%, rgba(0,0,0,0.15) 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.99) 1%,rgba(0,0,0,0.15) 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.99) 1%,rgba(0,0,0,0.15) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#26000000',GradientType=0 ); /* IE6-9 */
+      max-width: initial;
+  }
 
 }
-
-.feature .screenshot-wrapper .screenshot.hidden, .feature .screenshot-caption.hidden {
-  opacity: 0;
-  transition: none
-}
-
-.feature .screenshot-wrapper .navigation {
-  user-select: none;
-  border-radius: 100%;
-  padding: 10px;
-  width: 20px;
-  height: 20px;
-  text-align: center;
-  border-width: 1px;
-  border-style: solid;
-  border-color: $voltera-blue;
-  cursor: pointer;
-  transition: all $t-time ease-in-out 0s;
-  margin: $small-padding;
-  flex-shrink: 0;
-}
-.feature .screenshot-wrapper .navigation:hover {
-  background-color: $voltera-blue;
-  color: $white;
-}
-
-.feature .clips-wrapper {
-  padding: $medium-padding 0px;
-}
-
-.feature .promo {
-  margin: auto;
-  padding-top: $medium-padding;
-  max-width: 800px;
-}
-
 
 @media (max-width: $mobile-threshold) {
   .feature img {

@@ -36,7 +36,7 @@ export default class Experiment extends React.Component {
             label="Max Temp."
             />
         </MiniHero>
-        <section>
+        <section className="movie-time">
             <h2>An affordable dispensing system.</h2>
             <p className="pull-center">The Voltera V-One is a precision dispensing system for viscous inks and pastes. This experimental platform brings your novel applications to life.</p>
             <div className="promo">
@@ -47,7 +47,6 @@ export default class Experiment extends React.Component {
             />
           </div>
         </section>
-        <AskUs example="Eg - What viscosity range can you dispense?"/>
         <section className="flex-row reverse-wrap">
           <div className="description">
             <h2>Use your own materials.</h2>
@@ -56,6 +55,7 @@ export default class Experiment extends React.Component {
           </div>
           <img src="/product/cartridges-min.png"/>
         </section>
+        <AskUs example="Eg - What viscosity range can you dispense?"/>
         <section className="flex-row">
           <img src="/product/flexible-electronics.jpg"/>
           <div className="description">

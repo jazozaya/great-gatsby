@@ -30,6 +30,7 @@ export default class Desktop extends React.Component {
         <div className="child-header">
           <Link className={this.startsWith(pageName, urls.technology)} to={urls.technology}>How it works</Link>
           <Link className={this.startsWith(pageName, urls.print )} to={urls.print}>Circuit Printing </Link>
+          <Link className={this.startsWith(pageName, urls.drill)} to={urls.drill}>Drilling</Link>
           <Link className={this.startsWith(pageName, urls.paste)} to={urls.paste}>Paste Dispensing</Link>
           <Link className={this.startsWith(pageName, urls.software)} to={urls.software}>Desktop Software</Link>
           <Link className={this.startsWith(pageName, urls.experiment)} to={urls.experiment}>Experiment</Link>
