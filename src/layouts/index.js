@@ -83,7 +83,9 @@ module.exports = React.createClass({
 
           <link rel="shortcut icon" href={favicon} />
           <script defer="defer" type="text/javascript" src="https://www.googleadservices.com/pagead/conversion_async.js" charset="utf-8"></script>
+          <script type="text/javascript" src="https://secure.leadforensics.com/js/131258.js" ></script>
         </Helmet>
+        <img alt="" src="https://secure.leadforensics.com/131258.png" style={{display:"none"}} />
         <Header pageName={this.props.location.pathname} />
         <SignUp />
         <DummyHeader />
