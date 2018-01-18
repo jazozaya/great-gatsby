@@ -5,9 +5,9 @@ import CallToAction from 'components/common/cta'
 import FastFact from 'components/common/fastFact'
 import MiniHero from 'components/common/minihero'
 import YouTube from 'components/common/youtube'
-import Specs from 'components/common/drill';
+import Specs from 'components/common/specs';
 
-import boxDrill from 'components/product/boxDrill'
+import BoxDrill from 'components/product/boxDrill'
 
 import Gallery from 'components/common/gallery'
 import { printGallery } from 'components/common/gallery/constants'
@@ -25,7 +25,7 @@ export default class Print extends React.Component {
       <div className="feature">
         <MiniHero
           title="Double sided boards just got easier."
-          description="The V-One Drill is an attachment to the V-One. Just load your drill file and mount the V-One drill."
+          description="The V-One Drill is an attachment to the V-One. Just mount it on like the probe and load your drill file."
           >
           <FastFact
             title="1mil"
@@ -36,19 +36,19 @@ export default class Print extends React.Component {
             label="Min. Diam."
             />
           <FastFact
-            title="40 holes"
-            label="per min."
+            title="13,000"
+            label="RPM."
             />
         </MiniHero>
         <section className="movie-time">
-            <h2>A compact and automated drilling attachment.</h2>
-            <p className="pull-center">Easy on the eyes and ears, the V-One Drill is an attachment to the V-One </p>
-            <div className="promo">
+          <h2>A compact and automated drilling attachment.</h2>
+          <p className="pull-center">Easy on the eyes and ears, the V-One Drill is an attachment to the V-One </p>
+          <div className="promo">
             <YouTube
               width="800"
               videoId="PeW1nURJ5ww"
               url="/selector/print-conductive-silver-ink.jpg"
-            />
+              />
           </div>
         </section>
         <section className="flex-row reverse-wrap">
@@ -65,52 +65,58 @@ export default class Print extends React.Component {
           </video>
           <div className="description">
             <h2>Compact, but accurate.</h2>
-            <p>It was designed to be as compact as possible, but do not let looks fool you - this drill packs a punch with a measured runout (TIR) of 1 mil (25 microns)</p>
+            <p>It was designed to be as compact as possible, but don't let looks fool you - this drill packs a punch with a measured runout (TIR) of 1 mil (25 microns)</p>
             <p>Everything you need to get started is included: Drill bits of various sizes, FR1 substrates, rivets and more!</p>
           </div>
         </section>
-          <section className="flex-row column-wrapper">
-            <div className="column">
-              <img src="/product/drilling/rivet.jpg" />
-              <div className="description">
-                <h2>Rivets to the rescue!</h2>
-                <p>Once holes are drilled and the top and bottom layer are printed, it is time to connect them!</p>
-                <p>Rivets are little copper tubes that make a mechanical connection between the top and bottom layer. We found rivets to be the easiest way to create vias.</p>
-                <p>Watch the tutorial <Link to="/todo/">here!</Link></p>
-              </div>
+        <Workflow workflowType="drill" />
+        <section className="flex-row column-wrapper">
+          <div className="column">
+            <img src="/product/drilling/rivet.jpg" />
+            <div className="description">
+              <h2>Rivets to the rescue!</h2>
+              <p>Once holes are drilled and the top and bottom layer are printed, it is time to connect them!</p>
+              <p>Rivets are little copper tubes that make a mechanical connection between the top and bottom layer. We found rivets to be the easiest way to create vias.</p>
+              <p>Watch the tutorial <Link to="/todo/">here!</Link></p>
             </div>
-            <div className="column">
-              <img src="/product/drilling/drill-bit.jpg" />
-              <div className="description">
-                <h2>Different hole, different bit..</h2>
-                <p>A picture of the drilling case - mention the different sizes that come included, but offer to include more if they ask.</p>
-              </div>
+          </div>
+          <div className="column">
+            <img src="/product/drilling/drill-bit.jpg" />
+            <div className="description">
+              <h2>The right bit for the right hole.</h2>
+
+              <p>The following sizes are included (2 of each): 0.70mm, 0.80mm, 0.90mm, 1.00mm, 1.60mm. If you need different sizes, let us know!</p>
             </div>
-          </section>
+          </div>
+        </section>
+        <section>
+          <BoxDrill />
+        </section>
+        <Specs display="drill" />
         <DrillFAQ id="faq" title="F.A.Q." all />
         <Gallery
           title="A platform for all of your needs."
           description="The V-One is a versatile tool that will help you in any stage of development"
           gallery= {printGallery}
           />
-          <CallToAction
-            title="Ready to build faster?"
-            subtitle="We can help with that."
-            buttonOne={
-              {
-                label: "Buy Now",
-                url: "/store/",
-                internal: true
-              }
+        <CallToAction
+          title="Ready to build faster?"
+          subtitle="We can help with that."
+          buttonOne={
+            {
+              label: "Buy Now",
+              url: "/store/",
+              internal: true
             }
-            buttonTwo={
-              {
-                label: "Get a Quote",
-                url: "/request/quote/",
-                internal: true
-              }
+          }
+          buttonTwo={
+            {
+              label: "Get a Quote",
+              url: "/request/quote/",
+              internal: true
             }
-            />
+          }
+          />
       </div>);
     }
   }

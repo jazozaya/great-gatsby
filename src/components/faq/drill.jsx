@@ -21,7 +21,7 @@ export default class PrintFAQ extends React.Component {
             <p>For the time being, only drilling holes are supported. The V-One is not designed to withstand the lateral forces experienced during milling.</p>
           </Question>
           <Question underline title="What hazards are there? I heard FR4 dust is toxic">
-            <p>You are correct - FR4 dust contains fiberglass particles which can be harmful. That is why we use FR1 - it does not contain fiberglass and is a softer material, which means less wear on the drill bits.</p>
+            <p>We use FR1 - it does not contain fiberglass and is a softer material, which means less wear on the drill bits. FR4 dust, on the other hand, contains fiberglass particles which can be harmful.</p>
           </Question>
           <Question underline title="I already have a V-One, will it work?">
             <p>Yes! We have designed the drilling attachment to be entirely backwards compatible. If you struggled with double sided boards in the past, this attachment will make your life easier!</p>

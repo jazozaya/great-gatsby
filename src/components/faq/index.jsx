@@ -8,6 +8,7 @@ import ShippingFAQ from './shipping'
 import ExperimentFAQ from './experiment'
 import SomethingFAQ from './something'
 import SoftwareFAQ from './software'
+import DrillFAQ from './drill'
 
 export default class FAQ extends React.Component {
 
@@ -20,6 +21,7 @@ export default class FAQ extends React.Component {
         <PrintFAQ title="Conductive ink and printing"/>
         <PasteFAQ title="Solder paste and reflow"/>
         <SoftwareFAQ title="Desktop software" />
+        <DrillFAQ title="V-One Drilling attachment"/>
         <ExperimentFAQ title="Experiment with the V-One" />
         <ShippingFAQ title="Shipping to my country" />
         <SomethingFAQ title="It's something else" />

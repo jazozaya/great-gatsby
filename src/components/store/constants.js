@@ -19,6 +19,11 @@ export const collections = {
     handle: "conductive-inks",
     id: 343930305
   },
+  drilling: {
+    title: "Drilling",
+    handle: "drilling",
+    id: 22623092766
+  },
   substrates: {
     title: "Substrates",
     handle: "standard-substrates",

@@ -1,143 +1,129 @@
 @import 'src/css/colors';
 
-.box-wrapper {
+
+.box-wrapper-drill {
+
   h2 {
     text-align: left;
   }
+
+  .mobile-contents p {
+    line-height: 1.4em;
+  }
+
+  .description {
+    max-width: 500px;
+  }
+
+  .try-me {
+    background-image: url('./try-me-min.png');
+    background-position: bottom;
+    width: 600px;
+    height: 400px;
+  }
+
+  .try-me:hover {
+    cursor: pointer;
+  }
+
+  .in-the-box {
+    background-image: url('/drill-box-min.png');
+    background-position: bottom;
+    width: 600px;
+    height: 400px;
+    position: relative;
+    flex-shrink: 0;
+
+    .outline {
+      opacity: 0;
+      cursor: pointer;
+      background-repeat: no-repeat;
+      background-position: top;
+      position: absolute;
+    }
+
+    .outline:hover {
+      opacity: 1;
+    }
+
+    .visible {
+      opacity: 1;
+    }
+
+    .drill {
+      background-image: url('./drill.min.svg');
+      top: 153px;
+      left: 273px;
+      width: 53px;
+      height: 118px;
+    }
+
+    .drill-bit-container {
+      background-image: url('./drill-bit-container.min.svg');
+      left: 119px;
+      top: 117px;
+      width: 116px;
+      height: 79px;
+    }
+
+    .small-substrate {
+      background-image: url('./small-Substrate.min.svg');
+      left: 415px;
+      top: 170px;
+      width: 102px;
+      height: 68px;
+    }
+
+    .large-substrate {
+      background-image: url('./large-substrate.min.svg');
+      left: 399px;
+      top: 153px;
+      width: 134px;
+      height: 102px;
+    }
+
+    .rivet-tools {
+      background-image: url('./rivet-tools.min.svg');
+      top: 265px;
+      left: 125px;
+      width: 102px;
+      height: 23px;
+    }
+
+    .rivet-container-small {
+      background-image: url('./rivet-container-small.min.svg');
+      top: 210px;
+      left: 188px;
+      width: 48px;
+      height: 48px;
+    }
+
+    .rivet-container-large {
+      background-image: url('./rivet-container-large.min.svg');
+      left: 121px;
+      top: 209px;
+      width: 48px;
+      height: 48px;
+    }
+
+    .sacrificial {
+      background-image: url('./sacrificial.min.svg');
+      top: 124px;
+      left: 359px;
+      width: 211px;
+      height: 160px;
+    }
+
+    .safety-glasses {
+      background-image: url('./safety-glasses.min.svg');
+      top: 121px;
+      left: 25px;
+      width: 67px;
+      height: 168px;
+    }
+  }
 }
 
-.box-wrapper .mobile-contents p {
-  line-height: 1.4em;
-}
-
-.box-wrapper .description {
-  max-width: 500px;
-}
-
-.box-wrapper .try-me {
-  background-image: url('./try-me-min.png');
-  background-position: bottom;
-  width: 600px;
-  height: 400px;
-}
-
-.box-wrapper .try-me:hover {
-  cursor: pointer;
-}
-
-.in-the-box {
-  background-image: url('/v-one-box-min.png');
-  background-position: bottom;
-  width: 600px;
-  height: 400px;
-  position: relative;
-  flex-shrink: 0;
-}
-
-.in-the-box .outline {
-  opacity: 0;
-  cursor: pointer;
-  background-repeat: no-repeat;
-  background-position: top;
-  position: absolute;
-}
-
-.in-the-box .visible {
-  opacity: 1;
-}
-
-.in-the-box  .outline:hover {
-  opacity: 1;
-}
-
-.in-the-box .v-one {
-  background-image: url('./v-one.min.svg');
-  top: 42px;
-  left: 86px;
-  width: 473px;
-  height: 287px;
-}
-
-
-.in-the-box .burnishing-pad {
-  background-image: url('./burnishing-pad.min.svg');
-  left: 127px;
-  top: 225px;
-  width: 99px;
-  height: 89px;
-}
-
-
-.in-the-box .nozzles {
-  background-image: url('./nozzles.min.svg');
-  left: 234px;
-  top: 279px;
-  width: 119px;
-  height: 77px;
-}
-
-.in-the-box .solder-wire {
-  background-image: url('./solder-wire.min.svg');
-  left: 366px;
-  top: 341px;
-  width: 31px;
-  height: 24px;
-}
-
-.in-the-box .substrates {
-  background-image: url('./substrates.min.svg');
-  top: 281px;
-  left: 53px;
-  width: 157px;
-  height: 68px;
-}
-
-.in-the-box .dispenser-ink {
-  background-image: url('./dispenser-ink.min.svg');
-  top: 193px;
-  left: 336px;
-  width: 53px;
-  height: 153px;
-}
-.in-the-box .dispenser-paste {
-  background-image: url('./dispenser-paste.min.svg');
-  left: 236px;
-  top: 180px;
-  width: 53px;
-  height: 153px;
-}
-
-.in-the-box .cartridge-paste {
-  background-image: url('./cartridge-paste.min.svg');
-  top: 235px;
-  left: 278px;
-  width: 36px;
-  height: 95px;
-}
-
-.in-the-box .cartridge-ink {
-  background-image: url('./cartridge-ink.min.svg');
-  top: 251px;
-  left: 381px;
-  width: 38px;
-  height: 101px;
-}
-
-.in-the-box .probe {
-  background-image: url('./probe.min.svg');
-  top: 87px;
-  left: 314px;
-  width: 36px;
-  height: 98px;
-}
-
-.in-the-box .clamps {
-  background-image: url('./clamps.min.svg');
-  top: 188px;
-  left: 292px;
-  width: 190px;
-  height: 59px;
-}
 
 @media (max-width: $mobile-threshold) {
   .box-wrapper img {
