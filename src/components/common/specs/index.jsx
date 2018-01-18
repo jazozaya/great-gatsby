@@ -8,13 +8,6 @@ import './specs.scss'
 
 export default class Specs extends React.Component {
 
-  // componentDidMount() {
-  //
-  //     setTimeout(function() {
-  //       document.getElementById("specs").scrollIntoView();
-  //     }, 0);
-  // }
-
   constructor(props) {
     super(props);
     this.state = {
@@ -34,18 +27,60 @@ export default class Specs extends React.Component {
     return null;
   }
 
-  render() {
+  renderDrillSpecs(units) {
+    return (
+    <div id="specs-drill" className="specs-wrapper">
+      <div className="specs">
+        <h1>Attachment Specifications</h1>
+        <p className="pull-center">Find the most up to date specifications about the V-One Drill</p>
+        {this.renderUnitChange(units)}
+        <div className="table">
+          <h3>Device </h3>
+          <Row units={units}>
+            <p>Supported Material</p>
+            <p>FR1</p>
+            <p>FR1</p>
+          </Row>
+          <Row units={units} dark>
+            <p>Spindle Speed (maximum)</p>
+            <p>13,000 RPM</p>
+            <p>13,000 RPM</p>
+          </Row>
+          <Row units={units}>
+            <p>Power</p>
+            <p>12V, 25W</p>
+            <p>12V, 25W</p>
+          </Row>
+        </div>
+        <div className="table">
+          <h3>Drill Bits</h3>
+          <Row units={units}>
+            <p>Runout (TIR)</p>
+            <p>0.025mm</p>
+            <p>0.001”</p>
+          </Row>
+          <Row units={units} dark>
+            <p>Shank Diameter </p>
+            <p>3.175mm</p>
+            <p>1/8”</p>
+          </Row>
+          <Row units={units}>
+            <p>Bit Diameter (maximum)</p>
+            <p>2.0mm</p>
+            <p>0.078”</p>
+          </Row>
+          <Row units={units} dark>
+            <p>Bit Length (maximum)</p>
+            <p>38.1mm</p>
+            <p>1.5”</p>
+          </Row>
+        </div>
+      </div>
+    </div>
+    )
+  }
 
-    var units = "both";
-    if (Bowser.mobile) {
-      if (this.state.metric){
-        units = "Metric";
-      }
-      else {
-        units="Imperial"
-      }
-    }
-
+  renderVOneSpecs(units) {
     return(
       <div id="specs" className="specs-wrapper">
         <div className="specs">
@@ -155,7 +190,34 @@ export default class Specs extends React.Component {
           </div>
         </div>
       </div>
+    )
+  }
 
-    );
+  render() {
+
+    var units = "both";
+    if (Bowser.mobile) {
+      if (this.state.metric){
+        units = "Metric";
+      }
+      else {
+        units="Imperial"
+      }
+    }
+
+    const  { display }  = this.props;
+    switch(this.props.display){
+      case "vOne":
+      return this.renderVOneSpecs(units);
+      case "drill":
+      return this.renderDrillSpecs(units);
+      default:
+      return (
+        <div>
+          {this.renderVOneSpecs(units)}
+          {this.renderDrillSpecs(units)}
+        </div>
+      )
+    }
   }
 }

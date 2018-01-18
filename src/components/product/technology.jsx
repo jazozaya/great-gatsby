@@ -70,7 +70,7 @@ export default class Technology extends React.Component {
           <Box />
         </section>
         <TechnologyFAQ id="faq" title="F.A.Q." all />
-        <Specs />
+        <Specs display="vOne" />
         <CallToAction
           title="Want to schedule a call?"
           subtitle="Let's find a time to talk!"
