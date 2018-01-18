@@ -1,5 +1,6 @@
 import React from 'react'
 import Bowser from 'bowser'
+import Cookies from 'universal-cookie'
 
 import "./signup.scss"
 
@@ -8,6 +9,9 @@ const popStatus = {
   showing: "showing",
   processed: "processed"
 }
+
+const cookies = new Cookies()
+const cookieName = 'exit-popup'
 
 export default class Specs extends React.Component {
 
@@ -18,6 +22,7 @@ export default class Specs extends React.Component {
     }
     this.handleMouseLeave = this.handleMouseLeave.bind(this)
     this.onSubmit = this.onSubmit.bind(this)
+    this.onClose = this.onClose.bind(this)
   }
 
   handleMouseLeave(e) {
@@ -29,20 +34,26 @@ export default class Specs extends React.Component {
 
   componentDidMount() {
     // Bind a listener to trigger when mouse exits window - but wait about 40 seconds. (about 55% of our average page time)
-    if(!Bowser.mobile) {
+    if(!Bowser.mobile && cookies.get(cookieName, { path: '/' }) === undefined) {
       setTimeout(() => document.addEventListener("mouseleave", this.handleMouseLeave, false), 40000);
     }
-
   }
+
   componentWillUnmount() {
     document.removeEventListener("mouseleave", this.handleMouseLeave, false);
   }
 
+  onClose() {
+    cookies.set(cookieName, 'seen', { path: '/' });
+    this.setState({show: popStatus.processed})
+  }
+
   onSubmit() {
+    cookies.set(cookieName, 'seen', { path: '/' });
+    setTimeout(() => this.setState({show: popStatus.processed}), 100)
     // I have to add a delay, because:
     // If processed right away, the form is removed from DOM and it cannot be submitted.
     // If I delay a bit, the form action can be processed before and then the pop up is removed.
-    setTimeout(() => this.setState({show: popStatus.processed}), 100)
   }
 
   render() {
@@ -54,7 +65,7 @@ export default class Specs extends React.Component {
     return (
       <div className="signup-wrapper">
         <div className="signup">
-          <div onClick={() => this.setState({show: popStatus.processed})} className="close">X</div>
+          <div onClick={this.onClose} className="close">X</div>
           <h1>We have big news coming up!</h1>
           <p>Sign up below to stay in the loop.</p>
           <form action="https://voltera.us7.list-manage.com/subscribe/post?u=5e2801d5f399b19d163b280f7&amp;id=4ab4eb46aa" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="form" target="_blank" noValidate onSubmit={this.onSubmit}>
