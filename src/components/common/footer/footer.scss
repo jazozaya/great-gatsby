@@ -21,6 +21,10 @@
   margin: auto;
   align-items: flex-start;
 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
   ul {
     list-style: none;
     padding: 0px;

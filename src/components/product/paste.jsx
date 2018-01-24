@@ -7,7 +7,7 @@ import CallToAction from 'components/common/cta'
 import Gallery from 'components/common/gallery'
 import { pasteGallery } from 'components/common/gallery/constants'
 
-import PasteFAQ from 'components/faq/print'
+import PasteFAQ from 'components/faq/paste'
 
 import Workflow from './workflow'
 

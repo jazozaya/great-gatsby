@@ -24,7 +24,7 @@ export default class Footer extends React.Component {
 
     return (
       <div className="footer-wrapper">
-        <div className="footer flex-row">
+        <div className="footer">
           {this.renderLogo()}
           <div className="column">
             <p>V-One</p>
