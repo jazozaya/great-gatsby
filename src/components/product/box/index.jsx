@@ -209,7 +209,7 @@ export default class InTheBox extends React.Component {
 
   renderMobile() {
     return(
-        <div className="box-wrapper">
+        <section className="box-wrapper">
           <h1>What is in the box?</h1>
           <p className="pull-center">The V-One comes with all the accessories and consumables you need to start building hardware faster.</p>
           <img src="/v-one-box-min.png" />
@@ -225,13 +225,13 @@ export default class InTheBox extends React.Component {
             <p><strong>10 - Small substrates</strong>.<br />Every circuit needs a place to live!</p>
             <p><strong>6 - Large substrates</strong>.<br />To help you protoype larger circuits.</p>
           </div>
-      </div>
+      </section>
     );
   }
 
   renderDesktop() {
     return (
-      <div className="box-wrapper">
+      <section className="box-wrapper">
         <h1>What is in the box?</h1>
         <p className="pull-center">The V-One comes with all the accessories and consumables you need to start building hardware faster.</p>
         <div className="flex-row">
@@ -240,7 +240,7 @@ export default class InTheBox extends React.Component {
             {this.renderDescription()}
           </div>
         </div>
-      </div>
+      </section>
     );
   }
   render() {

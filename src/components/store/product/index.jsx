@@ -6,7 +6,8 @@ import ProductSnippet from 'components/store/utils/productSnippet'
 import ProductPictures from 'components/store/utils/productPictures'
 import Button from 'components/common/button'
 
-import { fetchProduct, fetchProductSnippets, fetchRecentCart } from 'components/store/api'
+import { collections as c } from 'components/store/constants'
+import { fetchProduct, fetchProductSnippets, fetchRecentCheckout, addItemtoCheckout } from 'components/store/api'
 
 import './product.scss'
 
@@ -15,27 +16,36 @@ export default class Product extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      variantIndex: 0,
       product: null, // Instance of our product.
-      products: [], // Snippets of our relatedProducts
       quantity: 1,
+      products: [], // Snippets of our relatedProducts
     };
+
+    this.processOptionChange = this.processOptionChange.bind(this);
   }
 
   componentWillMount() {
-    const { productId, collectionId } = this.props
+    const { productId, collectionId, noRelevant } = this.props
     fetchProduct(productId).then(product => this.setState({product: product}))
 
-    let workingCollectionId = collectionId || 301765121 //Id of ALL products.
-    fetchProductSnippets(workingCollectionId).then(products => this.setState({products: products}))
+    if(!noRelevant) {
+      let workingCollectionId = collectionId || c.allProducts.id //Id of ALL products.
+      fetchProductSnippets(workingCollectionId).then(products => this.setState({products: products}))
+    }
   }
+
 
   addToCart() {
-    const { product, quantity } = this.state
-    fetchRecentCart().then(cart => cart.createLineItemsFromVariants({variant: product.selectedVariant, quantity: quantity})).then(cart => this.setState({addedToCart: true}))
-  }
+    const { product, quantity, variantIndex } = this.state
 
-  onQuantityChange(event) {
-    this.setState({quantity: Math.round(event.target.value)})
+    const lineItems = [{
+      variantId: product.variants[variantIndex].id,
+      quantity: quantity,
+      customAttributes : { key:'Image', value: product.images[0].src}
+    }]
+    fetchRecentCheckout().then(checkout => addItemtoCheckout(checkout.id, lineItems)).then(checkout => this.setState({addedToCheckout: true}))
+
   }
 
   renderRelevantProducts() {
@@ -51,28 +61,74 @@ export default class Product extends React.Component {
       <div className="relevant-products">
         <h2 className="pull-left">{ collectionId ? "More from this collection:" : "Popular Products:"}</h2>
         <div className="relevant-gallery">
-            {filteredProd.slice(0,3).map((product, index) => <ProductSnippet key={index} collectionId={collectionId} product={product} external={true}/>)}
+          {filteredProd.slice(0,3).map((product, index) => <ProductSnippet key={index} collectionId={collectionId} product={product} external={true}/>)}
         </div>
       </div>
     )
   }
 
-  changedVariant(event) {
-    const { product } = this.state;
-    product.options[0].selected = event.target.value // Not sure how this works... Apparently we can modify the state.
+  processOptionChange() {
+    const { product } = this.state
+    this.setState({ variantIndex: this.updateVariantIndex(product) })
   }
 
-  renderVariantSelection() {
+  updateVariantIndex(product) {
+    //This method obtains the new variant based on the options that were selected. Only support for 2 options. A bit clunkly but it works.
+    const selectedOption0 = document.getElementById('option1').value
+    const selectedOption1 = product.options.length === 2 ? document.getElementById('option2').value : null;
+
+    let i;
+    for(i = 0; i < product.variants.length; i ++ ) {
+
+      // Check if 1 option
+      if (product.variants[i].selectedOptions.length === 1) { //Only 1 variant
+        if (product.variants[i].selectedOptions[0].value === selectedOption0) {
+          return i
+        }
+      }
+
+      // Check if 2 options.
+      if (product.variants[i].selectedOptions.length == 2) {
+        if (product.variants[i].selectedOptions[0].value === selectedOption0 && product.variants[i].selectedOptions[1].value === selectedOption1) {
+          return i
+        }
+      }
+    }
+
+    console.error("Something went horribly wrong")
+  }
+
+  renderOptionSelection() {
     const { product } = this.state
-    if (product.options[0].values.length === 1) {
+    if (product.variants.length === 1) {
       return null
     }
+
+    if (product.options.length === 1) {
+      return (
+        <div>
+          <strong>{product.options[0].name}: </strong>
+          <select id='option1' className="select" onChange={this.processOptionChange}>
+            {product.options[0].values.map((value, index) => <option key={index} value={value.value}>{value.value}</option>)}
+          </select>
+        </div>
+      )
+    }
+
     return (
       <div>
-        <strong>{product.options[0].name}: </strong>
-        <select className="select" onChange={(event) =>this.changedVariant(event)}>
-          {product.options[0].values.map((value, index) => <option key={index} value={value}>{value}</option>)}
-        </select>
+        <div>
+          <strong>{product.options[0].name}: </strong>
+          <select id='option1' className="select" onChange={this.processOptionChange}>
+            {product.options[0].values.map((value, index) => <option key={index} value={value.value}>{value.value}</option>)}
+          </select>
+        </div>
+        <div>
+          <strong>{product.options[1].name}: </strong>
+          <select id='option2' className="select" onChange={this.processOptionChange}>
+            {product.options[1].values.map((value, index) => <option key={index} value={value.value}>{value.value}</option>)}
+          </select>
+        </div>
       </div>
     )
   }
@@ -81,43 +137,47 @@ export default class Product extends React.Component {
     return (
       <div>
         <strong>Quantity:</strong>
-        <input className="select" id="number" type="number" value={this.state.quantity} min="1" max="100" onChange={(event) => this.onQuantityChange(event)}/>
+        <input className="select" id="number" type="number" value={this.state.quantity} min="1" max="100" onChange={(event) =>  this.setState({quantity: Math.round(event.target.value)})}/>
       </div>
     )
   }
 
   render() {
-    const { product, addedToCart, quantity } = this.state
+    const { product, addedToCheckout, quantity, variantIndex } = this.state
 
     if (!product) {
       return (
         <section className="product-wrapper">
           <h1>Loading...</h1>
-            <SpinnerLoader />
+          <SpinnerLoader />
         </section>
       )
     }
 
-    if (addedToCart) {
+    if (addedToCheckout) {
       return <Redirect push to="/store/cart/"/>
     }
 
     return (
       <section className="product-wrapper">
         <div className="information">
-          <ProductPictures images={product.images} />
-          <div className="details">
-            <h1 className="pull-left">{product.title}</h1>
-            <h2 className="pull-left price">{product.selectedVariant.formattedPrice} USD</h2>
-            {this.renderVariantSelection()}
-            {this.renderQuantitySelection()}
-            <Button label="Add to cart" onClick={() => this.addToCart()} color="light long"/>
-          </div>
+          <ProductPictures images={product.images}/>
+            <div className="details">
+              <h1 className="pull-left">{product.title}</h1>
+              <h2 className="pull-left price">${product.variants[variantIndex].price} USD</h2>
+              {this.renderOptionSelection()}
+              {this.renderQuantitySelection()}
+              <Button label="Add to cart" onClick={() => this.addToCart()} color="light long"/>
+            </div>
         </div>
         <h2 className="pull-left">Description</h2>
-        <div className="description" dangerouslySetInnerHTML={{ __html: product.description }}/>
+        <div className="description" dangerouslySetInnerHTML={{ __html: product.descriptionHtml }}/>
         {this.renderRelevantProducts()}
       </section>
     );
   }
 }
+
+
+
+            //

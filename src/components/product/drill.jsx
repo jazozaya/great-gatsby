@@ -76,22 +76,21 @@ export default class Print extends React.Component {
             <div className="description">
               <h2>Rivets to the rescue!</h2>
               <p>Once holes are drilled and the top and bottom layer are printed, it is time to connect them!</p>
-              <p>Rivets are little copper tubes that make a mechanical connection between the top and bottom layer. We found rivets to be the easiest way to create vias.</p>
-              <p>Watch the tutorial <Link to="/todo/">here!</Link></p>
+              <p>Rivets are little copper tubes that make a mechanical connection between the top and bottom layer. Rivets are by far the easiest way to create vias by hand.</p>
+              <p>Checkout the tutorial <Link to="/todo/">here!</Link></p>
             </div>
           </div>
           <div className="column">
             <img src="/product/drilling/drill-bit.jpg" />
             <div className="description">
               <h2>The right bit for the right hole.</h2>
-
+              <p>A range of high precision drill bits are included which cover the most common hole sizes.</p>
+              <p>Swapping out the bits is straightforward, only a hex key is needed.</p>
               <p>The following sizes are included (2 of each): 0.70mm, 0.80mm, 0.90mm, 1.00mm, 1.60mm. If you need different sizes, let us know!</p>
             </div>
           </div>
         </section>
-        <section>
-          <BoxDrill />
-        </section>
+        <BoxDrill />
         <Specs display="drill" />
         <DrillFAQ id="faq" title="F.A.Q." all />
         <Gallery

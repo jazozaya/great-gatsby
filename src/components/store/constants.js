@@ -2,39 +2,45 @@ export const collections = {
   bundles: {
     title: "Bundles",
     handle: "bundles",
-    id: 315550913
+    id: "Z2lkOi8vc2hvcGlmeS9Db2xsZWN0aW9uLzMxNTU1MDkxMw=="
   },
   solder: {
     title: "Solder",
     handle: "solder",
-    id: 343929793
+    id: "Z2lkOi8vc2hvcGlmeS9Db2xsZWN0aW9uLzM0MzkyOTc5Mw=="
   },
   accessories: {
     title: "Accessories",
     handle: "accessories",
-    id: 262492865
+    id: "Z2lkOi8vc2hvcGlmeS9Db2xsZWN0aW9uLzI2MjQ5Mjg2NQ=="
   },
   inks: {
     title: "Conductive Inks",
     handle: "conductive-inks",
-    id: 343930305
+    id: "Z2lkOi8vc2hvcGlmeS9Db2xsZWN0aW9uLzM0MzkzMDMwNQ=="
   },
   drilling: {
     title: "Drilling",
     handle: "drilling",
-    id: 22623092766
+    id: "Z2lkOi8vc2hvcGlmeS9Db2xsZWN0aW9uLzIyNjIzMDkyNzY2"
   },
   substrates: {
     title: "Substrates",
     handle: "standard-substrates",
-    id: 302583105
+    id: "Z2lkOi8vc2hvcGlmeS9Db2xsZWN0aW9uLzMwMjU4MzEwNQ=="
   },
   swag: {
     title: "Swag",
     handle: "swag",
-    id: 298518977
+    id: "Z2lkOi8vc2hvcGlmeS9Db2xsZWN0aW9uLzI5ODUxODk3Nw=="
   },
   vOne: {
     title: "V-One",
+  },
+  allProducts: {
+    title: "All Products",
+    handle: "all",
+    id: "Z2lkOi8vc2hvcGlmeS9Db2xsZWN0aW9uLzMwMTc2NTEyMQ=="
   }
+
 }
