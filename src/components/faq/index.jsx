@@ -16,7 +16,7 @@ export default class FAQ extends React.Component {
     return (
       <div className="faq-wrapper">
         <h1>F.A.Q.</h1>
-        <p className="center-narrow pull-center caption">If you have a question that is not answered in this page, try clicking the <strong>'chat'</strong> button at the bottom of the page to talk to us.</p>
+        <p className="center-narrow pull-center caption">If you have a question that is not answered in this page, try clicking the <strong>chat bubble</strong> at the bottom of the page to talk to us.</p>
         <TechnologyFAQ title="How does it work?" />
         <PrintFAQ title="Conductive ink and printing"/>
         <PasteFAQ title="Solder paste and reflow"/>

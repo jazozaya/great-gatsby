@@ -66,9 +66,7 @@ export default class Technology extends React.Component {
           <img src="/voltera-probe-min.png"/>
         </section>
         <HelpMe />
-        <section>
-          <Box />
-        </section>
+        <Box />
         <TechnologyFAQ id="faq" title="F.A.Q." all />
         <Specs display="vOne" />
         <CallToAction

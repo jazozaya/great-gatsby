@@ -39,7 +39,7 @@ export default class Search extends React.Component {
 
     return (
       <section className="search-wrapper">
-        <h1>Your Search Results</h1>
+        <h1>Your search results</h1>
         <p>Your search for <strong><i>{this.props.search}</i></strong> revealed the following:</p>
         <SearchBar/>
         <div className="results-gallery">

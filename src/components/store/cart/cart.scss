@@ -2,16 +2,17 @@
 
 .cart-wrapper {
 
-// Common Items to both desktop and mobile
-  .quantity-input {
-    padding: 5px;
-    border-radius: 5px;
-    border-style: groove;
-    height: 20px;
-    width: 65px;
-  }
-  .quantity-input:focus {
-    outline: none;
+  // Common Items to both desktop and mobile
+  .promo {
+
+    text-align: center;
+    padding: 5px 0px;
+    background-color: $light-grey;
+    margin-bottom: $small-padding;
+
+    .green {
+      color: $voltera-green;
+    }
   }
 
   .subtotal {
@@ -28,7 +29,36 @@
     }
   }
 
+  .controls {
+    width: 150px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    user-select: none;
 
+    .addOrSubtract {
+      background-color: $voltera-blue;
+      border: solid $voltera-blue 1px;
+      border-radius: 50%;
+      width: 25px;
+      height: 25px;
+      color: white;
+      text-align: center;
+      transition: all $t-time ease-in-out 0s;
+      cursor: pointer;
+    }
+    .addOrSubtract:hover {
+      color: $voltera-blue;
+      background-color: $white;
+    }
+
+    .add {
+      margin-left: 10px;
+    }
+    .subtract {
+      margin-right: 10px;
+    }
+  }
 
   // DESKTOP HEADERS //
   .cart-headers {
@@ -46,6 +76,9 @@
     align-items: center;
     padding: $small-padding 0px;
     border-bottom: solid 1px $soft-grey;
+    p {
+      margin: 0px;
+    }
 
     img {
       height: auto;
@@ -55,9 +88,7 @@
 
     .cart-row-details {
       flex-grow: 1;
-      p {
-        margin: 5px;
-      }
+
       .title {
         font-size: 1.2em;
       }
@@ -70,28 +101,30 @@
       align-items: center;
       text-align: right;
       p {
-        min-width: 150px;
+        width: 150px;
       }
+
+
     }
   }
 
   // MOBILE HEADERS //
   .cart-headers-mobile {
-      display: flex;
-      justify-content: space-around;
-      border-bottom: solid 1px $soft-grey;
-      h3 {
-        flex-basis: 70px;
-        text-align: initial;
-        min-width: initial;
-    }
+    display: flex;
+    justify-content: space-around;
+    border-bottom: solid 1px $soft-grey;
   }
 
   .cart-row-mobile {
+
     display: flex;
     flex-direction: column;
     padding: $small-padding 0px;
     border-bottom: solid 1px $soft-grey;
+
+    p {
+      margin: 0px;
+    }
 
     .cart-row-details {
       display: flex;
@@ -107,21 +140,9 @@
     .cart-row-numbers {
       display: flex;
       justify-content: space-around;
-      p {
-        flex-basis: 70px;
-      }
+    }
+    .controls {
+      width: initial;
     }
   }
-  .promo {
-
-    text-align: center;
-    padding: 5px 0px;
-    background-color: $light-grey;
-    margin-bottom: $small-padding;
-
-    .green {
-      color: $voltera-green;
-    }
-  }
-
 }
