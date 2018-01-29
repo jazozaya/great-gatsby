@@ -209,7 +209,7 @@ export default class InTheBox extends React.Component {
 
   renderMobile() {
     return(
-        <section className="box-wrapper">
+        <section id="v-one-box" className="box-wrapper">
           <h1>What is in the box?</h1>
           <p className="pull-center">The V-One comes with all the accessories and consumables you need to start building hardware faster.</p>
           <img src="/v-one-box-min.png" />
@@ -231,7 +231,7 @@ export default class InTheBox extends React.Component {
 
   renderDesktop() {
     return (
-      <section className="box-wrapper">
+      <section id="v-one-box" className="box-wrapper">
         <h1>What is in the box?</h1>
         <p className="pull-center">The V-One comes with all the accessories and consumables you need to start building hardware faster.</p>
         <div className="flex-row">
