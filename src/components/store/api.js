@@ -1,11 +1,12 @@
 import Client from 'shopify-buy'
 import Cookies from 'universal-cookie'
-import 'whatwg-fetch'
+import fetch from 'node-fetch'
+//import 'whatwg-fetch'
 
 var client = Client.buildClient({
   storefrontAccessToken: '349df796683b8ac51137cbe5f43dbcfc',
   domain: 'voltera.myshopify.com',
-});
+}, fetch);
 
 const cookies = new Cookies()
 
