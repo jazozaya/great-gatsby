@@ -28,7 +28,7 @@ export default class MyRefund extends React.Component {
         <p>To be eligible for an exchange you must contact support@voltera.io and request a Return Materials Authorization (RMA) and a return shipping label. Voltera reserves the right to refuse or return any product sent back without an RMA.</p>
         <h2>Shipping</h2>
         <p>To return or exchange your product, you should mail your product to: 113 Breithaupt Street, Suite 100, Kitchener, Ontario, N2H 5G9. You must include a copy of your purchase invoice and a copy of your RMA along with your return.</p>
-        <p>You are required to use our approved carrier to return your product, and you will be responsible for paying for all shipping costs associated with returning your item. Shipping costs are non-refundable.</p>
+        <p>You will be responsible for paying for all shipping costs associated with returning your item. Shipping costs are non-refundable.</p>
         <p>Depending on where you live, the time it may take for your exchanged product to reach you may vary.</p>
       </section>
     )
