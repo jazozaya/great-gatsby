@@ -92,16 +92,16 @@
 
     .rivet-container-small {
       background-image: url('./rivet-container-small.min.svg');
-      top: 210px;
-      left: 188px;
+      left: 121px;
+      top: 209px;
       width: 48px;
       height: 48px;
     }
 
     .rivet-container-large {
       background-image: url('./rivet-container-large.min.svg');
-      left: 121px;
-      top: 209px;
+      top: 210px;
+      left: 188px;
       width: 48px;
       height: 48px;
     }
@@ -126,7 +126,7 @@
 
 
 @media (max-width: $mobile-threshold) {
-  .box-wrapper img {
+  .box-wrapper-drill img {
     width: 100%;
     height: auto;
   }

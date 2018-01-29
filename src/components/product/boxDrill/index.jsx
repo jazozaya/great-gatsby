@@ -1,5 +1,6 @@
 import React from 'react'
 import Bowser from 'bowser'
+import Link from 'gatsby-link'
 import './box.scss'
 
 const summary = {
@@ -30,7 +31,7 @@ export default class InTheBox extends React.Component {
     return(
       <div>
         <h2>The V-One Drill Attachment</h2>
-        <p>This attachment snaps onto the V-One just like the probe and dispenser. The V-One </p>
+        <p>This attachment snaps onto the V-One just like the probe and dispenser. It might look small, but it packs a punch!</p>
         <p>Hover over the items on the left to learn more.</p>
         <i>Items not listed here: 4 Thumbscrews, 1 Hex key, 1 drilling starter circuit.</i>
       </div>
@@ -62,8 +63,8 @@ export default class InTheBox extends React.Component {
     return (
       <div>
         <h2>3x4” FR1 Substrates</h2>
-        <p></p>
-        <p>TODO - fix this text </p>
+        <p>When you start to run out of space in your design, migrate over to the larger substrates. These are also made of FR1 to extend the life of the drill bits.</p>
+        <p>We have even larger boards in our <Link to="/store/">store</Link>!</p>
         <i>6 substrates included</i>
       </div>
     )
@@ -73,8 +74,8 @@ export default class InTheBox extends React.Component {
     return (
       <div>
         <h2>Rivet Tools</h2>
-        <p>Use the right tool for the right job. These steel tools are used to press the rivets on the PCB after holes have been drilled.</p>
-        <p>They have been designed for optimum performance on the ink and ensures an electrical connection between the top and bottom layers of your PCB.</p>
+        <p>Use the right tool for the right job. These steel stakes are used to press the rivets on the PCB after holes have been drilled.</p>
+        <p>They have been designed for optimum performance on the ink and ensure an electrical connection between the top and bottom layers of your PCB.</p>
         <i>2 sizes included.</i>
       </div>
     )
@@ -84,8 +85,8 @@ export default class InTheBox extends React.Component {
     return (
       <div>
         <h2>1.0mm Rivets</h2>
-        <p>Every circuit needs a place to live. Once your design is finished, export the Gerbers and mount your substrate on the V-One to start printing.</p>
-        <p>These substrates are standard FR4 boards coated with solder mask to make hand soldering and reflowing easier. We have several sizes to suit your needs, visit our store to see them all!</p>
+        <p>Recommended for larger components like headers, buttons and connectors - these large (1.0 mm inner diameter) rivets are perfect to create plated through holes.</p>
+        <p>Feed the component legs through it and solder away. They will provide a secure mechanical connection and protect the ink.</p>
         <i>200 Pcs included.</i>
       </div>
     )
@@ -95,9 +96,9 @@ export default class InTheBox extends React.Component {
     return(
       <div>
         <h2>0.4mm Rivets</h2>
-        <p>This dispensing head is used to deposit ink or solder paste onto your board. An internal leadscrew is the key for extremely fine control over the ink flow.</p>
-        <p>Installing them on the machine is a snap. Literally! The finger grips and magnets allow for seamless mounting and removal. No tools required.</p>
-        <i>200 Pcs incldued.</i>
+        <p>These tiny rivets can create vias in seconds. Just grab a set of tweezers and insert them in the drilled hole, flip the board over and press down with the rivet tool.</p>
+        <p>They have an internal diameter of 0.4mm and an head diameter of 0.9mm. </p>
+        <i>200 Pcs included.</i>
       </div>
     )
   }
@@ -106,8 +107,8 @@ export default class InTheBox extends React.Component {
     return(
       <div>
         <h2>Sacrificial Layer</h2>
-        <p>The heated platform of the v-one needs to be protected. Mount this board on and then mount your substrate on top.</p>
-        <p>it will protect the heated bed of the V-One and the drill bits from any damage.</p>
+        <p>To protect the V-One from any damage during drilling, mount this piece of FR1 on the heated bed and clamp your substrate on top.</p>
+        <p>Don't worry, the sacrifical layer can be reused plenty of times.</p>
         <i>1 sacrificial board included</i>
       </div>
     )
@@ -117,7 +118,8 @@ export default class InTheBox extends React.Component {
     return(
       <div>
         <h2>Safety Glasses</h2>
-        <p>talk about safety first! We want to make sure you do things right</p>
+        <p>Safety first! The drill will be rotating at very high speeds during operation. It is improtant to protect your eyes from any debris.</p>
+        <p>Always were eye protection when working with the drill!</p>
         <i>1 set included</i>
       </div>
     )
@@ -189,32 +191,31 @@ export default class InTheBox extends React.Component {
 
   renderMobile() {
     return(
-        <div className="box-wrapper-drill">
+        <section id="drill-box" className="box-wrapper-drill">
           <h1>What is in the box?</h1>
           <p className="pull-center">The V-One Drill comes with everything you need to make double sided boards out of the box.</p>
           <img src="/v-one-box-min.png" />
           <div className="mobile-contents">
             <p><strong>1 - V-One Drill</strong>.<br />A drilling attachment for the Voltera V-One</p>
-            <p><strong>1 - Drill Bits Set</strong>.<br />--</p>
-            <p><strong>200 - 0.4mm Rivets</strong>.<br />--</p>
-            <p><strong>200 - 1.0mm Rivets</strong>.<br />--</p>
-            <p><strong>1 - 0.4mm Rivet Tool</strong>.<br />--</p>
-            <p><strong>1 - 1.0mm Rivet Tool</strong>.<br />--</p>
-            <p><strong>10 - 2x3” FR1 Substrates</strong>.<br />--</p>
-            <p><strong>6 - 3x4” FR1 Substrates</strong>.<br />--</p>
-            <p><strong>1 - Safety Glasses</strong>.<br />--</p>
-            <p><strong>1 - Sacrificial Layer</strong>.<br />--</p>
-            <p><strong>4 - 10mm Long thumbcrews</strong>.<br />--</p>
-            <p><strong>1 - 2.5mm Hex Key</strong>.<br />--</p>
+            <p><strong>1 - Drill Bits Set</strong>.<br />A set of precision drill bits with 5 different sizes.</p>
+            <p><strong>200 - 0.4mm Rivets</strong>.<br />Copper tubes for making vias.</p>
+            <p><strong>200 - 1.0mm Rivets</strong>.<br />Copper tubes for making plated through holes.</p>
+            <p><strong>2 - Rivet Tools</strong>.<br />Steel tools for perfectly pressing your rivets.</p>
+            <p><strong>10 - 2x3” FR1 Substrates</strong>.<br />Made of FR1 - to extend the life of the bits.</p>
+            <p><strong>6 - 3x4” FR1 Substrates</strong>.<br />Larger boards for when you need more space.</p>
+            <p><strong>1 - Safety Glasses</strong>.<br />Safety first! The motor spins at high speeds.</p>
+            <p><strong>1 - Sacrificial Layer</strong>.<br />Mount it on the V-One to protect the heated bed.</p>
+            <p><strong>4 - 10mm Long thumbcrews</strong>.<br />Clamp your substrates down easier!</p>
+            <p><strong>1 - 2.5mm Hex Key</strong>.<br />Used to swap out our drill bits.</p>
 
           </div>
-      </div>
+      </section>
     );
   }
 
   renderDesktop() {
     return (
-      <div className="box-wrapper-drill">
+      <section id="drill-box" className="box-wrapper-drill">
         <h1>What is in the box?</h1>
         <p className="pull-center">The V-One Drill comes with everything you need to make double sided boards out of the box.</p>
         <div className="flex-row">
@@ -223,7 +224,7 @@ export default class InTheBox extends React.Component {
             {this.renderDescription()}
           </div>
         </div>
-      </div>
+      </section>
     );
   }
   render() {
