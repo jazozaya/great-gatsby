@@ -25,8 +25,7 @@
     "react-svg-inline": "^2.0.0",
     "react-youtube": "^7.4.0",
     "shopify-buy": "^1.0.2",
-    "universal-cookie": "^2.1.0",
-    "whatwg-fetch": "^2.0.3"
+    "universal-cookie": "^2.1.2"
   },
   "keywords": [
     "gatsby"
