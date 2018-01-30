@@ -1,7 +1,7 @@
 import React from 'react'
 import Bowser from 'bowser'
 import Link from 'gatsby-link'
-import './box.scss'
+import './box-drill.scss'
 
 const summary = {
   // IMPORTANT - These names need to match class names in CSS
