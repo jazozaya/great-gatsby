@@ -50,6 +50,7 @@ export default class Collection extends React.Component {
       )
     }
 
+
     return (
       <section className="collection-wrapper">
         {this.renderHelmet(collection)}
