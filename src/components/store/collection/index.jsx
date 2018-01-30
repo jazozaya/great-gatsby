@@ -17,7 +17,7 @@ export default class Collection extends React.Component {
     }
   }
 
-  componentWillMount() {
+  componentDidMount() {
     const { collectionId } = this.props;
 
     fetchCollectionDetails(collectionId).then(collection => this.setState({collection: collection}))

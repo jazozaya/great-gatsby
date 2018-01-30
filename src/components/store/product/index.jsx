@@ -25,7 +25,7 @@ export default class Product extends React.Component {
     this.processOptionChange = this.processOptionChange.bind(this);
   }
 
-  componentWillMount() {
+  componentDidMount() {
     const { productId, collectionId, noRelevant } = this.props
     fetchProduct(productId).then(product => this.setState({product: product}))
 

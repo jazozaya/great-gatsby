@@ -19,7 +19,7 @@ export default class Cart extends React.Component {
     };
   }
 
-  componentWillMount() {
+  componentDidMount() {
     fetchRecentCheckout().then(checkout => this.setState({checkout: checkout}))
   }
   removeItemFromCart(lineItemId){
