@@ -100,7 +100,7 @@ export default class Cart extends React.Component {
         <p className="subtotal pull-right">Subtotal: ${checkout.subtotalPrice} USD</p>
         <p className="pull-right"><i>Shipping, taxes, and discounts will be calculated at checkout</i></p>
         <div className="cart-buttons pull-right">
-          <Button label="Continue Shopping" url="/store/" internal={true} color="dark"/>
+          <Button label="Continue Shopping" url="/store/" internal color="dark"/>
           <Button label="Checkout" url={checkout.webUrl} internal={false} color="light"/>
         </div>
       </div>
@@ -120,7 +120,7 @@ export default class Cart extends React.Component {
         <p className="subtotal pull-right">Subtotal: ${checkout.subtotalPrice} USD</p>
         <p className="pull-right"><i>Shipping, taxes, and discounts will be calculated at checkout</i></p>
         <div className="cart-buttons pull-center">
-          <Button label="Continue" url="/store/" internal={true} color="dark"/>
+          <Button label="Continue" url="/store/" internal color="dark"/>
           <Button label="Checkout" url={checkout.webUrl} internal={false} color="light"/>
         </div>
       </div>
@@ -141,7 +141,7 @@ export default class Cart extends React.Component {
           <p>Your cart is currently empty!</p>
           <img src={EmptyCart} width="200px"/>
           <p>Browse through our collections to view all of our product offerings.</p>
-          <Button label="Continue Shopping" url="/store/" internal={true} color="dark"/>
+          <Button label="Continue Shopping" url="/store/" internal color="dark"/>
         </div>
       )
     }

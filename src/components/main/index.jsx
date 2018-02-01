@@ -1,9 +1,7 @@
 import React from 'react'
-import Helmet from 'react-helmet'
 
 import CallToAction from 'components/common/cta';
 import Awards from 'components/common/awards'
-import CustomerQuotes from 'components/common/customer'
 
 import Hero from './hero'
 import Testimonial from './testimonial'
@@ -32,12 +30,10 @@ export default class Index extends React.Component {
 
     return (
       <div>
-        <Hero />
+        <Hero profile={this.props.profile} />
         <Summary />
         <FeatureSelector/>
         <Testimonial />
-        <BenefitsSelector />
-        <CustomerQuotes />
         <Awards />
         <CallToAction
           title="Want to get in touch?"

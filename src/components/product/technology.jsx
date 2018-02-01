@@ -8,10 +8,10 @@ import Specs from 'components/common/specs';
 import MiniHero from 'components/common/minihero'
 import FastFact from 'components/common/fastFact'
 import AskUs from 'components/common/askUs'
+import CustomerQuotes from 'components/common/customer'
 
 import TechnologyFAQ from 'components/faq/technology'
 import Box from './box'
-import HelpMe from './helpMe'
 
 import './common.scss'
 
@@ -65,8 +65,8 @@ export default class Technology extends React.Component {
           </div>
           <img src="/voltera-probe-min.png"/>
         </section>
-        <HelpMe />
         <Box />
+        <CustomerQuotes />
         <TechnologyFAQ id="faq" title="F.A.Q." all />
         <Specs display="vOne" />
         <CallToAction

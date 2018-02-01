@@ -16,6 +16,7 @@ export default class PrintFAQ extends React.Component {
           <Question underline title="How are vias and through holes created?">
             <p>We use rivets! Rivets are just small copper tubes.  They are placed in a hole and pressed into place using a special tool. A mechanical connection is made between the top and bottom layers.</p>
             <p>The V-One Drill comes with a pack of small rivets (200 pcs, 0.4mm ID) and large rivets (200 pcs, 1.0mm ID)</p>
+            <p>Check out the tutorial <a target="_blank" href="https://support.voltera.io/hc/en-us/articles/115005071313">here</a>.</p>
           </Question>
           <Question underline title="Can I route shapes? What about copper?">
             <p>For the time being, only drilling holes are supported. The V-One is not designed to withstand the lateral forces experienced during milling.</p>

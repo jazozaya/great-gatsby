@@ -5,10 +5,11 @@ import './dots.scss'
 export default class Dots extends React.Component {
 
   renderDot(index, selected) {
+    const { callback } = this.props
     if (index === selected) {
       return <div className="dot selected"></div>
     }
-    return <div className="dot"></div>
+    return <div className="dot" onClick={() => callback(index)}></div>
   }
 
   // There must be a better way of doing this... but i'm feeling lazy.

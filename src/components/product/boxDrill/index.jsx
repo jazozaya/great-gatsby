@@ -42,7 +42,7 @@ export default class InTheBox extends React.Component {
     return(
       <div>
         <h2>Drill Bit Set</h2>
-        <p>A set of precision drill bits. Installing them is easy and only needs a single 2.5mm hex key to install them in coupler.</p>
+        <p>A set of precision drill bits. Installing them is easy and only needs a single 1.5mm hex key to install them in coupler.</p>
         <p>The most common PCB drill sizes are included: 0.70mm, 0.80mm, 0.90mm, 1.00mm, 1.60mm. Two drill bits for each size.</p>
         <i>1 set included.</i>
       </div>
@@ -118,7 +118,7 @@ export default class InTheBox extends React.Component {
     return(
       <div>
         <h2>Safety Glasses</h2>
-        <p>Safety first! The drill will be rotating at very high speeds during operation. It is improtant to protect your eyes from any debris.</p>
+        <p>Safety first! The drill will be rotating at very high speeds during operation. It is important to protect your eyes from any debris.</p>
         <p>Always were eye protection when working with the drill!</p>
         <i>1 set included</i>
       </div>
@@ -194,7 +194,7 @@ export default class InTheBox extends React.Component {
         <section id="drill-box" className="box-wrapper-drill">
           <h1>What is in the box?</h1>
           <p className="pull-center">The V-One Drill comes with everything you need to make double sided boards out of the box.</p>
-          <img src="/v-one-box-min.png" />
+          <img src="/drill-box-min.png" />
           <div className="mobile-contents">
             <p><strong>1 - V-One Drill</strong>.<br />A drilling attachment for the Voltera V-One</p>
             <p><strong>1 - Drill Bits Set</strong>.<br />A set of precision drill bits with 5 different sizes.</p>
@@ -206,7 +206,7 @@ export default class InTheBox extends React.Component {
             <p><strong>1 - Safety Glasses</strong>.<br />Safety first! The motor spins at high speeds.</p>
             <p><strong>1 - Sacrificial Layer</strong>.<br />Mount it on the V-One to protect the heated bed.</p>
             <p><strong>4 - 10mm Long thumbcrews</strong>.<br />Clamp your substrates down easier!</p>
-            <p><strong>1 - 2.5mm Hex Key</strong>.<br />Used to swap out our drill bits.</p>
+            <p><strong>1 - 1.5mm Hex Key</strong>.<br />Used to swap out our drill bits.</p>
 
           </div>
       </section>

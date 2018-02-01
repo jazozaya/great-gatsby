@@ -12,6 +12,7 @@ import { printGallery } from 'components/common/gallery/constants'
 import PrintFAQ from 'components/faq/print'
 
 import Workflow from './workflow'
+import HelpMe from './helpMe'
 
 import './common.scss'
 
@@ -74,6 +75,7 @@ export default class Print extends React.Component {
             </div>
           </section>
         <PrintFAQ id="faq" title="F.A.Q." all />
+        <HelpMe/>
         <Gallery
           title="A platform for all of your needs."
           description="The V-One is a versatile tool that will help you in any stage of development"

@@ -13,12 +13,6 @@ export default class PrintFAQ extends React.Component {
             <p>A single ink cartridge will allow you to print up to 85 <strong>Hello World</strong> boards. This also equates to 100 m of conductive trace at 8 mil width, or 200 cm2 of solid pour.  The number of boards you are able to print will depend on size and complexity of the circuits you are building.</p>
             <p>The ink cartridge has an official shelf life of 6 months and should be stored in the refrigerator when not used.</p>
           </Question>
-          <Question underline title="How does double sided printing work?">
-            <p>We created a <a target="_blank" href="https://www.youtube.com/watch?v=iMqxk5a3u0Q">video</a> that walks you through this process!</p>
-          </Question>
-          <Question underline title="Can you hand solder to the ink?">
-            <p>Yes! We have a comprehensive user guide on soldering to conductive ink for through-hole components and connectors. <a target="_blank" href="http://www.voltera.io/handsoldering">Take a look!</a></p>
-        </Question>
           <Question underline title="Are there frequency or current limitations?">
             <p>An 8 month research partnership with the University of Alberta demonstrated the ink will perform on par with standard copper up to 5 GHz!</p>
             <p>To learn about conductivity considerations, visit our <a target="_blank" href="https://support.voltera.io/hc/en-us/articles/115005825067/#Conductivity">article</a> in our support docs.</p>

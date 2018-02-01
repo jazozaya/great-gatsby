@@ -64,7 +64,7 @@ export default class Print extends React.Component {
             <source src="/product/drilling/v-one-drill.webm" type="video/webm"/>
           </video>
           <div className="description">
-            <h2>Compact, but accurate.</h2>
+            <h2>Compact and mighty.</h2>
             <p>It was designed to be as compact as possible, but don't let looks fool you - this drill packs a punch with a measured runout (TIR) of 1 mil (25 microns)</p>
             <p>Everything you need to get started is included: Drill bits of various sizes, FR1 substrates, rivets and more!</p>
           </div>
@@ -77,7 +77,6 @@ export default class Print extends React.Component {
               <h2>Rivets to the rescue!</h2>
               <p>Once holes are drilled and the top and bottom layer are printed, it is time to connect them!</p>
               <p>Rivets are little copper tubes that make a mechanical connection between the top and bottom layer. Rivets are by far the easiest way to create vias by hand.</p>
-              <p>Checkout the tutorial <Link to="/todo/">here!</Link></p>
             </div>
           </div>
           <div className="column">
@@ -91,8 +90,8 @@ export default class Print extends React.Component {
           </div>
         </section>
         <BoxDrill />
-        <Specs display="drill" />
         <DrillFAQ id="faq" title="F.A.Q." all />
+        <Specs display="drill" />
         <Gallery
           title="A platform for all of your needs."
           description="The V-One is a versatile tool that will help you in any stage of development"

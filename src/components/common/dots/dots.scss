@@ -1,0 +1,21 @@
+@import 'src/css/colors';
+
+.dots {
+  display: flex;
+  width: 80px;
+  margin: $small-padding auto;
+  justify-content: space-between;
+
+  .dot {
+    width:15px;
+    height: 15px;
+    border-radius: 100%;
+    background-color: darken($light-grey, 20);
+    cursor: pointer;
+  }
+
+  .dot.selected {
+    background-color: $voltera-green;
+  }
+
+}

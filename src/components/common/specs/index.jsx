@@ -31,8 +31,8 @@ export default class Specs extends React.Component {
     return (
     <div id="specs-drill" className="specs-wrapper">
       <div className="specs">
-        <h1>Attachment Specifications</h1>
-        <p className="pull-center">Find the most up to date specifications about the V-One Drill</p>
+        <h1>V-One Drill Specifications</h1>
+        <p className="pull-center">Find the most up to date specifications about our new drilling attachment.</p>
         {this.renderUnitChange(units)}
         <div className="table">
           <h3>Device </h3>
@@ -50,6 +50,11 @@ export default class Specs extends React.Component {
             <p>Power</p>
             <p>12V, 25W</p>
             <p>12V, 25W</p>
+          </Row>
+          <Row units={units} dark>
+            <p>Drilling Data</p>
+            <p>Excellon (TXT)</p>
+            <p>Excellon (TXT)</p>
           </Row>
         </div>
         <div className="table">
@@ -84,7 +89,7 @@ export default class Specs extends React.Component {
     return(
       <div id="specs" className="specs-wrapper">
         <div className="specs">
-          <h1>Technical Specifications</h1>
+          <h1>V-One Specifications</h1>
           <p className="pull-center">Find the most up to date specifications about the Voltera V-One here. Send us an email if you cannot find what you are looking for.</p>
           {this.renderUnitChange(units)}
           <div className="table">
