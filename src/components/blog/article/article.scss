@@ -1,0 +1,41 @@
+@import 'src/css/colors';
+
+.article-wrapper {
+  max-width: 800px;
+
+  figure {
+    margin: $small-padding 0px;
+
+    img {
+      max-width: 800px;
+      width: 100%;
+      height: auto;
+    }
+  }
+  figcaption {
+    text-align: center;
+    font-style: italic;
+    margin-top: 5px;
+  }
+
+  .preamble {
+    padding-bottom: $small-padding;
+    border-bottom: solid 1px $divider;
+    display: flex;
+
+    img {
+      margin-right: $small-padding;
+    }
+
+    p {
+      font-size: 0.8em;
+      margin: 0px;
+    }
+    h2 {
+      text-align: left;
+      margin: 0px;
+      font-size: 1.3em;
+    }
+  }
+
+}
