@@ -9,12 +9,12 @@ export default class Hero extends React.Component {
   constructor(props) {
     super(props);
     this.state ={
-      index: 0
+      index: 1
     };
 
     // Save timer id so we clear it when we navigate away.
     const profile = parseInt(props.profile)
-    this.state.index = profile ? profile : 0
+    this.state.index = profile ? profile : 1
     this.state.intervalId = setInterval(() => this.setState({index: (this.state.index + 1) % 3}), 5000)
     this.overrideSelection = this.overrideSelection.bind(this)
   }
@@ -32,25 +32,6 @@ export default class Hero extends React.Component {
     this.setState({intervalId: intervalId, index: newIndex})
   }
 
-  renderDrill() {
-    return (
-      <div className="hero drill">
-        <div className="wrapper">
-          <h1>Meet the V-One Drill.</h1>
-          <p>Create double sided circuit boards on your desk.</p>
-          <div className="buttons">
-            <Button label="Buy Now - $699" url="/store/" internal color="light" />
-            <Button label="Learn More" url="/product/technology/" internal color="clear" />
-          </div>
-        </div>
-
-        <div className="dots-position">
-          <Dots selected="0" total="3" callback={this.overrideSelection}/>
-        </div>
-      </div>
-    );
-  }
-
   renderVOne() {
     return (
       <div className="hero v-one">
@@ -63,11 +44,31 @@ export default class Hero extends React.Component {
           </div>
         </div>
         <div className="dots-position">
+          <Dots selected="0" total="3" callback={this.overrideSelection}/>
+        </div>
+      </div>
+    );
+  }
+
+  renderDrill() {
+    return (
+      <div className="hero drill">
+        <div className="wrapper">
+          <h1>Meet the V-One Drill.</h1>
+          <p>Create double sided circuit boards on your desk.</p>
+          <div className="buttons">
+            <Button label="Buy Now - $699" url="/store/" internal color="light" />
+            <Button label="Learn More" url="/product/drill/" internal color="clear" />
+          </div>
+        </div>
+
+        <div className="dots-position">
           <Dots selected="1" total="3" callback={this.overrideSelection}/>
         </div>
       </div>
     );
   }
+
 
   renderExperiment() {
     return (
@@ -90,9 +91,9 @@ export default class Hero extends React.Component {
   render() {
     switch(this.state.index) {
       case 0:
-      return this.renderDrill();
-      case 1:
       return this.renderVOne();
+      case 1:
+      return this.renderDrill();
       case 2:
       return this.renderExperiment()
       default:
