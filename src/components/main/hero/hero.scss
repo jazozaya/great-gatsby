@@ -40,7 +40,7 @@
 // Specific to V-One Hero
 .hero.v-one {
   background-image: url('./circuit-board-printer.jpg');
-  background-position: bottom;
+  background-position: center;
 
   .wrapper {
     margin: auto;
@@ -60,7 +60,7 @@
 
 .hero.drill {
   background-image: url('./drilling-attachment.jpg');
-  background-position: top;
+  background-position: center;
 
   .wrapper {
     text-align: center;
@@ -83,7 +83,7 @@
 
 .hero.dispensing {
   background-image: url('./dispensing-machine.jpg');
-  background-position: top;
+  background-position: center;
 
   .wrapper {
     text-align: right;
