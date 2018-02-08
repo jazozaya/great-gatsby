@@ -60,7 +60,7 @@ export default class Print extends React.Component {
           <img src="/product/drilling/drill-attachment.jpg"/>
         </section>
         <section className="flex-row">
-          <video width="600" height="500" autoPlay loop>
+          <video playsInline muted width="600" height="500" autoPlay loop>
             <source src="/product/drilling/v-one-drill.webm" type="video/webm"/>
           </video>
           <div className="description">

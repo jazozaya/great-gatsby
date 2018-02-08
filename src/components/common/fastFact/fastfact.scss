@@ -25,7 +25,7 @@
 }
 
 .fast-fact p {
-  font-weight: 300px;
+  font-weight: 300;
   font-size: 0.9em;
   line-height: 0.9em;
   margin: 3px;
@@ -34,16 +34,8 @@
 @media (max-width: $mobile-threshold) {
   .fast-fact {
     margin: $small-padding  10px;
-  }
-  .fast-fact h4 {
-    font-size: 1.0em;
-    line-height: 0.6em;
-  }
-  .fast-fact p {
     font-size: 0.7em;
-  }
-
-  .fast-fact {
+    
     width: 80px;
     height: 80px;
   }
