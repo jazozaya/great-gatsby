@@ -48,6 +48,7 @@ export default class LandingRequest extends React.Component {
       email: document.getElementById('email').value,
       phone: document.getElementById('phone').value,
       country: document.getElementById('country').value,
+      question: "THIS CONTACT REPLIED TO THE NEWSLETTER EMAIL AND SHOWED INTEREST IN THE DRILL. HANG ON TO HIS EMAIL UNTIL WE FIGURE OUT WHAT TO DO WITH THEM."
     }
 
     // Change state to sending.
@@ -97,7 +98,7 @@ export default class LandingRequest extends React.Component {
   renderRequest() {
     return (
       <div>
-        <h2>Want to know more?</h2>
+        <h2>Be the first to get all the details!</h2>
         <form>
           <h3>Contact Information</h3>
           <div className="format">
@@ -147,8 +148,8 @@ export default class LandingRequest extends React.Component {
     return (
       <div className="landing-wrapper">
         <div className="request">
-          <h1>Hi there!</h1>
-          <p className="pull-center"><strong>Hole</strong>-y smokes we're launching a new add-on!  We'll be <strong>drilling</strong> down to the details next month!</p>
+          <h1>It's finally here!</h1>
+          <p className="pull-center">The <strong>V-One Drill Attachment</strong> is launching next week! It makes double sided boards a breeze.</p>
           {this.renderVideo()}
           {this.renderStatus()}
         </div>
