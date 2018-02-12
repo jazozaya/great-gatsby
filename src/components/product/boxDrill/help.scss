@@ -32,4 +32,36 @@
     position: relative;
     flex-shrink: 0;
   }
+
+  .outline {
+    opacity: 0;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: top;
+    position: absolute;
+  }
+
+  .outline:hover {
+    opacity: 1;
+  }
+  
+  .visible {
+    opacity: 1;
+  }
+
+  .drill {
+    background-image: url('./drill.min.svg');
+    top: 153px;
+    left: 273px;
+    width: 53px;
+    height: 118px;
+  }
+
+  .drill-bit-container {
+    background-image: url('./drill-bit-container.min.svg');
+    left: 119px;
+    top: 117px;
+    width: 116px;
+    height: 79px;
+  }
 }
