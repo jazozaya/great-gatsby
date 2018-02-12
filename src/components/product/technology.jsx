@@ -11,7 +11,7 @@ import AskUs from 'components/common/askUs'
 import CustomerQuotes from 'components/common/customer'
 
 import TechnologyFAQ from 'components/faq/technology'
-//import Box from './box'
+import Box from './box'
 
 import './common.scss'
 
@@ -65,7 +65,7 @@ export default class Technology extends React.Component {
           </div>
           <img src="/voltera-probe-min.png"/>
         </section>
-        {/*<Box />*/}
+        <Box />
         <CustomerQuotes />
         <TechnologyFAQ id="faq" title="F.A.Q." all />
         <Specs display="vOne" />
