@@ -172,7 +172,7 @@ export default class InTheBox extends React.Component {
   renderInTheBox(){
 
     if(!this.state.interacted) {
-      return <div className="try-me" onClick={() => this.setState({interacted: true})}/>
+      return <div className="try-me-drill" onClick={() => this.setState({interacted: true})}/>
     }
     return(
       <div className="in-the-box">

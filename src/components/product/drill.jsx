@@ -8,12 +8,7 @@ import YouTube from 'components/common/youtube'
 import Specs from 'components/common/specs';
 
 import BoxDrill from 'components/product/boxDrill'
-
-import Gallery from 'components/common/gallery'
-import { printGallery } from 'components/common/gallery/constants'
-
 import DrillFAQ from 'components/faq/drill'
-
 import Workflow from './workflow'
 
 import './common.scss'
@@ -46,8 +41,8 @@ export default class Print extends React.Component {
           <div className="promo">
             <YouTube
               width="800"
-              videoId="PeW1nURJ5ww"
-              url="/selector/print-conductive-silver-ink.jpg"
+              videoId="fNGT2Iz0UcE"
+              url="/selector/v-one-drill-attachment.jpg"
               />
           </div>
         </section>
@@ -92,11 +87,6 @@ export default class Print extends React.Component {
         <BoxDrill />
         <DrillFAQ id="faq" title="F.A.Q." all />
         <Specs display="drill" />
-        <Gallery
-          title="A platform for all of your needs."
-          description="The V-One is a versatile tool that will help you in any stage of development"
-          gallery= {printGallery}
-          />
         <CallToAction
           title="Ready to build faster?"
           subtitle="We can help with that."

@@ -15,7 +15,9 @@ export default class Main extends React.Component {
     return (
       <div className="store-wrapper">
         <Product productId={"Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0LzQ0OTY2NTk4NQ=="} noRelevant/>
-        <Product productId={"Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0LzQ4MzI5NjczOTM1OA=="} noRelevant/>
+        <div id="drill">
+          <Product productId={"Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0LzQ4MzI5NjczOTM1OA=="} noRelevant/>
+        </div>
         <div className="collection-separator"/>
         <LazyLoad height={500} offset={200} once>
           <Collection collectionId={c.bundles.id} noHelmet/>
