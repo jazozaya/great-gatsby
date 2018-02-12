@@ -1,3 +1,4 @@
+@import 'src/css/colors';
 
 .box-wrapper-drill {
 
@@ -112,5 +113,21 @@
     left: 359px;
     width: 211px;
     height: 160px;
+  }
+
+  .safety-glasses {
+    background-image: url('./safety-glasses.min.svg');
+    top: 121px;
+    left: 25px;
+    width: 67px;
+    height: 168px;
+  }
+}
+
+
+@media (max-width: $mobile-threshold) {
+  .box-wrapper-drill img {
+    width: 100%;
+    height: auto;
   }
 }
