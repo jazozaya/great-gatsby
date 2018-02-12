@@ -1,7 +1,7 @@
 import React from 'react'
 import Bowser from 'bowser'
 import Link from 'gatsby-link'
-import './box-drill.scss'
+import './boxdrill.scss'
 
 const summary = {
   // IMPORTANT - These names need to match class names in CSS
@@ -16,7 +16,7 @@ const summary = {
   safetyGlasses: "safety-glasses",
 }
 
-export default class InTheBox extends React.Component {
+export default class BoxDrill extends React.Component {
 
   constructor(props) {
     super(props);
@@ -207,7 +207,6 @@ export default class InTheBox extends React.Component {
             <p><strong>1 - Sacrificial Layer</strong>.<br />Mount it on the V-One to protect the heated bed.</p>
             <p><strong>4 - 10mm Long thumbcrews</strong>.<br />Clamp your substrates down easier!</p>
             <p><strong>1 - 1.5mm Hex Key</strong>.<br />Used to swap out our drill bits.</p>
-
           </div>
       </section>
     );
