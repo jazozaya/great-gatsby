@@ -34,7 +34,7 @@ export default class Technology extends React.Component {
             />
           <FastFact
             title="~5 USD"
-            label="Board cost."
+            label="Board cost"
             />
         </MiniHero>
         <section className="movie-time">

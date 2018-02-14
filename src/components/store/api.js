@@ -29,7 +29,7 @@ function setItem(itemName, value) {
 }
 
 var client = Client.buildClient({
-  storefrontAccessToken: '349df796683b8ac51137cbe5f43dbcfc',
+  storefrontAccessToken: 'b34b3e722fe10915ea813aae8310d8a0',
   domain: 'voltera.myshopify.com',
 }, fetch);
 

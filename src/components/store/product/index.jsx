@@ -142,6 +142,21 @@ export default class Product extends React.Component {
     )
   }
 
+  renderButton() {
+    const { product, variantIndex } = this.state
+
+    if(product.variants[variantIndex].available) {
+        return <Button label="Add to cart" onClick={() => this.addToCart()} color="light long"/>
+    } else {
+      return(
+        <div>
+          <p><i>Special item, please contact sales.</i></p>
+          <Button label="Contact Sales" url="/contact/" internal color="light long"/>
+        </div>
+      )
+    }
+  }
+
   render() {
     const { product, addedToCheckout, quantity, variantIndex } = this.state
 
@@ -167,7 +182,7 @@ export default class Product extends React.Component {
               <h2 className="pull-left price">${product.variants[variantIndex].price} USD</h2>
               {this.renderOptionSelection()}
               {this.renderQuantitySelection()}
-              <Button label="Add to cart" onClick={() => this.addToCart()} color="light long"/>
+              {this.renderButton()}
             </div>
         </div>
         <h2 className="pull-left">Description</h2>

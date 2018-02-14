@@ -27,7 +27,7 @@ export default class Print extends React.Component {
           >
           <FastFact
             title="8 mil"
-            label="Min. width"
+            label="Trace/space"
             />
           <FastFact
             title="0.65 mm"
