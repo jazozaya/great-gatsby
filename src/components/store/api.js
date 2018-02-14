@@ -3,7 +3,7 @@ import Cookies from 'universal-cookie'
 import 'whatwg-fetch'
 
 var shopClient = ShopifyBuy.buildClient({
-  accessToken: '349df796683b8ac51137cbe5f43dbcfc',
+  accessToken: 'c41daba67016b4d8ab6e2efc87ed94ef',
   domain: 'voltera.myshopify.com',
   appId: '6'
 });
