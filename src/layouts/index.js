@@ -7,7 +7,7 @@ import SignUp from 'components/common/signUp'
 
 import favicon from 'favicon.ico';
 
-import { loadIntercom, loadHeap, loadHotjar } from './api'
+import { loadIntercom, loadFacebookPixel, loadHeap, loadHotjar } from './api'
 
 import 'css/main.scss'
 
@@ -49,6 +49,9 @@ module.exports = React.createClass({
       loadHeap();
       //loadHotjar();
 
+      loadFacebookPixel();
+
+
       // Load Intercom
       loadIntercom()
       window.Intercom("boot", {
@@ -82,6 +85,9 @@ module.exports = React.createClass({
           <meta property="article:author" content="" />
           <link rel="shortcut icon" href={favicon} />
           <script defer="defer" type="text/javascript" src="https://www.googleadservices.com/pagead/conversion_async.js" charset="utf-8"></script>
+          <noscript>
+              {`<img height="1" width="1" src="https://www.facebook.com/tr?id=1802551463109806&ev=PageView&noscript=1"/>`}
+          </noscript>
         </Helmet>
         <Header pageName={this.props.location.pathname} />
         <SignUp />
