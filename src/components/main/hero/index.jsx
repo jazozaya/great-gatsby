@@ -57,7 +57,7 @@ export default class Hero extends React.Component {
           <h1>Meet the V-One Drill.</h1>
           <p>Create double sided circuit boards on your desk.</p>
           <div className="buttons">
-            <Button label="Buy Now - $499" url="/store/#drill" internal color="light" />
+            {/*<Button label="Buy Now - $499" url="/store/#drill" internal color="light" />*/}
             <Button label="Learn More" url="/product/drill/" internal color="clear" />
           </div>
         </div>
