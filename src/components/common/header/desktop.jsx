@@ -30,6 +30,7 @@ export default class Desktop extends React.Component {
         <div className="child-header">
           <Link className={this.startsWith(pageName, urls.technology)} to={urls.technology}>How it works</Link>
           <Link className={this.startsWith(pageName, urls.print )} to={urls.print}>Circuit Printing </Link>
+          <Link className={this.startsWith(pageName, urls.drill)} to={urls.drill}>Drilling</Link>
           <Link className={this.startsWith(pageName, urls.paste)} to={urls.paste}>Paste Dispensing</Link>
           <Link className={this.startsWith(pageName, urls.software)} to={urls.software}>Desktop Software</Link>
           <Link className={this.startsWith(pageName, urls.experiment)} to={urls.experiment}>Experiment</Link>
@@ -46,6 +47,7 @@ export default class Desktop extends React.Component {
           <Link className={this.includes(pageName, c.bundles.handle)} to={`/store/collection/${c.bundles.handle}/`}>{c.bundles.title}</Link>
           <Link className={this.includes(pageName, c.accessories.handle)} to={`/store/collection/${c.accessories.handle}/`}>{c.accessories.title}</Link>
           <Link className={this.includes(pageName, c.inks.handle)} to={`/store/collection/${c.inks.handle}/`}>{c.inks.title}</Link>
+          {/*<Link className={this.includes(pageName, c.drilling.handle)} to={`/store/collection/${c.drilling.handle}/`}>{c.drilling.title}</Link>*/}
           <Link className={this.includes(pageName, c.solder.handle)} to={`/store/collection/${c.solder.handle}/`}>{c.solder.title}</Link>
           <Link className={this.includes(pageName, c.substrates.handle)} to={`/store/collection/${c.substrates.handle}/`}>{c.substrates.title}</Link>
           <Link className={this.includes(pageName, c.swag.handle)} to={`/store/collection/${c.swag.handle}/`}>{c.swag.title}</Link>

@@ -54,8 +54,7 @@ export default class LandingRequest extends React.Component {
       return
     }
 
-    const intervalId = setInterval(this.updateIntercom, 1000)
-    this.state.intervalId = intervalId
+    this.state.intervalId = setInterval(this.updateIntercom, 1000)
   }
 
   sendRequest() {

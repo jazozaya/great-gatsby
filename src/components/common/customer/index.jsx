@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Dots from './dots'
+import Dots from 'components/common/dots'
 
 import './customer.scss'
 
@@ -13,8 +13,6 @@ const QuoteList = [
   //  "The results we have been getting so far exceed our expectations."
 ]
 
-var intervalId;
-
 export default class CustomerQuotes extends React.Component {
 
   constructor(props) {
@@ -22,28 +20,20 @@ export default class CustomerQuotes extends React.Component {
     this.state = {
       quoteIndex: 0,
       quoteOpacity: "visible",
-      lastChange: Date.now()
     };
     this.nextQuote = this.nextQuote.bind(this)
-    this.handleTimeout = this.handleTimeout.bind(this)
+    this.overrideSelection = this.overrideSelection.bind(this)
+  }
+
+  overrideSelection(newIndex) {
+    this.setState({ quoteIndex: newIndex, quoteOpacity: "hidden"})
   }
 
   nextQuote() {
-    this.setState( { quoteIndex: (this.state.quoteIndex + 1) % QuoteList.length, quoteOpacity: "hidden", lastChange: Date.now() })
+    this.setState( { quoteIndex: (this.state.quoteIndex + 1) % QuoteList.length, quoteOpacity: "hidden" })
   }
   previousQuote() {
-    this.setState( {quoteIndex: (this.state.quoteIndex + QuoteList.length - 1) % QuoteList.length,  quoteOpacity: "hidden", lastChange: Date.now() })
-  }
-
-
-  handleTimeout() {
-    console.log("Handling Timeout")
-    if (Date.now() - this.state.lastChange > 4*1000) {
-      console.log("Changing Quote")
-      this.nextQuote();
-    } else {
-      console.log("Not enough time has passed since last change")
-    }
+    this.setState( {quoteIndex: (this.state.quoteIndex + QuoteList.length - 1) % QuoteList.length,  quoteOpacity: "hidden" })
   }
 
   componentDidUpdate() {
@@ -52,19 +42,12 @@ export default class CustomerQuotes extends React.Component {
     }
   }
 
-  // componentDidMount() {
-  //   intervalId = setInterval(this.handleTimeout, 5000);
-  // }
-  // componentWillUnmount() {
-  //   clearInterval(intervalId);
-  // }
-
   render() {
     const quoteClass = `quote ${this.state.quoteOpacity}`
 
     return (
       <div className="customer-wrapper shadow-banner">
-        <h2>What do our users say?</h2>
+        <h2>What are people saying?</h2>
         <div className="customer flex-row center-wide">
           <div className="navigation left" onClick={() => this.previousQuote()}>&lt;</div>
           <div className="quote-wrapper">
@@ -77,6 +60,7 @@ export default class CustomerQuotes extends React.Component {
         <Dots
           selected={this.state.quoteIndex.toString()}
           total={QuoteList.length.toString()}
+          callback={this.overrideSelection}
           />
       </div>
     );

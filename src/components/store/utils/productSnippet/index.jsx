@@ -12,7 +12,7 @@ export default class ProductSnippet extends React.Component {
           <img src={product.image} />
         </div>
         <h3>{product.title}</h3>
-        <p className="price">{product.price}</p>
+        <p className="price">${product.price}</p>
         <p className="description">{product.description}</p>
       </Link>
     )
@@ -34,7 +34,7 @@ export default class ProductSnippet extends React.Component {
   render() {
     const { product, collectionId, external } = this.props;
     // A collection ID might not have been passed in.
-    var destination = `/store/product/?title=${product.title}&productId=${product.id}`
+    var destination = `/store/product/?productId=${product.id}`
     if (collectionId) {
       destination = `${destination}&collectionId=${collectionId}`
     }

@@ -1,6 +1,5 @@
 # General Redirects.
 /forums https://community.voltera.io/
-/blog https://medium.com/@voltera
 https://store.voltera.io https://www.voltera.io/store/
 http://store.voltera.io https://www.voltera.io/store/
 
@@ -32,6 +31,8 @@ http://store.voltera.io/* https://www.voltera.io/store/
 /msds https://support.voltera.io/hc/en-us/articles/115004414348
 /handsoldering https://support.voltera.io/hc/en-us/articles/115005823107
 /maintenance https://support.voltera.io/hc/en-us/articles/115004414408
+/start-drilling https://support.voltera.io/hc/en-us/articles/115005052354
+/rivets https://support.voltera.io/hc/en-us/articles/115005071313
 
 # Links used in the app
 /app-link/simple-vs-aligned https://support.voltera.io/hc/en-us/articles/115005825187
@@ -42,6 +43,7 @@ http://store.voltera.io/* https://www.voltera.io/store/
 /app-link/calibrating-the-solder-dispenser https://support.voltera.io/hc/en-us/articles/115004414848#calibrating-the-solder-dispenser
 /app-link/priming-the-dispenser https://support.voltera.io/hc/en-us/articles/115004294268#priming-the-dispenser
 /app-link/toolpath-selection https://support.voltera.io/hc/en-us/articles/115004294268#Print
+/app-link/drilling-tutorial https://support.voltera.io/hc/en-us/articles/360000744393
 /app-link/icon /favicon.ico
 
 # Documents

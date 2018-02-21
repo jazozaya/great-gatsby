@@ -43,6 +43,7 @@ export default class Mobile extends React.Component {
       <ul className="sub-header">
         <li><Link className={this.startsWith(pageName, urls.technology)} to={urls.technology}>How it works</Link></li>
         <li><Link className={this.startsWith(pageName, urls.print)} to={urls.print}>Circuit Printing </Link></li>
+        <li><Link className={this.startsWith(pageName, urls.drill)} to={urls.drill}>Drilling </Link></li>
         <li><Link className={this.startsWith(pageName, urls.paste)} to={urls.paste}>Paste Dispensing</Link></li>
         <li><Link className={this.startsWith(pageName, urls.software)} to={urls.software}>Desktop Software</Link></li>
         <li><Link className={this.startsWith(pageName, urls.experiment)} to={urls.experiment}>Experiment</Link></li>
@@ -62,6 +63,7 @@ export default class Mobile extends React.Component {
           <li><Link className={this.includes(pageName, c.bundles.handle)} to={`/store/collection/${c.bundles.handle}/`}>{c.bundles.title}</Link></li>
           <li><Link className={this.includes(pageName, c.accessories.handle)} to={`/store/collection/${c.accessories.handle}/`}>{c.accessories.title}</Link></li>
           <li><Link className={this.includes(pageName, c.inks.handle)} to={`/store/collection/${c.inks.handle}/`}>{c.inks.title}</Link></li>
+          {/*<li><Link className={this.includes(pageName, c.drilling.handle)} to={`/store/collection/${c.drilling.handle}/`}>{c.drilling.title}</Link></li>*/}
           <li><Link className={this.includes(pageName, c.solder.handle)} to={`/store/collection/${c.solder.handle}/`}>{c.solder.title}</Link></li>
           <li><Link className={this.includes(pageName, c.substrates.handle)} to={`/store/collection/${c.substrates.handle}/`}>{c.substrates.title}</Link></li>
           <li><Link className={this.includes(pageName, c.swag.handle)} to={`/store/collection/${c.swag.handle}/`}>{c.swag.title}</Link></li>

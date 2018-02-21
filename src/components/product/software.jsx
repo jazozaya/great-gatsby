@@ -6,7 +6,7 @@ import CallToAction from 'components/common/cta'
 import FastFact from 'components/common/fastFact'
 import MiniHero from 'components/common/minihero'
 import Explore from 'components/common/explore'
-import Dots from 'components/common/customer/dots'
+import Dots from 'components/common/dots'
 
 import SoftwareFAQ from 'components/faq/software'
 
@@ -42,6 +42,12 @@ export default class Software extends React.Component {
       imgIndex: 0,
       screenshot: "visible"
     };
+
+    this.overrideSelection = this.overrideSelection.bind(this)
+  }
+
+  overrideSelection(newIndex) {
+    this.setState({ imgIndex: newIndex, screenshot: "hidden"})
   }
 
   nextImage() {
@@ -93,6 +99,7 @@ export default class Software extends React.Component {
           <Dots
             selected={this.state.imgIndex.toString()}
             total={SoftwareImages.length.toString()}
+            callback={this.overrideSelection}
             />
         </section>
           <section className="flex-row column-wrapper">

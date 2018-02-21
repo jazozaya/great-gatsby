@@ -9,7 +9,7 @@ export default class Summary extends React.Component {
     return (
       <div className="summary-wrapper">
         <section className="summary center-narrow">
-          <h2>The V-One <a href="#print">prints double sided PCBs</a>, dispenses <a href="#paste">solder paste</a>, and will help you explore <Link to="/product/experiment/">new materials and substrates</Link>.</h2>
+          <h2>The V-One <Link to="/product/print/">prints double sided PCBs</Link>, dispenses <Link to="/product/paste/">solder paste</Link>, and will help you explore <Link to="/product/experiment/">new materials and substrates</Link>.</h2>
         </section>
       </div>
     );

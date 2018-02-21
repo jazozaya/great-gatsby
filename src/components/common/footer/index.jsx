@@ -41,7 +41,7 @@ export default class Footer extends React.Component {
             <ul>
               <li><Link to='/about/'>About Us</Link></li>
               <li><Link to='/contact/'>Contact</Link></li>
-              <li><a href="https://www.voltera.io/blog">Blog</a></li>
+              <li><Link to='/blog/'>Blog</Link></li>
               <li><a href="http://community.voltera.io">Forums</a></li>
             </ul>
           </div>

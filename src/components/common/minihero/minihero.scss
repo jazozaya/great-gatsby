@@ -9,6 +9,13 @@
   display: flex;
   align-items: center;
   box-sizing: border-box;
+}
+
+.mini-hero {
+  margin: auto;
+  max-width: $narrow-width;
+  color: $white;
+  text-align: center;
 
   h1 {
     color: $white;
@@ -17,13 +24,6 @@
   p {
     font-size: 1.1em;
   }
-}
-
-.mini-hero {
-  margin: auto;
-  max-width: $narrow-width;
-  color: $white;
-  text-align: center;
 }
 
 .mini-spacer {

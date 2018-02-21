@@ -5,6 +5,8 @@
   "author": "Jesus Zozaya <jesus@voltera.io>",
   "dependencies": {
     "bowser": "^1.7.1",
+    "es6-object-assign": "^1.1.0",
+    "es6-promise": "^4.2.4",
     "gatsby": "^1.9.119",
     "gatsby-link": "^1.0.1",
     "gatsby-plugin-google-analytics": "^1.0.3",
@@ -12,6 +14,7 @@
     "gatsby-plugin-sass": "^1.0.1",
     "google-map-react": "^0.24.0",
     "moment": "^2.18.1",
+    "node-fetch": "^1.7.3",
     "query-string": "^5.0.0",
     "react": "^15.6.2",
     "react-datepicker": "^0.48.0",
@@ -21,9 +24,8 @@
     "react-router-dom": "^4.2.2",
     "react-svg-inline": "^2.0.0",
     "react-youtube": "^7.4.0",
-    "shopify-buy": "^0.7.1",
-    "universal-cookie": "^2.1.0",
-    "whatwg-fetch": "^2.0.3"
+    "shopify-buy": "^1.0.2",
+    "universal-cookie": "^2.1.2"
   },
   "keywords": [
     "gatsby"

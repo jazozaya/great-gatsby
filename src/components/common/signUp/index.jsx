@@ -44,12 +44,12 @@ export default class Specs extends React.Component {
   }
 
   onClose() {
-    cookies.set(cookieName, 'seen', { path: '/' });
+    cookies.set(cookieName, 'seen', { path: '/', maxAge: 604800});
     this.setState({show: popStatus.processed})
   }
 
   onSubmit() {
-    cookies.set(cookieName, 'seen', { path: '/' });
+    cookies.set(cookieName, 'seen', { path: '/', maxAge: 604800});
     setTimeout(() => this.setState({show: popStatus.processed}), 100)
     // I have to add a delay, because:
     // If processed right away, the form is removed from DOM and it cannot be submitted.

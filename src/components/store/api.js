@@ -1,77 +1,70 @@
-import ShopifyBuy from 'shopify-buy'
-import Cookies from 'universal-cookie'
-import 'whatwg-fetch'
+import Client from 'shopify-buy'
+import fetch from 'node-fetch'
+import Bowser from 'bowser'
 
-var shopClient = ShopifyBuy.buildClient({
-  accessToken: 'c41daba67016b4d8ab6e2efc87ed94ef',
+// Polyfill
+if (Bowser.msie) {
+
+  require('es6-object-assign').polyfill();
+  require('es6-promise').polyfill();
+
+  if (!String.prototype.endsWith) {
+  	String.prototype.endsWith = function(search, this_len) {
+  		if (this_len === undefined || this_len > this.length) {
+  			this_len = this.length;
+  		}
+          return this.substring(this_len - search.length, this_len) === search;
+  	};
+  }
+}
+
+// Simple wrapper
+function getItem(itemName) {
+  return JSON.parse(sessionStorage.getItem(itemName))
+}
+
+// Simple wrapper
+function setItem(itemName, value) {
+  sessionStorage.setItem(itemName,JSON.stringify(value))
+}
+
+var client = Client.buildClient({
+  storefrontAccessToken: 'b34b3e722fe10915ea813aae8310d8a0',
   domain: 'voltera.myshopify.com',
-  appId: '6'
-});
-
-const cookies = new Cookies()
-
-function getCookie(name) {
-  return cookies.get(name)
-}
-
-function setCookie(name, object) {
-  const cookieLength = JSON.stringify(object).length
-  if (cookieLength > 2000){
-    console.warn(`Cookie ${name} is longish! ${cookieLength}`)
-  }
-  if (cookieLength > 4000){
-    console.error(`Cookie ${name} is too long! ${cookieLength}`)
-  }
-  cookies.set(name, object, {path: '/'})
-}
-
-function strip(html){
-  var tmp = document.createElement("DIV");
-  tmp.innerHTML = html;
-  return tmp.textContent || tmp.innerText || "";
-}
-
-function getImages(images) {
-  let img = []
-  images.forEach((image) => {
-    img.push(image.src)
-  })
-  return img
-}
+}, fetch);
 
 // Extract the bare minimum for each product to create a snippet.
 function getSkinnyProducts(products) {
   const skinnyProducts = products.map((product ) => {
     return {
-      id: product.id.toString(),
+      id: product.id,
       title:  product.title,
-      price: product.selectedVariant.formattedPrice,
-      description: strip(product.description).substr(0,150)+"...",
-      image: product.selectedVariantImage.variants[5].src
+      price: product.variants[0].price,
+      description: product.description.substr(0,150)+"...",
+      image: product.images[0].src
     }
   })
   return skinnyProducts
 }
 
-
-
 export function fetchCollectionDetails(collectionId) {
   return new Promise(function(resolve, reject) {
 
-    // Try fetching from cookie first. Otherwise query http:
-    const cookieName = `collection_${collectionId}`
-    var collection = getCookie(cookieName)
+    // See if we have it in local storage first.:
+    const itemName = `collection_${collectionId}`
+    var collection = getItem(itemName)
     if (collection) {
       return resolve(collection)
     }
-    shopClient.fetchCollection(collectionId).then(function (collection) {
+
+    client.collection.fetch(collectionId).then(function (collection) {
       const skinnyCollection =  {
-        description: strip(collection.attrs.body_html),
-        collectionId: collection.attrs.collection_id.toString(),
-        handle: collection.attrs.handle,
-        title: collection.attrs.title
+        description: collection.description,
+        collectionId: collection.id,
+        handle: collection.handle,
+        title: collection.title
       }
-      setCookie(cookieName, skinnyCollection)
+      setItem(itemName, skinnyCollection)
       return resolve(skinnyCollection)
     })
   });
@@ -81,43 +74,102 @@ export function fetchCollectionDetails(collectionId) {
 export function fetchProductSnippets(collectionId){
   return new Promise(function(resolve, reject) {
 
-  const cookieName = `collection_products_${collectionId}`
-  var products = getCookie(cookieName)
-  if (products) {
-    return resolve(products)
-  }
 
-  shopClient.fetchQueryProducts({ collection_id: collectionId, sort_by: "best-selling"}).then(function (products) {
-    const skinnyProducts = getSkinnyProducts(products)
-    setCookie(cookieName, skinnyProducts)
-    return resolve(skinnyProducts)
+    const itemName = `collection_products_${collectionId}`
+    var products = getItem(itemName)
+    if (products) {
+      return resolve(products)
+    }
+
+    client.collection.fetchWithProducts(collectionId).then(collection => {
+      const skinnyProducts = getSkinnyProducts(collection.products)
+      setItem(itemName, skinnyProducts)
+      return resolve(skinnyProducts)
     })
+
   });
 }
 
-// Individual products are not stored in cookies.
 export function fetchProduct(product_id) {
   return new Promise(function(resolve, reject) {
-    shopClient.fetchProduct(product_id).then(function (product) {
+
+    const itemName = `product_${product_id}`
+    var product = getItem(itemName)
+    if (product) {
+      return resolve(product)
+    }
+
+    client.product.fetch(product_id).then(product => {
+      setItem(itemName, product)
       return resolve(product)
     })
   });
 }
 
-// Fetch Recent Cart (or create a new one)
-export function fetchRecentCart() {
+/* 3 Possible scenarios
+A - Brand new user, locatl storage does not exist. Create a new checkout and store locally.
+B - Old checkout, local storage exists - we return the checkout
+C - Old checkout, but order was paid for. cookie exists, inspect order for completion and create a new one.
+*/
+export function fetchRecentCheckout() {
   return new Promise(function(resolve, reject) {
-    shopClient.fetchRecentCart().then( cart => {
-      return resolve(cart)
+    const itemName = 'checkout_id'
+
+    var checkoutId =  localStorage.getItem(itemName);
+    if (checkoutId) {
+      client.checkout.fetch(checkoutId).then(checkout => {
+
+        // Inspect it. If completed - create a new one and store cookie.
+        if (checkout.completedAt === null) {
+          return resolve(checkout)
+        } else {
+          client.checkout.create().then(checkout => {
+            localStorage.setItem(itemName, checkout.id);
+            return resolve(checkout)
+          })
+        }
+      })
+    } else {
+
+      // Create a brand new order and store locally.
+      client.checkout.create().then(checkout => {
+        localStorage.setItem(itemName, checkout.id);
+        return resolve(checkout)
+      })
+    }
+  })
+}
+
+export function addItemtoCheckout(checkoutId, lineItems) {
+  return new Promise(function(resolve, reject) {
+    client.checkout.addLineItems(checkoutId, lineItems).then((checkout) => {
+      return resolve(checkout)
     })
-  });
+  })
+}
+
+export function removeLineItems(checkoutId, lineItemId) {
+  return new Promise(function(resolve, reject){
+    client.checkout.removeLineItems(checkoutId, [lineItemId]).then(checkout => {
+      return resolve(checkout)
+    })
+  })
+}
+
+export function updateLineItems(checkoutId, lineItemId, quantity) {
+  return new Promise(function(resolve, reject) {
+    const lineItems = [{id: lineItemId, quantity: quantity}]
+    client.checkout.updateLineItems(checkoutId, lineItems).then(checkout => {
+      return resolve(checkout)
+    })
+  })
 }
 
 // For searching - Check all products and compare title and description.
+
 export function fetchAllProducts(search) {
   return new Promise(function(resolve, reject) {
-    shopClient.fetchAllProducts().then(products => {
-
+    client.product.fetchAll(200).then(products => {
       // need to compare all lower case.
       const lowerSearch = search.toLowerCase()
       const filteredProducts = products.filter(product => {

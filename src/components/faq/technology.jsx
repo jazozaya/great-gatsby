@@ -18,8 +18,9 @@ export default class TechnologyFAQ extends React.Component {
         <Question underline title="What is the print area of the V-One?">
           <p>135mm x 113.5mm (5.3" x 4.4"). Visit our <Link to="/specs/">specifications</Link> page for full product details.</p>
         </Question>
-        <Question underline title="Does the V-One drill through holes and vias?">
-          <p>The V-One currently does not drill holes.  We recommend you use a small drill press or Dremel press with an inexpensive rotary tool collet and a PCB drill bit set to help you drill a variety of sizes for vias and through-hole pads.</p>
+        <Question underline title="Can the V-One make vias and through holes?">
+          <p>It does now! We just released the <strong>V-One Drill!</strong> - an attachment to the V-One</p>
+          <p>The <strong>V-One Drill</strong> makes double sided boards much easier to create and comes with all the drill bits, rivets and other accessories you need to get started. Learn more about it <Link to="/product/drill/">here!</Link></p>
         </Question>
         <Question underline title="Does the V-One pick-and-place components?">
           <p>The V-One currently does not have an integrated pick-and-place, so components must be placed by hand. The V-One has been designed to be a prototyping tool.  At these volumes setting up a pick and place machine can take more time and effort than manual placement.</p>

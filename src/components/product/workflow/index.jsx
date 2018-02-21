@@ -6,7 +6,9 @@ import machineIcon from './machine.min.svg'
 import solderIcon from './iron.min.svg'
 import factoryIcon from './factory.min.svg'
 import solderedIcon from './soldered.min.svg'
-
+import drillIcon from './drill.min.svg'
+import tracesIcon from './traces.min.svg'
+import rivetIcon from './rivet.min.svg'
 import arrowRight from './arrow-right.min.svg'
 
 class Step extends React.Component {
@@ -67,12 +69,43 @@ export default class Workflow extends React.Component {
     );
   }
 
-  render() {
-    const { workflowType } = this.props;
-    return (
+  renderDrillWorkflow() {
+    return(
+      <div className="flex-row center-wide workflow">
+        <Step
+          icon={drillIcon}
+          description="Load your design file and drill your blank PCB board."
+          />
+        <img className="icon-arrow" src={arrowRight}></img>
+        <Step
+          icon={tracesIcon}
+          description="Print the top and bottom layer on the V-One."
+          />
+        <img className="icon-arrow" src={arrowRight}></img>
+        <Step
+          icon={rivetIcon}
+          description="Use rivets to create your vias and plated thru-holes!"
+          />
+      </div>
+    );
+  }
 
+  renderWorkflow() {
+    const { workflowType } = this.props;
+    switch(workflowType){
+      case('print'):
+        return this.renderPrintWorkflow();
+      case('solder'):
+        return this.renderSolderWorkflow();
+      case('drill'):
+        return this.renderDrillWorkflow();
+    }
+  }
+
+  render() {
+    return (
       <div className="shadow-banner workflow-wrapper ">
-        {workflowType === "print" ? this.renderPrintWorkflow() : this.renderSolderWorkflow() }
+        {this.renderWorkflow()}
       </div>
     );
   }

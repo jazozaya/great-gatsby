@@ -9,11 +9,9 @@ export default class Logo extends React.Component {
     const { emblem } = this.props;
 
     return (
-      <div>
-        <Link to='/'>
-          { emblem ? <img src={logoEmblem}/> : <img src={logo} />}
-        </Link>
-      </div>
+      <Link to='/'>
+        { emblem ? <img src={logoEmblem}/> : <img src={logo} />}
+      </Link>
     );
   }
 }
