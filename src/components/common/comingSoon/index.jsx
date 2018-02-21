@@ -1,9 +1,8 @@
 import React from 'react'
-import Button from 'components/common/button'
 
 import './comingSoon.scss'
 
-export default class CallToAction extends React.Component {
+export default class ComingSoon extends React.Component {
 
   render() {
     const { title, subtitle, buttonOne, buttonTwo } = this.props;

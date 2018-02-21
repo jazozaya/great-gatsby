@@ -66,7 +66,7 @@ export default class Specs extends React.Component {
       <div className="signup-wrapper">
         <div className="signup">
           <div onClick={this.onClose} className="close">X</div>
-          <h1>We have big news coming up!</h1>
+          <h1>Join our community!</h1>
           <p>Sign up below to stay in the loop.</p>
           <form action="https://voltera.us7.list-manage.com/subscribe/post?u=5e2801d5f399b19d163b280f7&amp;id=4ab4eb46aa" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="form" target="_blank" noValidate onSubmit={this.onSubmit}>
             {/*-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->*/}

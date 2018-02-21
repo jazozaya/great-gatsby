@@ -38,7 +38,7 @@ export default class Print extends React.Component {
         </MiniHero>
         <section className="movie-time">
           <h2>A compact and automated drilling attachment.</h2>
-          <p className="pull-center">Easy on the eyes and ears, the V-One Drill is an attachment to the V-One </p>
+          <p className="pull-center">Easy on the eyes and ears, the V-One Drill mounts directly on the V-One </p>
           <div className="promo">
             <YouTube
               width="800"
