@@ -6,119 +6,137 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
+
 <url>
   <loc>https://www.voltera.io/</loc>
-  <changefreq>weekly</changefreq>
+  <lastmod>2018-02-22T22:32:11+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://www.voltera.io/faq/</loc>
-  <changefreq>weekly</changefreq>
+  <lastmod>2018-02-22T22:32:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.voltera.io/product/technology/</loc>
-  <changefreq>weekly</changefreq>
+  <lastmod>2018-02-22T22:32:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.voltera.io/contact/</loc>
-  <changefreq>weekly</changefreq>
+  <lastmod>2018-02-22T22:32:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.voltera.io/store/</loc>
-  <changefreq>weekly</changefreq>
+  <lastmod>2018-02-22T22:32:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.voltera.io/product/experiment/</loc>
-  <changefreq>weekly</changefreq>
+  <loc>https://www.voltera.io/product/drill/</loc>
+  <lastmod>2018-02-22T22:32:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.voltera.io/product/print/</loc>
-  <changefreq>weekly</changefreq>
+  <lastmod>2018-02-22T22:32:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.voltera.io/product/paste/</loc>
-  <changefreq>weekly</changefreq>
+  <lastmod>2018-02-22T22:32:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.voltera.io/product/experiment/</loc>
+  <lastmod>2018-02-22T22:32:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.voltera.io/product/software/</loc>
-  <changefreq>weekly</changefreq>
+  <lastmod>2018-02-22T22:32:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.voltera.io/request/call/</loc>
-  <changefreq>weekly</changefreq>
+  <lastmod>2018-02-22T22:32:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.voltera.io/request/quote/</loc>
-  <changefreq>weekly</changefreq>
+  <lastmod>2018-02-22T22:32:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.voltera.io/specs/</loc>
-  <changefreq>weekly</changefreq>
+  <lastmod>2018-02-22T22:32:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.voltera.io/about/</loc>
-  <changefreq>weekly</changefreq>
+  <lastmod>2018-02-22T22:32:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.voltera.io/blog/</loc>
+  <lastmod>2018-02-22T22:32:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.voltera.io/docs/refund/</loc>
+  <lastmod>2018-02-22T22:32:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.voltera.io/docs/privacy/</loc>
-  <changefreq>weekly</changefreq>
+  <lastmod>2018-02-22T22:32:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.voltera.io/docs/tos</loc>
-  <changefreq>weekly</changefreq>
+  <lastmod>2018-02-22T22:32:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.voltera.io/store/collection/bundles/</loc>
-  <changefreq>weekly</changefreq>
+  <lastmod>2018-02-22T22:32:11+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.voltera.io/store/collection/accessories/</loc>
-  <changefreq>weekly</changefreq>
+  <lastmod>2018-02-22T22:32:11+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.voltera.io/store/collection/conductive-inks/</loc>
-  <changefreq>weekly</changefreq>
+  <lastmod>2018-02-22T22:32:11+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.voltera.io/store/collection/solder/</loc>
-  <changefreq>weekly</changefreq>
+  <lastmod>2018-02-22T22:32:11+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.voltera.io/store/collection/standard-substrates/</loc>
-  <changefreq>weekly</changefreq>
+  <lastmod>2018-02-22T22:32:11+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.voltera.io/store/collection/swag/</loc>
-  <changefreq>weekly</changefreq>
+  <lastmod>2018-02-22T22:32:11+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.voltera.io/store/cart/</loc>
-  <changefreq>weekly</changefreq>
+  <lastmod>2018-02-22T22:32:11+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.voltera.io/pdfs/V-One-Summary.pdf</loc>
-  <changefreq>weekly</changefreq>
+  <lastmod>2018-02-22T22:32:11+00:00</lastmod>
   <priority>0.64</priority>
 </url>
+
+
 </urlset>
