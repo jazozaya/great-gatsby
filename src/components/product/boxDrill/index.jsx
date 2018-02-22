@@ -30,10 +30,10 @@ export default class BoxDrill extends React.Component {
   renderDrill() {
     return(
       <div>
-        <h2>The V-One Drill Attachment</h2>
-        <p>This attachment snaps onto the V-One just like the probe and dispenser. It might look small, but it packs a punch!</p>
+        <h2>The V-One Drill</h2>
+        <p>This attachment snaps onto the V-One just like the <strong>Probe</strong> and <strong>Dispenser</strong>. It might look small, but it packs a punch!</p>
         <p>Hover over the items on the left to learn more.</p>
-        <i>Items not listed here: 4 Thumbscrews, 1 Hex key, 1 drilling starter circuit.</i>
+        <i>Items not listed here: 4 Thumbscrews, 1 Hex key, 1 Punk Console starter kit.</i>
       </div>
     )
   }
@@ -85,8 +85,8 @@ export default class BoxDrill extends React.Component {
     return (
       <div>
         <h2>1.0mm Rivets</h2>
-        <p>Recommended for larger components like headers, buttons and connectors - these large (1.0 mm inner diameter) rivets are perfect to create plated through holes.</p>
-        <p>Feed the component legs through it and solder away. They will provide a secure mechanical connection and protect the ink.</p>
+        <p>These larger rivets are perfect for through-hole connections. Create secure mechanical connections for larger compnents like buttons, headers and connectors</p>
+        <p>They have an internal diameter of 1.0mm and a head diameter of 2.2mm</p>
         <i>200 Pcs included.</i>
       </div>
     )
@@ -96,8 +96,8 @@ export default class BoxDrill extends React.Component {
     return(
       <div>
         <h2>0.4mm Rivets</h2>
-        <p>These tiny rivets can create vias in seconds. Just grab a set of tweezers and insert them in the drilled hole, flip the board over and press down with the rivet tool.</p>
-        <p>They have an internal diameter of 0.4mm and an head diameter of 0.9mm. </p>
+        <p>With rivets and the included rivet tool, you can effortlessly create vias in seconds</p>
+        <p>They have an internal diameter of 0.4mm and a head diameter of 0.9mm. </p>
         <i>200 Pcs included.</i>
       </div>
     )
@@ -119,7 +119,7 @@ export default class BoxDrill extends React.Component {
       <div>
         <h2>Safety Glasses</h2>
         <p>Safety first! The drill will be rotating at very high speeds during operation. It is important to protect your eyes from any debris.</p>
-        <p>Always were eye protection when working with the drill!</p>
+        <p>Always wear eye protection when working with the drill!</p>
         <i>1 set included</i>
       </div>
     )

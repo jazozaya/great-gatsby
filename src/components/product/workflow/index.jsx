@@ -74,7 +74,7 @@ export default class Workflow extends React.Component {
       <div className="flex-row center-wide workflow">
         <Step
           icon={drillIcon}
-          description="Load your design file and drill your blank PCB board."
+          description="Load your design file and drill your blank PCB."
           />
         <img className="icon-arrow" src={arrowRight}></img>
         <Step
@@ -84,7 +84,7 @@ export default class Workflow extends React.Component {
         <img className="icon-arrow" src={arrowRight}></img>
         <Step
           icon={rivetIcon}
-          description="Use rivets to create your vias and plated thru-holes!"
+          description="Use rivets to create your vias and through hole connections!"
           />
       </div>
     );

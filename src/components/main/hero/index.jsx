@@ -39,7 +39,7 @@ export default class Hero extends React.Component {
           <h1>Build hardware faster.</h1>
           <p>Prototype on your desktop with the<br />Voltera V-One PCB Printer.</p>
           <div className="buttons">
-            <Button label="Buy Now - $4,199" url="/store/" internal color="light" />
+            <Button label="Buy Now - $3,998" url="/store/" internal color="light" />
             <Button label="Learn More" url="/product/technology/" internal color="clear" />
           </div>
         </div>

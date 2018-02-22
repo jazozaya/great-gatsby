@@ -21,7 +21,7 @@ export default class Print extends React.Component {
       <div className="feature">
         <MiniHero
           title="Double sided boards just got easier."
-          description="The V-One Drill is an attachment to the V-One. Just mount it on like the probe and load your drill file."
+          description="The V-One Drill is an attachment to the V-One. Just mount it on and load your drill file."
           >
           <FastFact
             title="1mil"
@@ -37,7 +37,7 @@ export default class Print extends React.Component {
             />
         </MiniHero>
         <section className="movie-time">
-          <h2>A compact and automated drilling attachment.</h2>
+          <h2>An automated drilling attachment.</h2>
           <p className="pull-center">Easy on the eyes and ears, the V-One Drill mounts directly on the V-One </p>
           <div className="promo">
             <YouTube
@@ -50,9 +50,9 @@ export default class Print extends React.Component {
         <ComingSoon />
         <section className="flex-row reverse-wrap">
           <div className="description">
-            <h2>Compatible with your V-One.</h2>
+            <h2>Made for your V-One.</h2>
             <p>Creating double sided boards just got easier. Use the drilling attachment to make vias and through holes; then secure the connection with rivets.</p>
-            <p>The drill mounts on the V-One just like the probe or dispenser but is externally powered. The operation is automated and surprisingly quiet. Just be sure to wear the safety glasses provided!</p>
+            <p>The drill mounts on the V-One just like the <strong>Probe</strong> or <strong>Dispenser</strong> but is externally powered. The operation is automated and surprisingly quiet. Just be sure to wear the safety glasses provided!</p>
           </div>
           <img src="/product/drilling/drill-attachment.jpg"/>
         </section>
@@ -62,7 +62,7 @@ export default class Print extends React.Component {
           </video>
           <div className="description">
             <h2>Compact and mighty.</h2>
-            <p>It was designed to be as compact as possible, but don't let looks fool you - this drill packs a punch with a measured runout (TIR) of 1 mil (25 microns)</p>
+            <p>It was designed to be as compact as possible, but don't let looks fool you - this drill has a measured runout (TIR) of 1 mil (25 microns)</p>
             <p>Everything you need to get started is included: Drill bits of various sizes, FR1 substrates, rivets and more!</p>
           </div>
         </section>
@@ -72,14 +72,14 @@ export default class Print extends React.Component {
             <img src="/product/drilling/rivet.jpg" />
             <div className="description">
               <h2>Rivets to the rescue!</h2>
-              <p>Once holes are drilled and the top and bottom layer are printed, it is time to connect them!</p>
-              <p>Rivets are little copper tubes that make a mechanical connection between the top and bottom layer. Rivets are by far the easiest way to create vias by hand.</p>
+              <p>Design with two layers and easily make connections without compromises.</p>
+              <p>Rivets are little copper tubes that make a mechanical & electrical connection between the top and bottom layer. Rivets are by far the easiest way to create vias by hand.</p>
             </div>
           </div>
           <div className="column">
             <img src="/product/drilling/drill-bit.jpg" />
             <div className="description">
-              <h2>The right bit for the right hole.</h2>
+              <h2>The right bit for the right job.</h2>
               <p>A range of high precision drill bits are included which cover the most common hole sizes.</p>
               <p>Swapping out the bits is straightforward, only a hex key is needed.</p>
               <p>The following sizes are included (2 of each): 0.70mm, 0.80mm, 0.90mm, 1.00mm, 1.60mm. If you need different sizes, let us know!</p>
