@@ -15,9 +15,9 @@ export default class Main extends React.Component {
     return (
       <div className="store-wrapper">
         <Product productId={"Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0LzQ0OTY2NTk4NQ=="} noRelevant/>
-        {/*<div id="drill">
+        <div id="drill">
           <Product productId={"Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0LzQ4MzI5NjczOTM1OA=="} noRelevant/>
-        </div>*/}
+        </div>
         <div className="collection-separator"/>
         <LazyLoad height={500} offset={200} once>
           <Collection collectionId={c.bundles.id} noHelmet/>
@@ -31,9 +31,9 @@ export default class Main extends React.Component {
           <Collection collectionId={c.inks.id} noHelmet/>
         </LazyLoad>
         <div className="collection-separator"/>
-        {/*<LazyLoad height={500} offset={200} once>
+        <LazyLoad height={500} offset={200} once>
           <Collection collectionId={c.drilling.id} noHelmet/>
-        </LazyLoad>*/}
+        </LazyLoad>
         <div className="collection-separator"/>
         <LazyLoad height={500} offset={200} once>
           <Collection collectionId={c.solder.id} noHelmet/>
