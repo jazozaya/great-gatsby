@@ -21,14 +21,14 @@ export default class Print extends React.Component {
       <div className="feature">
         <MiniHero
           title="Double sided boards just got easier."
-          description="The V-One Drill is an attachment to the V-One. Just mount it on and load your drill file."
+          description="Automate your PCB drilling with the V-One Drill attachment"
           >
           <FastFact
-            title="1mil"
+            title="3 mil"
             label="Runout"
             />
           <FastFact
-            title="0.4mm"
+            title="0.4 mm"
             label="Min. Diam."
             />
           <FastFact
@@ -51,8 +51,8 @@ export default class Print extends React.Component {
         <section className="flex-row reverse-wrap">
           <div className="description">
             <h2>Made for your V-One.</h2>
-            <p>Creating double sided boards just got easier. Use the drilling attachment to make vias and through holes; then secure the connection with rivets.</p>
-            <p>The drill mounts on the V-One just like the <strong>Probe</strong> or <strong>Dispenser</strong> but is externally powered. The operation is automated and surprisingly quiet. Just be sure to wear the safety glasses provided!</p>
+            <p>Reduce the number of machines and interfaces in your workflow. The V-One Drill attachment brings CNC drilling to the V-One platform.</p>
+            <p>The V-One's unique magnetic attachments makes tool changing a breeze. Use the drilling attachment to make quickly vias and through holes in your double sided boards.</p>
           </div>
           <img src="/product/drilling/drill-attachment.jpg"/>
         </section>
@@ -61,8 +61,8 @@ export default class Print extends React.Component {
             <source src="/product/drilling/v-one-drill.webm" type="video/webm"/>
           </video>
           <div className="description">
-            <h2>Compact and mighty.</h2>
-            <p>It was designed to be as compact as possible, but don't let looks fool you - this drill has a measured runout (TIR) of 1 mil (25 microns)</p>
+            <h2>Compact and elegant design.</h2>
+            <p>It was designed to be as compact as possible, but don't let its small size fool you - the V-One Drill can spin at 13,000 RPM with a runout of 3 mil (~75 microns).</p>
             <p>Everything you need to get started is included: Drill bits of various sizes, FR1 substrates, rivets and more!</p>
           </div>
         </section>
@@ -71,18 +71,17 @@ export default class Print extends React.Component {
           <div className="column">
             <img src="/product/drilling/rivet.jpg" />
             <div className="description">
-              <h2>Rivets to the rescue!</h2>
+              <h2>Unlock design freedom with rivets!</h2>
               <p>Design with two layers and easily make connections without compromises.</p>
-              <p>Rivets are little copper tubes that make a mechanical & electrical connection between the top and bottom layer. Rivets are by far the easiest way to create vias by hand.</p>
+              <p>Copper rivets make an electrical connection between top and bottom layers and eliminates single layer design limitations. Rivets also provide strong mechanical connections for headers and connectors.</p>
             </div>
           </div>
           <div className="column">
             <img src="/product/drilling/drill-bit.jpg" />
             <div className="description">
-              <h2>The right bit for the right job.</h2>
-              <p>A range of high precision drill bits are included which cover the most common hole sizes.</p>
-              <p>Swapping out the bits is straightforward, only a hex key is needed.</p>
-              <p>The following sizes are included (2 of each): 0.70mm, 0.80mm, 0.90mm, 1.00mm, 1.60mm. If you need different sizes, let us know!</p>
+              <h2>The right bit for the job.</h2>
+              <p>A range of high precision drill bits are included. Change drill bits in seconds with the included hex key.</p>
+              <p>The following 1/8″ shank drill bits are included (2 of each): 0.70mm, 0.80mm, 0.90mm, 1.00mm, 1.60mm. If you need different sizes, let us know!</p>
             </div>
           </div>
         </section>

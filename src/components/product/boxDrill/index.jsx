@@ -1,6 +1,5 @@
 import React from 'react'
 import Bowser from 'bowser'
-import Link from 'gatsby-link'
 import './boxDrill.scss'
 
 const summary = {
@@ -31,7 +30,7 @@ export default class BoxDrill extends React.Component {
     return(
       <div>
         <h2>The V-One Drill</h2>
-        <p>This attachment snaps onto the V-One just like the <strong>Probe</strong> and <strong>Dispenser</strong>. It might look small, but it packs a punch!</p>
+        <p>The V-One Drill attachment brings CNC drilling to the V-One platform. The V-One's unique magnetic attachments makes tool changing a breeze.</p>
         <p>Hover over the items on the left to learn more.</p>
         <i>Items not listed here: 4 Thumbscrews, 1 Hex key, 1 Punk Console starter kit.</i>
       </div>
@@ -42,7 +41,7 @@ export default class BoxDrill extends React.Component {
     return(
       <div>
         <h2>Drill Bit Set</h2>
-        <p>A set of precision drill bits. Installing them is easy and only needs a single 1.5mm hex key to install them in coupler.</p>
+        <p>A set of precision 1/8″ shank drill bits. Change bits in seconds with the included hex key.</p>
         <p>The most common PCB drill sizes are included: 0.70mm, 0.80mm, 0.90mm, 1.00mm, 1.60mm. Two drill bits for each size.</p>
         <i>1 set included.</i>
       </div>
@@ -64,7 +63,6 @@ export default class BoxDrill extends React.Component {
       <div>
         <h2>3x4” FR1 Substrates</h2>
         <p>When you start to run out of space in your design, migrate over to the larger substrates. These are also made of FR1 to extend the life of the drill bits.</p>
-        <p>We have even larger boards in our <Link to="/store/">store</Link>!</p>
         <i>6 substrates included</i>
       </div>
     )
@@ -74,7 +72,7 @@ export default class BoxDrill extends React.Component {
     return (
       <div>
         <h2>Rivet Tools</h2>
-        <p>Use the right tool for the right job. These steel stakes are used to press the rivets on the PCB after holes have been drilled.</p>
+        <p>These steel rivet forming tools are used to install the rivets on the PCB after holes have been drilled.</p>
         <p>They have been designed for optimum performance on the ink and ensure an electrical connection between the top and bottom layers of your PCB.</p>
         <i>2 sizes included.</i>
       </div>
@@ -96,7 +94,7 @@ export default class BoxDrill extends React.Component {
     return(
       <div>
         <h2>0.4mm Rivets</h2>
-        <p>With rivets and the included rivet tool, you can effortlessly create vias in seconds</p>
+        <p>With rivets and the included rivet tool, you can effortlessly create vias in seconds.</p>
         <p>They have an internal diameter of 0.4mm and a head diameter of 0.9mm. </p>
         <i>200 Pcs included.</i>
       </div>
@@ -108,7 +106,7 @@ export default class BoxDrill extends React.Component {
       <div>
         <h2>Sacrificial Layer</h2>
         <p>To protect the V-One from any damage during drilling, mount this piece of FR1 on the heated bed and clamp your substrate on top.</p>
-        <p>Don't worry, the sacrifical layer can be reused plenty of times.</p>
+        <p>Don't worry, the sacrifical layer can be reused for multiple projects before needing to be replaced.</p>
         <i>1 sacrificial board included</i>
       </div>
     )
@@ -118,8 +116,8 @@ export default class BoxDrill extends React.Component {
     return(
       <div>
         <h2>Safety Glasses</h2>
-        <p>Safety first! The drill will be rotating at very high speeds during operation. It is important to protect your eyes from any debris.</p>
-        <p>Always wear eye protection when working with the drill!</p>
+        <p>Safety first! The motor and drill bits will be rotating at very high speeds during operation. It is important to protect your eyes from any debris.</p>
+        <p>Always wear eye protection when working with the V-One Drill!</p>
         <i>1 set included</i>
       </div>
     )

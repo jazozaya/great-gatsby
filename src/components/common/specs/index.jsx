@@ -61,8 +61,8 @@ export default class Specs extends React.Component {
           <h3>Drill Bits</h3>
           <Row units={units}>
             <p>Runout (TIR)</p>
-            <p>0.025mm</p>
-            <p>0.001”</p>
+            <p>0.075mm</p>
+            <p>0.003”</p>
           </Row>
           <Row units={units} dark>
             <p>Shank Diameter </p>
