@@ -74,8 +74,9 @@ export default class Product extends React.Component {
 
   updateVariantIndex(product) {
     //This method obtains the new variant based on the options that were selected. Only support for 2 options. A bit clunkly but it works.
-    const selectedOption0 = document.getElementById('option1').value
-    const selectedOption1 = product.options.length === 2 ? document.getElementById('option2').value : null;
+
+    const selectedOption0 = document.getElementById(`option1-${product.id}`).value
+    const selectedOption1 = product.options.length === 2 ? document.getElementById(`option2-${product.id}`).value : null;
 
     let i;
     for(i = 0; i < product.variants.length; i ++ ) {
@@ -104,28 +105,32 @@ export default class Product extends React.Component {
       return null
     }
 
+    const option1 = `option1-${product.id}` // Avoid name conflicts with other products.
+
     if (product.options.length === 1) {
       return (
         <div>
           <strong>{product.options[0].name}: </strong>
-          <select id='option1' className="select" onChange={this.processOptionChange}>
+          <select id={option1} className="select" onChange={this.processOptionChange}>
             {product.options[0].values.map((value, index) => <option key={index} value={value.value}>{value.value}</option>)}
           </select>
         </div>
       )
     }
 
+    const option2 = `option2-${product.id}` // Avoid name conflicts with other products.
+
     return (
       <div>
         <div>
           <strong>{product.options[0].name}: </strong>
-          <select id='option1' className="select" onChange={this.processOptionChange}>
+          <select id={option1} className="select" onChange={this.processOptionChange}>
             {product.options[0].values.map((value, index) => <option key={index} value={value.value}>{value.value}</option>)}
           </select>
         </div>
         <div>
           <strong>{product.options[1].name}: </strong>
-          <select id='option2' className="select" onChange={this.processOptionChange}>
+          <select id={option2} className="select" onChange={this.processOptionChange}>
             {product.options[1].values.map((value, index) => <option key={index} value={value.value}>{value.value}</option>)}
           </select>
         </div>
