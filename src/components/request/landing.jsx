@@ -3,6 +3,8 @@ import { Redirect } from 'react-router'
 import Button from 'components/common/button'
 import SpinnerLoader from 'components/common/spinnerLoader'
 
+import Specs from 'components/common/specs'
+
 import './common.scss'
 
 const status = {
@@ -28,33 +30,6 @@ export default class LandingRequest extends React.Component {
       missingFields: false,
       count: 0,
     };
-    this.updateIntercom = this.updateIntercom.bind(this);
-  }
-
-  updateIntercom() {
-
-    // Check if intercome is ready, and update the user data.
-    if (process.env.NODE_ENV === 'production' && typeof(window.Intercom) !== 'undefined') {
-      window.Intercom("update", {
-        name:  `${this.props.firstName} ${this.props.lastName}`,
-        email: this.props.email,
-        "landing_page": "true"
-      });
-      clearInterval(this.state.intervalId)
-    } else {
-      console.log("Intercom Not Ready!")
-    }
-  }
-  componentWillMount(){
-    const { firstName, lastName, email } = this.props;
-
-    // Check if we have good data.
-    if (!(firstName && lastName && email)) {
-      console.warn("Landing Page: No valid parameters received, will not register with Intercom.");
-      return
-    }
-
-    this.state.intervalId = setInterval(this.updateIntercom, 1000)
   }
 
   sendRequest() {
@@ -122,13 +97,15 @@ export default class LandingRequest extends React.Component {
   }
 
   renderRequest() {
+    const { firstName, lastName } = this.props;
+    const name = (firstName && lastName) ?  firstName + ' ' + lastName : ""
     return (
       <div>
         <h2>Want to know more?</h2>
         <form>
           <h3>Contact Information</h3>
           <div className="format">
-            <p>Name: <input className="text-input" type="text" id="name" name="name"/></p>
+            <p>Name: <input className="text-input" type="text" id="name" name="name" defaultValue={name}/></p>
             <p>Email: <input className="text-input" type="email"  id="email" name="email"  autoComplete="email"/></p>
             <p>Phone: <input className="text-input" type="tel" id="phone" name="phone" autoComplete="tel" /></p>
             <p>Country: <input className="text-input" name="ship-country" id="country"  autoComplete="shipping country" /></p>
@@ -144,7 +121,7 @@ export default class LandingRequest extends React.Component {
 
   renderVideo() {
     if (typeof(window) !== 'undefined') {
-      var width = Math.min(window.innerWidth -100, 601) // Trim in case of mobile.
+      var width = Math.min(window.innerWidth - 100, 601) // Trim in case of mobile.
       var height = Math.round(width / (640/360)) // Find the corresponding height to preserve the aspect ratio.
 
       // We apply the css dynamically since we do not know width ahead of time.
@@ -179,6 +156,7 @@ export default class LandingRequest extends React.Component {
           {this.renderVideo()}
           {this.renderStatus()}
         </div>
+        <Specs />
       </div>
     );
   }

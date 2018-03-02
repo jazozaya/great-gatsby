@@ -1,13 +1,5 @@
 @import 'src/css/colors';
 
-.chat-wrapper {
-  margin-top: $medium-padding;
-}
-
-.chat-wrapper iframe {
-  border-style: none;
-}
-
 .request-wrapper {
   padding: $medium-padding $small-padding;
   display: flex;
@@ -19,93 +11,94 @@
 .landing-wrapper {
   padding: $medium-padding $small-padding;
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
 .request {
-  width: $form-width;
+  max-width: $form-width;
+  margin: $small-padding auto;
   padding: $small-padding $medium-padding;
   background-color: $white;
   border-radius: 10px;
   box-shadow: 0px 0px 15px 0px black;
+
+    h3 {
+    border-bottom-style: solid;
+    border-bottom-color: $voltera-green;
+    border-bottom-width: 1px;
+    padding-bottom: 5px;
+    margin-top: 40px;
+  }
+
+    img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .missing {
+    color: red;
+    text-align: center;
+  }
+
+  .format {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .format p {
+    flex-basis: 240px;
+    text-align: right;
+    margin: 3px;
+  }
+
+  .button-wrapper {
+    margin: $small-padding 0px;
+    text-align: center;
+  }
+
+  input, textarea, select {
+    border-style: solid;
+    border-width: 1px;
+    border-color: grey;
+    border-radius: 3px;
+  }
+
+  textarea {
+    height: 40px;
+    width: 100%;
+  }
+
+  .text-input {
+    max-width: 130px;
+  }
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .wide-text {
+    flex-basis: 101px;
+    text-align: right;
+    margin: 3px;
+    flex-grow: 0;
+  }
+
+  .wide-select,.time-select {
+    margin: 3px;
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
+
+  .date-wrapper {
+    text-align: center;
+    margin: $small-padding 0px;
+  }
 }
 
-.request h3 {
-  border-bottom-style: solid;
-  border-bottom-color: $voltera-green;
-  border-bottom-width: 1px;
-  padding-bottom: 5px;
-  margin-top: 40px;
-}
-
-.request img {
-  max-width: 100%;
-  height: auto;
-}
-
-.request .missing {
-  color: red;
-  text-align: center;
-}
-
-.request .format {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.request .format p {
-  flex-basis: 240px;
-  text-align: right;
-  margin: 3px;
-}
-
-.request .button-wrapper {
-  margin: $small-padding 0px;
-  text-align: center;
-}
-
-
-.request input, .request textarea, .request select {
-  border-style: solid;
-  border-width: 1px;
-  border-color: grey;
-  border-radius: 3px;
-}
-
-.request .text-input {
-  max-width: 130px;
-}
-
-// Styling for elements that span the whole width.
-.request .wrapper {
-  display: flex;
-  align-items: center;
-}
-
-.request .wide-text {
-  flex-basis: 101px;
-  text-align: right;
-  margin: 3px;
-  flex-grow: 0;
-}
-
-.request .wide-select, .request .time-select {
-  margin: 3px;
-  flex-grow: 1;
-  flex-shrink: 1;
-}
 
 .request .wrapper p {
   margin: 3px;
-}
-
-.request textarea {
-  height: 40px;
-  width: 100%;
-}
-
-.request .date-wrapper {
-  text-align: center;
-  margin: $small-padding 0px;
 }
