@@ -42,7 +42,6 @@ export default class Product extends React.Component {
     const lineItems = [{
       variantId: product.variants[variantIndex].id,
       quantity: quantity,
-      customAttributes : { key:'Image', value: product.images[0].src}
     }]
     fetchRecentCheckout().then(checkout => addItemtoCheckout(checkout.id, lineItems)).then(checkout => this.setState({addedToCheckout: true}))
 

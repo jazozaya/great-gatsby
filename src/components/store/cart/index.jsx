@@ -34,17 +34,19 @@ export default class Cart extends React.Component {
   }
 
   renderImage(lineItem) {
-    return lineItem.variant.image ?  <img src={lineItem.variant.image.src} /> : <img src={lineItem.customAttributes[0].value} />
+    return lineItem.variant.image ?  <img src={lineItem.variant.image.src} /> : <img src={lineItem.variant.product.images[0].src} />
   }
 
   renderItem(lineItem, index) {
 
-    const destination = `/store/product/?productId=${lineItem.variant.id}`
+    const destination = `/store/product/?productId=${lineItem.variant.product.id}`
     return (
       <div key={index} className="cart-row">
         {this.renderImage(lineItem)}
         <div className="cart-row-details">
-          <div className="title">{lineItem.title}</div>
+          <div className="title">
+            <Link to={destination}>{lineItem.title}</Link>
+          </div>
           {lineItem.variant.title !== "Default Title" ? <p>{lineItem.variant.title}</p> : null }
           <p><a className="remove" onClick={() => this.removeItemFromCart(lineItem.id)}>Remove</a></p>
         </div>
@@ -62,13 +64,15 @@ export default class Cart extends React.Component {
   }
 
   renderItemMobile(lineItem, index) {
-    const destination = `/store/product/?productId=${lineItem.variant.id}`
+    const destination = `/store/product/?productId=${lineItem.variant.product.id}`
     return (
       <div key={index} className="cart-row-mobile">
         <div className="cart-row-details">
           {this.renderImage(lineItem)}
           <div>
-            <div className="title">{lineItem.title}</div>
+            <div className="title">
+              <Link to={destination}>{lineItem.title}</Link>
+            </div>
             {lineItem.variant.title !== "Default Title" ? <p>{lineItem.variant.title}</p> : null }
             <p><a className="remove" onClick={() => this.removeItemFromCart(lineItem.id)}>Remove</a></p>
           </div>
