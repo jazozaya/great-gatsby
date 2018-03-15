@@ -25,7 +25,7 @@ export default class PrintFAQ extends React.Component {
             <p>We use FR1 - it does not contain fiberglass and is a softer material, which means less wear on the drill bits. FR4 dust, on the other hand, contains fiberglass particles which can be harmful.</p>
           </Question>
           <Question underline title="I already have a V-One, will it work?">
-            <p>Yes! We have designed the drilling attachment to be entirely backwards compatible. If you struggled with double sided boards in the past, this attachment will make your life easier!</p>
+            <p>Yes! We have designed the drilling attachment for the V-One. If you struggled with double sided boards in the past, this attachment will make your life easier!</p>
           </Question>
 
       </Template>

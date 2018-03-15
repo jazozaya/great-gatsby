@@ -21,7 +21,7 @@ export default class FAQ extends React.Component {
         <PrintFAQ title="Conductive ink and printing"/>
         <PasteFAQ title="Solder paste and reflow"/>
         <SoftwareFAQ title="Desktop software" />
-        <DrillFAQ title="V-One Drilling attachment"/>
+        <DrillFAQ title="V-One Drill attachment"/>
         <ExperimentFAQ title="Experiment with the V-One" />
         <ShippingFAQ title="Shipping to my country" />
         <SomethingFAQ title="It's something else" />
