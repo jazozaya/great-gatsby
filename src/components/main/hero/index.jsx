@@ -15,7 +15,7 @@ export default class Hero extends React.Component {
     // Save timer id so we clear it when we navigate away.
     const profile = parseInt(props.profile)
     this.state.index = profile ? profile : 1
-    this.state.intervalId = setInterval(() => this.setState({index: (this.state.index + 1) % 3}), 6500)
+    this.state.intervalId = setInterval(() => this.setState({index: (this.state.index + 1) % 3}), 6500*3)
     this.overrideSelection = this.overrideSelection.bind(this)
   }
   componentWillUnmount() {
