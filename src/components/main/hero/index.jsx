@@ -56,8 +56,11 @@ export default class Hero extends React.Component {
         <div className="wrapper">
           <h1>Meet the V-One Drill.</h1>
           <p>Create double sided circuit boards on your desk.</p>
+          <br /><br /><br />
+          <p>Limited Price!</p>
+          <p><strong  className="green">$499 USD</strong> until <strong  className="green">March 31st</strong>!</p>
           <div className="buttons">
-            <Button label="Buy Now - $499" url="/store/#drill" internal color="light" />
+            <Button label="Buy Now" url="/store/#drill" internal color="light" />
             <Button label="Learn More" url="/product/drill/" internal color="clear" />
           </div>
         </div>

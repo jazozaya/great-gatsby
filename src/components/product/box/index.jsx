@@ -35,7 +35,7 @@ export default class InTheBox extends React.Component {
         <p>The V-One is a 3 axis machine, about the same size as a laptop and can fit on your desk. </p>
         <p>It is equipped with a heated platform used to cure conductive ink and to reflow solder paste.</p>
         <p>Hover over the items on the left to learn more.</p>
-        <i>Items not listed here: 3g Tube of Flux, 1 Hello World starter kit.</i>
+        <i>Items not shown here: 3g Tube of Flux, 1 Hello World starter kit.</i>
       </div>
     )
   }

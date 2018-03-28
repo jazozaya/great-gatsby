@@ -32,7 +32,7 @@ export default class BoxDrill extends React.Component {
         <h2>The V-One Drill</h2>
         <p>The V-One Drill attachment brings CNC drilling to the V-One platform. The V-One's unique magnetic attachments makes tool changing a breeze.</p>
         <p>Hover over the items on the left to learn more.</p>
-        <i>Items not listed here: 4 Thumbscrews, 1 Hex key, 1 Punk Console starter kit.</i>
+        <i>Items not shown here: 4 Thumbscrews, 1 Hex key, 1 Punk Console starter kit.</i>
       </div>
     )
   }
