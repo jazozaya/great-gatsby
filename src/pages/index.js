@@ -7,10 +7,9 @@ import Main from 'components/main'
 export default class MyQuote extends React.Component {
 
   render() {
-    const { q } = queryString.parse(this.props.location.search);
     return (
       <div>
-        <Main profile={q}/>
+        <Main/>
       </div>
     )
   }

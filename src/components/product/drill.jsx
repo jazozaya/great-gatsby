@@ -2,7 +2,6 @@ import React from 'react'
 import Link from 'gatsby-link'
 
 import CallToAction from 'components/common/cta'
-import ComingSoon from 'components/common/comingSoon'
 import FastFact from 'components/common/fastFact'
 import MiniHero from 'components/common/minihero'
 import YouTube from 'components/common/youtube'
@@ -47,7 +46,6 @@ export default class Print extends React.Component {
               />
           </div>
         </section>
-        <ComingSoon />
         <section className="flex-row reverse-wrap">
           <div className="description">
             <h2>Made for your V-One.</h2>

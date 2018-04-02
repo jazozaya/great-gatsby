@@ -30,7 +30,7 @@ export default class Index extends React.Component {
 
     return (
       <div>
-        <Hero profile={this.props.profile} />
+        <Hero/>
         <Summary />
         <FeatureSelector/>
         <Testimonial />

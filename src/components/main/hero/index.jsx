@@ -9,13 +9,11 @@ export default class Hero extends React.Component {
   constructor(props) {
     super(props);
     this.state ={
-      index: 1
+      index: 0
     };
 
     // Save timer id so we clear it when we navigate away.
-    const profile = parseInt(props.profile)
-    this.state.index = profile ? profile : 1
-    this.state.intervalId = setInterval(() => this.setState({index: (this.state.index + 1) % 3}), 6500*3)
+    this.state.intervalId = setInterval(() => this.setState({index: (this.state.index + 1) % 3}), 6500)
     this.overrideSelection = this.overrideSelection.bind(this)
   }
   componentWillUnmount() {
@@ -39,7 +37,7 @@ export default class Hero extends React.Component {
           <h1>Build hardware faster.</h1>
           <p>Prototype on your desktop with the<br />Voltera V-One PCB Printer.</p>
           <div className="buttons">
-            <Button label="Buy Now - $3,998" url="/store/" internal color="light" />
+            <Button label="Buy Now - $4,198" url="/store/" internal color="light" />
             <Button label="Learn More" url="/product/technology/" internal color="clear" />
           </div>
         </div>
@@ -56,11 +54,8 @@ export default class Hero extends React.Component {
         <div className="wrapper">
           <h1>Meet the V-One Drill.</h1>
           <p>Create double sided circuit boards on your desk.</p>
-          <br /><br /><br />
-          <p>Limited Price!</p>
-          <p><strong  className="green">$499 USD</strong> until <strong  className="green">March 31st</strong>!</p>
           <div className="buttons">
-            <Button label="Buy Now" url="/store/#drill" internal color="light" />
+            <Button label="Buy Now - $699" url="/store/#drill" internal color="light" />
             <Button label="Learn More" url="/product/drill/" internal color="clear" />
           </div>
         </div>
