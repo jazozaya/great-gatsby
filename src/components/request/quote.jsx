@@ -38,7 +38,7 @@ const companyProfileRight = {
   personal: ['profile-personal', "Personal Use"],
   fabLab: ['profile-fablab', "Fab Lab"],
   tools: ['profile-tools', "Tools & Machines"],
-  incubator: ['profile-incubator', "Incubator"],
+  incubator: ['profile-incubator', "Incubator / Accelerator"],
 }
 
 const industrySegmentLeft = {
@@ -101,6 +101,23 @@ export default class QuoteRequest extends React.Component {
     return industry
   }
 
+  extractSearchState() {
+    let searchState = ''
+    if (document.getElementById('learning').checked) {
+      searchState = "Learning - Expanding my knowledge"
+    }
+    if (document.getElementById('searching').checked) {
+      searchState = "Searching - Investigating technologies for my application"
+    }
+    if (document.getElementById('investing').checked) {
+      searchState = "Investing - Buying within 1 year"
+    }
+    if (document.getElementById('purchasing').checked) {
+      searchState = "Purchasing - Actively in the buying process"
+    }
+    return searchState;
+  }
+
   sendRequest() {
 
     // Performs some data validation to make sure everything was filled in.
@@ -108,8 +125,9 @@ export default class QuoteRequest extends React.Component {
 
     let profile = this.extractCompanyProfile();
     let segment = this.extractIndustrySegment();
+    let searchState = this.extractSearchState();
 
-    if(!allComplete || !profile || !segment){
+    if(!allComplete || !profile || !segment || !searchState){
       this.setState( { missingFields: true, count: this.state.count + 1 });
       return;
     }
@@ -132,6 +150,7 @@ export default class QuoteRequest extends React.Component {
       country: document.getElementById('country').value,
       company_profile: profile,
       industry_segment: segment,
+      search_state: searchState,
       additional_comment: document.getElementById('additional-comment').value
     }
 
@@ -197,8 +216,8 @@ export default class QuoteRequest extends React.Component {
           <div className="format">
             <p>First Name: <input className="text-input" type="text" id="fname" name="name" /></p>
             <p>Last Name: <input className="text-input" type="text" id="lname" name="name" /></p>
-            <p>Email: <input className="text-input" type="email"  id="email" name="email"  autoComplete="email" /></p>
-            <p>Title: <input className="text-input" id="title" name="title" autoComplete="title" /></p>
+            <p>Work Email: <input className="text-input" type="email"  id="email" name="email"  autoComplete="email" /></p>
+            <p>Job Title: <input className="text-input" id="title" name="title" autoComplete="title" /></p>
             <p>Phone: <input className="text-input" type="tel" id="phone" name="phone" autoComplete="tel" /></p>
             <p>Company: <input className="text-input" id="company" name="company" autoComplete="organization" /></p>
           </div>
@@ -243,6 +262,13 @@ export default class QuoteRequest extends React.Component {
             </div>
           </div>
           {this.renderOtherIndustry()}
+          <p>What best describes your current situation?</p>
+          <div className="left-check">
+            <input type="radio" name="search-state" value="learning" id="learning"/> <label htmlFor="learning"><strong>Learning</strong> - Expanding my knowledge</label><br/>
+            <input type="radio" name="search-state" value="searching" id="searching"/> <label htmlFor="searching"><strong>Searching</strong> - Investigating technologies for my application</label><br/>
+            <input type="radio" name="search-state" value="investing" id="investing"/> <label htmlFor="investing"><strong>Investing</strong> - Buying within 1 year</label><br/>
+            <input type="radio" name="search-state" value="purchasing" id="purchasing"/> <label htmlFor="purchasing"><strong>Purchasing</strong> - Actively in the buying process</label><br/>
+          </div>
           <h3>Extra Information</h3>
           <p>Is there anything you want to tell us?</p>
           <textarea  placeholder="(Optional)" id="additional-comment"/>
