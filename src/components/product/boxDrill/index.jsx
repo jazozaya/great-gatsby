@@ -83,7 +83,7 @@ export default class BoxDrill extends React.Component {
     return (
       <div>
         <h2>1.0mm Rivets</h2>
-        <p>These larger rivets are perfect for through-hole connections. Create secure mechanical connections for larger compnents like buttons, headers and connectors</p>
+        <p>These larger rivets are perfect for through-hole connections. Create secure mechanical connections for larger components like buttons, headers and connectors</p>
         <p>They have an internal diameter of 1.0mm and a head diameter of 2.2mm</p>
         <i>200 Pcs included.</i>
       </div>

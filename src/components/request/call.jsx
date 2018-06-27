@@ -22,6 +22,8 @@ const requiredFields = [
   'name',
   'email',
   'company',
+  'city',
+  'country',
   'phone',
   'time',
   'timezone'
@@ -73,6 +75,8 @@ export default class QuoteRequest extends React.Component {
       from_name: document.getElementById('name').value,
       phone: document.getElementById('phone').value,
       company: document.getElementById('company').value,
+      city: document.getElementById('city').value,
+      country: document.getElementById('country').value,
       time: document.getElementById('time').value,
       timezone: document.getElementById('timezone').value,
       date: this.state.selectedDate,
@@ -211,6 +215,9 @@ export default class QuoteRequest extends React.Component {
           <p>Email: <input className="text-input" type="email"  id="email" name="email"  autoComplete="email" /></p>
           <p>Phone: <input className="text-input" type="tel" id="phone" name="phone" autoComplete="tel" /></p>
           <p>Company: <input className="text-input" id="company" name="company" autoComplete="company" /></p>
+          <p>City: <input className="text-input" name="ship-city" id="city"  autoComplete="shipping address-level2" /></p>
+          <p>Country: <input className="text-input" name="ship-country" id="country"  autoComplete="shipping country" /></p>
+
         </div>
         <h3>Pick a Date</h3>
         <p>Choose an upcoming date and time that meets your schedule. </p>

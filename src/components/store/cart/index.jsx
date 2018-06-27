@@ -157,7 +157,7 @@ export default class Cart extends React.Component {
       <section className="cart-wrapper">
         <h1>Your Cart</h1>
         <div className="promo">
-          <p>Save <strong>10%</strong> when you spend <strong>$400</strong> on consumables and accessories! Use the code <strong className="green">10%OFF400</strong> during checkout.</p>
+          <p>Save <strong>10%</strong> when you spend <strong>$400</strong> on consumables and accessories! Use the code <strong className="green">10%OFF400</strong> during checkout. (Bundles excluded)</p>
         </div>
         {this.renderCart()}
       </section>

@@ -15,7 +15,7 @@ export default class About extends React.Component {
           <p>In order to empower our users to build hardware faster, we know that we need to focus on:</p>
           <ul>
             <li><strong>Reliability</strong> - you should know the spec and trust the machine to hit it every time.</li>
-            <li><strong>Accessiblity</strong> - the platform should be as easy to use as a smartphone app</li>
+            <li><strong>Accessibility</strong> - the platform should be as easy to use as a smartphone app</li>
             <li><strong>Flexibility</strong> - so many users are creating flexible/stretchable electronics or printing other materials on various substrates.</li>
           </ul>
 
