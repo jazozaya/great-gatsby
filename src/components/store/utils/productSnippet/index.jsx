@@ -1,33 +1,88 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
+import Button from 'components/common/button'
+import Spinner from 'components/common/spinnerLoader'
+import { fetchRecentCheckout, addItemtoCheckout } from 'components/store/api'
+
 import './productSnippet.scss'
+
+const status = {
+  ready: "ready",
+  adding: "adding",
+  added: "added",
+}
 
 export default class ProductSnippet extends React.Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      status: status.ready
+    };
+  }
+
+  addToCart() {
+    const { product} = this.props;
+    this.setState({status: status.adding })
+
+    const lineItems = [{
+      variantId: product.variantId,
+      quantity: 1,
+    }]
+    fetchRecentCheckout().then(checkout => addItemtoCheckout(checkout.id, lineItems)).then(checkout => this.setState({status: status.added}))
+  }
+
+  renderAddToCart() {
+
+    switch(this.state.status) {
+      case status.ready:
+        return(
+          <div className="add-to-cart">
+            <Button label="Add to cart" onClick={() => this.addToCart()} color="light long"/>
+          </div>
+        )
+      case status.adding:
+        return <Spinner mini />
+      case status.added:
+        setTimeout(() => this.setState({status: status.ready}), 1000)
+        return(
+          <p className="pull-center">
+            <strong>Added!</strong>
+          </p>
+        )
+    }
+  }
+
   renderInternal(product, destination) {
     return (
-      <Link className="product-snippet" to={destination}>
-        <div className="pull-center">
-          <img src={product.image} />
-        </div>
-        <h3>{product.title}</h3>
-        <p className="price">${product.price}</p>
-        <p className="description">{product.description}</p>
-      </Link>
+      <div className="product-snippet">
+        <Link to={destination}>
+          <div className="pull-center">
+            <img src={product.image} />
+          </div>
+          <h3>{product.title}</h3>
+          <p className="price">${product.price}</p>
+          {<p className="description">{product.description}</p>}
+        </Link>
+        {this.renderAddToCart()}
+      </div>
     )
   }
 
   renderExternal(product, destination) {
     return (
-      <a className="product-snippet" href={destination}>
-        <div className="pull-center">
-          <img src={product.image} />
-        </div>
-        <h3>{product.title}</h3>
-        <p className="price">{product.price}</p>
-        <p className="description">{product.description}</p>
-      </a>
+      <div className="product-snippet">
+        <a href={destination}>
+          <div className="pull-center">
+            <img src={product.image} />
+          </div>
+          <h3>{product.title}</h3>
+          <p className="price">${product.price}</p>
+          <p className="description">{product.description}</p>
+        </a>
+        {this.renderAddToCart()}
+      </div>
     )
   }
 

@@ -40,7 +40,8 @@ function getSkinnyProducts(products) {
       id: product.id,
       title:  product.title,
       price: product.variants[0].price,
-      description: product.description.substr(0,150)+"...",
+      variantId: product.variants[0].id,
+      description: product.description.substr(0,75)+"...",
       image: product.images[0].src
     }
   })
