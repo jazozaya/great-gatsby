@@ -8,7 +8,6 @@ import './article.scss'
 export default class Contact extends React.Component {
 
   render() {
-    const text= "Check out this post by Voltera"
     const { title, author, published, content, src } = this.props.data;
     return(
       <section className="article-wrapper">

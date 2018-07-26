@@ -5,11 +5,13 @@
 
   figure {
     margin: $small-padding 0px;
+    text-align: center;
 
     img {
       max-width: 800px;
-      width: 100%;
+      width: auto;
       height: auto;
+
     }
   }
   figcaption {
