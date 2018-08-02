@@ -44,6 +44,7 @@ export default class Desktop extends React.Component {
       <div className="child-wrapper">
         <div className="child-header">
           <Link className={pageName === "/store/" ? "selected" : null} to={'/store/'}>{c.vOne.title}</Link>
+          <Link className={this.includes(pageName, c.newItems.handle)} to={`/store/collection/${c.newItems.handle}/`}>{c.newItems.title}</Link>
           <Link className={this.includes(pageName, c.bundles.handle)} to={`/store/collection/${c.bundles.handle}/`}>{c.bundles.title}</Link>
           <Link className={this.includes(pageName, c.accessories.handle)} to={`/store/collection/${c.accessories.handle}/`}>{c.accessories.title}</Link>
           <Link className={this.includes(pageName, c.inks.handle)} to={`/store/collection/${c.inks.handle}/`}>{c.inks.title}</Link>

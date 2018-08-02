@@ -20,6 +20,10 @@ export default class Main extends React.Component {
         </div>
         <div className="collection-separator"/>
         <LazyLoad height={500} offset={200} once>
+          <Collection collectionId={c.newItems.id} noHelmet/>
+        </LazyLoad>
+        <div className="collection-separator"/>
+        <LazyLoad height={500} offset={200} once>
           <Collection collectionId={c.bundles.id} noHelmet/>
         </LazyLoad>
         <div className="collection-separator"/>

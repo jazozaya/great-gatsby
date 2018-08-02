@@ -60,6 +60,7 @@ export default class Mobile extends React.Component {
     return(
       <ul className="sub-header">
           <li><Link className={pageName === "/store" || pageName === "/store/" ? "selected" : null} to={'/store/'}>{c.vOne.title}</Link></li>
+          <li><Link className={this.includes(pageName, c.newItems.handle)} to={`/store/collection/${c.newItems.handle}/`}>{c.newItems.title}</Link></li>
           <li><Link className={this.includes(pageName, c.bundles.handle)} to={`/store/collection/${c.bundles.handle}/`}>{c.bundles.title}</Link></li>
           <li><Link className={this.includes(pageName, c.accessories.handle)} to={`/store/collection/${c.accessories.handle}/`}>{c.accessories.title}</Link></li>
           <li><Link className={this.includes(pageName, c.inks.handle)} to={`/store/collection/${c.inks.handle}/`}>{c.inks.title}</Link></li>

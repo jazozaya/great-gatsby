@@ -34,6 +34,11 @@ export const collections = {
     handle: "swag",
     id: "Z2lkOi8vc2hvcGlmeS9Db2xsZWN0aW9uLzI5ODUxODk3Nw=="
   },
+  newItems: {
+    title: "New!",
+    handle: "new",
+    id: "Z2lkOi8vc2hvcGlmeS9Db2xsZWN0aW9uLzU3NjU1MDAxMTgw"
+  },
   vOne: {
     title: "V-One",
   },

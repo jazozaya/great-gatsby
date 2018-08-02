@@ -47,6 +47,9 @@ http://store.voltera.io/* https://www.voltera.io/store/
 /app-link/drilling-tutorial https://support.voltera.io/hc/en-us/articles/360000744393
 /app-link/icon /favicon.ico
 
+# Links used for Inks
+/inklink/exp/001 https://support.voltera.io/hc/en-us/articles/360007508253
+
 # Documents
 /summary /pdfs/V-One-Summary.pdf
 /techsheet /pdfs/Voltera-Conductive-Ink.pdf
