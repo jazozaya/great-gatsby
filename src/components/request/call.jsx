@@ -208,7 +208,7 @@ export default class QuoteRequest extends React.Component {
       <div>
       <h1>Schedule a Call</h1>
       <form>
-        <p>We'd love to jump on a call with you, simply pick a date and time below.</p>
+        <p className="pull-center">Call us anytime at <strong>+1 888-381-3332 ext: 1</strong> or pick a time and we'll call you back!</p>
         <h3>Contact Information</h3>
         <div className="format">
           <p>Name: <input className="text-input" type="text" id="name" name="name" /></p>
@@ -219,33 +219,15 @@ export default class QuoteRequest extends React.Component {
           <p>Country: <input className="text-input" name="ship-country" id="country"  autoComplete="shipping country" /></p>
 
         </div>
-        <h3>Pick a Date</h3>
+        <h3>Pick a Date & Time</h3>
         <p>Choose an upcoming date and time that meets your schedule. </p>
         <div className="wrapper">
           <p>Time:</p>
           <select className="time-select" id="time" name="time">
             <option value="">Please Select...</option>
-            <option value="8:30 am">8:30 am</option>
-            <option value="9:00 am">9:00 am</option>
-            <option value="9:30 am">9:30 am</option>
-            <option value="10:00 am">10:00 am</option>
-            <option value="10:30 am">10:30 am</option>
-            <option value="11:00 am">11:00 am</option>
-            <option value="11:30 am">11:30 am</option>
-            <option value="12:00 am">12:00 pm</option>
-            <option value="12:30 am">12:30 pm</option>
-            <option value="1:00 am">1:00 pm</option>
-            <option value="1:30 am">1:30 pm</option>
-            <option value="2:00 am">2:00 pm</option>
-            <option value="2:30 am">2:30 pm</option>
-            <option value="3:00 am">3:00 pm</option>
-            <option value="3:30 am">3:30 pm</option>
-            <option value="4:00 am">4:00 pm</option>
-            <option value="4:30 am">4:30 pm</option>
-            <option value="5:00 am">5:00 pm</option>
-            <option value="5:30 am">5:30 pm</option>
-            <option value="6:00 am">6:00 pm</option>
-            <option value="6:30 am">6:30 pm</option>
+            <option value="morning">Morning (9 am to 12 pm)</option>
+            <option value="afternoon">Afternoon (1 am to 5 pm)</option>
+            <option value="evening">Evening (6 pm to 8 pm)</option>
           </select>
         </div>
         <div className="wrapper">
@@ -267,7 +249,8 @@ export default class QuoteRequest extends React.Component {
       </form>
       {this.state.missingFields ? <p className="missing">Please fill out all of the form fields! ({this.state.count})</p> : null}
       <div className="button-wrapper">
-        <Button label="Schedule Call" color="dark" onClick={this.sendRequest.bind(this)}/>
+        <Button label="Schedule" color="dark" onClick={this.sendRequest.bind(this)}/>
+        <Button label="Call Now" color="dark" url="http://acctmgr.evoice.com/AcctMgr/ClickToCall/ClickToConnectSession.aspx?key=565c30ac-2251-42c0-8ab2-f6be671472a6"/>
       </div>
     </div>
   );

@@ -56,6 +56,10 @@
   .button-wrapper {
     margin: $small-padding 0px;
     text-align: center;
+
+    .button {
+      margin-left: $small-padding;
+    }
   }
 
   input, textarea, select {
@@ -106,6 +110,32 @@
 
   label {
     user-select: none;
+  }
+
+
+  .circle-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .slit {
+      width: 50px;
+      background-color: $voltera-blue;
+      height: 2px;
+    }
+
+    .circle {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border-width: 2px;
+      border-style: solid;
+      border-color: $voltera-blue;
+      background-color: $voltera-blue;
+    }
+    .circle.filled {
+      background-color: $voltera-green;
+    }
   }
 }
 

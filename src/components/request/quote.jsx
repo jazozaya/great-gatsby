@@ -6,10 +6,12 @@ import SpinnerLoader from 'components/common/spinnerLoader'
 import './common.scss'
 
 const status = {
-  ready: "ready",
-  sending: "sending",
-  sent: "sent",
-  failed: "failed",
+  pageOne: "pageOne",
+  pageTwo: "pageTwo",
+  pageThree: "pageThree",
+  emailSending: "emailSending",
+  emailSent: "emailSent",
+  emailFailed: "emailFailed",
 }
 
 const requiredFields = [
@@ -60,7 +62,7 @@ export default class QuoteRequest extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      status: status.ready,
+      status: status.pageOne,
       missingFields: false,
       otherProfile: false,
       otherIndustry: false,
@@ -118,22 +120,16 @@ export default class QuoteRequest extends React.Component {
     return searchState;
   }
 
-  sendRequest() {
-
-    // Performs some data validation to make sure everything was filled in.
+  pageOneValidate() {
     const allComplete = requiredFields.every(field => document.getElementById(field).value.length > 0);
 
-    let profile = this.extractCompanyProfile();
-    let segment = this.extractIndustrySegment();
-    let searchState = this.extractSearchState();
-
-    if(!allComplete || !profile || !segment || !searchState){
-      this.setState( { missingFields: true, count: this.state.count + 1 });
-      return;
+    if (!allComplete) {
+      this.setState({ missingFields: true, count: this.state.count + 1 })
+      return
     }
 
-    const emailParams = {
-
+    // Capture the p
+    var emailParams = {
       timestamp: Date(),
       to_email: process.env.NODE_ENV === 'production' ? 'forms@voltera.io' : 'jesus@voltera.io',
       reply_to: document.getElementById('email').value,
@@ -148,14 +144,58 @@ export default class QuoteRequest extends React.Component {
       state: document.getElementById('state').value,
       postal: document.getElementById('postal').value,
       country: document.getElementById('country').value,
-      company_profile: profile,
-      industry_segment: segment,
-      search_state: searchState,
-      additional_comment: document.getElementById('additional-comment').value
     }
 
+    this.setState({
+      status: status.pageTwo,
+      emailParams: emailParams,
+      count:0,
+      missingFields: false
+    })
+  }
+
+  pageTwoValidate() {
+
+    // Performs some data validation to make sure everything was filled in.
+    let profile = this.extractCompanyProfile();
+    let segment = this.extractIndustrySegment();
+
+    if(!profile || !segment){
+      this.setState( { missingFields: true, count: this.state.count + 1 });
+      return;
+    }
+
+    var emailParams = this.state.emailParams
+    emailParams.company_profile =  profile,
+    emailParams.industry_segment = segment,
+
+    this.setState({
+      status: status.pageThree,
+      emailParams: emailParams,
+      count:0,
+      missingFields: false
+    })
+  }
+
+
+  pageThreeValidate() {
+
+    // Performs some data validation to make sure everything was filled in.
+    let searchState = this.extractSearchState();
+    let hearAboutUs = document.getElementById('hear-about-us').value
+
+    if(!searchState || hearAboutUs.length == 0 ){
+      this.setState( { missingFields: true, count: this.state.count + 1 });
+      return;
+    }
+
+    var emailParams = this.state.emailParams
+    emailParams.search_state = searchState
+    emailParams.hear_about_us = hearAboutUs
+    emailParams.additional_comment = document.getElementById('additional-comment').value
+
     // Change state to sending.
-    this.setState({status: status.sending});
+    this.setState({status: status.emailSending});
     window.emailjs.init("user_a6VUHHdymj1y3WbePDyCm")
     window.emailjs.send("gmail","quote_request", emailParams)
     .then((response) => this.emailSuccess(response), (err) => this.emailFailure(err));
@@ -164,14 +204,14 @@ export default class QuoteRequest extends React.Component {
 
   emailSuccess(response) {
     console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
-    this.setState({ status: status.sent});
+    this.setState({ status: status.emailSent});
   }
   emailFailure(err) {
     console.log("FAILED. error=", err);
-    this.setState({ status: status.failed});
+    this.setState({ status: status.emailFailed});
   }
 
-  renderSending() {
+  renderEmailSending() {
     return (
       <div>
         <h1>Please Wait</h1>
@@ -182,11 +222,11 @@ export default class QuoteRequest extends React.Component {
     )
   }
 
-  renderSent() {
+  renderEmailSent() {
     return <Redirect push to="/request/thankyou/" />
   }
 
-  renderFailed(){
+  renderEmailFailed(){
     return (
       <div className="pull-center">
         <h1>Uh Oh!</h1>
@@ -198,19 +238,23 @@ export default class QuoteRequest extends React.Component {
     );
   }
 
-  renderCheckbox(type, index) {
+  renderProgressIndicator(index) {
     return(
-      <div key={index}>
-        <input type="checkbox" id={type[0]}></input>
-        <label htmlFor={type[0]}>{type[1]}</label>
+      <div className="circle-wrapper">
+        <div className="circle filled"></div>
+        <div className="slit"></div>
+        <div className={index > 0 ? "circle filled": "circle"}></div>
+        <div className="slit"></div>
+        <div className={index > 1 ? "circle filled": "circle"}></div>
       </div>
     )
   }
 
-  renderRequest() {
+  // PAGE ONE //
+  renderPageOne() {
     return (
       <div>
-        <h1>Request a quote.</h1>
+        {this.renderProgressIndicator(0)}
         <form>
           <h3>Contact Information</h3>
           <div className="format">
@@ -227,11 +271,27 @@ export default class QuoteRequest extends React.Component {
             <input className="wide-select" name="ship-address"  id="street"  autoComplete="shipping street-address" />
           </div>
           <div className="format">
-            <p>City: <input className="text-input" name="ship-city" id="city"  autoComplete="shipping address-level2" /></p>
-            <p>State/Region: <input className="text-input" name="ship-state" id="state"  autoComplete="shipping address-level3" /></p>
+            <p>City: <input className="text-input" name="ship-city" id="city"  autoComplete="shipping locality" /></p>
+            <p>State/Region: <input className="text-input" name="ship-state" id="state"  autoComplete="shipping region" /></p>
             <p>Postal Code: <input className="text-input" name="ship-zip" id="postal"  autoComplete="shipping postal-code" /></p>
             <p>Country: <input className="text-input" name="ship-country" id="country"  autoComplete="shipping country" /></p>
           </div>
+        </form>
+        {this.state.missingFields ? <p className="missing">Please complete all the fields! ({this.state.count})</p> : null}
+        <div className="button-wrapper">
+          <Button label="Next" color="dark" onClick={this.pageOneValidate.bind(this)}/>
+        </div>
+      </div>
+    );
+  }
+
+
+  // PAGE TWO AND  HELPER FUNCTIONS //
+  renderPageTwo() {
+    return (
+      <div>
+        {this.renderProgressIndicator(1)}
+        <form>
           <h3>Company Profile</h3>
           <p>Please select one or more</p>
           <div className="checkboxes">
@@ -262,23 +322,22 @@ export default class QuoteRequest extends React.Component {
             </div>
           </div>
           {this.renderOtherIndustry()}
-          <p>What best describes your current situation?</p>
-          <div className="left-check">
-            <input type="radio" name="search-state" value="learning" id="learning"/> <label htmlFor="learning"><strong>Learning</strong> - Expanding my knowledge</label><br/>
-            <input type="radio" name="search-state" value="searching" id="searching"/> <label htmlFor="searching"><strong>Searching</strong> - Investigating technologies for my application</label><br/>
-            <input type="radio" name="search-state" value="investing" id="investing"/> <label htmlFor="investing"><strong>Investing</strong> - Buying within 1 year</label><br/>
-            <input type="radio" name="search-state" value="purchasing" id="purchasing"/> <label htmlFor="purchasing"><strong>Purchasing</strong> - Actively in the buying process</label><br/>
-          </div>
-          <h3>Extra Information</h3>
-          <p>Is there anything you want to tell us?</p>
-          <textarea  placeholder="(Optional)" id="additional-comment"/>
         </form>
         {this.state.missingFields ? <p className="missing">Please complete all the fields! ({this.state.count})</p> : null}
         <div className="button-wrapper">
-          <Button label="Submit" color="dark" onClick={this.sendRequest.bind(this)}/>
+          <Button label="Next" color="dark" onClick={this.pageTwoValidate.bind(this)}/>
         </div>
       </div>
     );
+  }
+
+  renderCheckbox(type, index) {
+    return(
+      <div key={index}>
+        <input type="checkbox" id={type[0]}></input>
+        <label htmlFor={type[0]}>{type[1]}</label>
+      </div>
+    )
   }
 
   renderOtherProfile() {
@@ -303,16 +362,47 @@ export default class QuoteRequest extends React.Component {
     }
   }
 
+  // PAGE THREE //
+  renderPageThree() {
+    return (
+      <div>
+        {this.renderProgressIndicator(2)}
+        <form>
+          <h3>Extra Information</h3>
+          <p>What best describes your current situation?</p>
+          <div className="left-check">
+            <input type="radio" name="search-state" value="learning" id="learning"/> <label htmlFor="learning"><strong>Learning</strong> - Expanding my knowledge</label><br/>
+            <input type="radio" name="search-state" value="searching" id="searching"/> <label htmlFor="searching"><strong>Searching</strong> - Investigating technologies for my application</label><br/>
+            <input type="radio" name="search-state" value="investing" id="investing"/> <label htmlFor="investing"><strong>Investing</strong> - Buying within 1 year</label><br/>
+            <input type="radio" name="search-state" value="purchasing" id="purchasing"/> <label htmlFor="purchasing"><strong>Purchasing</strong> - Actively in the buying process</label><br/>
+          </div>
+          <p>How did you find out about the V-One?</p>
+          <textarea  placeholder="Tradeshow, Social Media, Online Ads, Word of Mouth, etc..." id="hear-about-us"/>
+          <p>Is there anything you want to tell us?</p>
+          <textarea  placeholder="(Optional)" id="additional-comment"/>
+        </form>
+        {this.state.missingFields ? <p className="missing">Please complete all the fields! ({this.state.count})</p> : null}
+        <div className="button-wrapper">
+          <Button label="Submit" color="dark" onClick={this.pageThreeValidate.bind(this)}/>
+        </div>
+      </div>
+    );
+  }
+
   renderStatus() {
     switch(this.state.status) {
-      case status.ready:
-      return this.renderRequest();
-      case status.sending:
-      return this.renderSending();
-      case status.sent:
-      return this.renderSent();
-      case status.failed:
-      return this.renderFailed();
+      case status.pageOne:
+      return this.renderPageOne();
+      case status.pageTwo:
+      return this.renderPageTwo();
+      case status.pageThree:
+      return this.renderPageThree();
+      case status.emailSending:
+      return this.renderEmailSending();
+      case status.emailSent:
+      return this.renderEmailSent();
+      case status.emailFailed:
+      return this.renderEmailFailed();
     }
   }
 
@@ -320,6 +410,8 @@ export default class QuoteRequest extends React.Component {
     return (
       <div className="request-wrapper">
         <div className="request">
+          <h1>Request a quote.</h1>
+          <p className="pull-center">Get in touch! Call us anytime at <strong>+1 888-381-3332 ext: 1</strong></p>
           {this.renderStatus()}
         </div>
       </div>);
