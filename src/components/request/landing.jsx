@@ -2,6 +2,7 @@ import React from 'react'
 import { Redirect } from 'react-router'
 import Button from 'components/common/button'
 import SpinnerLoader from 'components/common/spinnerLoader'
+import YouTube from 'components/common/youtube'
 
 import Specs from 'components/common/specs'
 
@@ -42,14 +43,30 @@ export default class LandingRequest extends React.Component {
       return;
     }
 
+
+    const { sourceDetails, landingType } = this.props;
+
     const emailParams = {
+
+      // Information about the email:
+      subject: landingType,
       timestamp: Date(),
+
+      // Information about them.
       to_email: process.env.NODE_ENV === 'production' ? 'forms@voltera.io' : 'jesus@voltera.io',
       reply_to: document.getElementById('email').value,
       from_name: document.getElementById('name').value,
       email: document.getElementById('email').value,
       phone: document.getElementById('phone').value,
       country: document.getElementById('country').value,
+
+
+      // Information about their source.
+      utm_source: sourceDetails.utm_source,
+      utm_medium: sourceDetails.utm_medium,
+      utm_campaign: sourceDetails.utm_campaign,
+      utm_term: sourceDetails.utm_term,
+      utm_content: sourceDetails.utm_content
     }
 
     // Change state to sending.
@@ -97,15 +114,13 @@ export default class LandingRequest extends React.Component {
   }
 
   renderRequest() {
-    const { firstName, lastName } = this.props;
-    const name = (firstName && lastName) ?  firstName + ' ' + lastName : ""
     return (
       <div>
         <h2>Want to know more?</h2>
         <form>
           <h3>Contact Information</h3>
           <div className="format">
-            <p>Name: <input className="text-input" type="text" id="name" name="name" defaultValue={name}/></p>
+            <p>Name: <input className="text-input" type="text" id="name" name="name" autoComplete="name"/></p>
             <p>Email: <input className="text-input" type="email"  id="email" name="email"  autoComplete="email"/></p>
             <p>Phone: <input className="text-input" type="tel" id="phone" name="phone" autoComplete="tel" /></p>
             <p>Country: <input className="text-input" name="ship-country" id="country"  autoComplete="shipping country" /></p>
@@ -120,17 +135,16 @@ export default class LandingRequest extends React.Component {
   }
 
   renderVideo() {
+    const { videoId } = this.props;
     if (typeof(window) !== 'undefined') {
       var width = Math.min(window.innerWidth - 100, 601) // Trim in case of mobile.
-      var height = Math.round(width / (640/360)) // Find the corresponding height to preserve the aspect ratio.
+      var height = Math.round(width / (560/315)) // Find the corresponding height to preserve the aspect ratio.
 
-      // We apply the css dynamically since we do not know width ahead of time.
-      const style = {
-        width: `${width}px`,
-        height: `${height}px`,
-      };
-
-      return <div className={`wistia_embed wistia_async_${this.props.wistiaId}`} style={style}>&nbsp;</div>
+      return <YouTube
+          width={width}
+          videoId={videoId}
+          url={`/landing/${videoId}.jpg`}
+        />
     }
   }
 
@@ -151,8 +165,8 @@ export default class LandingRequest extends React.Component {
     return (
       <div className="landing-wrapper">
         <div className="request">
-          <h1>Hi {this.props.firstName || "there"}!</h1>
-          <p className="pull-center">We thought you might be interested in this video. Let us know what you think!</p>
+          <h1>Hi there!</h1>
+          <p className="pull-center">Check out this video for a detailed walkthrough of our tool!</p>
           {this.renderVideo()}
           {this.renderStatus()}
         </div>
