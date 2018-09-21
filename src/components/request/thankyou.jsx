@@ -13,9 +13,9 @@ export default class QuoteRequest extends React.Component {
         <div className="request">
           <div className="pull-center">
             <h1>Success!</h1>
-            <p>We have received your request. We will be in touch soon!</p>
+            <p>We will be in touch soon! Until then, download<br />our overview PDF to learn more!</p>
             <div className="button-wrapper">
-              <Button label="Return" url={"/"} color="dark" internal/>
+              <Button label="Download Overview" url="/pdfs/Voltera-Overview.pdf" color="dark"/>
             </div>
           </div>
         </div>

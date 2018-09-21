@@ -19,7 +19,7 @@ export default class Spec extends React.Component {
           buttonOne={
             {
             label: "Download",
-            url: "/pdfs/V-One-Summary.pdf",
+            url: "/pdfs/Voltera-Overview.pdf",
             internal: false
             }
           }

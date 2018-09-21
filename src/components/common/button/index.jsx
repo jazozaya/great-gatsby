@@ -21,6 +21,6 @@ export default class Button extends React.Component {
     }
 
     // External link
-    return <a className={type} href={url}>{label}</a>;
+    return <a className={type} target="_blank" href={url}>{label}</a>;
   }
 }
