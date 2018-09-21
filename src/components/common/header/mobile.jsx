@@ -95,11 +95,11 @@ export default class Mobile extends React.Component {
       <div onClick= {() => this.setState({open : false})} className="link-panel-wrapper">
         <div className="link-panel">
           <ul>
-            <li><Link className={this.startsWith(pageName, "/faq")} to='/faq/'>FAQ</Link></li>
             <li><a className={this.startsWith(pageName, "/product")} onClick={(event) => this.catchProduct(event)}>Product</a></li>
             {this.renderSubheaderProduct()}
             <li><a href="http://community.voltera.io">Forums</a></li>
             <li><a href="http://support.voltera.io">Support</a></li>
+            <li><Link className={this.startsWith(pageName, "/faq")} to='/faq/'>FAQ</Link></li>
             <li><Link to='/contact/'>Contact</Link></li>
             <li><a className={this.startsWith(pageName, "/store")} onClick={(event) => this.catchStore(event)}>Store</a></li>
             {this.renderSubheaderStore()}

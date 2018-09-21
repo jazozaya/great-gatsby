@@ -80,10 +80,10 @@ export default class Desktop extends React.Component {
           <div className="parent-header">
             <Logo />
             <div className="links">
-              <Link className={this.startsWith(pageName, "/faq/")} to="/faq/">FAQ</Link>
               <Link className={this.startsWith(pageName, "/product/")} to={urls.technology}>Product</Link>
               <a href="http://community.voltera.io">Forums</a>
               <a href="http://support.voltera.io">Support</a>
+              <Link className={this.startsWith(pageName, "/faq/")} to="/faq/">FAQ</Link>
               <Link className={this.startsWith(pageName, "/contact/")}to="/contact/">Contact</Link>
               <Link className={`store-link ${this.startsWith(pageName,"/store/")}`} to="/store/">Store</Link>
             </div>
