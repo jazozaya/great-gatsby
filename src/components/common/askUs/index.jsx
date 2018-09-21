@@ -38,16 +38,20 @@ export default class AskUs extends React.Component {
   captureEmail(e) {
     e.preventDefault()
 
-    if (!this.validateEmail(document.getElementById('email').value)) {
+    let email = document.getElementById('email').value
+
+    if (!this.validateEmail(email)) {
       this.setState({ invalidEmail: true })
       return
     }
 
     const emailParams = {
       timestamp: Date(),
+      subject: "Quick Question",
       to_email: process.env.NODE_ENV === 'production' ? 'forms@voltera.io' : 'jesus@voltera.io',
-      reply_to: document.getElementById('email').value,
-      email: document.getElementById('email').value,
+      reply_to: email,
+      email: email,
+      from_name: email,
       question: this.state.question,
     }
 
