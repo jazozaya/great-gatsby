@@ -4,6 +4,7 @@ import Footer from 'components/common/footer'
 import Header from 'components/common/header'
 import DummyHeader from 'components/common/dummyHeader'
 import SignUp from 'components/common/signUp'
+import Reminder from 'components/common/reminder'
 
 import favicon from 'favicon.ico';
 
@@ -48,7 +49,6 @@ module.exports = React.createClass({
       // Load HEAP
       loadHeap();
       loadHotjar();
-
       loadFacebookPixel();
 
 
@@ -91,6 +91,7 @@ module.exports = React.createClass({
         </Helmet>
         <Header pageName={this.props.location.pathname} />
         <SignUp />
+        <Reminder/>
         <DummyHeader />
         {this.props.children()}
         <Footer />

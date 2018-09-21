@@ -16,7 +16,7 @@ export default class TechnologyFAQ extends React.Component {
           <p>You can comfortably make a simple single layer board in under an hour.</p>
         </Question>
         <Question underline title="What is the print area of the V-One?">
-          <p>135mm x 113.5mm (5.3" x 4.4"). Visit our <Link to="/specs/">specifications</Link> page for full product details.</p>
+          <p>127mm x 104mm (5.0â€ x 4.1â€). Visit our <Link to="/specs/">specifications</Link> page for full product details.</p>
         </Question>
         <Question underline title="Can the V-One make vias and through holes?">
           <p>It does now! We just released the <strong>V-One Drill!</strong> - an attachment to the V-One</p>
