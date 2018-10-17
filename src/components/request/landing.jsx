@@ -89,7 +89,6 @@ export default class LandingRequest extends React.Component {
   renderSending() {
     return (
       <div>
-        <h1>Please Wait</h1>
         <p className="pull-center">We are processing your request.</p>
         <SpinnerLoader />
         <p className="pull-center">Thank you for filling out your information.</p>

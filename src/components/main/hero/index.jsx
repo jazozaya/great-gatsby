@@ -13,22 +13,22 @@ export default class Hero extends React.Component {
     };
 
     // Save timer id so we clear it when we navigate away.
-    this.state.intervalId = setInterval(() => this.setState({index: (this.state.index + 1) % 3}), 6500)
-    this.overrideSelection = this.overrideSelection.bind(this)
+    //this.state.intervalId = setInterval(() => this.setState({index: (this.state.index + 1) % 3}), 6500)
+    //this.overrideSelection = this.overrideSelection.bind(this)
   }
-  componentWillUnmount() {
-    clearInterval(this.state.intervalId)
-  }
+  // componentWillUnmount() {
+  //   clearInterval(this.state.intervalId)
+  // }
 
-  overrideSelection(newIndex) {
-
-    // Clear current timer and start a new one.
-    clearInterval(this.state.intervalId)
-    const intervalId = setInterval(() => this.setState({index: (this.state.index + 1) % 3}), 6500)
-
-    // Change the index.
-    this.setState({intervalId: intervalId, index: newIndex})
-  }
+  // overrideSelection(newIndex) {
+  //
+  //   // Clear current timer and start a new one.
+  //   clearInterval(this.state.intervalId)
+  //   const intervalId = setInterval(() => this.setState({index: (this.state.index + 1) % 3}), 6500)
+  //
+  //   // Change the index.
+  //   this.setState({intervalId: intervalId, index: newIndex})
+  // }
 
   renderVOne() {
     return (
@@ -41,61 +41,62 @@ export default class Hero extends React.Component {
             <Button label="Learn More" url="/product/technology/" internal color="clear" />
           </div>
         </div>
-        <div className="dots-position">
+        {/*<div className="dots-position">
           <Dots selected="0" total="3" callback={this.overrideSelection}/>
-        </div>
+        </div>*/}
       </div>
     );
   }
 
-  renderDrill() {
-    return (
-      <div className="hero drill">
-        <div className="wrapper">
-          <h1>Meet the V-One Drill.</h1>
-          <p>Create double sided circuit boards on your desk.</p>
-          <div className="buttons">
-            <Button label="Buy Now - $699" url="/store/#drill" internal color="light" />
-            <Button label="Learn More" url="/product/drill/" internal color="clear" />
-          </div>
-        </div>
-
-        <div className="dots-position">
-          <Dots selected="1" total="3" callback={this.overrideSelection}/>
-        </div>
-      </div>
-    );
-  }
-
-
-  renderExperiment() {
-    return (
-      <div className="hero dispensing">
-        <div className="wrapper">
-          <h1>Dispense any material.</h1>
-          <p>An affordable dispensing system.</p>
-          <div className="buttons">
-            <Button label="Buy Now - $3,499" url="/store/" internal color="light" />
-            <Button label="Learn More" url="/product/experiment/" internal color="clear" />
-          </div>
-        </div>
-        <div className="dots-position">
-          <Dots selected="2" total="3" callback={this.overrideSelection}/>
-        </div>
-      </div>
-    );
-  }
+  // renderDrill() {
+  //   return (
+  //     <div className="hero drill">
+  //       <div className="wrapper">
+  //         <h1>Meet the V-One Drill.</h1>
+  //         <p>Create double sided circuit boards on your desk.</p>
+  //         <div className="buttons">
+  //           <Button label="Buy Now - $699" url="/store/#drill" internal color="light" />
+  //           <Button label="Learn More" url="/product/drill/" internal color="clear" />
+  //         </div>
+  //       </div>
+  //
+  //       <div className="dots-position">
+  //         <Dots selected="1" total="3" callback={this.overrideSelection}/>
+  //       </div>
+  //     </div>
+  //   );
+  // }
+  //
+  //
+  // renderExperiment() {
+  //   return (
+  //     <div className="hero dispensing">
+  //       <div className="wrapper">
+  //         <h1>Dispense any material.</h1>
+  //         <p>An affordable dispensing system.</p>
+  //         <div className="buttons">
+  //           <Button label="Buy Now - $3,499" url="/store/" internal color="light" />
+  //           <Button label="Learn More" url="/product/experiment/" internal color="clear" />
+  //         </div>
+  //       </div>
+  //       <div className="dots-position">
+  //         <Dots selected="2" total="3" callback={this.overrideSelection}/>
+  //       </div>
+  //     </div>
+  //   );
+  // }
 
   render() {
-    switch(this.state.index) {
-      case 0:
-      return this.renderVOne();
-      case 1:
-      return this.renderDrill();
-      case 2:
-      return this.renderExperiment()
-      default:
-      return this.renderDrill();
-    }
+    return this.renderVOne();
+    // switch(this.state.index) {
+    //   case 0:
+    //   return this.renderVOne();
+    //   case 1:
+    //   return this.renderDrill();
+    //   case 2:
+    //   return this.renderExperiment()
+    //   default:
+    //   return this.renderDrill();
+    //}
   }
 }

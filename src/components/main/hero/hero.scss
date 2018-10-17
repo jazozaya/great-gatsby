@@ -58,54 +58,54 @@
 
 // Specific to Drill Hero
 
-.hero.drill {
-  background-image: url('./drilling-attachment.jpg');
-  background-position: center;
-
-  .wrapper {
-    text-align: center;
-    margin: auto;
-    padding-top: 15vh;
-    padding-left: $small-padding;
-    padding-right: $small-padding;
-    max-width: $max-width;
-  }
-
-  .green {
-    color: $voltera-green;
-  }
-
-  h1 {
-    text-align: center;
-  }
-
-  .buttons {
-    justify-content: center;
-  }
-}
-
-
-.hero.dispensing {
-  background-image: url('./dispensing-machine.jpg');
-  background-position: center;
-
-  .wrapper {
-    text-align: right;
-    margin: auto;
-    padding-top: 15vh;
-    padding-left: $small-padding;
-    padding-right: $small-padding;
-    max-width: $max-width;
-  }
-
-  h1 {
-    text-align: right;
-  }
-
-  .buttons {
-    justify-content: flex-end;
-  }
-}
+// .hero.drill {
+//   background-image: url('./drilling-attachment.jpg');
+//   background-position: center;
+//
+//   .wrapper {
+//     text-align: center;
+//     margin: auto;
+//     padding-top: 15vh;
+//     padding-left: $small-padding;
+//     padding-right: $small-padding;
+//     max-width: $max-width;
+//   }
+//
+//   .green {
+//     color: $voltera-green;
+//   }
+//
+//   h1 {
+//     text-align: center;
+//   }
+//
+//   .buttons {
+//     justify-content: center;
+//   }
+// }
+//
+//
+// .hero.dispensing {
+//   background-image: url('./dispensing-machine.jpg');
+//   background-position: center;
+//
+//   .wrapper {
+//     text-align: right;
+//     margin: auto;
+//     padding-top: 15vh;
+//     padding-left: $small-padding;
+//     padding-right: $small-padding;
+//     max-width: $max-width;
+//   }
+//
+//   h1 {
+//     text-align: right;
+//   }
+//
+//   .buttons {
+//     justify-content: flex-end;
+//   }
+// }
 
 @media (max-width: $mobile-threshold) {
   .hero h1 {
