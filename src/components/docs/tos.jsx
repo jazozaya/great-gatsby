@@ -106,7 +106,7 @@ export default class MyPrivacy extends React.Component {
         </p>
         <h3>5. Warranty</h3>
         <p>
-          Voltera warrants that, for a period of six (6) months from the date that the Product is delivered to you by Voltera or its authorized distributor: (a) the Product will comply with Voltera’s specifications for such Product, and (b) the Product will be free from material defects in material, design and workmanship.  <strong>This warranty is valid only for the original purchaser of a new Product obtained from Voltera or its authorized distributor, and shall not survive any transfer of ownership of the Product</strong>.  The foregoing warranty shall be subject to the following provisions:
+          Voltera warrants that, for a period of one (1) year from the date that the Product is delivered to you by Voltera or its authorized distributor: (a) the Product will comply with Voltera’s specifications for such Product, and (b) the Product will be free from material defects in material, design and workmanship.  <strong>This warranty is valid only for the original purchaser of a new Product obtained from Voltera or its authorized distributor, and shall not survive any transfer of ownership of the Product</strong>.  The foregoing warranty shall be subject to the following provisions:
         </p>
         <ol type="a">
           <li>
