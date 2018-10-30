@@ -1,22 +1,19 @@
-import React from 'react'
-import Helmet from 'react-helmet'
+import React from "react";
+import Helmet from "react-helmet";
 
-import RequestCall from 'components/request/call'
-import Awards from 'components/common/awards'
+import RequestCall from "components/request/call";
+import Awards from "components/common/awards";
 
-export default class MyQuote extends React.Component {
+import Layout from "components/layout";
 
-  render() {
-    return (
-      <div>
-        <Helmet>
-          <title>Voltera | Schedule a Call</title>
-          <meta name="description" content="Want to talk? Have questions about how it works? Schedule a call with us. We can help!" />
-          <script defer="defer" type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-        </Helmet>
-        <RequestCall />
-        <Awards />
-      </div>
-    )
-  }
-}
+export default props => (
+  <Layout pathname={props.location.pathname}>
+    <Helmet>
+      <title>Voltera | Schedule a Call</title>
+      <meta name="description" content="Want to talk? Have questions about how it works? Schedule a call with us. We can help!" />
+      <script defer="defer" type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js" />
+    </Helmet>
+    <RequestCall />
+    <Awards />
+  </Layout>
+);

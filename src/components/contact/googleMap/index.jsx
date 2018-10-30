@@ -1,18 +1,18 @@
-import React from 'react'
-import './googleMap.scss'
-import volteraEmblem from './voltera-emblem.png'
-import Bowser from 'bowser'
-import GoogleMapReact from 'google-map-react';
+import React from "react";
+import "./googleMap.scss";
+import volteraEmblem from "./voltera-emblem.png";
+import Bowser from "bowser";
+import GoogleMapReact from "google-map-react";
 
 class GoogleMarker extends React.Component {
-  render () {
-    return (<img src={volteraEmblem} />);
+  render() {
+    return <img src={volteraEmblem} alt="" />;
   }
 }
 
 export default class GoogleMap extends React.Component {
   static defaultProps = {
-    center: {lat: 43.4555075, lng: -80.4955712},
+    center: { lat: 43.4555075, lng: -80.4955712 },
     zoom: 5
   };
 
@@ -21,20 +21,20 @@ export default class GoogleMap extends React.Component {
     if (Bowser.msie) {
       return null;
     }
-    return <GoogleMarker lat={43.4555075} lng={-80.4955712} />
+    return <GoogleMarker lat={43.4555075} lng={-80.4955712} />;
   }
 
   render() {
     return (
       <div className="googleMap">
         <GoogleMapReact
-          bootstrapURLKeys= {{
+          bootstrapURLKeys={{
             key: "AIzaSyDAKgLWBTIjlTC2F2pKIo0Lah_1nofGlHs"
           }}
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
-          >
-        {this.renderMarker()}
+        >
+          {this.renderMarker()}
         </GoogleMapReact>
       </div>
     );

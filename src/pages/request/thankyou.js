@@ -1,19 +1,16 @@
-import React from 'react'
-import Helmet from 'react-helmet'
+import React from "react";
+import Helmet from "react-helmet";
 
-import ThankYou from 'components/request/thankyou'
+import ThankYou from "components/request/thankyou";
 
-export default class MyCall extends React.Component {
+import Layout from "components/layout";
 
-  render() {
-    return (
-      <div>
-        <Helmet>
-          <title>Voltera | Thank you!</title>
-          <meta name="description" content="We appreciate your input" />
-        </Helmet>
-        <ThankYou/>
-      </div>
-    )
-  }
-}
+export default props => (
+  <Layout pathname={props.location.pathname}>
+    <Helmet>
+      <title>Voltera | Thank you!</title>
+      <meta name="description" content="We appreciate your input" />
+    </Helmet>
+    <ThankYou />
+  </Layout>
+);

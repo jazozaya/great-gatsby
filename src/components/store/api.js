@@ -1,22 +1,22 @@
 import Client from 'shopify-buy'
 import fetch from 'node-fetch'
-import Bowser from 'bowser'
+//import Bowser from 'bowser'
 
 // Polyfill
-if (Bowser.msie) {
+// if (Bowser.msie) {
 
-  require('es6-object-assign').polyfill();
-  require('es6-promise').polyfill();
+//   require('es6-object-assign').polyfill();
+//   require('es6-promise').polyfill();
 
-  if (!String.prototype.endsWith) {
-  	String.prototype.endsWith = function(search, this_len) {
-  		if (this_len === undefined || this_len > this.length) {
-  			this_len = this.length;
-  		}
-          return this.substring(this_len - search.length, this_len) === search;
-  	};
-  }
-}
+//   if (!String.prototype.endsWith) {
+//   	String.prototype.endsWith = function(search, this_len) {
+//   		if (this_len === undefined || this_len > this.length) {
+//   			this_len = this.length;
+//   		}
+//           return this.substring(this_len - search.length, this_len) === search;
+//   	};
+//   }
+// }
 
 // Simple wrapper
 function getItem(itemName) {

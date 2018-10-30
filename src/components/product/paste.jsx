@@ -86,7 +86,7 @@ export default class Paste extends React.Component {
             </div>
           </div>
           <div className="column">
-            <img src="/product/status-led-lights.jpg" />
+            <img src="/product/status-led-lights.jpg" alt=""/>
             <div className="description">
               <h2>Status indicators.</h2>
               <p>The unit is equipped with LED indicators that let you know the status of the machine from accross the room.</p>

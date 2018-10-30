@@ -1,18 +1,15 @@
-import React from 'react'
-import Helmet from 'react-helmet'
-import Refund from 'components/docs/refund'
+import React from "react";
+import Helmet from "react-helmet";
+import Refund from "components/docs/refund";
 
-export default class MyTOS extends React.Component {
+import Layout from "components/layout";
 
-  render() {
-    return (
-      <div>
-        <Helmet>
-          <title>Voltera | Refund Policy</title>
-          <meta name="description" content="Learn about our return policy and exchanges." />
-        </Helmet>
-        <Refund />
-      </div>
-    );
-  }
-}
+export default props => (
+  <Layout pathname={props.location.pathname}>
+    <Helmet>
+      <title>Voltera | Refund Policy</title>
+      <meta name="description" content="Learn about our return policy and exchanges." />
+    </Helmet>
+    <Refund />
+  </Layout>
+);

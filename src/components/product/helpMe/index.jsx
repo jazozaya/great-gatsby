@@ -11,7 +11,7 @@ class Reason extends React.Component {
     const { iconSrc, title } = this.props;
     return (
       <div className="reason">
-        <img className="icon" src={iconSrc}></img>
+        <img className="icon" src={iconSrc} alt=""/>
         <h3>{title}</h3>
         <div className="description">
           {this.props.children}

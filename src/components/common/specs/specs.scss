@@ -44,17 +44,6 @@ background-color: $white;
   flex-basis: 280px;
 }
 
-.specs .units {
-  cursor: pointer;
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 2px;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding:0.9em 1.8em;
-  font-weight: 600;
-}
-
 .specs .units-wrapper {
   display: flex;
   justify-content: space-around;

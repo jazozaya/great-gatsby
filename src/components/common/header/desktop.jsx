@@ -1,14 +1,13 @@
 import React from 'react';
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 import Logo from 'components/common/logo';
 import SVGInline from "react-svg-inline"
 import './desktop.scss'
 
-var rawSVG = require('!raw-loader!./cart.min.svg');
-
-
 import { urls } from './constants'
 import { collections as c } from 'components/store/constants'
+
+var rawSVG = require('!raw-loader!./cart.min.svg');
 
 export default class Desktop extends React.Component {
 

@@ -1,4 +1,4 @@
-@import 'src/css/colors';
+@import "src/css/colors";
 
 .faq-wrapper {
   padding: $medium-padding 0px;
@@ -6,47 +6,4 @@
 
 .faq-wrapper .caption {
   padding: 0px $small-padding;
-}
-
-.faq-section {
-  max-width: $narrow-width;
-  margin: auto;
-  padding: $medium-padding $small-padding;
-}
-
-.faq-underline {
-  border-bottom: 1px solid #d9d9d9;
-}
-
-.faq-question-title {
-  line-height: 2.3em;
-  color: #79ce00;
-  cursor: pointer;
-  user-select: none;
-  font-weight: 600;
-  margin: 0px;
-
-  i {
-      border: solid $voltera-green;
-      border-width: 0 3px 3px 0;
-      display: inline-block;
-      padding: 3px;
-      margin: 0px 10px 2px 0px;
-  }
-
-  .arrow-right {
-      transform: rotate(-45deg);
-      -webkit-transform: rotate(-45deg);
-  }
-
-  .arrow-down {
-      transform: rotate(45deg);
-      -webkit-transform: rotate(45deg);
-  }
-}
-
-@media (max-width: $mobile-threshold) {
-  .faq-question-title {
-    font-size: 0.9em;
-  }
 }

@@ -1,15 +1,10 @@
 import React from 'react'
-import Bowser from 'bowser'
 
-import YouTube from 'components/common/youtube'
 import CallToAction from 'components/common/cta'
 import FastFact from 'components/common/fastFact'
 import MiniHero from 'components/common/minihero'
-import Explore from 'components/common/explore'
 import Dots from 'components/common/dots'
-
 import SoftwareFAQ from 'components/faq/software'
-
 import Gallery from 'components/common/gallery'
 import { softwareGallery } from 'components/common/gallery/constants'
 
@@ -93,7 +88,7 @@ export default class Software extends React.Component {
           </div>
           <div className="flex-row screenshot-wrapper">
             <div className="navigation left" onClick={() => this.previousImage()}>&lt;</div>
-            <img className={screenshotClass} src={SoftwareImages[this.state.imgIndex].src} />
+            <img className={screenshotClass} src={SoftwareImages[this.state.imgIndex].src} alt="" />
             <div className="navigation right" onClick={() => this.nextImage()}>&gt;</div>
           </div>
           <Dots
@@ -104,7 +99,7 @@ export default class Software extends React.Component {
         </section>
           <section className="flex-row column-wrapper">
             <div className="column">
-              <img src="/software/software-locate-pad.jpg" />
+              <img src="/software/software-locate-pad.jpg" alt="" />
               <div className="description">
                 <h2>Smart Alignment.</h2>
                 <p>We've developed a unique approach to alignment. Just tell the software the location of 2 key features in your board and it takes care the rest.</p>
@@ -112,7 +107,7 @@ export default class Software extends React.Component {
               </div>
             </div>
             <div className="column">
-              <img src="/software/software-probing.jpg" />
+              <img src="/software/software-probing.jpg" alt="" />
               <div className="description">
                 <h2>Automatic Height Compensation.</h2>
                 <p>Before you dispense, the software will measure the height of an array of points on the board.</p>

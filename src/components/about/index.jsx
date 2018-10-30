@@ -23,7 +23,7 @@ export default class About extends React.Component {
           <p>Most importantly, we listen to what our users say is slowing them down, and try to eliminate those hurdles.  We want to be the go-to resource for the knowledge and tools to help you build hardware faster.  </p>
           <p>Got ideas about how we can make that happen?  Get in touch!</p>
           <h3>Our Users</h3>
-          <img src="/around-the-world.png"/>
+          <img src="/around-the-world.png" alt=""/>
         </section>
       </div>
     );

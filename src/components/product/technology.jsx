@@ -1,8 +1,6 @@
 import React from 'react'
 
 import YouTube from 'components/common/youtube'
-import Button from 'components/common/button'
-import Explore from 'components/common/explore';
 import CallToAction from 'components/common/cta';
 import Specs from 'components/common/specs';
 import MiniHero from 'components/common/minihero'
@@ -49,7 +47,7 @@ export default class Technology extends React.Component {
           </div>
         </section>
         <section className="flex-row">
-          <img src="/voltera-dispenser-min.png"/>
+          <img src="/voltera-dispenser-min.png" alt=""/>
           <div className="description">
             <h2>Anyone can use it.</h2>
             <p>The ink cartridge is installed in the dispenser, and the dispenser is mounted on the V-One. All of our attachments are magnetically mounted, so you do not need any special tools to swap them.</p>
@@ -63,7 +61,7 @@ export default class Technology extends React.Component {
             <p>This high precision probe was developed from the ground up and creates a height map of your substrate. The V-One takes the map into account and makes micro adjustments to ensure a constant printing height of 100 microns. </p>
             <p>Since we do not need the substrate to be conductive, we can dispense on rigid materials like FR4, glass and ceramics, along with flexible substrates like Kapton (Polyimide).</p>
           </div>
-          <img src="/voltera-probe-min.png"/>
+          <img src="/voltera-probe-min.png" alt=""/>
         </section>
         <Box />
         <CustomerQuotes />

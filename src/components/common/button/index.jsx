@@ -1,7 +1,7 @@
 import React from 'react';
 import './button.scss';
 
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 
 export default class Button extends React.Component {
 
@@ -21,6 +21,6 @@ export default class Button extends React.Component {
     }
 
     // External link
-    return <a className={type} target="_blank" href={url}>{label}</a>;
+    return <a className={type} target="_blank" href={url} rel="noopener noreferrer">{label}</a>;
   }
 }

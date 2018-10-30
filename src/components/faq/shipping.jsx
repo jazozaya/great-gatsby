@@ -3,7 +3,7 @@ import React from 'react'
 import Question from './utils/question'
 import Template from './utils/template'
 
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 
 export default class Shipping extends React.Component {
 

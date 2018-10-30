@@ -1,20 +1,15 @@
-import React from 'react'
-import Helmet from 'react-helmet'
-import Cart from 'components/store/cart'
+import React from "react";
+import Helmet from "react-helmet";
+import Cart from "components/store/cart";
 
-export default class MyCart extends React.Component {
+import Layout from "components/layout";
 
-  render() {
-    return (
-      <div>
-        <Helmet>
-          <title>Voltera | Cart</title>
-          <meta name="description" content="Your shopping cart. Are you ready to checkout?" />
-        </Helmet>
-        <Cart />
-      </div>
-    )
-  }
-}
-
-// TODO - When they are in the checkout page. Could we show them more relevant products?
+export default props => (
+  <Layout pathname={props.location.pathname}>
+    <Helmet>
+      <title>Voltera | Cart</title>
+      <meta name="description" content="Your shopping cart. Are you ready to checkout?" />
+    </Helmet>
+    <Cart />
+  </Layout>
+);

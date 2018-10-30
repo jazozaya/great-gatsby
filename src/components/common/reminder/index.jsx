@@ -2,7 +2,7 @@ import React from 'react';
 import Bowser from 'bowser'
 import "./reminder.scss"
 
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 
 export default class Header extends React.Component {
 

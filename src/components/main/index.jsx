@@ -6,7 +6,6 @@ import Awards from 'components/common/awards'
 import Hero from './hero'
 import Testimonial from './testimonial'
 import FeatureSelector from './featureSelector'
-import BenefitsSelector from './benefitsSelector'
 import Summary from './summary'
 
 import "css/main.scss"

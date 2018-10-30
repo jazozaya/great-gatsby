@@ -35,7 +35,7 @@
 }
 
 
-.header-mobile a {
+.header-mobile span, .header-mobile a {
   color: $white;
   text-decoration: none;
   margin: 10px;
@@ -45,7 +45,7 @@
   font-weight: 600;
 }
 
-.header-mobile .sub-header a {
+.header-mobile .sub-header span, .header-mobile .sub-header a {
   font-size: 0.8em;
 }
 .header-mobile .sub-header li {
@@ -76,7 +76,7 @@
 
 
 @media (max-width: $mobile-threshold) {
-  .header-mobile a {
+  .header-mobile a, .header-mobile span {
     font-weight: 300;
   }
 }

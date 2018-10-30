@@ -1,18 +1,15 @@
-import React from 'react'
-import Helmet from 'react-helmet'
-import Privacy from 'components/docs/tos'
+import React from "react";
+import Helmet from "react-helmet";
+import Layout from "components/layout";
 
-export default class MyTOS extends React.Component {
+import Privacy from "components/docs/tos";
 
-  render() {
-    return (
-      <div>
-        <Helmet>
-          <title>Voltera | Terms of Service</title>
-          <meta name="description" content="Learn about our warranty and our terms & conditions." />
-        </Helmet>
-        <Privacy />
-      </div>
-    );
-  }
-}
+export default props => (
+  <Layout pathname={props.location.pathname}>
+    <Helmet>
+      <title>Voltera | Terms of Service</title>
+      <meta name="description" content="Learn about our warranty and our terms & conditions." />
+    </Helmet>
+    <Privacy />
+  </Layout>
+);

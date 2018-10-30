@@ -1,16 +1,10 @@
-import React from 'react'
-import Helmet from 'react-helmet'
-import queryString from 'query-string'
+import React from "react";
 
-import Main from 'components/main'
+import Layout from "components/layout";
+import Main from "components/main";
 
-export default class MyQuote extends React.Component {
-
-  render() {
-    return (
-      <div>
-        <Main/>
-      </div>
-    )
-  }
-}
+export default props => (
+  <Layout pathname={props.location.pathname}>
+    <Main />
+  </Layout>
+);

@@ -2,7 +2,7 @@ import React from 'react'
 import './hero.scss'
 
 import Button from 'components/common/button'
-import Dots from 'components/common/dots'
+//import Dots from 'components/common/dots'
 
 export default class Hero extends React.Component {
 

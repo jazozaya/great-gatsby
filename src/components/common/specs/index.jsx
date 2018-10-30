@@ -1,7 +1,6 @@
 import React from 'react'
 import Bowser from 'bowser'
 import Row from './row'
-import Button from 'components/common/button'
 
 import './specs.scss'
 
@@ -19,8 +18,8 @@ export default class Specs extends React.Component {
     if (Bowser.mobile) {
       return(
         <div className="units-wrapper">
-          <a onClick={() => this.setState({metric: true})} className={units === "Metric" ? "units dark" : "units clear"}>Metric</a>
-          <a onClick={() => this.setState({metric: false})} className={units === "Imperial" ? "units dark" : "units clear"}>Imperial</a>
+          <button onClick={() => this.setState({metric: true})} className={units === "Metric" ? "units dark" : "units clear"}>Metric</button>
+          <button onClick={() => this.setState({metric: false})} className={units === "Imperial" ? "units dark" : "units clear"}>Imperial</button>
         </div>
       )
     }
@@ -210,7 +209,6 @@ export default class Specs extends React.Component {
       }
     }
 
-    const  { display }  = this.props;
     switch(this.props.display){
       case "vOne":
       return this.renderVOneSpecs(units);

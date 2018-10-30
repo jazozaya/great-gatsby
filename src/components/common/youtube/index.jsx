@@ -1,78 +1,73 @@
-import React from 'react'
-import Bowser from 'bowser'
-import Youtube from 'react-youtube'
+import React from "react";
+import Bowser from "bowser";
+import Youtube from "react-youtube";
 
 // Simple Wrapper so we don't have to keep including the opts.
 const opts = {
-  playerVars: { // https://developers.google.com/youtube/player_parameters
-    color: 'white',
+  playerVars: {
+    // https://developers.google.com/youtube/player_parameters
+    color: "white",
     controls: 2,
     rel: 0,
     showinfo: 0,
     autoplay: 1
   }
-}
+};
 
 export default class YouTube extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      playVideo: false
+    };
+  }
 
-    constructor(props) {
-      super(props);
-      this.state = {
-        playVideo: false,
-      };
+  renderStaticImage(width, height) {
+    const { url } = this.props;
+    const imgStyle = {cursor: 'pointer'};
+    return <img style={imgStyle} width={width} height={height} onClick={() => this.setState({ playVideo: true })} src={url} alt="" />;
+  }
+
+  renderVideo(width, height) {
+    const { videoId } = this.props;
+    opts.width = width;
+    opts.height = height;
+    return <Youtube videoId={videoId} opts={opts} />;
+  }
+
+  renderContent(width, height) {
+    // Mobile devices don't autoplay, so load the youtube video from the start.
+    if (Bowser.mobile || this.state.playVideo) {
+      return this.renderVideo(width, height);
     }
+    return this.renderStaticImage(width, height);
+  }
 
-    renderStaticImage(width, height) {
-      const { url } = this.props;
+  render() {
+    const { width } = this.props;
+
+    // Need to check window size in case of mobile. But window is undefined during compilation.
+    if (typeof window !== "undefined") {
+      var width_int = Math.min(window.innerWidth - 40, width); // Trim in case of mobile.
+      const width_s = width_int.toString(); // Ensure we store width as a string.
+      const height_s = Math.round(width_int / (640 / 360)).toString(); // Find the corresponding height to preserve the aspect ratio.
+
+      // We apply the css dynamically since we do not know width ahead of time.
+      var divStyle = {
+        width: `${width_s}px`,
+        height: `${height_s}px`
+      };
+
       return (
-        <a>
-          <img width={width} height={height} onClick={() => this.setState({ playVideo: true})} src={url}></img>
-        </a>
+        <div className="youtube-wrapper" style={divStyle}>
+          {this.renderContent(width_s, height_s)}
+        </div>
       );
     }
-
-    renderVideo(width, height) {
-      const { videoId } = this.props;
-      opts.width = width
-      opts.height = height
-      return <Youtube videoId={videoId} opts={opts}/>
-    }
-
-    renderContent(width, height) {
-
-      // Mobile devices don't autoplay, so load the youtube video from the start.
-      if (Bowser.mobile || this.state.playVideo) {
-        return this.renderVideo(width, height);
-      }
-      return this.renderStaticImage(width, height);
-    }
-
-    render() {
-      const { width } = this.props;
-
-      // Need to check window size in case of mobile. But window is undefined during compilation.
-      if (typeof(window) !== 'undefined') {
-
-        var width_int = Math.min(window.innerWidth - 40, width) // Trim in case of mobile.
-        const width_s = width_int.toString() // Ensure we store width as a string.
-        const height_s = Math.round(width_int / (640/360)).toString() // Find the corresponding height to preserve the aspect ratio.
-
-        // We apply the css dynamically since we do not know width ahead of time.
-        var divStyle = {
-          width: `${width_s}px`,
-          height: `${height_s}px`,
-        };
-
-        return (
-          <div className="youtube-wrapper" style={divStyle}>
-            {this.renderContent(width_s, height_s)}
-          </div>
-        );
-      }
-      return null; // Should never happen.
-    }
+    return null; // Should never happen.
   }
+}
 
 YouTube.defaultProps = {
   width: 640
-}
+};
