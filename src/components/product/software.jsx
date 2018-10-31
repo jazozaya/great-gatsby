@@ -8,22 +8,27 @@ import SoftwareFAQ from 'components/faq/software'
 import Gallery from 'components/common/gallery'
 import { softwareGallery } from 'components/common/gallery/constants'
 
+import imgHome from 'images/software/software-home.jpg'
+import imgLocate1 from 'images/software/software-locate-pad.jpg'
+import imgOutline from 'images/software/software-outline.jpg'
+import imgPriming from 'images/software/software-priming.jpg'
+import imgProbing from 'images/software/software-probing.jpg'
 
 import './common.scss'
 
 const SoftwareImages = [
   {
-    src: "/software/software-home.jpg",
+    src: imgHome,
     title: "Meet our desktop application",
     caption: "The software has been designed with you in mind. A minimal interface and instructional videos guide you every step of the way so you can get started in minutes."
   },
   {
-    src: '/software/software-outline.jpg',
+    src: imgOutline,
     title: "Works with your design tool",
     caption: "We support the Gerber format, so the same files you send to a factory can be used. Design with a program you're already comfortable with (EAGLE, Kicad, Altium, etc) and export the Gerbers to get started.  "
   },
   {
-    src: '/software/software-priming.jpg',
+    src: imgPriming,
     title: "A flat learning curve",
     caption: "Follow along the step by step instructions and learn how to calibrate your unit to get the perfect print. You'll be a pro in no time."
   }
@@ -99,7 +104,7 @@ export default class Software extends React.Component {
         </section>
           <section className="flex-row column-wrapper">
             <div className="column">
-              <img src="/software/software-locate-pad.jpg" alt="" />
+              <img src={imgLocate1} alt="" />
               <div className="description">
                 <h2>Smart Alignment.</h2>
                 <p>We've developed a unique approach to alignment. Just tell the software the location of 2 key features in your board and it takes care the rest.</p>
@@ -107,7 +112,7 @@ export default class Software extends React.Component {
               </div>
             </div>
             <div className="column">
-              <img src="/software/software-probing.jpg" alt="" />
+              <img src={imgProbing} alt="" />
               <div className="description">
                 <h2>Automatic Height Compensation.</h2>
                 <p>Before you dispense, the software will measure the height of an array of points on the board.</p>

@@ -2,6 +2,8 @@ import React from "react";
 import Bowser from "bowser";
 import "./boxDrill.scss";
 
+import boxDrill from './drill-box-min.png'
+
 const summary = {
   // IMPORTANT - These names need to match class names in CSS
   drill: "drill",
@@ -213,7 +215,7 @@ export default class BoxDrill extends React.Component {
       <section id="drill-box" className="box-wrapper-drill">
         <h1>What is in the box?</h1>
         <p className="pull-center">The V-One Drill comes with everything you need to make double sided boards out of the box.</p>
-        <img src="/drill-box-min.png" alt="" />
+        <img src={boxDrill} alt="" />
         <div className="mobile-contents">
           <p>
             <strong>1 - V-One Drill</strong>.<br />A drilling attachment for the Voltera V-One

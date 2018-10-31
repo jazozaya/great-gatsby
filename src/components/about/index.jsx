@@ -1,6 +1,8 @@
 import React from 'react'
 import './about.scss'
 
+import map from './around-the-world.png'
+
 export default class About extends React.Component {
 
   render() {
@@ -23,7 +25,7 @@ export default class About extends React.Component {
           <p>Most importantly, we listen to what our users say is slowing them down, and try to eliminate those hurdles.  We want to be the go-to resource for the knowledge and tools to help you build hardware faster.  </p>
           <p>Got ideas about how we can make that happen?  Get in touch!</p>
           <h3>Our Users</h3>
-          <img src="/around-the-world.png" alt=""/>
+          <img src={map} alt=""/>
         </section>
       </div>
     );

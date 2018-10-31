@@ -14,7 +14,6 @@ import "react-datepicker/dist/react-datepicker.css";
 const status = {
   ready: "ready",
   sending: "sending",
-  sent: "sent",
   failed: "failed"
 };
 
@@ -69,7 +68,8 @@ export default class QuoteRequest extends React.Component {
       time: document.getElementById("time").value,
       timezone: document.getElementById("timezone").value,
       date: this.state.selectedDate,
-      additional_item: document.getElementById("additional-item").value
+      additional_item: document.getElementById("additional-item").value,
+      referrer: document.referrer ? document.referrer : "Unknown"
     };
 
     // // Change state to sending.
@@ -80,7 +80,7 @@ export default class QuoteRequest extends React.Component {
 
   emailSuccess(response) {
     console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
-    this.setState({ status: status.sent });
+    navigate("/request/thankyou/?q=RFC");
   }
   emailFailure(err) {
     console.log("FAILED. error=", err);
@@ -96,10 +96,6 @@ export default class QuoteRequest extends React.Component {
         <p className="pull-center">Thank you for the interest in Voltera!</p>
       </div>
     );
-  }
-
-  renderSent() {
-    navigate("/request/thankyou/");
   }
 
   renderFailed() {
@@ -271,8 +267,6 @@ export default class QuoteRequest extends React.Component {
         return this.renderRequest();
       case status.sending:
         return this.renderSending();
-      case status.sent:
-        return this.renderSent();
       case status.failed:
         return this.renderFailed();
       default:

@@ -5,7 +5,7 @@ import queryString from "query-string";
 import Landing from "components/request/landing";
 import Layout from "components/layout";
 
-import thumbPath from "components/request/thumbnail/N6nEgN4THRE.jpg";
+import thumbPath from "components/request/thumbnail/8oWg8hP9FLc.jpg";
 
 export default class MyLanding extends React.Component {
   render() {
@@ -27,11 +27,11 @@ export default class MyLanding extends React.Component {
           <script defer="defer" type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js" />
         </Helmet>
         <Landing
-          videoId="N6nEgN4THRE"
+          videoId="8oWg8hP9FLc"
           thumbPath={thumbPath}
           sourceDetails={sourceDetails}
-          landingType="Landing - Print Walkthrough"
-          thankYou="q=walkthrough-print"
+          landingType="Landing - Solder Walkthrough"
+          thankYou="q=walkthrough-solder"
           description="A quick overview of our tool. Let us know if you'd like more information."
         />
       </Layout>

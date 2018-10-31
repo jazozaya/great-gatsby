@@ -2,6 +2,7 @@ import React from 'react'
 import YouTube from 'components/common/youtube'
 
 import Button from 'components/common/button'
+import printYoutube from 'images/youtubeScreen/print-conductive-silver-ink.jpg'
 import './teaser.scss'
 
 export default class Feature extends React.Component {
@@ -11,7 +12,7 @@ export default class Feature extends React.Component {
       <div className="teaser flex-row">
           <YouTube
             videoId="PeW1nURJ5ww"
-            url="/selector/print-conductive-silver-ink.jpg"
+            url={printYoutube}
             width="600"
           />
           <div className="description">

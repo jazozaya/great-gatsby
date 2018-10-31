@@ -1,4 +1,5 @@
 import React from "react";
+import dyson from './james-dyson.jpg'
 
 import "./testimonial.scss";
 
@@ -15,7 +16,7 @@ export default class Testimonial extends React.Component {
             <h3 className="author">Sir James Dyson - Inventor & founder.</h3>
           </div>
           <a href="http://www.dyson.com/community/aboutdyson.aspx" target="_blank" rel="noopener noreferrer">
-            <img width="150" height="150" src="/testimonial/james-dyson.jpg" alt="" />
+            <img width="150" height="150" src={dyson} alt="" />
           </a>
         </div>
       </div>

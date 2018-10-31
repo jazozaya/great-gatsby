@@ -1,6 +1,8 @@
 import React from 'react'
 import YouTube from 'components/common/youtube'
 import Button from 'components/common/button'
+
+import dispensePageYoutube from 'images/youtubeScreen/dispense-solder-paste.jpg'
 import './teaser.scss'
 
 export default class Feature extends React.Component {
@@ -18,7 +20,7 @@ export default class Feature extends React.Component {
         </div>
         <YouTube
           videoId="NdJQ5Xl4jkw"
-          url="/selector/dispense-solder-paste.jpg"
+          url= {dispensePageYoutube}
           width="600"
         />
       </div>);

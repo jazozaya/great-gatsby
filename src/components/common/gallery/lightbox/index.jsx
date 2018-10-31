@@ -16,11 +16,10 @@ export default class Lightbox extends React.Component {
   }
 
   renderNormal() {
-    const { fileName, subtitle } = this.props;
-    const urlName = `/gallery/thumbnail/${fileName}`;
+    const { thumbnailURL, subtitle } = this.props;
     return (
       <div className="no-lightbox">
-        <img src={urlName} onClick={() => this.toggleLightbox()} alt="" />
+        <img src={thumbnailURL} onClick={() => this.toggleLightbox()} alt="" />
         <p>
           <i>{subtitle}</i>
         </p>
@@ -40,7 +39,9 @@ export default class Lightbox extends React.Component {
         controls: 2,
         rel: 0,
         showinfo: 0,
-        autoplay: 1
+        autoplay: 1,
+        enablejsapi: 1,
+        origin: "http://localhost:8000/"
       }
     };
 
@@ -63,9 +64,8 @@ export default class Lightbox extends React.Component {
   }
 
   renderImage() {
-    const { fileName } = this.props;
-    const urlName = `/gallery/large/${fileName}`;
-    return <img src={urlName} onClick={() => this.toggleLightbox()} alt="" />;
+    const { largeURL } = this.props;
+    return <img src={largeURL} onClick={() => this.toggleLightbox()} alt="" />;
   }
 
   renderLightbox() {

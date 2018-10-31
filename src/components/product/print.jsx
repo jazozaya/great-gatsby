@@ -14,6 +14,12 @@ import PrintFAQ from "components/faq/print";
 import Workflow from "./workflow";
 import HelpMe from "./helpMe";
 
+import imgDoubleSided from 'images/printing/double-sided-printing.jpg'
+import imgPrototyping from 'images/printing/prototyping-platform.jpg'
+import imgInkPrinting from 'images/printing/conductive-ink-printing.jpg'
+import imgHandSoldering from 'images/printing/hand-soldering-ink.jpg'
+import imgWalkthrough from 'images/youtubeScreen/walkthrough.jpg'
+
 import "./common.scss";
 
 export default class Print extends React.Component {
@@ -29,7 +35,7 @@ export default class Print extends React.Component {
           <FastFact title="1 hour" label="or less" />
         </MiniHero>
         <section className="flex-row">
-          <img src="/product/printing/double-sided-printing.jpg" alt="" />
+          <img src={imgDoubleSided} alt="" />
           <div className="description">
             <h2>Single and double layer circuits.</h2>
             <p>
@@ -53,12 +59,12 @@ export default class Print extends React.Component {
               Get started quickly on projects with the Arduino&reg; Uno, Arduino&reg; Mega, Raspberry Pi&trade; B+, and the Particle Photon.
             </p>
           </div>
-          <img src="/product/printing/prototyping-platform.jpg" alt="" />
+          <img src={imgPrototyping} alt="" />
         </section>
         <Workflow workflowType="print" />
         <section className="flex-row column-wrapper">
           <div className="column">
-            <img src="/product/printing/conductive-ink-printing.jpg" alt="" />
+            <img src={imgInkPrinting} alt="" />
             <div className="description">
               <h2>Silver based ink.</h2>
               <p>
@@ -72,7 +78,7 @@ export default class Print extends React.Component {
             </div>
           </div>
           <div className="column">
-            <img src="/product/printing/hand-soldering-ink.jpg" alt="" />
+            <img src={imgHandSoldering} alt="" />
             <div className="description">
               <h2>Solder without compromise.</h2>
               <p>
@@ -87,7 +93,7 @@ export default class Print extends React.Component {
           <h2>See the V-One in action!</h2>
           <p className="pull-center">Learn how to create a double sided circuit using the V-One Drill in this detailed walkthrough.</p>
           <div className="promo">
-            <YouTube width="800" videoId="N6nEgN4THRE" url="/product/printing/walkthrough.jpg" />
+            <YouTube width="800" videoId="N6nEgN4THRE" url={imgWalkthrough} />
           </div>
         </section>
         <PrintFAQ id="faq" title="F.A.Q." all />

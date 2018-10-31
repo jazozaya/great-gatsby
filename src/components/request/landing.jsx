@@ -11,7 +11,6 @@ import "./common.scss";
 const status = {
   ready: "ready",
   sending: "sending",
-  sent: "sent",
   failed: "failed"
 };
 
@@ -36,7 +35,7 @@ export default class LandingRequest extends React.Component {
       return;
     }
 
-    const { sourceDetails, landingType } = this.props;
+    const { sourceDetails, landingType, thankYou } = this.props;
 
     const emailParams = {
       // Information about the email:
@@ -64,12 +63,12 @@ export default class LandingRequest extends React.Component {
     window.emailjs.init("user_a6VUHHdymj1y3WbePDyCm");
     window.emailjs
       .send("gmail", "quick_question", emailParams)
-      .then(response => this.emailSuccess(response), err => this.emailFailure(err));
+      .then(response => this.emailSuccess(response, thankYou), err => this.emailFailure(err));
   }
 
-  emailSuccess(response) {
+  emailSuccess(response, thankYou) {
     console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
-    this.setState({ status: status.sent });
+    navigate(`/request/thankyou/?${thankYou}`);
   }
   emailFailure(err) {
     console.log("FAILED. error=", err);
@@ -84,10 +83,6 @@ export default class LandingRequest extends React.Component {
         <p className="pull-center">Thank you for filling out your information.</p>
       </div>
     );
-  }
-
-  renderSent() {
-    navigate("/request/thankyou/");
   }
 
   renderFailed() {
@@ -134,10 +129,10 @@ export default class LandingRequest extends React.Component {
   }
 
   renderVideo() {
-    const { videoId } = this.props;
+    const { videoId, thumbPath } = this.props;
     if (typeof window !== "undefined") {
       var width = Math.min(window.innerWidth - 100, 601); // Trim in case of mobile.
-      return <YouTube width={width} videoId={videoId} url={`/landing/${videoId}.jpg`} />;
+      return <YouTube width={width} videoId={videoId} url={thumbPath} />;
     }
   }
 
@@ -147,8 +142,6 @@ export default class LandingRequest extends React.Component {
         return this.renderRequest();
       case status.sending:
         return this.renderSending();
-      case status.sent:
-        return this.renderSent();
       case status.failed:
         return this.renderFailed();
       default:
@@ -157,11 +150,12 @@ export default class LandingRequest extends React.Component {
   }
 
   render() {
+    const { description } = this.props;
     return (
       <div className="landing-wrapper">
         <div className="request">
           <h1>Hi there!</h1>
-          <p className="pull-center">Check out this video for a detailed walkthrough of our tool!</p>
+          <p className="pull-center">{description}</p>
           {this.renderVideo()}
           {this.renderStatus()}
         </div>

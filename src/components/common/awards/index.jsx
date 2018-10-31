@@ -1,5 +1,11 @@
 import React from 'react'
 import Bowser from 'bowser'
+
+import dyson from './logos/james-dyson-award.gif'
+import maker from './logos/maker-faire.gif'
+import popsci from './logos/popular-science.gif'
+import techcrunch from './logos/techcrunch-hardware.gif'
+
 import './awards.scss'
 
 export default class Awards extends React.Component {
@@ -20,28 +26,28 @@ export default class Awards extends React.Component {
         <div className="awards flex-row center-narrow">
           <div>
             <a href="http://techcrunch.com/2015/01/08/and-the-winner-of-hardware-battlefield-2015-is-voltera/" target="_blank" rel="noopener noreferrer">
-              <img className="individual-award" src="/awards/techcrunch-hardware.gif" alt=""/>
+              <img className="individual-award" src={techcrunch} alt=""/>
             </a>
             <h3>"International Winner"</h3>
           </div>
           {this.renderDivider()}
           <div>
             <a href="http://www.popsci.com/3d-printer-circuit-boards" target="_blank" rel="noopener noreferrer">
-              <img className="individual-award" src="/awards/popular-science.gif" alt=""/>
+              <img className="individual-award" src={popsci} alt=""/>
             </a>
             <h3>"Invention of the Year"</h3>
           </div>
           {this.renderDivider()}
           <div>
             <a href="http://www.jamesdysonaward.org/en-GB/news/voltera-v-one-wins-2015-james-dyson-award/" target="_blank" rel="noopener noreferrer">
-              <img className="individual-award" src="/awards/james-dyson-award.gif" alt=""/>
+              <img className="individual-award" src={dyson} alt=""/>
             </a>
             <h3>"International Winner"</h3>
           </div>
           {this.renderDivider()}
           <div>
             <a href="http://makezine.com/2015/06/15/volteras-v-one-prints-2-layer-circuit-boards/" target="_blank" rel="noopener noreferrer">
-              <img className="individual-award" src="/awards/maker-faire.gif" alt=""/>
+              <img className="individual-award" src={maker} alt=""/>
             </a>
             <h3>"Editor's Choice"</h3>
           </div>

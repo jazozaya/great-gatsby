@@ -1,5 +1,7 @@
 import React from "react";
 import Bowser from "bowser";
+
+import inTheBox from './v-one-box-min.png'
 import "./box.scss";
 
 const summary = {
@@ -252,7 +254,7 @@ export default class InTheBox extends React.Component {
       <section id="v-one-box" className="box-wrapper">
         <h1>What is in the box?</h1>
         <p className="pull-center">The V-One comes with all the accessories and consumables you need to start building hardware faster.</p>
-        <img src="/v-one-box-min.png" alt="" />
+        <img src={inTheBox} alt="" />
         <div className="mobile-contents">
           <p>
             <strong>1 - Voltera V-One</strong>.<br />A protoyping tool that can fit on your desk.

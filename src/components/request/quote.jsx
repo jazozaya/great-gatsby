@@ -10,7 +10,6 @@ const status = {
   pageTwo: "pageTwo",
   pageThree: "pageThree",
   emailSending: "emailSending",
-  emailSent: "emailSent",
   emailFailed: "emailFailed"
 };
 
@@ -177,6 +176,9 @@ export default class QuoteRequest extends React.Component {
     emailParams.hear_about_us = hearAboutUs;
     emailParams.additional_comment = document.getElementById("additional-comment").value;
 
+    // Lastly - get the referrer
+    emailParams.referrer = document.referrer ? document.referrer : "Unknown"
+
     // Change state to sending.
     this.setState({ status: status.emailSending });
     window.emailjs.init("user_a6VUHHdymj1y3WbePDyCm");
@@ -185,7 +187,7 @@ export default class QuoteRequest extends React.Component {
 
   emailSuccess(response) {
     console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
-    this.setState({ status: status.emailSent });
+    navigate("/request/thankyou/?q=RFQ");
   }
   emailFailure(err) {
     console.log("FAILED. error=", err);
@@ -195,16 +197,11 @@ export default class QuoteRequest extends React.Component {
   renderEmailSending() {
     return (
       <div>
-        <h1>Please Wait</h1>
         <p className="pull-center">We are processing your request.</p>
         <SpinnerLoader />
         <p className="pull-center">Thank you for filling out your information.</p>
       </div>
     );
-  }
-
-  renderEmailSent() {
-    navigate("/request/thankyou/");
   }
 
   renderEmailFailed() {
@@ -417,8 +414,6 @@ export default class QuoteRequest extends React.Component {
         return this.renderPageThree();
       case status.emailSending:
         return this.renderEmailSending();
-      case status.emailSent:
-        return this.renderEmailSent();
       case status.emailFailed:
         return this.renderEmailFailed();
       default:

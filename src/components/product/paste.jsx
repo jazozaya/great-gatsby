@@ -9,6 +9,12 @@ import { pasteGallery } from 'components/common/gallery/constants'
 
 import PasteFAQ from 'components/faq/paste'
 
+import imgDispenseYoutube from 'images/youtubeScreen/dispense-solder-paste.jpg'
+import img0603 from 'images/youtubeScreen/paste-on-0603.jpg'
+import imgReflow from 'images/youtubeScreen/reflow-platform.jpg'
+import imgBGA from 'images/youtubeScreen/solder-paste-bga.jpg'
+import imgLEDs from 'images/paste/status-led-lights.jpg'
+
 import Workflow from './workflow'
 
 
@@ -43,7 +49,7 @@ export default class Paste extends React.Component {
             <YouTube
               width="800"
               videoId="NdJQ5Xl4jkw"
-              url="/selector/dispense-solder-paste.jpg"
+              url={imgDispenseYoutube}
             />
           </div>
         </section>
@@ -51,7 +57,7 @@ export default class Paste extends React.Component {
           <YouTube
             width="600"
             videoId="s_cjg2BzySg"
-            url="/product/paste-on-0603.jpg"
+            url={img0603}
           />
           <div className="description">
             <h2>Forget the stencil.</h2>
@@ -68,7 +74,7 @@ export default class Paste extends React.Component {
           <YouTube
             width="600"
             videoId="y3RZLiPDljs"
-            url="/product/reflow-platform.jpg"
+            url={imgReflow}
           />
         </section>
         <Workflow workflowType="solder" />
@@ -77,7 +83,7 @@ export default class Paste extends React.Component {
             <YouTube
               width="500"
               videoId="lbZVRBrdXKU"
-              url="/product/solder-paste-bga.jpg"
+              url={imgBGA}
             />
             <div className="description">
               <h2>The hard parts made easy.</h2>
@@ -86,7 +92,7 @@ export default class Paste extends React.Component {
             </div>
           </div>
           <div className="column">
-            <img src="/product/status-led-lights.jpg" alt=""/>
+            <img src={imgLEDs} alt=""/>
             <div className="description">
               <h2>Status indicators.</h2>
               <p>The unit is equipped with LED indicators that let you know the status of the machine from accross the room.</p>

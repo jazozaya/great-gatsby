@@ -1,6 +1,8 @@
 import React from 'react'
 import YouTube from 'components/common/youtube'
 import Button from 'components/common/button'
+
+import softwareYoutube from 'images/youtubeScreen/voltera-software.jpg'
 import './teaser.scss'
 
 export default class Feature extends React.Component {
@@ -10,7 +12,7 @@ export default class Feature extends React.Component {
       <div className="teaser flex-row">
         <YouTube
           videoId="3oCkXdwWpUY"
-          url="/selector/voltera-software.jpg"
+          url={softwareYoutube}
           width="600"
         />
         <div className="description">

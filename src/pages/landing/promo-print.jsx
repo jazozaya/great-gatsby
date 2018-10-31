@@ -2,10 +2,10 @@ import React from "react";
 import Helmet from "react-helmet";
 import queryString from "query-string";
 
-import Landing from "components/request/landing";
 import Layout from "components/layout";
+import Landing from "components/request/landing";
 
-import thumbPath from "components/request/thumbnail/N6nEgN4THRE.jpg";
+import thumbPath from "components/request/thumbnail/PeW1nURJ5ww.jpg";
 
 export default class MyLanding extends React.Component {
   render() {
@@ -27,12 +27,12 @@ export default class MyLanding extends React.Component {
           <script defer="defer" type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js" />
         </Helmet>
         <Landing
-          videoId="N6nEgN4THRE"
+          videoId="PeW1nURJ5ww"
           thumbPath={thumbPath}
           sourceDetails={sourceDetails}
-          landingType="Landing - Print Walkthrough"
-          thankYou="q=walkthrough-print"
-          description="A quick overview of our tool. Let us know if you'd like more information."
+          landingType="Landing - Print Promo"
+          thankYou="q=promo-print"
+          description="Go from concept to creation in minutes!"
         />
       </Layout>
     );

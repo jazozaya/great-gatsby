@@ -10,6 +10,12 @@ import BoxDrill from "components/product/boxDrill";
 import DrillFAQ from "components/faq/drill";
 import Workflow from "./workflow";
 
+import imgDrillYoutube from "images/youtubeScreen/v-one-drill-attachment.jpg";
+import imgAnimation from 'images/drilling/v-one-drill.webm'
+import imgDrillAttachment from 'images/drilling/drill-attachment.jpg'
+import imgRivet from 'images/drilling/rivet.jpg'
+import imgBit from 'images/drilling/drill-bit.jpg'
+
 import "./common.scss";
 
 export default class Print extends React.Component {
@@ -25,7 +31,7 @@ export default class Print extends React.Component {
           <h2>An automated drilling attachment.</h2>
           <p className="pull-center">Easy on the eyes and ears, the V-One Drill mounts directly on the V-One </p>
           <div className="promo">
-            <YouTube width="800" videoId="fNGT2Iz0UcE" url="/selector/v-one-drill-attachment.jpg" />
+            <YouTube width="800" videoId="fNGT2Iz0UcE" url={imgDrillYoutube} />
           </div>
         </section>
         <section className="flex-row reverse-wrap">
@@ -40,11 +46,11 @@ export default class Print extends React.Component {
               through holes in your double sided boards.
             </p>
           </div>
-          <img src="/product/drilling/drill-attachment.jpg" alt="" />
+          <img src={imgDrillAttachment} alt="" />
         </section>
         <section className="flex-row">
           <video playsInline muted width="600" height="500" autoPlay loop>
-            <source src="/product/drilling/v-one-drill.webm" type="video/webm" />
+            <source src={imgAnimation} type="video/webm" />
           </video>
           <div className="description">
             <h2>Compact and elegant design.</h2>
@@ -58,7 +64,7 @@ export default class Print extends React.Component {
         <Workflow workflowType="drill" />
         <section className="flex-row column-wrapper">
           <div className="column">
-            <img src="/product/drilling/rivet.jpg" alt="" />
+            <img src={imgRivet} alt="" />
             <div className="description">
               <h2>Unlock design freedom with rivets!</h2>
               <p>Design with two layers and easily make connections without compromises.</p>
@@ -69,7 +75,7 @@ export default class Print extends React.Component {
             </div>
           </div>
           <div className="column">
-            <img src="/product/drilling/drill-bit.jpg" alt="" />
+            <img src={imgBit} alt="" />
             <div className="description">
               <h2>The right bit for the job.</h2>
               <p>A range of high precision drill bits are included. Change drill bits in seconds with the included hex key.</p>

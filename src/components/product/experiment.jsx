@@ -11,6 +11,11 @@ import YouTube from "components/common/youtube";
 import Gallery from "components/common/gallery";
 import { experimentGallery } from "components/common/gallery/constants";
 
+import imgCartridges from 'images/dispensing/cartridges-min.png'
+import imgFlexible from 'images/dispensing/flexible-electronics.jpg'
+import imgHeated from 'images/dispensing/heated-platform-min.png'
+import imgDispenseYoutube from 'images/youtubeScreen/dispensing-system.jpg'
+
 import "./common.scss";
 
 export default class Experiment extends React.Component {
@@ -32,7 +37,7 @@ export default class Experiment extends React.Component {
             applications to life.
           </p>
           <div className="promo">
-            <YouTube width="800" videoId="Iwt_QdkDTbk" url="/product/dispensing-system.jpg" />
+            <YouTube width="800" videoId="Iwt_QdkDTbk" url={imgDispenseYoutube} />
           </div>
         </section>
         <section className="flex-row reverse-wrap">
@@ -47,11 +52,11 @@ export default class Experiment extends React.Component {
               <Link to="/contact/">Contact us</Link> today to find how we can help you!
             </p>
           </div>
-          <img src="/product/cartridges-min.png" alt="" />
+          <img src={imgCartridges} alt="" />
         </section>
         <AskUs example="Eg - What viscosity range can you dispense?" />
         <section className="flex-row">
-          <img src="/product/flexible-electronics.jpg" alt="" />
+          <img src={imgFlexible} alt="" />
           <div className="description">
             <h2>A flexible platform.</h2>
             <p>
@@ -70,7 +75,7 @@ export default class Experiment extends React.Component {
             </p>
             <p>The temperature profile can also be customized, so you are able to thermally cure all sorts of materials and substrates.</p>
           </div>
-          <img src="/product/heated-platform-min.png" alt="" />
+          <img src={imgHeated} alt="" />
         </section>
         <ExperimentFAQ id="faq" title="F.A.Q." all />
         <Gallery

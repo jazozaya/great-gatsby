@@ -24,7 +24,7 @@ export default class YouTube extends React.Component {
 
   renderStaticImage(width, height) {
     const { url } = this.props;
-    const imgStyle = {cursor: 'pointer'};
+    const imgStyle = { cursor: "pointer" };
     return <img style={imgStyle} width={width} height={height} onClick={() => this.setState({ playVideo: true })} src={url} alt="" />;
   }
 
