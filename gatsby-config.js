@@ -20,18 +20,18 @@ module.exports = {
         trackingId: "UA-41924051-3"
       }
     },
-    {
-      resolve: "gatsby-plugin-intercom-spa",
-      options: {
-        app_id: "p4hz4ihv"
-      }
-    },
-    {
-      resolve: `gatsby-plugin-facebook-pixel`,
-      options: {
-        pixelId: "1802551463109806"
-      }
-    },
+    // {
+    //   resolve: "gatsby-plugin-intercom-spa",
+    //   options: {
+    //     app_id: "p4hz4ihv"
+    //   }
+    // },
+    // {
+    //   resolve: `gatsby-plugin-facebook-pixel`,
+    //   options: {
+    //     pixelId: "1802551463109806"
+    //   }
+    // },
     // {
     //   resolve: `gatsby-plugin-hotjar`,
     //   options: {
@@ -63,19 +63,19 @@ module.exports = {
         ]
       }
     },
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: "Voltera",
-        short_name: "Voltera",
-        start_url: "/",
-        background_color: `#333E48`,
-        theme_color: `#79ce00`,
-        display: "minimal-ui",
-        icon: "src/icon.png" // This path is relative to the root of the site.
-      }
-    },
-    'gatsby-plugin-offline'
+    // {
+    //   resolve: `gatsby-plugin-manifest`,
+    //   options: {
+    //     name: "Voltera",
+    //     short_name: "Voltera",
+    //     start_url: "/",
+    //     background_color: `#333E48`,
+    //     theme_color: `#79ce00`,
+    //     display: "minimal-ui",
+    //     icon: "src/icon.png" // This path is relative to the root of the site.
+    //   }
+    // },
+    // 'gatsby-plugin-offline'
   ],
   pathPrefix: "/"
 };
