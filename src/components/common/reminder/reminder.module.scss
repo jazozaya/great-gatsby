@@ -1,0 +1,55 @@
+@import "src/css/colors";
+
+.wrapper {
+  position: fixed;
+  z-index: 2;
+  bottom: 50vh;
+  left: -86px;
+  transform: rotate(-90deg);
+  width: 200px;
+}
+
+.tab {
+  padding: 15px;
+  font-size: 13px;
+  background-color: $voltera-blue;
+  color: $white;
+  font-weight: 600;
+  border-style: solid;
+  border-color: $white;
+  border-width: 1px;
+  text-transform: uppercase;
+}
+
+.tab:hover {
+  background-color: $white;
+  color: $voltera-blue;
+  text-decoration: none;
+  border-color: $voltera-blue;
+}
+.buy-now {
+  border-bottom-left-radius: 20px;
+}
+.request-quote {
+  border-bottom-right-radius: 20px;
+}
+
+@media (max-width: $mobile-threshold) {
+  .wrapper {
+    width: 178px;
+    bottom: 5px;
+    left: calc(50vw - 89px);
+    transform: rotate(0deg);
+  }
+  .tab {
+    padding: 10px;
+  }
+  .buy-now {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 0px;
+  }
+  .request-quote {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 0px;
+  }
+}

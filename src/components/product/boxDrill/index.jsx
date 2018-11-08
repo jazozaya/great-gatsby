@@ -1,8 +1,9 @@
 import React from "react";
-import Bowser from "bowser";
 import "./boxDrill.scss";
 
-import boxDrill from './drill-box-min.png'
+import { graphql, StaticQuery } from "gatsby";
+import Img from "gatsby-image";
+import { isMobile, isMobileStart } from "./../../../constants";
 
 const summary = {
   // IMPORTANT - These names need to match class names in CSS
@@ -17,14 +18,53 @@ const summary = {
   safetyGlasses: "safety-glasses"
 };
 
-export default class BoxDrill extends React.Component {
+export default () => (
+  <StaticQuery
+    query={graphql`
+      query {
+        tryMe: file(relativePath: { eq: "inBoxDrill/try-me-drill-min.png" }) {
+          childImageSharp {
+            fixed(width: 600, height: 400, quality: 90) {
+              ...GatsbyImageSharpFixed_withWebp_noBase64
+            }
+          }
+        }
+        mobileBox: file(relativePath: { eq: "inBoxDrill/drill-box-min.png" }) {
+          childImageSharp {
+            fluid(maxWidth: 600, quality: 90) {
+              ...GatsbyImageSharpFluid_withWebp_noBase64
+            }
+          }
+        }
+      }
+    `}
+    render={data => <BoxDrill data={data} />}
+  />
+);
+
+class BoxDrill extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       description: summary.drill,
       hoverDescription: null,
-      interacted: false
+      interacted: false,
+      isMobile: isMobileStart
     };
+
+    this.updateDimensions = this.updateDimensions.bind(this);
+  }
+
+  updateDimensions() {
+    this.setState({ isMobile: isMobile() });
+  }
+
+  componentDidMount() {
+    window.addEventListener("resize", this.updateDimensions);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.updateDimensions);
   }
 
   renderDrill() {
@@ -193,7 +233,12 @@ export default class BoxDrill extends React.Component {
 
   renderInTheBox() {
     if (!this.state.interacted) {
-      return <div className="try-me-drill" onClick={() => this.setState({ interacted: true })} />;
+      const divStyle = { cursor: "pointer" };
+      return (
+        <div style={divStyle} onClick={() => this.setState({ interacted: true })}>
+          <Img fixed={this.props.data.tryMe.childImageSharp.fixed} />
+        </div>
+      );
     }
     return (
       <div className="in-the-box">
@@ -215,7 +260,7 @@ export default class BoxDrill extends React.Component {
       <section id="drill-box" className="box-wrapper-drill">
         <h1>What is in the box?</h1>
         <p className="pull-center">The V-One Drill comes with everything you need to make double sided boards out of the box.</p>
-        <img src={boxDrill} alt="" />
+        <Img fluid={this.props.data.mobileBox.childImageSharp.fluid} />
         <div className="mobile-contents">
           <p>
             <strong>1 - V-One Drill</strong>.<br />A drilling attachment for the Voltera V-One
@@ -277,6 +322,6 @@ export default class BoxDrill extends React.Component {
     );
   }
   render() {
-    return Bowser.mobile ? this.renderMobile() : this.renderDesktop();
+    return this.state.isMobile ? this.renderMobile() : this.renderDesktop();
   }
 }

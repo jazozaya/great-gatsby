@@ -1,11 +1,10 @@
 import React from "react";
 import Helmet from "react-helmet";
+import { graphql } from 'gatsby'
 import queryString from "query-string";
 
 import Layout from "components/layout";
 import Landing from "components/request/landing";
-
-import thumbPath from "components/request/thumbnail/PeW1nURJ5ww.jpg";
 
 export default class MyLanding extends React.Component {
   render() {
@@ -28,7 +27,7 @@ export default class MyLanding extends React.Component {
         </Helmet>
         <Landing
           videoId="PeW1nURJ5ww"
-          thumbPath={thumbPath}
+          thumbFluid={this.props.data.thumbnail.childImageSharp.fluid}
           sourceDetails={sourceDetails}
           landingType="Landing - Print Promo"
           thankYou="q=promo-print"
@@ -38,3 +37,15 @@ export default class MyLanding extends React.Component {
     );
   }
 }
+
+export const query = graphql`
+  query {
+    thumbnail: file(relativePath: { eq: "landing/PeW1nURJ5ww.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 600, quality: 90) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+  }
+`

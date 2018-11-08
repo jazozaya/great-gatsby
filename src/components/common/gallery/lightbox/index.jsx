@@ -1,7 +1,6 @@
 import React from "react";
-import Bowser from "bowser";
 import "./lightbox.scss";
-import Youtube from "react-youtube";
+import YouTube from "components/common/youtube";
 
 export default class Lightbox extends React.Component {
   constructor(props) {
@@ -29,38 +28,7 @@ export default class Lightbox extends React.Component {
 
   renderVideo() {
     const { videoId, maxWidth } = this.props;
-
-    const opts = {
-      height: "450",
-      width: "800",
-      playerVars: {
-        // https://developers.google.com/youtube/player_parameters
-        color: "white",
-        controls: 2,
-        rel: 0,
-        showinfo: 0,
-        autoplay: 1,
-        enablejsapi: 1,
-        origin: "http://localhost:8000/"
-      }
-    };
-
-    // For certain videos, we don't want them fullscreen (this could be cleaned up, but I was being lazy)
-    if (maxWidth) {
-      const height = Math.round(parseInt(maxWidth) / (640 / 360));
-      opts.width = maxWidth.toString();
-      opts.height = height.toString();
-    }
-
-    // Trim down if it's mobile.
-    if (Bowser.mobile && typeof window !== "undefined") {
-      const width = window.innerWidth - 40;
-      const height = Math.round(width / (640 / 360)); // Find the corresponding height to preserve the default aspect ratio.
-      opts.width = width.toString();
-      opts.height = height.toString();
-    }
-
-    return <Youtube videoId={videoId} opts={opts} />;
+    return <YouTube width={maxWidth} videoId={videoId} noThumbnail />;
   }
 
   renderImage() {

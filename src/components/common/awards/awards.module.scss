@@ -1,0 +1,35 @@
+@import "src/css/colors";
+
+.wrapper {
+  padding: $medium-padding $small-padding;
+}
+
+.awards {
+  padding-top: $small-padding;
+}
+.logo {
+  transition: all $t-time ease-in-out 0s;
+  margin: 0px $small-padding;
+  position: relative;
+  bottom: 0px;
+}
+
+.logo:hover {
+  bottom: 5px;
+}
+
+.awards h3 {
+  text-align: center;
+}
+
+.vertical {
+  background-color: $voltera-blue;
+  height: 120px;
+  width: 1px;
+}
+
+@media (max-width: $mobile-threshold) {
+  .awards h3 {
+    font-size: 0.7em;
+  }
+}

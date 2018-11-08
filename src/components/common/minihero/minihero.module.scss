@@ -1,0 +1,39 @@
+@import "src/css/colors";
+
+.wrapper {
+  background-color: $medium-grey;
+  min-height: 400px;
+  padding: 0px $small-padding;
+
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  margin-top: $subheader-height;
+}
+
+.mini-hero {
+  margin: auto;
+  max-width: $narrow-width;
+  color: $white;
+  text-align: center;
+
+  h1 {
+    color: $white;
+    font-size: 2.5em;
+  }
+  p {
+    font-size: 1.1em;
+  }
+}
+
+.fact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (max-width: $mobile-threshold) {
+  .wrapper {
+    margin-top: 0px;
+  }
+}

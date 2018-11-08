@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from "gatsby";
+import { graphql, StaticQuery, Link } from "gatsby";
+import Img from "gatsby-image";
 
 import CallToAction from "components/common/cta";
 import ExperimentFAQ from "components/faq/experiment";
@@ -11,17 +12,47 @@ import YouTube from "components/common/youtube";
 import Gallery from "components/common/gallery";
 import { experimentGallery } from "components/common/gallery/constants";
 
-import imgCartridges from 'images/dispensing/cartridges-min.png'
-import imgFlexible from 'images/dispensing/flexible-electronics.jpg'
-import imgHeated from 'images/dispensing/heated-platform-min.png'
-import imgDispenseYoutube from 'images/youtubeScreen/dispensing-system.jpg'
+import style from "./common.module.scss";
 
-import "./common.scss";
+export default () => (
+  <StaticQuery
+    query={graphql`
+      query {
+        dispensing: allFile(filter: { relativeDirectory: { eq: "dispensing" } }, sort: { fields: [name] }) {
+          edges {
+            node {
+              childImageSharp {
+                fluid(maxWidth: 600, quality: 90) {
+                  ...GatsbyImageSharpFluid_withWebp_noBase64
+                }
+              }
+            }
+          }
+        }
+        youtube: file(relativePath: { eq: "youtubeScreen/v-one-drill-attachment.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 800, quality: 90) {
+              ...GatsbyImageSharpFluid_withWebp_noBase64
+            }
+          }
+        }
+      }
+    `}
+    render={data => <Experiment data={data} />}
+  />
+);
 
-export default class Experiment extends React.Component {
+class Experiment extends React.Component {
   render() {
+    const { dispensing, youtube } = this.props.data;
+
+    const imgCartridges = dispensing.edges[0].node.childImageSharp.fluid;
+    const imgFlexible = dispensing.edges[1].node.childImageSharp.fluid;
+    const imgHeated = dispensing.edges[2].node.childImageSharp.fluid;
+    const imgDispenseYoutube = youtube.childImageSharp.fluid;
+
     return (
-      <div className="feature">
+      <div className={style.feature}>
         <MiniHero
           title="Print anything on everything."
           description="Experiment with new fluids using the Voltera V-One platform. Print with your own materials onto the substrates you want."
@@ -30,18 +61,18 @@ export default class Experiment extends React.Component {
           <FastFact title="Flexibility" label="Built-in" />
           <FastFact title="240°C" label="Max Temp." />
         </MiniHero>
-        <section className="movie-time">
+        <section className={style.movieTime}>
           <h2>An affordable dispensing system.</h2>
           <p className="pull-center">
             The Voltera V-One is a precision dispensing system for viscous inks and pastes. This experimental platform brings your novel
             applications to life.
           </p>
-          <div className="promo">
-            <YouTube width="800" videoId="Iwt_QdkDTbk" url={imgDispenseYoutube} />
+          <div className={style.promo}>
+            <YouTube width="800" videoId="Iwt_QdkDTbk" fluid={imgDispenseYoutube} />
           </div>
         </section>
         <section className="flex-row reverse-wrap">
-          <div className="description">
+          <div className={style.description}>
             <h2>Use your own materials.</h2>
             <p>
               The system uses standard 5cc syringes. This means cartridges can be filled with any material you want to dispense with. We
@@ -52,12 +83,12 @@ export default class Experiment extends React.Component {
               <Link to="/contact/">Contact us</Link> today to find how we can help you!
             </p>
           </div>
-          <img src={imgCartridges} alt="" />
+          <Img className={style.imageWrapper} fluid={imgCartridges} />
         </section>
         <AskUs example="Eg - What viscosity range can you dispense?" />
         <section className="flex-row">
-          <img src={imgFlexible} alt="" />
-          <div className="description">
+          <Img className={style.imageWrapper} fluid={imgFlexible} />
+          <div className={style.description}>
             <h2>A flexible platform.</h2>
             <p>
               Our standard substrate is FR4, but that doesn't mean you cannot print on other ridgid materials like glass, ceramics, or even
@@ -67,7 +98,7 @@ export default class Experiment extends React.Component {
           </div>
         </section>
         <section className="flex-row reverse-wrap">
-          <div className="description">
+          <div className={style.description}>
             <h2>Thermally cure your materials.</h2>
             <p>
               The mounting platform doubles as a heated bed. With a 550W heater, the bed can reach a maximum temperature of 240°C (464°F) in
@@ -75,7 +106,7 @@ export default class Experiment extends React.Component {
             </p>
             <p>The temperature profile can also be customized, so you are able to thermally cure all sorts of materials and substrates.</p>
           </div>
-          <img src={imgHeated} alt="" />
+          <Img className={style.imageWrapper} fluid={imgHeated} />
         </section>
         <ExperimentFAQ id="faq" title="F.A.Q." all />
         <Gallery

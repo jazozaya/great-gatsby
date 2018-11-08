@@ -1,4 +1,8 @@
 import React from "react";
+import Bowser from "bowser";
+
+import { graphql, StaticQuery } from "gatsby";
+import Img from "gatsby-image";
 
 import CallToAction from "components/common/cta";
 import FastFact from "components/common/fastFact";
@@ -10,32 +14,75 @@ import BoxDrill from "components/product/boxDrill";
 import DrillFAQ from "components/faq/drill";
 import Workflow from "./workflow";
 
-import imgDrillYoutube from "images/youtubeScreen/v-one-drill-attachment.jpg";
-import imgAnimation from 'images/drilling/v-one-drill.webm'
-import imgDrillAttachment from 'images/drilling/drill-attachment.jpg'
-import imgRivet from 'images/drilling/rivet.jpg'
-import imgBit from 'images/drilling/drill-bit.jpg'
+import imgAnimation from "images/drilling/v-one-drill.webm";
 
-import "./common.scss";
+import style from "./common.module.scss";
 
-export default class Print extends React.Component {
+export default () => (
+  <StaticQuery
+    query={graphql`
+      query {
+        drilling: allFile(filter: { extension: {ne: "webm"}, relativeDirectory: { eq: "drilling" } }, sort: { fields: [name] }) {
+          edges {
+            node {
+              childImageSharp {
+                fluid(maxWidth: 600, quality: 90) {
+                  ...GatsbyImageSharpFluid_withWebp_noBase64
+                }
+              }
+            }
+          }
+        }
+        youtube: file(relativePath: { eq: "youtubeScreen/v-one-drill-attachment.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 800, quality: 90) {
+              ...GatsbyImageSharpFluid_withWebp_noBase64
+            }
+          }
+        }
+      }
+    `}
+    render={data => <Drill data={data} />}
+  />
+);
+
+class Drill extends React.Component {
+  renderAnimation() {
+    if (Bowser.msedge) {
+      return <Img className={style.imageWrapper} fluid={this.props.data.drilling.edges[3].node.childImageSharp.fluid} />;
+    } else {
+      return (
+        <video playsInline muted width="600" height="500" autoPlay loop>
+          <source src={imgAnimation} type="video/webm" />
+        </video>
+      );
+    }
+  }
+
   render() {
+    const { drilling, youtube } = this.props.data;
+
+    const imgDrillAttachment = drilling.edges[0].node.childImageSharp.fluid;
+    const imgBit = drilling.edges[1].node.childImageSharp.fluid;
+    const imgRivet = drilling.edges[2].node.childImageSharp.fluid;
+    const imgDrillYoutube = youtube.childImageSharp.fluid;
+
     return (
-      <div className="feature">
+      <div className={style.feature}>
         <MiniHero title="Double sided boards just got easier." description="Automate your PCB drilling with the V-One Drill attachment">
           <FastFact title="3 mil" label="Runout" />
           <FastFact title="0.4 mm" label="Min. Diam." />
           <FastFact title="13,000" label="RPM." />
         </MiniHero>
-        <section className="movie-time">
+        <section className={style.movieTime}>
           <h2>An automated drilling attachment.</h2>
           <p className="pull-center">Easy on the eyes and ears, the V-One Drill mounts directly on the V-One </p>
-          <div className="promo">
-            <YouTube width="800" videoId="fNGT2Iz0UcE" url={imgDrillYoutube} />
+          <div className={style.promo}>
+            <YouTube width="800" videoId="fNGT2Iz0UcE" fluid={imgDrillYoutube} />
           </div>
         </section>
         <section className="flex-row reverse-wrap">
-          <div className="description">
+          <div className={style.description}>
             <h2>Made for your V-One.</h2>
             <p>
               Reduce the number of machines and interfaces in your workflow. The V-One Drill attachment brings CNC drilling to the V-One
@@ -46,13 +93,11 @@ export default class Print extends React.Component {
               through holes in your double sided boards.
             </p>
           </div>
-          <img src={imgDrillAttachment} alt="" />
+          <Img className={style.imageWrapper} fluid={imgDrillAttachment} />
         </section>
         <section className="flex-row">
-          <video playsInline muted width="600" height="500" autoPlay loop>
-            <source src={imgAnimation} type="video/webm" />
-          </video>
-          <div className="description">
+          {this.renderAnimation()}
+          <div className={style.description}>
             <h2>Compact and elegant design.</h2>
             <p>
               It was designed to be as compact as possible, but don't let its small size fool you - the V-One Drill can spin at 13,000 RPM
@@ -62,10 +107,10 @@ export default class Print extends React.Component {
           </div>
         </section>
         <Workflow workflowType="drill" />
-        <section className="flex-row column-wrapper">
-          <div className="column">
-            <img src={imgRivet} alt="" />
-            <div className="description">
+        <section className={`flex-row ${style.columnWrapper}`}>
+          <div className={style.column}>
+            <Img fluid={imgRivet} />
+            <div className={style.description}>
               <h2>Unlock design freedom with rivets!</h2>
               <p>Design with two layers and easily make connections without compromises.</p>
               <p>
@@ -74,9 +119,9 @@ export default class Print extends React.Component {
               </p>
             </div>
           </div>
-          <div className="column">
-            <img src={imgBit} alt="" />
-            <div className="description">
+          <div className={style.column}>
+            <Img fluid={imgBit} />
+            <div className={style.description}>
               <h2>The right bit for the job.</h2>
               <p>A range of high precision drill bits are included. Change drill bits in seconds with the included hex key.</p>
               <p>

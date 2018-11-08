@@ -1,5 +1,4 @@
 import React from "react";
-import Bowser from "bowser";
 
 import Button from "components/common/button";
 import { Link } from "gatsby";
@@ -8,18 +7,32 @@ import EmptyCart from "./empty_cart.min.svg";
 import { fetchRecentCheckout, removeLineItems, updateLineItems } from "components/store/api";
 
 import "./cart.scss";
+import { isMobileStart, isMobile } from "../../../constants";
 
 export default class Cart extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      checkout: null
+      checkout: null,
+      isMobile: isMobileStart
     };
+
+    this.updateDimensions = this.updateDimensions.bind(this)
+  }
+
+  updateDimensions() {
+    this.setState({isMobile: isMobile()})
   }
 
   componentDidMount() {
     fetchRecentCheckout().then(checkout => this.setState({ checkout: checkout }));
+    window.addEventListener("resize", this.updateDimensions)
   }
+
+  componentWillUnmount(){
+    window.removeEventListener("resize", this.updateDimensions)
+  }
+
   removeItemFromCart(lineItemId) {
     const { checkout } = this.state;
     removeLineItems(checkout.id, lineItemId).then(checkout => this.setState({ checkout: checkout }));
@@ -172,7 +185,7 @@ export default class Cart extends React.Component {
         </div>
       );
     }
-    return Bowser.mobile ? this.renderMobile() : this.renderDesktop();
+    return this.state.isMobile ? this.renderMobile() : this.renderDesktop();
   }
 
   render() {

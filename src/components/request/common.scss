@@ -149,4 +149,8 @@
   .request .checkboxes {
     justify-content: flex-start;
   }
+
+  .request {
+    padding: $small-padding $small-padding;
+  }
 }

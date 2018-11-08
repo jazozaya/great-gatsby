@@ -1,0 +1,57 @@
+@import "src/css/colors";
+
+.column-wrapper {
+  align-items: flex-start;
+}
+
+.image-wrapper {
+  flex-basis: 600px;
+}
+
+.description {
+  max-width: 500px;
+  margin: 0px;
+  flex-shrink: 1;
+  text-align: justify;
+}
+
+.promo {
+  margin: auto;
+  padding-top: $medium-padding;
+  max-width: 800px;
+}
+
+.movie-time {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+1,000000+100&1+0,0.15+100 */
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.99) 1%, rgba(0, 0, 0, 0.15) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    top,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0.99) 1%,
+    rgba(0, 0, 0, 0.15) 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0.99) 1%,
+    rgba(0, 0, 0, 0.15) 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#26000000',GradientType=0 ); /* IE6-9 */
+  max-width: initial;
+}
+
+@media (max-width: $mobile-threshold) {
+  .feature img {
+    width: 100%;
+    height: auto;
+  }
+
+  .feature video {
+    width: 100%;
+    height: auto;
+  }
+
+  .column {
+    padding: $small-padding 0px;
+  }
+}

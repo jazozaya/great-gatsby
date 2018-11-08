@@ -1,0 +1,52 @@
+@import "src/css/colors";
+
+.hero {
+  position: relative;
+  h1 {
+    text-align: left;
+    color: $white;
+    font-size: 3em;
+    line-height: 50px;
+    margin-bottom: 0px;
+  }
+  p {
+    font-size: 1.5em;
+    margin: 0px;
+    color: $white;
+  }
+}
+
+.buttons {
+  margin: $small-padding $small-padding 0px 0px;
+}
+
+.image-wrap {
+  pointer-events: none;
+  user-select: none;
+  min-height: 70vh;
+}
+.button-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.text {
+  position: absolute;
+  top: 15vh;
+  left: 15vw;
+}
+
+@media (max-width: $mobile-threshold) {
+  .hero h1 {
+    font-size: 1.8em;
+  }
+  .hero p {
+    font-size: 1.2em;
+  }
+
+  .text {
+    top: 0px;
+    left: 0px;
+    padding: $small-padding;
+  }
+}

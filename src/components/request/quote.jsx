@@ -3,6 +3,8 @@ import { navigate } from "gatsby";
 import Button from "components/common/button";
 import SpinnerLoader from "components/common/spinnerLoader";
 
+import { validateEmail } from './utils'
+
 import "./common.scss";
 
 const status = {
@@ -50,9 +52,9 @@ export default class QuoteRequest extends React.Component {
     this.state = {
       status: status.pageOne,
       missingFields: false,
+      invalidEmail: false,
       otherProfile: false,
       otherIndustry: false,
-      count: 0
     };
   }
 
@@ -109,7 +111,13 @@ export default class QuoteRequest extends React.Component {
     const allComplete = requiredFields.every(field => document.getElementById(field).value.length > 0);
 
     if (!allComplete) {
-      this.setState({ missingFields: true, count: this.state.count + 1 });
+      this.setState({ invalidEmail: false, missingFields: true });
+      return;
+    }
+
+    // Ensure the email we are getting is valid. 
+    if (!validateEmail(document.getElementById("email").value)) {
+      this.setState({ invalidEmail: true, missingFields: false });
       return;
     }
 
@@ -134,9 +142,14 @@ export default class QuoteRequest extends React.Component {
     this.setState({
       status: status.pageTwo,
       emailParams: emailParams,
-      count: 0,
       missingFields: false
     });
+  }
+
+  missingFields() {
+    if (this.state.missingFields) {
+      return <p className="missing">Please complete all the fields!</p>
+    }
   }
 
   pageTwoValidate() {
@@ -145,7 +158,7 @@ export default class QuoteRequest extends React.Component {
     let segment = this.extractIndustrySegment();
 
     if (!profile || !segment) {
-      this.setState({ missingFields: true, count: this.state.count + 1 });
+      this.setState({ missingFields: true });
       return;
     }
 
@@ -156,7 +169,6 @@ export default class QuoteRequest extends React.Component {
     this.setState({
       status: status.pageThree,
       emailParams: emailParams,
-      count: 0,
       missingFields: false
     });
   }
@@ -167,7 +179,7 @@ export default class QuoteRequest extends React.Component {
     let hearAboutUs = document.getElementById("hear-about-us").value;
 
     if (!searchState || hearAboutUs.length === 0) {
-      this.setState({ missingFields: true, count: this.state.count + 1 });
+      this.setState({ missingFields: true });
       return;
     }
 
@@ -277,7 +289,8 @@ export default class QuoteRequest extends React.Component {
             </p>
           </div>
         </form>
-        {this.state.missingFields ? <p className="missing">Please complete all the fields! ({this.state.count})</p> : null}
+        {this.missingFields()}
+        {this.state.invalidEmail ? <p className="missing">Please enter a valid email!</p> : null}
         <div className="button-wrapper">
           <Button label="Next" color="dark" onClick={this.pageOneValidate.bind(this)} />
         </div>
@@ -322,7 +335,7 @@ export default class QuoteRequest extends React.Component {
           </div>
           {this.renderOtherIndustry()}
         </form>
-        {this.state.missingFields ? <p className="missing">Please complete all the fields! ({this.state.count})</p> : null}
+        {this.missingFields()}
         <div className="button-wrapper">
           <Button label="Next" color="dark" onClick={this.pageTwoValidate.bind(this)} />
         </div>
@@ -396,7 +409,7 @@ export default class QuoteRequest extends React.Component {
           <p>Is there anything you want to tell us?</p>
           <textarea placeholder="(Optional)" id="additional-comment" />
         </form>
-        {this.state.missingFields ? <p className="missing">Please complete all the fields! ({this.state.count})</p> : null}
+        {this.missingFields()}
         <div className="button-wrapper">
           <Button label="Submit" color="dark" onClick={this.pageThreeValidate.bind(this)} />
         </div>

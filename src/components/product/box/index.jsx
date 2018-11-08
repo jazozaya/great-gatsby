@@ -1,8 +1,9 @@
 import React from "react";
-import Bowser from "bowser";
+import { graphql, StaticQuery } from "gatsby";
+import Img from "gatsby-image";
 
-import inTheBox from './v-one-box-min.png'
 import "./box.scss";
+import { isMobile, isMobileStart } from "../../../constants";
 
 const summary = {
   // IMPORTANT - These names need to match class names in CSS
@@ -19,14 +20,53 @@ const summary = {
   clamps: "clamps"
 };
 
-export default class InTheBox extends React.Component {
+export default () => (
+  <StaticQuery
+    query={graphql`
+      query {
+        tryMe: file(relativePath: { eq: "inBox/try-me-min.png" }) {
+          childImageSharp {
+            fixed(width: 600, height: 400, quality: 90) {
+              ...GatsbyImageSharpFixed_withWebp_noBase64
+            }
+          }
+        }
+        mobileBox: file(relativePath: { eq: "inBox/v-one-box-min.png" }) {
+          childImageSharp {
+            fluid(maxWidth: 600, quality: 90) {
+              ...GatsbyImageSharpFluid_withWebp_noBase64
+            }
+          }
+        }
+      }
+    `}
+    render={data => <InTheBox data={data} />}
+  />
+);
+
+class InTheBox extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       description: summary.vOne,
       hoverDescription: null,
-      interacted: false
+      interacted: false,
+      isMobile: isMobileStart
     };
+
+    this.updateDimensions = this.updateDimensions.bind(this);
+  }
+
+  updateDimensions() {
+    this.setState({ isMobile: isMobile() });
+  }
+
+  componentDidMount() {
+    window.addEventListener("resize", this.updateDimensions);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.updateDimensions);
   }
 
   renderVOne() {
@@ -230,7 +270,12 @@ export default class InTheBox extends React.Component {
 
   renderInTheBox() {
     if (!this.state.interacted) {
-      return <div className="try-me" onClick={() => this.setState({ interacted: true })} />;
+      const divStyle = { cursor: "pointer" };
+      return (
+        <div style={divStyle} onClick={() => this.setState({ interacted: true })}>
+          <Img fixed={this.props.data.tryMe.childImageSharp.fixed} />
+        </div>
+      );
     }
     return (
       <div className="in-the-box">
@@ -254,7 +299,7 @@ export default class InTheBox extends React.Component {
       <section id="v-one-box" className="box-wrapper">
         <h1>What is in the box?</h1>
         <p className="pull-center">The V-One comes with all the accessories and consumables you need to start building hardware faster.</p>
-        <img src={inTheBox} alt="" />
+        <Img fluid={this.props.data.mobileBox.childImageSharp.fluid} />
         <div className="mobile-contents">
           <p>
             <strong>1 - Voltera V-One</strong>.<br />A protoyping tool that can fit on your desk.
@@ -311,6 +356,6 @@ export default class InTheBox extends React.Component {
     );
   }
   render() {
-    return Bowser.mobile ? this.renderMobile() : this.renderDesktop();
+    return this.state.isMobile ? this.renderMobile() : this.renderDesktop();
   }
 }

@@ -1,6 +1,7 @@
 import React from 'react'
-import Bowser from 'bowser'
 import Row from './row'
+
+import { isMobileStart } from './../../../constants'
 
 import './specs.scss'
 
@@ -10,12 +11,13 @@ export default class Specs extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      metric: true
+      metric: true,
+      isMobile: isMobileStart
     };
   }
 
   renderUnitChange(units) {
-    if (Bowser.mobile) {
+    if (this.state.isMobile) {
       return(
         <div className="units-wrapper">
           <button onClick={() => this.setState({metric: true})} className={units === "Metric" ? "units dark" : "units clear"}>Metric</button>
@@ -200,7 +202,7 @@ export default class Specs extends React.Component {
   render() {
 
     var units = "both";
-    if (Bowser.mobile) {
+    if (this.state.isMobile) {
       if (this.state.metric){
         units = "Metric";
       }

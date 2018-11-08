@@ -1,3 +1,5 @@
+const path = require("path");
+
 module.exports = {
   siteMetadata: {
     title: `Voltera | Build Hardware Faster`,
@@ -30,11 +32,20 @@ module.exports = {
         pixelId: "1802551463109806"
       }
     },
+    // {
+    //   resolve: `gatsby-plugin-hotjar`,
+    //   options: {
+    //     id: 640069,
+    //     sv: 6
+    //   }
+    // },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-plugin-hotjar`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        id: 640069,
-        sv: 6
+        name: `images`,
+        path: path.join(__dirname, `src`, `images`)
       }
     },
     {
@@ -51,7 +62,20 @@ module.exports = {
           }
         ]
       }
-    }
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: "Voltera",
+        short_name: "Voltera",
+        start_url: "/",
+        background_color: `#333E48`,
+        theme_color: `#79ce00`,
+        display: "minimal-ui",
+        icon: "src/icon.png" // This path is relative to the root of the site.
+      }
+    },
+    'gatsby-plugin-offline'
   ],
   pathPrefix: "/"
 };

@@ -1,5 +1,8 @@
 import React from "react";
 
+import { graphql, StaticQuery } from "gatsby";
+import Img from "gatsby-image";
+
 import YouTube from "components/common/youtube";
 import CallToAction from "components/common/cta";
 import Specs from "components/common/specs";
@@ -11,16 +14,46 @@ import CustomerQuotes from "components/common/customer";
 import TechnologyFAQ from "components/faq/technology";
 import Box from "./box";
 
-import dispenserRender from "./voltera-dispenser-min.png";
-import probeRender from "./voltera-probe-min.png";
-import printYoutube from 'images/youtubeScreen/print-conductive-silver-ink.jpg'
+import style from "./common.module.scss";
 
-import "./common.scss";
+export default () => (
+  <StaticQuery
+    query={graphql`
+      query {
+        technology: allFile(filter: { relativeDirectory: { eq: "technology" } }, sort: { fields: [name] }) {
+          edges {
+            node {
+              childImageSharp {
+                fluid(maxWidth: 600, quality: 90) {
+                  ...GatsbyImageSharpFluid_withWebp_noBase64
+                }
+              }
+            }
+          }
+        }
+        youtube: file(relativePath: { eq: "youtubeScreen/print-conductive-silver-ink.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 800, quality: 90) {
+              ...GatsbyImageSharpFluid_withWebp_noBase64
+            }
+          }
+        }
+      }
+    `}
+    render={data => <Technology data={data} />}
+  />
+);
 
-export default class Technology extends React.Component {
+class Technology extends React.Component {
   render() {
+    // Prepare our files
+    const { technology, youtube } = this.props.data;
+    const imgDispenserRender = technology.edges[0].node.childImageSharp.fluid;
+    const imgProbeRender = technology.edges[1].node.childImageSharp.fluid;
+    const imgPrintYoutube = youtube.childImageSharp.fluid;
+
     return (
-      <div className="feature">
+      <div className={style.feature}>
         <MiniHero
           title="How does it work?"
           description="The Voltera V-One dispenses conductive ink and solder paste onto FR4, but really... you can use it for whatever you want."
@@ -29,18 +62,18 @@ export default class Technology extends React.Component {
           <FastFact title="100's" label="Of iterations" />
           <FastFact title="~5 USD" label="Board cost" />
         </MiniHero>
-        <section className="movie-time">
+        <section className={style.movieTime}>
           <h2>A prototyping platform for electronics.</h2>
           <p className="pull-center">
             On your desktop and on your schedule, the Voltera V-One gets you from prototype to production faster than ever before.
           </p>
-          <div className="promo">
-            <YouTube width="800" videoId="PeW1nURJ5ww" url={printYoutube} />
+          <div className={style.promo}>
+            <YouTube width="800" videoId="PeW1nURJ5ww" fluid={imgPrintYoutube} />
           </div>
         </section>
         <section className="flex-row">
-          <img src={dispenserRender} alt="" />
-          <div className="description">
+          <Img className={style.imageWrapper} fluid={imgDispenserRender} />
+          <div className={style.description}>
             <h2>Anyone can use it.</h2>
             <p>
               The ink cartridge is installed in the dispenser, and the dispenser is mounted on the V-One. All of our attachments are
@@ -55,7 +88,7 @@ export default class Technology extends React.Component {
         </section>
         <AskUs example="Eg - What is the print area of the V-One?" />
         <section className="flex-row reverse-wrap">
-          <div className="description">
+          <div className={style.description}>
             <h2>A perfect print every time.</h2>
             <p>
               This high precision probe was developed from the ground up and creates a height map of your substrate. The V-One takes the map
@@ -66,7 +99,7 @@ export default class Technology extends React.Component {
               with flexible substrates like Kapton (Polyimide).
             </p>
           </div>
-          <img src={probeRender} alt="" />
+          <Img className={style.imageWrapper} fluid={imgProbeRender} />
         </section>
         <Box />
         <CustomerQuotes />

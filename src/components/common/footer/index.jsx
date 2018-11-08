@@ -1,5 +1,4 @@
 import React from "react";
-import Bowser from "bowser";
 import Logo from "components/common/logo";
 import "./footer.scss";
 
@@ -8,21 +7,35 @@ import facebookIcon from "./facebook-icon.min.svg";
 import instagramIcon from "./instagram-icon.min.svg";
 import youtubeIcon from "./youtube-icon.min.svg";
 
+import { isMobile, isMobileStart } from "./../../../constants";
+
 import { Link } from "gatsby";
 
 export default class Footer extends React.Component {
-  renderLogo() {
-    if (!Bowser.mobile) {
-      return <Logo />;
-    }
-    return null;
+  constructor(props) {
+    super(props);
+    this.state = {
+      isMobile: isMobileStart
+    };
+    this.updateDimensions = this.updateDimensions.bind(this);
+  }
+
+  updateDimensions() {
+    this.setState({ isMobile: isMobile() });
+  }
+
+  componentDidMount() {
+    window.addEventListener("resize", this.updateDimensions);
+  }
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.updateDimensions);
   }
 
   render() {
     return (
       <div className="footer-wrapper">
         <div className="footer">
-          {this.renderLogo()}
+          {this.state.isMobile ? null: <Logo />}
           <div className="column">
             <p>V-One</p>
             <ul>

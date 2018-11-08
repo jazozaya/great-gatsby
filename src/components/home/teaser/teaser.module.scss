@@ -1,0 +1,16 @@
+@import 'src/css/colors';
+
+.description {
+  flex-basis: 500px;
+  flex-grow: 0;
+  text-align: justify;
+}
+
+.button-wrap {
+  margin-top: $medium-padding;
+  text-align: center;
+}
+
+.video-wrap {
+  flex-basis: 600px;
+}

@@ -1,5 +1,4 @@
 import React from 'react'
-import Bowser from 'bowser'
 
 import InTouch from './inTouch'
 import GoogleMap from './googleMap'
@@ -58,7 +57,7 @@ export default class Contact extends React.Component {
               </p>
             </div>
           </div>
-          {Bowser.msie ? <div className="our-location"/> : <GoogleMap />}
+          <GoogleMap />
         </div>
       </div>
     );

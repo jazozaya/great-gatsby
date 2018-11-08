@@ -3,8 +3,9 @@ import { navigate } from "gatsby";
 import Button from "components/common/button";
 import SpinnerLoader from "components/common/spinnerLoader";
 import YouTube from "components/common/youtube";
-
 import Specs from "components/common/specs";
+
+import { validateEmail } from './utils'
 
 import "./common.scss";
 
@@ -22,7 +23,7 @@ export default class LandingRequest extends React.Component {
     this.state = {
       status: status.ready,
       missingFields: false,
-      count: 0
+      invalidEmail: false,
     };
   }
 
@@ -30,10 +31,18 @@ export default class LandingRequest extends React.Component {
     // Performs some data validation to make sure everything was filled in.
     const allComplete = requiredFields.every(field => document.getElementById(field).value.length > 0);
 
+    // Ensure all data is complete.
     if (!allComplete) {
-      this.setState({ missingFields: true, count: this.state.count + 1 });
+      this.setState({  invalidEmail: false, missingFields: true});
       return;
     }
+
+    // Ensure the email we are getting is valid. 
+    if (!validateEmail(document.getElementById("email").value)) {
+      this.setState({ invalidEmail: true, missingFields: false });
+      return;
+    }
+
 
     const { sourceDetails, landingType, thankYou } = this.props;
 
@@ -120,7 +129,8 @@ export default class LandingRequest extends React.Component {
             </p>
           </div>
         </form>
-        {this.state.missingFields ? <p className="missing">Please fill out of all of the required fields! ({this.state.count})</p> : null}
+        {this.state.missingFields ? <p className="missing">Please fill out of all of the required fields!</p> : null}
+        {this.state.invalidEmail ? <p className="missing">Please enter a valid email!</p> : null}
         <div className="button-wrapper">
           <Button label="Submit" color="dark" onClick={this.sendRequest.bind(this)} />
         </div>
@@ -129,10 +139,10 @@ export default class LandingRequest extends React.Component {
   }
 
   renderVideo() {
-    const { videoId, thumbPath } = this.props;
+    const { videoId, thumbFluid } = this.props;
     if (typeof window !== "undefined") {
-      var width = Math.min(window.innerWidth - 100, 601); // Trim in case of mobile.
-      return <YouTube width={width} videoId={videoId} url={thumbPath} />;
+      var width = Math.min(window.innerWidth - 100, 600); // Trim in case of mobile.
+      return <YouTube width={width} videoId={videoId} fluid={thumbFluid} />;
     }
   }
 

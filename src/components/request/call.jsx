@@ -1,6 +1,5 @@
 import React from "react";
 import { navigate } from "gatsby";
-import Bowser from "bowser";
 
 import DatePicker from "react-datepicker";
 import moment from "moment";
@@ -9,7 +8,12 @@ import "./common.scss";
 
 import Button from "components/common/button";
 import SpinnerLoader from "components/common/spinnerLoader";
+
+import { validateEmail } from "./utils";
+
+
 import "react-datepicker/dist/react-datepicker.css";
+import { isMobileStart } from "../../constants";
 
 const status = {
   ready: "ready",
@@ -25,9 +29,10 @@ export default class QuoteRequest extends React.Component {
     this.state = {
       status: status.ready,
       missingFields: false,
-      count: 0,
+      invalidEmail: false,
       selectedDate: "",
-      highlightedDay: moment()
+      highlightedDay: moment(),
+      isMobile: isMobileStart
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -51,7 +56,13 @@ export default class QuoteRequest extends React.Component {
     const allComplete = requiredFields.every(field => document.getElementById(field).value.length > 0);
 
     if (!allComplete || this.state.selectedDate.length === 0) {
-      this.setState({ missingFields: true, count: this.state.count + 1 });
+      this.setState({ invalidEmail: false, missingFields: true });
+      return;
+    }
+
+    // Ensure the email we are getting is valid.
+    if (!validateEmail(document.getElementById("email").value)) {
+      this.setState({ invalidEmail: true, missingFields: false });
       return;
     }
 
@@ -113,7 +124,7 @@ export default class QuoteRequest extends React.Component {
   }
 
   renderTimeZone() {
-    if (Bowser.mobile) {
+    if (this.state.isMobile) {
       return (
         <select className="time-select" id="timezone">
           <option value="">Please Select...</option>
@@ -248,7 +259,8 @@ export default class QuoteRequest extends React.Component {
           <p>Is there anything you want to let us know?</p>
           <textarea placeholder="(Optional)" id="additional-item" />
         </form>
-        {this.state.missingFields ? <p className="missing">Please fill out all of the form fields! ({this.state.count})</p> : null}
+        {this.state.missingFields ? <p className="missing">Please fill out all of the form fields!</p> : null}
+        {this.state.invalidEmail ? <p className="missing">Please enter a valid email!</p> : null}
         <div className="button-wrapper">
           <Button label="Schedule" color="dark" onClick={this.sendRequest.bind(this)} />
           <Button

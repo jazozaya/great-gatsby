@@ -44,6 +44,6 @@ color: $white;
 }
 
 .no-lightbox img {
-   width: 360px;
-   height: 203px;
+   max-width: 360px;
+   height: auto;
 }
