@@ -1,9 +1,9 @@
 import React from "react";
 import { graphql, StaticQuery } from "gatsby";
+import Bowser from 'bowser'
 import Img from "gatsby-image";
 
 import "./box.scss";
-import { isMobile, isMobileStart } from "../../../constants";
 
 const summary = {
   // IMPORTANT - These names need to match class names in CSS
@@ -51,22 +51,8 @@ class InTheBox extends React.Component {
       description: summary.vOne,
       hoverDescription: null,
       interacted: false,
-      isMobile: isMobileStart
     };
 
-    this.updateDimensions = this.updateDimensions.bind(this);
-  }
-
-  updateDimensions() {
-    this.setState({ isMobile: isMobile() });
-  }
-
-  componentDidMount() {
-    window.addEventListener("resize", this.updateDimensions);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener("resize", this.updateDimensions);
   }
 
   renderVOne() {
@@ -356,6 +342,6 @@ class InTheBox extends React.Component {
     );
   }
   render() {
-    return this.state.isMobile ? this.renderMobile() : this.renderDesktop();
+    return Bowser.mobile ? this.renderMobile() : this.renderDesktop();
   }
 }

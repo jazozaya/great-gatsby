@@ -27,29 +27,6 @@ export default () => (
 );
 
 class Awards extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isMobile: isMobileStart
-    };
-    this.updateDimensions = this.updateDimensions.bind(this);
-  }
-
-  updateDimensions() {
-    this.setState({isMobile: isMobile()})
-  }
-
-  componentDidMount() {
-    window.addEventListener("resize", this.updateDimensions);
-  }
-  componentWillUnmount() {
-    window.removeEventListener("resize", this.updateDimensions);
-  }
-
-  renderDivider() {
-    return this.state.isMobile ?  null: <div className={style.vertical} />
-  }
-
   render() {
     const { data } = this.props;
     const techcrunch = data.allFile.edges[3].node.childImageSharp.fixed;
@@ -71,14 +48,12 @@ class Awards extends React.Component {
             </a>
             <h3>"International Winner"</h3>
           </div>
-          {this.renderDivider()}
           <div>
             <a href="http://www.popsci.com/3d-printer-circuit-boards" target="_blank" rel="noopener noreferrer">
               <Img fixed={popsci} className={style.logo} />
             </a>
             <h3>"Invention of the Year"</h3>
           </div>
-          {this.renderDivider()}
           <div>
             <a
               href="http://www.jamesdysonaward.org/en-GB/news/voltera-v-one-wins-2015-james-dyson-award/"
@@ -89,7 +64,6 @@ class Awards extends React.Component {
             </a>
             <h3>"International Winner"</h3>
           </div>
-          {this.renderDivider()}
           <div>
             <a
               href="http://makezine.com/2015/06/15/volteras-v-one-prints-2-layer-circuit-boards/"
