@@ -3,7 +3,6 @@ import Img from "gatsby-image";
 import { graphql, StaticQuery } from "gatsby";
 
 import style from "./awards.module.scss";
-import { isMobile, isMobileStart } from "../../../constants";
 
 export default () => (
   <StaticQuery

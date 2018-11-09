@@ -1,5 +1,6 @@
+@import "src/css/colors";
+
 .office {
   flex-grow: 1;
-  max-width: 1200px;
-  min-width: 600px;
-  }
+  flex-basis: 550px;
+}

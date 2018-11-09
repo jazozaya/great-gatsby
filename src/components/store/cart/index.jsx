@@ -7,30 +7,20 @@ import EmptyCart from "./empty_cart.min.svg";
 import { fetchRecentCheckout, removeLineItems, updateLineItems } from "components/store/api";
 
 import "./cart.scss";
-import { isMobileStart, isMobile } from "../../../constants";
+import { isMobile } from "../../../constants";
 
 export default class Cart extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       checkout: null,
-      isMobile: isMobileStart
+      isMobile: true
     };
-
-    this.updateDimensions = this.updateDimensions.bind(this)
-  }
-
-  updateDimensions() {
-    this.setState({isMobile: isMobile()})
   }
 
   componentDidMount() {
+    this.setState({ isMobile: isMobile() });
     fetchRecentCheckout().then(checkout => this.setState({ checkout: checkout }));
-    window.addEventListener("resize", this.updateDimensions)
-  }
-
-  componentWillUnmount(){
-    window.removeEventListener("resize", this.updateDimensions)
   }
 
   removeItemFromCart(lineItemId) {

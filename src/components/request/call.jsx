@@ -11,9 +11,8 @@ import SpinnerLoader from "components/common/spinnerLoader";
 
 import { validateEmail } from "./utils";
 
-
 import "react-datepicker/dist/react-datepicker.css";
-import { isMobileStart } from "../../constants";
+import { isMobile } from "../../constants";
 
 const status = {
   ready: "ready",
@@ -32,10 +31,14 @@ export default class QuoteRequest extends React.Component {
       invalidEmail: false,
       selectedDate: "",
       highlightedDay: moment(),
-      isMobile: isMobileStart
+      isMobile: true
     };
 
     this.handleChange = this.handleChange.bind(this);
+  }
+
+  componentDidMount() {
+    this.setState({ isMobile: isMobile() });
   }
 
   // Handler for the date change.

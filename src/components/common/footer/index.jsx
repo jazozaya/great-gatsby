@@ -7,7 +7,7 @@ import facebookIcon from "./facebook-icon.min.svg";
 import instagramIcon from "./instagram-icon.min.svg";
 import youtubeIcon from "./youtube-icon.min.svg";
 
-import { isMobile, isMobileStart } from "./../../../constants";
+import { isMobile } from "./../../../constants";
 
 import { Link } from "gatsby";
 
@@ -15,20 +15,12 @@ export default class Footer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isMobile: isMobileStart
+      isMobile: true
     };
-    this.updateDimensions = this.updateDimensions.bind(this);
-  }
-
-  updateDimensions() {
-    this.setState({ isMobile: isMobile() });
   }
 
   componentDidMount() {
-    window.addEventListener("resize", this.updateDimensions);
-  }
-  componentWillUnmount() {
-    window.removeEventListener("resize", this.updateDimensions);
+    this.setState({isMobile: isMobile()})
   }
 
   render() {

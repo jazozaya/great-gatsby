@@ -1,7 +1,7 @@
 import React from 'react'
 import Row from './row'
 
-import { isMobileStart } from './../../../constants'
+import { isMobile } from './../../../constants'
 
 import './specs.scss'
 
@@ -12,8 +12,12 @@ export default class Specs extends React.Component {
     super(props);
     this.state = {
       metric: true,
-      isMobile: isMobileStart
+      isMobile: true
     };
+  }
+
+  componentDidMount() {
+    this.setState({isMobile: isMobile()})
   }
 
   renderUnitChange(units) {

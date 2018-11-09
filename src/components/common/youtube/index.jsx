@@ -1,7 +1,7 @@
 import React from "react";
 import Youtube from "react-youtube";
 import Img from "gatsby-image";
-import { isMobileStart } from "../../../constants";
+import { isMobile } from "../../../constants";
 
 // Simple Wrapper so we don't have to keep including the opts.
 const opts = {
@@ -20,14 +20,17 @@ export default class YouTube extends React.Component {
     super(props);
     this.state = {
       playVideo: false,
-      isMobile: isMobileStart
+      isMobile: false
     };
 
-    if (typeof window !== "undefined") {
-      this.state.screenWidth = window.innerWidth
-    }
+    // if (typeof window !== "undefined") {
+    //   this.state.screenWidth = window.innerWidth
+    // }
   }
 
+  componentDidMount() {
+    this.setState({isMobile: isMobile(), screenWidth: window.innerWidth})
+  }
 
   renderStaticImage() {
     const { fluid } = this.props;

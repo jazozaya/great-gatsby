@@ -3,7 +3,7 @@ import "./boxDrill.scss";
 
 import { graphql, StaticQuery } from "gatsby";
 import Img from "gatsby-image";
-import { isMobile, isMobileStart } from "./../../../constants";
+import { isMobile } from "./../../../constants";
 
 const summary = {
   // IMPORTANT - These names need to match class names in CSS
@@ -49,22 +49,12 @@ class BoxDrill extends React.Component {
       description: summary.drill,
       hoverDescription: null,
       interacted: false,
-      isMobile: isMobileStart
+      isMobile: true
     };
-
-    this.updateDimensions = this.updateDimensions.bind(this);
-  }
-
-  updateDimensions() {
-    this.setState({ isMobile: isMobile() });
   }
 
   componentDidMount() {
-    window.addEventListener("resize", this.updateDimensions);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener("resize", this.updateDimensions);
+    this.setState({ isMobile: isMobile() });
   }
 
   renderDrill() {
