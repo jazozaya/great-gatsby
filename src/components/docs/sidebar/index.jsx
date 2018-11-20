@@ -38,7 +38,7 @@ class SideBar extends React.Component {
     super(props);
     this.state = {
       expand: false,
-      isMobile: true
+      isMobile: false
     };
   }
 

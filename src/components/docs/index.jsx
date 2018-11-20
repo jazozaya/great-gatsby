@@ -17,7 +17,7 @@ export default () => (
   <StaticQuery
     query={graphql`
       query {
-        docs: allFile(filter: { relativeDirectory: { eq: "docs" } }) {
+        docs: allFile(filter: {relativeDirectory: {eq: "docs"}}, sort: { fields: [name]}) {
           edges {
             node {
               childImageSharp {
