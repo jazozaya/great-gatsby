@@ -47,7 +47,8 @@ class Docs extends React.Component {
         <section className={s.wrapper}>
           <SideBar details={this.props.details} />
           <div className={s.document}>
-            <h1>Tutorials and Downloads.</h1>
+            <h1>Tutorials, downloads and troubleshooting tips.</h1>
+            <p>Get to know the basics of the Voltera V-One and learn a few tricks along the way!</p>
             <div className="flex-row">
               <QuickStart icon={helloWorld} link="/docs/hello-world/printer-setup/">
                 <h2>Getting Started!</h2>
