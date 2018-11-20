@@ -30,21 +30,15 @@
 }
 
 .info {
-  flex-basis: 400px;
-  text-align: center;
-}
-
-.info-wrapper {
   display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: space-around;
-
-  p {
-    text-align: left;
-  }
+  align-items: center;
+  margin: $small-padding;
 
   h2 {
-    text-align: center;
+    margin-top: 0px;
   }
+}
+
+.img-wrapper {
+  margin-right: $small-padding;
 }

@@ -21,7 +21,7 @@ export default () => (
           edges {
             node {
               childImageSharp {
-                fixed(width: 180, height: 180, quality: 90) {
+                fixed(width: 120, height: 120, quality: 90) {
                   ...GatsbyImageSharpFixed_withWebp_noBase64
                 }
               }
@@ -38,8 +38,8 @@ class Docs extends React.Component {
   render() {
     const { docs } = this.props.data;
 
-    const intercom = docs.edges[0].node.childImageSharp.fixed;
-    const forums = docs.edges[1].node.childImageSharp.fixed;
+    const forums = docs.edges[0].node.childImageSharp.fixed;
+    const intercom = docs.edges[1].node.childImageSharp.fixed;
 
     return (
       <div>
@@ -47,36 +47,37 @@ class Docs extends React.Component {
         <section className={s.wrapper}>
           <SideBar details={this.props.details} />
           <div className={s.document}>
-            <h1>Tutorials, user guides and troubleshooting tips.</h1>
-            <p>Get to know the basics of the Voltera V-One and learn a few tricks along the way!</p>
+            <h1>Tutorials and Downloads.</h1>
             <div className="flex-row">
               <QuickStart icon={helloWorld} link="/docs/hello-world/printer-setup/">
                 <h2>Getting Started!</h2>
-                <p>Print your first board and learn the basics with the Hello World tutorial!</p>
               </QuickStart>
               <QuickStart icon={drilling} link="/docs/punk-console/drill-safety/">
                 <h2>Start Drilling!</h2>
-                <p>Create the Punk Console! Use the drill to create a double sided board.</p>
               </QuickStart>
               <QuickStart icon={downloads} link="/docs/desktop-application/">
                 <h2>Download App!</h2>
-                <p>Looking for the software? Get it here and jump right into it!</p>
               </QuickStart>
             </div>
-            <div className={s.infoWrapper}>
-              <div className={s.info}>
-                <Img fixed={intercom} className={s.imgWrapper} />
-                <div>
-                  <h2>Need help? Say hello!</h2>
-                  <p>Live chat with our support team by clicking the green bubble in the bottom right of the desktop app.</p>
-                </div>
+            <div className={s.info}>
+              <Img fixed={intercom} className={s.imgWrapper} />
+              <div>
+                <h2>Need help? Say hello!</h2>
+                <p>Live chat with our support team by clicking the green bubble in the bottom right of the app.</p>
               </div>
-              <div className={s.info}>
-                <Img fixed={forums} className={s.imgWrapper} />
-                <div>
-                  <h2>Join the community!</h2>
-                  <p> Visit our forums <a href="http://community.voltera.io/" target="_blank" rel="noopener noreferrer">here</a> and join the conversation to chat with beginners and experts.</p>
-                </div>
+            </div>
+            <div className={s.info}>
+              <Img fixed={forums} className={s.imgWrapper} />
+              <div>
+                <h2>Join the community!</h2>
+                <p>
+                  Visit our forums{" "}
+                  <a href="http://community.voltera.io/" target="_blank" rel="noopener noreferrer">
+                    {" "}
+                    here{" "}
+                  </a>{" "}
+                  and join the conversation to chat with V-One beginners and experts.
+                </p>
               </div>
             </div>
           </div>
