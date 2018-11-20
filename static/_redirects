@@ -95,7 +95,12 @@ https://support.voltera.io/hc/en-us/articles/360002229474*           https://www
 https://support.voltera.io/hc/en-us/articles/115003440253*           https://www.voltera.io/docs
 
 # Main Redirects - Catch Everything (Keep after other support articles)
-https://support.voltera.io*      https://www.voltera.io/docs/ 301
+https://support.voltera.io https://www.voltera.io/docs/
+http://support.voltera.io https://www.voltera.io/docs/
+
+# Catch everything from the old support.
+https://support.voltera.io/* https://www.voltera.io/docs/
+http://support.voltera.io/* https://www.voltera.io/docs/
 
 
 # Links used in the app

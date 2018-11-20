@@ -66,7 +66,7 @@ It's possible you have some dried ink on the limit switches that are throwing th
 
 ## Printing too low
 
-_This is dangerous territory and a broken nozzle is usually imminent. Please review the [Broken Nozzles](/docs/troubleshooting/broken-nozzles/) article_
+_This is dangerous territory and a broken nozzle is usually imminent. Please review the [Broken Nozzles](/docs/broken-nozzles/) article_
 
 ### Symptoms
 
@@ -78,7 +78,7 @@ If you are printing too low the ink will be getting smooshed by the nozzle, and 
 
 ### Solution
 
-Assuming a default print height of 0.08 mm, this indicates the height calibration is incorrect. Please review the [Broken Nozzles](/docs/troubleshooting/broken-nozzles/) article
+Assuming a default print height of 0.08 mm, this indicates the height calibration is incorrect. Please review the [Broken Nozzles](/docs/broken-nozzles/) article
 
 ## Trapped Air Bubble.
 

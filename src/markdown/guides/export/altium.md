@@ -8,7 +8,7 @@ title: "Altium"
 
 ## Gerber Export Guide
 
-This article describes the preferred method for generating Gerber and Drill files to print circuits on the Voltera V-One. Before proceeding, it is recommended to read the [Circuit Design Guidelines](/docs/advanced/circuit-design-guidelines/).
+This article describes the preferred method for generating Gerber and Drill files to print circuits on the Voltera V-One. Before proceeding, it is recommended to read the [Circuit Design Guidelines](/docs/circuit-design-guidelines/).
 
 **Note**: Screenshots are of Altium Designer 13.2 running on Windows 8.1. The exact names of the settings presented may differ based on the Altium Designer version, operating system, and circuit design in question.
 
