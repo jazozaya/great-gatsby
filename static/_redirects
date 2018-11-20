@@ -42,61 +42,60 @@ http://store.voltera.io/* https://www.voltera.io/store/
 
 # Old Zendesk Redirects
 ## Getting Started
-https://support.voltera.io/hc/en-us/articles/115004160628-1-Safety-Guidelines            https://www.voltera.io/docs/hello-world/safety-guidelines/
-https://support.voltera.io/hc/en-us/articles/115004266327-2-Printer-Setup                https://www.voltera.io/docs/hello-world/printer-setup/
-https://support.voltera.io/hc/en-us/articles/115004294268-3-Hello-World-Print            https://www.voltera.io/docs/hello-world/printing-the-circuit/
-https://support.voltera.io/hc/en-us/articles/115004414848-4-Hello-World-Solder-Paste     https://www.voltera.io/docs/hello-world/dispensing-solder-paste/
-https://support.voltera.io/hc/en-us/articles/115004414968-5-Hello-World-Reflow           https://www.voltera.io/docs/hello-world/reflow-and-assembly/
-https://support.voltera.io/hc/en-us/articles/115004414408-6-Maintenance                  https://www.voltera.io/docs/hello-world/maintenance/
+https://support.voltera.io/hc/en-us/articles/115004160628*           https://www.voltera.io/docs/hello-world/safety-guidelines/
+https://support.voltera.io/hc/en-us/articles/115004266327*           https://www.voltera.io/docs/hello-world/printer-setup/
+https://support.voltera.io/hc/en-us/articles/115004294268*           https://www.voltera.io/docs/hello-world/printing-the-circuit/
+https://support.voltera.io/hc/en-us/articles/115004414848*           https://www.voltera.io/docs/hello-world/dispensing-solder-paste/
+https://support.voltera.io/hc/en-us/articles/115004414968*           https://www.voltera.io/docs/hello-world/reflow-and-assembly/
+https://support.voltera.io/hc/en-us/articles/115004414408*           https://www.voltera.io/docs/hello-world/maintenance/
 
 ## Downloads
-https://support.voltera.io/hc/en-us/articles/115004264687-Desktop-Application-and-Drivers  https://www.voltera.io/docs/desktop-application/
-https://support.voltera.io/hc/en-us/articles/115004265027-Substrates-and-Templates         https://www.voltera.io/docs/substrates-and-templates/
-https://support.voltera.io/hc/en-us/articles/115004414348*                                 https://www.voltera.io/docs/sds/
-https://support.voltera.io/hc/en-us/articles/115002006953-User-Manual                      https://www.voltera.io/docs/user-manual/
-https://support.voltera.io/hc/en-us/articles/115001038214-Wallpapers                       https://www.voltera.io/docs/wallpapers/
+https://support.voltera.io/hc/en-us/articles/115004264687*           https://www.voltera.io/docs/desktop-application/
+https://support.voltera.io/hc/en-us/articles/115004265027*           https://www.voltera.io/docs/substrates-and-templates/
+https://support.voltera.io/hc/en-us/articles/115004414348*           https://www.voltera.io/docs/sds/
+https://support.voltera.io/hc/en-us/articles/115002006953*           https://www.voltera.io/docs/user-manual/
+https://support.voltera.io/hc/en-us/articles/115001038214*           https://www.voltera.io/docs/wallpapers/
 
 ## User Guides
-https://support.voltera.io/hc/en-us/articles/115005825067-Circuit-Design-Guidelines                        https://www.voltera.io/docs/circuit-design-guidelines/
-https://support.voltera.io/hc/en-us/articles/115005823107-Hand-Soldering-Tutorial                          https://www.voltera.io/docs/hand-soldering/
-https://support.voltera.io/hc/en-us/articles/115005825187-Aligned-Printing                                 https://www.voltera.io/docs/aligned-printing/
-https://support.voltera.io/hc/en-us/articles/115002633033-EAGLE-Export-Guide                               https://www.voltera.io/docs/export/eagle/
-https://support.voltera.io/hc/en-us/articles/115002550914-KiCad-Export-Guide                               https://www.voltera.io/docs/export/kicad/
-https://support.voltera.io/hc/en-us/articles/115002547054-Altium-Export-Guide                              https://www.voltera.io/docs/export/altium/
-https://support.voltera.io/hc/en-us/articles/360000822694-Print-Settings-Overview                          https://www.voltera.io/docs/print-settings-overview/
-https://support.voltera.io/hc/en-us/articles/360007508253-Using-the-Experimental-Conductive-Ink-EXP001     https://www.voltera.io/docs/using-exp001/
-https://support.voltera.io/hc/en-us/articles/115002895614-Filling-an-Empty-Cartridge                       https://www.voltera.io/docs/filling-an-empty-cartridge/
-https://support.voltera.io/hc/en-us/articles/115005823647-Understanding-Print-Height                       https://www.voltera.io/docs/understanding-print-height/
+https://support.voltera.io/hc/en-us/articles/115005825067*           https://www.voltera.io/docs/circuit-design-guidelines/
+https://support.voltera.io/hc/en-us/articles/115005823107*           https://www.voltera.io/docs/hand-soldering/
+https://support.voltera.io/hc/en-us/articles/115005825187*           https://www.voltera.io/docs/aligned-printing/
+https://support.voltera.io/hc/en-us/articles/115002633033*           https://www.voltera.io/docs/export/eagle/
+https://support.voltera.io/hc/en-us/articles/115002550914*           https://www.voltera.io/docs/export/kicad/
+https://support.voltera.io/hc/en-us/articles/115002547054*           https://www.voltera.io/docs/export/altium/
+https://support.voltera.io/hc/en-us/articles/360000822694*           https://www.voltera.io/docs/print-settings-overview/
+https://support.voltera.io/hc/en-us/articles/360007508253*           https://www.voltera.io/docs/using-exp001/
+https://support.voltera.io/hc/en-us/articles/115002895614*           https://www.voltera.io/docs/filling-an-empty-cartridge/
+https://support.voltera.io/hc/en-us/articles/115005823647*           https://www.voltera.io/docs/understanding-print-height/
 
 ## Troubleshooting
-https://support.voltera.io/hc/en-us/articles/360006363174-Purging-the-Solder-Paste-Cartridge              https://www.voltera.io/docs/purging-solder-paste/
-https://support.voltera.io/hc/en-us/articles/115005831867-Broken-Nozzles                                  https://www.voltera.io/docs/broken-nozzles/
-https://support.voltera.io/hc/en-us/articles/115006001328-Improving-Print-Quality                         https://www.voltera.io/docs/improving-print-quality/
-https://support.voltera.io/hc/en-us/articles/115005850027-Gerber-Files-Fail-To-Load                       https://www.voltera.io/docs/gerber-files-fail-to-load/
-https://support.voltera.io/hc/en-us/articles/115005834507-Difficulty-Soldering                            https://www.voltera.io/docs/difficulty-soldering/
-https://support.voltera.io/hc/en-us/articles/360006361494-Calculated-XY-Center-Different-than-Calibrated  https://www.voltera.io/docs/calculated-xy-different/
-https://support.voltera.io/hc/en-us/articles/115005831967-No-Ink-Or-Paste-Comes-Out                       https://www.voltera.io/docs/no-ink-or-paste-comes-out/
-https://support.voltera.io/hc/en-us/articles/115005851407-Backlash-Compensation                           https://www.voltera.io/docs/backlash-compensation/
-https://support.voltera.io/hc/en-us/articles/115005850847-Connection-Problems                             https://www.voltera.io/docs/usb-connection-problems/
+https://support.voltera.io/hc/en-us/articles/360006363174*           https://www.voltera.io/docs/purging-solder-paste/
+https://support.voltera.io/hc/en-us/articles/115005831867*           https://www.voltera.io/docs/broken-nozzles/
+https://support.voltera.io/hc/en-us/articles/115006001328*           https://www.voltera.io/docs/improving-print-quality/
+https://support.voltera.io/hc/en-us/articles/115005850027*           https://www.voltera.io/docs/gerber-files-fail-to-load/
+https://support.voltera.io/hc/en-us/articles/115005834507*           https://www.voltera.io/docs/difficulty-soldering/
+https://support.voltera.io/hc/en-us/articles/360006361494*           https://www.voltera.io/docs/calculated-xy-different/
+https://support.voltera.io/hc/en-us/articles/115005831967*           https://www.voltera.io/docs/no-ink-or-paste-comes-out/
+https://support.voltera.io/hc/en-us/articles/115005851407*           https://www.voltera.io/docs/backlash-compensation/
+https://support.voltera.io/hc/en-us/articles/115005850847*           https://www.voltera.io/docs/usb-connection-problems/
 
 ## Start Drilling
-https://support.voltera.io/hc/en-us/articles/115005052354-1-Safety-Guidelines                 https://www.voltera.io/docs/punk-console/drill-safety/
-https://support.voltera.io/hc/en-us/articles/115005072813-2-Drill-Setup                       https://www.voltera.io/docs/punk-console/drill-setup/
-https://support.voltera.io/hc/en-us/articles/360000744393-3-Punk-Console-Drilling             https://www.voltera.io/docs/punk-console/drill-the-holes/
-https://support.voltera.io/hc/en-us/articles/360000783173-4-Punk-Console-Printing             https://www.voltera.io/docs/punk-console/printing-the-circuit/
-https://support.voltera.io/hc/en-us/articles/360000830274-5-Punk-Console-Assembly             https://www.voltera.io/docs/punk-console/rivets-and-assembly/
-https://support.voltera.io/hc/en-us/articles/115005071313-6-Using-Rivets                      https://www.voltera.io/docs/working-with-rivets/
+https://support.voltera.io/hc/en-us/articles/115005052354*           https://www.voltera.io/docs/punk-console/drill-safety/
+https://support.voltera.io/hc/en-us/articles/115005072813*           https://www.voltera.io/docs/punk-console/drill-setup/
+https://support.voltera.io/hc/en-us/articles/360000744393*           https://www.voltera.io/docs/punk-console/drill-the-holes/
+https://support.voltera.io/hc/en-us/articles/360000783173*           https://www.voltera.io/docs/punk-console/printing-the-circuit/
+https://support.voltera.io/hc/en-us/articles/360000830274*           https://www.voltera.io/docs/punk-console/rivets-and-assembly/
+https://support.voltera.io/hc/en-us/articles/115005071313*           https://www.voltera.io/docs/working-with-rivets/
 
 
 ## Orphans
-https://support.voltera.io/hc/en-us/articles/360007185254-Allegro-OrCAD-Export-Guide                    https://www.voltera.io/docs
-https://support.voltera.io/hc/en-us/articles/115003451934-Probing-Misses-the-Board                      https://www.voltera.io/docs
-https://support.voltera.io/hc/en-us/articles/360002229474-Errors-and-Submitting-Support-Packages        https://www.voltera.io/docs
-https://support.voltera.io/hc/en-us/articles/115003440253-Probe-Nozzle-Fell-in-a-Hole                   https://www.voltera.io/docs
+https://support.voltera.io/hc/en-us/articles/360007185254*           https://www.voltera.io/docs
+https://support.voltera.io/hc/en-us/articles/115003451934*           https://www.voltera.io/docs
+https://support.voltera.io/hc/en-us/articles/360002229474*           https://www.voltera.io/docs
+https://support.voltera.io/hc/en-us/articles/115003440253*           https://www.voltera.io/docs
 
 # Main Redirects - Catch Everything (Keep after other support articles)
-https://support.voltera.io/*      https://www.voltera.io/docs/ 301
-https://support.voltera.io        https://www.voltera.io/docs/ 301
+https://support.voltera.io*      https://www.voltera.io/docs/ 301
 
 
 # Links used in the app
