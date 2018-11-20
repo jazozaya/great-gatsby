@@ -8,3 +8,5 @@ export function isMobile() {
   }
   return false;
 }
+
+//export const isMobileStart = isMobile();

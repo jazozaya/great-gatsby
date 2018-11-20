@@ -20,14 +20,14 @@ export default class Footer extends React.Component {
   }
 
   componentDidMount() {
-    this.setState({isMobile: isMobile()})
+    this.setState({ isMobile: isMobile() });
   }
 
   render() {
     return (
       <div className="footer-wrapper">
         <div className="footer">
-          {this.state.isMobile ? null: <Logo />}
+          {this.state.isMobile ? null : <Logo />}
           <div className="column">
             <p>V-One</p>
             <ul>
@@ -44,7 +44,7 @@ export default class Footer extends React.Component {
                 <Link to="/specs/">Specifications</Link>
               </li>
               <li>
-                <a href="http://www.voltera.io/downloads">Downloads</a>
+                <Link to="/docs/desktop-application/">Downloads</Link>
               </li>
             </ul>
           </div>
@@ -91,7 +91,8 @@ export default class Footer extends React.Component {
           </div>
         </div>
         <div className="footer-links">
-          <Link to="/docs/refund/">Refunds </Link> | <Link to="/docs/privacy/">Privacy</Link> | <Link to="/docs/tos">Terms of Service</Link>
+          <Link to="/legal/refund/">Refunds </Link> | <Link to="/legal/privacy/">Privacy</Link> |{" "}
+          <Link to="/legal/tos">Terms of Service</Link>
         </div>
       </div>
     );

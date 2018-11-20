@@ -101,13 +101,6 @@
     margin: $small-padding 0px;
   }
 
-  .checkboxes {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
-
   label {
     user-select: none;
   }
@@ -146,10 +139,6 @@
 
 
 @media (max-width: $mobile-threshold) {
-  .request .checkboxes {
-    justify-content: flex-start;
-  }
-
   .request {
     padding: $small-padding $small-padding;
   }

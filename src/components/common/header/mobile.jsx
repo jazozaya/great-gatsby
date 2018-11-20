@@ -166,7 +166,9 @@ export default class Mobile extends React.Component {
             </li>
             {this.renderSubheaderProduct()}
             <li>
-              <a href="http://support.voltera.io">Support</a>
+            <Link className={this.startsWith(pageName, "/docs")} to="/docs/">
+                Docs
+              </Link>
             </li>
             <li>
               <Link className={this.startsWith(pageName, "/faq")} to="/faq/">

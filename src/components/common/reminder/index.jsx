@@ -5,6 +5,12 @@ import { Link } from "gatsby";
 
 export default class Header extends React.Component {
   render() {
+    const { pageName } = this.props;
+
+    if (pageName.startsWith("/docs")) {
+      return null;
+    }
+
     return (
       <div className={style.wrapper}>
         <Link className={`${style.tab} ${style.buyNow}`} to="/store/">

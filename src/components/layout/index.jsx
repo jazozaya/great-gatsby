@@ -70,7 +70,7 @@ export default class Layout extends React.Component {
         </Helmet>
         <Header pageName={this.props.pathname} />
         <SignUp />
-        <Reminder />
+        <Reminder pageName={this.props.pathname} />
         <DummyHeader />
         {this.props.children}
         <Footer />

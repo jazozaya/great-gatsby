@@ -1,0 +1,50 @@
+@import "src/css/colors";
+
+.wrapper {
+  display: flex;
+}
+
+.document {
+  h1 {
+    text-align: left;
+  }
+
+  h2 {
+    text-align: left;
+    font-size: 1.5em;
+  }
+  h3 {
+    border-bottom-color: $voltera-green;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+  }
+
+  span {
+    color: grey;
+    font-size: 0.9em;
+  }
+
+  li {
+    margin: 10px 0px;
+  }
+}
+
+.info {
+  flex-basis: 400px;
+  text-align: center;
+}
+
+.info-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-around;
+
+  p {
+    text-align: left;
+  }
+
+  h2 {
+    text-align: center;
+  }
+}

@@ -8,6 +8,9 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
@@ -32,20 +35,25 @@ module.exports = {
         pixelId: "1802551463109806"
       }
     },
-    // {
-    //   resolve: `gatsby-plugin-hotjar`,
-    //   options: {
-    //     id: 640069,
-    //     sv: 6
-    //   }
-    // },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-hotjar`,
+      options: {
+        id: 640069,
+        sv: 6
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
         path: path.join(__dirname, `src`, `images`)
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: path.join(__dirname, `src`, `markdown`),
+        name: "markdown-pages"
       }
     },
     {
@@ -69,13 +77,13 @@ module.exports = {
         name: "Voltera",
         short_name: "Voltera",
         start_url: "/",
-        background_color: `#333E48`,
+        background_color: `#282828`,
         theme_color: `#79ce00`,
         display: "minimal-ui",
         icon: "src/icon.png" // This path is relative to the root of the site.
       }
     },
-    'gatsby-plugin-offline'
+    "gatsby-plugin-offline"
   ],
   pathPrefix: "/"
 };

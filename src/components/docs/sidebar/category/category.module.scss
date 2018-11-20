@@ -1,0 +1,35 @@
+@import "src/css/colors";
+
+.category {
+  h2 {
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all $t-time ease-in-out 0s;
+    padding: 10px;
+    margin: 5px 0px;
+    font-size: 1.3em;
+    text-align: left;
+  }
+
+  h2:hover {
+    background-color: $medium-grey;
+    color: $white;
+
+    span {
+      border: solid $white;
+      border-width: 0 3px 3px 0;
+    }
+  }
+
+  .nested {
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: $mobile-threshold) {
+  .category {
+    h2 {
+      font-size: 1.2em;
+    }
+  }
+}

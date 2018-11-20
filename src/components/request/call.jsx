@@ -9,7 +9,7 @@ import "./common.scss";
 import Button from "components/common/button";
 import SpinnerLoader from "components/common/spinnerLoader";
 
-import { validateEmail } from "./utils";
+import { validateEmail } from "./utils/api";
 
 import "react-datepicker/dist/react-datepicker.css";
 import { isMobile } from "../../constants";

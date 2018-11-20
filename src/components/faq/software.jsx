@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'gatsby'
 
 import Question from "./utils/question";
 import Template from "./utils/template";
@@ -10,10 +11,7 @@ export default class SoftwareFAQ extends React.Component {
       <Template id={id} title={title} all={all}>
         <Question underline title="Is the software free?">
           <p>
-            Yep! The software is required to operate the V-One. You can download a copy of it at{" "}
-            <a target="_blank" href="http://www.voltera.io/downloads" rel="noopener noreferrer">
-              here
-            </a>
+            Yep! The software is required to operate the V-One. You can download a copy of it <Link to="/docs/desktop-application/">here</Link>
             .
           </p>
         </Question>

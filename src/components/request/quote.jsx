@@ -3,7 +3,9 @@ import { navigate } from "gatsby";
 import Button from "components/common/button";
 import SpinnerLoader from "components/common/spinnerLoader";
 
-import { validateEmail } from './utils'
+import Industry from './utils/industry'
+
+import { validateEmail, extractCompanyProfile, extractIndustrySegment } from './utils/api'
 
 import "./common.scss";
 
@@ -17,35 +19,6 @@ const status = {
 
 const requiredFields = ["fname", "lname", "email", "phone", "company", "street", "city", "state", "postal", "country"];
 
-const companyProfileLeft = {
-  academia: ["profile-academia", "Academia / Education"],
-  research: ["profile-research", "Research Institute"],
-  engineering: ["profile-engineering", "Engineering Design / Consulting"],
-  manufacturing: ["profile-manufacturing", "Manufacturing"],
-  reseller: ["profile-reseller", "Reseller / Purchasing Agency"]
-};
-
-const companyProfileRight = {
-  personal: ["profile-personal", "Personal Use"],
-  fabLab: ["profile-fablab", "Fab Lab"],
-  tools: ["profile-tools", "Tools & Machines"],
-  incubator: ["profile-incubator", "Incubator / Accelerator"]
-};
-
-const industrySegmentLeft = {
-  automotive: ["industry-automotive", "Automotive"],
-  aerospace: ["industry-aerospace", "Aerospace / Defense"],
-  pharma: ["industry-pharma", "Pharma / Medtech"],
-  consumer: ["industry-consumer", "Consumer Electronics"],
-  sport: ["industry-sport", "Sport / Wellness"]
-};
-const industrySegmentRight = {
-  education: ["industry-education", "Education"],
-  energy: ["industry-energy", "Energy / Environment"],
-  mining: ["industry-mining", "Mining / Oil & Gas"],
-  transportation: ["industry-transportation", "Transportation"]
-};
-
 export default class QuoteRequest extends React.Component {
   constructor(props) {
     super(props);
@@ -53,41 +26,7 @@ export default class QuoteRequest extends React.Component {
       status: status.pageOne,
       missingFields: false,
       invalidEmail: false,
-      otherProfile: false,
-      otherIndustry: false,
     };
-  }
-
-  extractCompanyProfile() {
-    let profile = "";
-    profile += document.getElementById(companyProfileLeft.academia[0]).checked ? `${companyProfileLeft.academia[1]}, ` : "";
-    profile += document.getElementById(companyProfileLeft.research[0]).checked ? `${companyProfileLeft.research[1]}, ` : "";
-    profile += document.getElementById(companyProfileLeft.engineering[0]).checked ? `${companyProfileLeft.engineering[1]}, ` : "";
-    profile += document.getElementById(companyProfileLeft.manufacturing[0]).checked ? `${companyProfileLeft.manufacturing[1]}, ` : "";
-    profile += document.getElementById(companyProfileLeft.reseller[0]).checked ? `${companyProfileLeft.reseller[1]}, ` : "";
-    profile += document.getElementById(companyProfileRight.personal[0]).checked ? `${companyProfileRight.personal[1]}, ` : "";
-    profile += document.getElementById(companyProfileRight.fabLab[0]).checked ? `${companyProfileRight.fabLab[1]}, ` : "";
-    profile += document.getElementById(companyProfileRight.tools[0]).checked ? `${companyProfileRight.tools[1]}, ` : "";
-    profile += document.getElementById(companyProfileRight.incubator[0]).checked ? `${companyProfileRight.incubator[1]}, ` : "";
-    profile += document.getElementById("other-profile").checked ? document.getElementById("profile-other-answer").value : "";
-    return profile;
-  }
-
-  extractIndustrySegment() {
-    let industry = "";
-    industry += document.getElementById(industrySegmentLeft.automotive[0]).checked ? `${industrySegmentLeft.automotive[1]}, ` : "";
-    industry += document.getElementById(industrySegmentLeft.aerospace[0]).checked ? `${industrySegmentLeft.aerospace[1]}, ` : "";
-    industry += document.getElementById(industrySegmentLeft.pharma[0]).checked ? `${industrySegmentLeft.pharma[1]}, ` : "";
-    industry += document.getElementById(industrySegmentLeft.consumer[0]).checked ? `${industrySegmentLeft.consumer[1]}, ` : "";
-    industry += document.getElementById(industrySegmentLeft.sport[0]).checked ? `${industrySegmentLeft.sport[1]}, ` : "";
-    industry += document.getElementById(industrySegmentRight.education[0]).checked ? `${industrySegmentRight.education[1]}, ` : "";
-    industry += document.getElementById(industrySegmentRight.energy[0]).checked ? `${industrySegmentRight.energy[1]}, ` : "";
-    industry += document.getElementById(industrySegmentRight.mining[0]).checked ? `${industrySegmentRight.mining[1]}, ` : "";
-    industry += document.getElementById(industrySegmentRight.transportation[0]).checked
-      ? `${industrySegmentRight.transportation[1]}, `
-      : "";
-    industry += document.getElementById("other-industry").checked ? document.getElementById("industry-other-answer").value : "";
-    return industry;
   }
 
   extractSearchState() {
@@ -154,8 +93,8 @@ export default class QuoteRequest extends React.Component {
 
   pageTwoValidate() {
     // Performs some data validation to make sure everything was filled in.
-    let profile = this.extractCompanyProfile();
-    let segment = this.extractIndustrySegment();
+    let profile = extractCompanyProfile();
+    let segment = extractIndustrySegment();
 
     if (!profile || !segment) {
       this.setState({ missingFields: true });
@@ -304,36 +243,7 @@ export default class QuoteRequest extends React.Component {
       <div>
         {this.renderProgressIndicator(1)}
         <form>
-          <h3>Company Profile</h3>
-          <p>Please select one or more</p>
-          <div className="checkboxes">
-            <div className="left-check">
-              {Object.keys(companyProfileLeft).map((type, index) => this.renderCheckbox(companyProfileLeft[type], index))}
-            </div>
-            <div className="right-check">
-              {Object.keys(companyProfileRight).map((type, index) => this.renderCheckbox(companyProfileRight[type], index))}
-              <div>
-                <input type="checkbox" id="other-profile" onClick={() => this.setState({ otherProfile: !this.state.otherProfile })} />
-                <label htmlFor="other-profile">Other</label>
-              </div>
-            </div>
-          </div>
-          {this.renderOtherProfile()}
-          <h3>Industry Segment</h3>
-          <p>Please select one or more</p>
-          <div className="checkboxes">
-            <div className="left-check">
-              {Object.keys(industrySegmentLeft).map((type, index) => this.renderCheckbox(industrySegmentLeft[type], index))}
-            </div>
-            <div className="right-check">
-              {Object.keys(industrySegmentRight).map((type, index) => this.renderCheckbox(industrySegmentRight[type], index))}
-              <div>
-                <input type="checkbox" id="other-industry" onClick={() => this.setState({ otherIndustry: !this.state.otherIndustry })} />
-                <label htmlFor="other-industry">Other</label>
-              </div>
-            </div>
-          </div>
-          {this.renderOtherIndustry()}
+          <Industry />
         </form>
         {this.missingFields()}
         <div className="button-wrapper">
@@ -341,37 +251,6 @@ export default class QuoteRequest extends React.Component {
         </div>
       </div>
     );
-  }
-
-  renderCheckbox(type, index) {
-    return (
-      <div key={index}>
-        <input type="checkbox" id={type[0]} />
-        <label htmlFor={type[0]}>{type[1]}</label>
-      </div>
-    );
-  }
-
-  renderOtherProfile() {
-    if (this.state.otherProfile) {
-      return (
-        <div>
-          <p>Please describe your company profile:</p>
-          <textarea id="profile-other-answer" />
-        </div>
-      );
-    }
-  }
-
-  renderOtherIndustry() {
-    if (this.state.otherIndustry) {
-      return (
-        <div>
-          <p>Please describe your industry segment:</p>
-          <textarea id="industry-other-answer" />
-        </div>
-      );
-    }
   }
 
   // PAGE THREE //

@@ -5,7 +5,9 @@ import SpinnerLoader from "components/common/spinnerLoader";
 import YouTube from "components/common/youtube";
 import Specs from "components/common/specs";
 
-import { validateEmail } from './utils'
+import Industry from "./utils/industry";
+
+import { validateEmail, extractCompanyProfile, extractIndustrySegment } from "./utils/api";
 
 import "./common.scss";
 
@@ -23,28 +25,31 @@ export default class LandingRequest extends React.Component {
     this.state = {
       status: status.ready,
       missingFields: false,
-      invalidEmail: false,
+      invalidEmail: false
     };
   }
 
   sendRequest() {
+    const { sourceDetails, landingType, thankYou } = this.props;
+
     // Performs some data validation to make sure everything was filled in.
     const allComplete = requiredFields.every(field => document.getElementById(field).value.length > 0);
 
+    // Performs some data validation to make sure everything was filled in.
+    let profile = extractCompanyProfile();
+    let segment = extractIndustrySegment();
+
     // Ensure all data is complete.
-    if (!allComplete) {
-      this.setState({  invalidEmail: false, missingFields: true});
+    if (!allComplete || !profile || !segment) {
+      this.setState({ invalidEmail: false, missingFields: true });
       return;
     }
 
-    // Ensure the email we are getting is valid. 
+    // Ensure the email we are getting is valid.
     if (!validateEmail(document.getElementById("email").value)) {
       this.setState({ invalidEmail: true, missingFields: false });
       return;
     }
-
-
-    const { sourceDetails, landingType, thankYou } = this.props;
 
     const emailParams = {
       // Information about the email:
@@ -58,6 +63,13 @@ export default class LandingRequest extends React.Component {
       email: document.getElementById("email").value,
       phone: document.getElementById("phone").value,
       country: document.getElementById("country").value,
+
+      // Information about their profile and industry
+      company_profile: profile,
+      industry_segment: segment,
+
+      // Additional comments
+      additional: document.getElementById("additional-comment").value,
 
       // Information about their source.
       utm_source: sourceDetails.utm_source,
@@ -128,6 +140,10 @@ export default class LandingRequest extends React.Component {
               Country: <input className="text-input" name="ship-country" id="country" autoComplete="shipping country" />
             </p>
           </div>
+          <Industry />
+          <h3>Extra Information</h3>
+          <p>Is there anything you want to tell us?</p>
+          <textarea placeholder="(Optional)" id="additional-comment" />
         </form>
         {this.state.missingFields ? <p className="missing">Please fill out of all of the required fields!</p> : null}
         {this.state.invalidEmail ? <p className="missing">Please enter a valid email!</p> : null}

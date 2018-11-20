@@ -6,7 +6,7 @@
   z-index: 2;
   left: 0px;
   right: 0px;
-  height: $header-height;
+  height: $mobile-header-height;
   user-select: none;
   background-color: $black;
 
@@ -20,7 +20,7 @@
 // Used for catching offscreen taps so that it is minimized.
 .header-mobile .link-panel-wrapper {
   position: fixed;
-  top: $header-height;
+  top: $mobile-header-height;
   left: 0px;
   right: 0px;
   bottom: 0px;
@@ -29,9 +29,12 @@
 .header-mobile .link-panel {
   position: fixed;
   background-color: $black;
-  top: $header-height;
+  top: $mobile-header-height;
   left: 0px;
   right: 0px;
+
+  overflow: auto;
+  max-height: 80vh;
 }
 
 
