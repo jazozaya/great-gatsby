@@ -31,8 +31,8 @@
 
 .info {
   display: flex;
-  align-items: center;
   margin: $small-padding;
+  align-items: center;
 
   h2 {
     margin-top: 0px;
@@ -41,4 +41,15 @@
 
 .img-wrapper {
   margin-right: $small-padding;
+}
+
+@media (max-width: $mobile-threshold) {
+  .info {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .img-wrapper {
+    margin: $small-padding;
+  }
 }

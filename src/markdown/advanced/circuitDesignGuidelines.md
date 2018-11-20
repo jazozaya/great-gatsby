@@ -3,7 +3,7 @@ path: "/docs/circuit-design-guidelines/"
 date: "2018-11-11"
 category: "Advanced topics"
 section: ""
-title: "Circuit design guideines"
+title: "Circuit design guidelines"
 ---
 
 ## Compatible Gerber File Extensions

@@ -51,13 +51,13 @@ class Docs extends React.Component {
             <p>Get to know the basics of the Voltera V-One and learn a few tricks along the way!</p>
             <div className="flex-row">
               <QuickStart icon={helloWorld} link="/docs/hello-world/printer-setup/">
-                <h2>Getting Started!</h2>
+                <h2>Getting Started</h2>
               </QuickStart>
               <QuickStart icon={drilling} link="/docs/punk-console/drill-safety/">
-                <h2>Start Drilling!</h2>
+                <h2>Start Drilling</h2>
               </QuickStart>
               <QuickStart icon={downloads} link="/docs/desktop-application/">
-                <h2>Download App!</h2>
+                <h2>Download App</h2>
               </QuickStart>
             </div>
             <div className={s.info}>
