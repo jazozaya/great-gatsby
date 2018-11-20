@@ -85,7 +85,7 @@ Download the V-One software installer for your operating system. Open the file a
 - [Windows 7, 8, 8.1, 10](http://voltera-styx.herokuapp.com/download/win32) (64-bit only)
 - [OSX 10.11 (El Capitan), MacOS 10.12 (Sierra), MacOS 10.13 (High Sierra)](http://voltera-styx.herokuapp.com/download/osx)
 
-**Note** - Windows 7 Users will require FTDI drivers, visit our [downloads](/docs/downloads/desktop-application-and-drivers/) page to learn more
+**Note** - Windows 7 Users will require FTDI drivers, visit our [downloads](/docs/desktop-application/) page to learn more
 
 ## Setting Up Your V-One
 

@@ -52,7 +52,7 @@ https://support.voltera.io/hc/en-us/articles/115004414408-6-Maintenance         
 ## Downloads
 https://support.voltera.io/hc/en-us/articles/115004264687-Desktop-Application-and-Drivers  https://www.voltera.io/docs/desktop-application/
 https://support.voltera.io/hc/en-us/articles/115004265027-Substrates-and-Templates         https://www.voltera.io/docs/substrates-and-templates/
-https://support.voltera.io/hc/en-us/articles/115004414348-SDS                              https://www.voltera.io/docs/sds/
+https://support.voltera.io/hc/en-us/articles/115004414348*                                 https://www.voltera.io/docs/sds/
 https://support.voltera.io/hc/en-us/articles/115002006953-User-Manual                      https://www.voltera.io/docs/user-manual/
 https://support.voltera.io/hc/en-us/articles/115001038214-Wallpapers                       https://www.voltera.io/docs/wallpapers/
 
@@ -96,7 +96,7 @@ https://support.voltera.io/hc/en-us/articles/115003440253-Probe-Nozzle-Fell-in-a
 
 # Main Redirects - Catch Everything (Keep after other support articles)
 https://support.voltera.io/*      https://www.voltera.io/docs/ 301
-
+https://support.voltera.io        https://www.voltera.io/docs/ 301
 
 
 # Links used in the app
