@@ -65,7 +65,7 @@ export default class Layout extends React.Component {
           <meta property="og:site_name" content="Voltera V-One. Prototyping tool." />
           <meta property="og:locale" content="en_US" />
           <meta property="article:author" content="" />
-          <link rel="shortcut icon" href={favicon} />
+          <link rel="shortcut icon" type="image/x-icon" href={favicon}/>
           <script defer="defer" type="text/javascript" src="https://www.googleadservices.com/pagead/conversion_async.js" charset="utf-8" />
         </Helmet>
         <Header pageName={this.props.pathname} />

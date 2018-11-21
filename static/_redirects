@@ -12,14 +12,15 @@ http://store.voltera.io/* https://www.voltera.io/store/
 /docs/tos/       /legal/tos/
 
 #From old website (404's)
-# /v-one /product/technology/
-# /assets/downloads/Voltera_DRC.dru https://support.voltera.io/hc/article_attachments/115001926453/Voltera_DRC.dru
-# /assets/pdf/Altium-Gerber-Drill-File-Guide.pdf https://support.voltera.io/hc/article_attachments/115001926373/Altium-Gerber-Drill-Export-Guide.pdf
-# /assets/pdf/KiCAD%20Gerber_Drill%20File%20Export%20Guide.pdf https://support.voltera.io/hc/article_attachments/115001926393/KiCAD-Gerber-Drill-Export-Guide.pdf
-# /assets/pdf/2015* https://support.voltera.io/hc/en-us/articles/115004414348
-# /assets/pdf/2016* https://support.voltera.io/hc/en-us/articles/115004414348
-# /assets/images/backgrounds/V-One-Feature-Set.pdf /pdfs/V-One-Summary.pdf
-# /policies/terms-of-service /docs/tos/
+/v-one                                                           /product/technology/
+/support/getting-started/hello-world-print                       https://www.voltera.io/docs/hello-world/printing-the-circuit/
+# /assets/downloads/Voltera_DRC.dru                              https://support.voltera.io/hc/article_attachments/115001926453/Voltera_DRC.dru
+# /assets/pdf/Altium-Gerber-Drill-File-Guide.pdf                 https://support.voltera.io/hc/article_attachments/115001926373/Altium-Gerber-Drill-Export-Guide.pdf
+# /assets/pdf/KiCAD%20Gerber_Drill%20File%20Export%20Guide.pdf   https://support.voltera.io/hc/article_attachments/115001926393/KiCAD-Gerber-Drill-Export-Guide.pdf
+# /assets/pdf/2015*                                              https://support.voltera.io/hc/en-us/articles/115004414348
+# /assets/pdf/2016*                                              https://support.voltera.io/hc/en-us/articles/115004414348
+# /assets/images/backgrounds/V-One-Feature-Set.pdf               /pdfs/V-One-Summary.pdf
+# /policies/terms-of-service                                     /docs/tos/
 
 #Social
 /twitter   https://twitter.com/voltera_io/
@@ -121,3 +122,6 @@ http://support.voltera.io/* https://www.voltera.io/docs/
 # Documents
 /summary        /pdfs/V-One-Summary.pdf
 /techsheet      /pdfs/Voltera-Conductive-Ink.pdf
+
+# images - Used to be 
+/v-one-box-min.png /v-one.png

@@ -2,7 +2,6 @@
 
 .mobile-wrapper {
   // Want it to take full screen.
-
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
   background-color: $light-grey;
@@ -15,9 +14,9 @@
   z-index: 1;
 
   left: 10px;
-  top: 100px;
+  top: 95px;
+  bottom: 90px;
 
-  height: calc(100vh - 220px);
   overflow: auto;
 }
 
@@ -48,12 +47,12 @@
 }
 
 .toggle {
-
   user-select: none;
   background-color: $voltera-blue;
   border-radius: 100%;
 
   cursor: pointer;
+  z-index: 2;
 
   font-size: 0%;
   padding: 17px;
@@ -62,9 +61,9 @@
   bottom: 20px;
   left: 20px;
 
-  transition: all $t-time ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
 }
 
 .expanded {
-  transform: rotate(-180deg);
+  transform: scaleX(-1);
 }
