@@ -3,7 +3,7 @@ import SideBar from "./sidebar";
 import Search from "./search";
 import CallToAction from "components/common/cta";
 
-import { graphql, StaticQuery, Link } from "gatsby";
+import { graphql, StaticQuery } from "gatsby";
 import Img from "gatsby-image";
 
 import helloWorld from "./quickStart/helloWorld.svg";

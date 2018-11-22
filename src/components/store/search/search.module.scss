@@ -1,0 +1,16 @@
+@import "src/css/colors";
+
+.wrapper {
+  margin-top: $subheader-height;
+}
+.results-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+@media (max-width: $mobile-threshold) {
+  .results-gallery {
+    justify-content: center;
+  }
+}

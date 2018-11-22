@@ -4,7 +4,7 @@ import ProductSnippet from "components/store/utils/productSnippet";
 import SearchBar from "components/store/utils/searchBar";
 
 import { fetchAllProducts } from "components/store/api";
-import "./search.scss";
+import s from "./search.module.scss";
 
 export default class Search extends React.Component {
   constructor(props) {
@@ -37,7 +37,7 @@ export default class Search extends React.Component {
 
   render() {
     return (
-      <section className="search-wrapper">
+      <section className={s.wrapper}>
         <h1>Your search results</h1>
         <p>
           Your search for{" "}
@@ -47,7 +47,7 @@ export default class Search extends React.Component {
           revealed the following:
         </p>
         <SearchBar />
-        <div className="results-gallery">{this.renderResults()}</div>
+        <div className={s.resultsGallery}>{this.renderResults()}</div>
       </section>
     );
   }

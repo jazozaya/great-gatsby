@@ -1,5 +1,40 @@
 const path = require("path");
 
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`
+});
+
+const query = `{
+  allMarkdownRemark {
+    edges {
+      node {
+        id
+        frontmatter {
+          title
+          path
+        }
+        excerpt(pruneLength:3000)
+      }
+    }
+  }
+}`;
+
+const queries = [
+  {
+    query,
+    transformer: ({ data }) =>
+      data.allMarkdownRemark.edges.map(({ node }) => {
+        obj = {
+          objectID: node.id,
+          title: node.frontmatter.title,
+          path: node.frontmatter.path,
+          excerpt: node.excerpt
+        };
+        return obj;
+      })
+  }
+];
+
 module.exports = {
   siteMetadata: {
     title: `Voltera | Build Hardware Faster`,
@@ -71,19 +106,37 @@ module.exports = {
         ]
       }
     },
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: "Voltera",
-        short_name: "Voltera",
-        start_url: "/",
-        background_color: `#282828`,
-        theme_color: `#79ce00`,
-        display: "minimal-ui",
-        icon: "src/icon.png" // This path is relative to the root of the site.
-      }
-    },
-    "gatsby-plugin-offline"
+    // {
+    //   resolve: `gatsby-plugin-algolia`,
+    //   options: {
+    //     appId: process.env.ALGOLIA_APP_ID,
+    //     apiKey: process.env.ALGOLIA_API_KEY,
+    //     indexName: process.env.ALGOLIA_INDEX_NAME, // for all queries
+    //     queries,
+    //     chunkSize: 1000 // default: 1000
+    //   }
+    // },
+    // {
+    //   resolve: "gatsby-source-shopify2",
+    //   options: {
+    //     shopName: "voltera",
+    //     accessToken: "b34b3e722fe10915ea813aae8310d8a0",
+    //     verbose: true
+    //   }
+    // },
+    // {
+    //   resolve: `gatsby-plugin-manifest`,
+    //   options: {
+    //     name: "Voltera",
+    //     short_name: "Voltera",
+    //     start_url: "/",
+    //     background_color: `#282828`,
+    //     theme_color: `#79ce00`,
+    //     display: "minimal-ui",
+    //     icon: "src/icon.png" // This path is relative to the root of the site.
+    //   }
+    // },
+    // "gatsby-plugin-offline"
   ],
   pathPrefix: "/"
 };
