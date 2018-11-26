@@ -46,10 +46,12 @@
 
 .hits-wrapper {
   position: fixed;
-  top: 130px;
+  top: 120px;
   z-index: 2;
   margin: auto;
   width: 100%;
+  height: calc(100% - 120px);
+  background-color: #2828285e;
 }
 
 
@@ -79,12 +81,13 @@
 }
 
 .ais-Highlight {
+  font-size: 1.2em;
   display: block;
   font-weight: 600;
 }
 
 .ais-Hits-item {
-  margin: 5px;
+  margin: 10px 5px;
   border-radius: 10px;
   padding: 10px;
 }
@@ -94,8 +97,7 @@
 }
 
 .ais-Highlight-highlighted, .ais-Snippet-highlighted {
-  background-color: $voltera-blue;
-  color: white;
+  background-color: rgb(200,200,200);
   font-style: normal;
 }
 

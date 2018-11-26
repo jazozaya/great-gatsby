@@ -23,15 +23,21 @@ const Content = connectStateResults(({ searchState, searchResults }) => {
 
   // If we have results and valid hits.
   if (searchResults && searchResults.nbHits !== 0) {
-    return <Hits hitComponent={Product} />;
+    return (
+      <div className="hits-wrapper">
+        <Hits hitComponent={Product} />
+      </div>
+    );
   }
 
   // If we don't have hits (wrap so it displays in the same style)
   return (
-    <div className="ais-Hits">
-      <p>
-        No results have been found for: <em>{searchState.query}</em>
-      </p>
+    <div className="hits-wrapper">
+      <div className="ais-Hits">
+        <p>
+          No results have been found for: <em>{searchState.query}</em>
+        </p>
+      </div>
     </div>
   );
 });
@@ -46,11 +52,9 @@ export default class Specs extends React.Component {
     return (
       <InstantSearch appId="0M9O8K67BX" apiKey="02a6a0889ba6194edd1030b80dde383c" indexName="test_doc">
         <div className="search-wrapper">
-          <SearchBox submit={<img src={icon} alt="Search" />} reset={null} translations={{placeholder:"Search our documentation..."}}/>
+          <SearchBox submit={<img src={icon} alt="Search" />} reset={null} translations={{ placeholder: "Search our documentation..." }} />
         </div>
-        <div className="hits-wrapper">
-          <Content />
-        </div>
+        <Content />
       </InstantSearch>
     );
   }

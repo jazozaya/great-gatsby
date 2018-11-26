@@ -1,7 +1,7 @@
 ---
 path: "/docs/purging-solder-paste/"
-date: "2018-11-11"
-category: "Advanced topics"
+date: "2018-11-26"
+category: "Guides"
 section: ""
 title: "Purging solder paste"
 ---

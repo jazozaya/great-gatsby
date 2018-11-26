@@ -38,9 +38,9 @@ export default class Category extends React.Component {
 
     return (
       <div>
+        <Articles docs={allOtherDocs} details={details} />
         <Section docs={helloWorldDocs} details={details} />
         <Section docs={punkConsoleDocs} details={details} />
-        <Articles docs={allOtherDocs} details={details} />
       </div>
     );
   }
@@ -57,8 +57,8 @@ export default class Category extends React.Component {
 
     return (
       <div>
-        <Section docs={exportDocs} details={details} />
         <Articles docs={allOtherDocs} details={details} />
+        <Section docs={exportDocs} details={details} />
       </div>
     );
   }
