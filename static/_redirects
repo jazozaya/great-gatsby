@@ -11,16 +11,36 @@ http://store.voltera.io/* https://www.voltera.io/store/
 /docs/privacy/   /legal/privacy/
 /docs/tos/       /legal/tos/
 
-#From old website (404's)
+############ From old website (404's) ######################
 /v-one                                                           /product/technology/
+/support/getting-started/setup                                   https://www.voltera.io/docs/hello-world/printer-setup/
 /support/getting-started/hello-world-print                       https://www.voltera.io/docs/hello-world/printing-the-circuit/
+/support/downloads/export-guides-and-gerber-files                https://www.voltera.io/docs/export/altium/
+/support/software/export-guides-and-gerber-files                 https://www.voltera.io/docs/export/altium/
+/support/user-guides/hand-soldering                              https://www.voltera.io/docs/hand-soldering/
+/support/user-guides/height-calibration                          https://www.voltera.io/docs/understanding-print-height/
+/support/troubleshooting/probe-repair-and-troubleshooting        https://www.voltera.io/docs/
+/support/troubleshooting/no-ink-coming-out                       https://www.voltera.io/docs/no-ink-or-paste-comes-out/
+
+/troubleshooting/ts_no_ink.html                                  https://www.voltera.io/docs/no-ink-or-paste-comes-out/
+/troubleshooting/ts_soldering.html                               https://www.voltera.io/docs/difficulty-soldering/
+/troubleshooting/index.html                                      https://www.voltera.io/docs/
+/troubleshooting/                                                https://www.voltera.io/docs/
+
+/request/chat/                                                   https://www.voltera.io/contact/
+
+/support/contact-support/voltera-support                         https://www.voltera.io/contact/
+/assets/pdf/KiCAD%20Gerber_Drill%20File%20Export%20Guide.pdf     https://www.voltera.io/docs/export/kicad/
+
 # /assets/downloads/Voltera_DRC.dru                              https://support.voltera.io/hc/article_attachments/115001926453/Voltera_DRC.dru
 # /assets/pdf/Altium-Gerber-Drill-File-Guide.pdf                 https://support.voltera.io/hc/article_attachments/115001926373/Altium-Gerber-Drill-Export-Guide.pdf
-# /assets/pdf/KiCAD%20Gerber_Drill%20File%20Export%20Guide.pdf   https://support.voltera.io/hc/article_attachments/115001926393/KiCAD-Gerber-Drill-Export-Guide.pdf
 # /assets/pdf/2015*                                              https://support.voltera.io/hc/en-us/articles/115004414348
 # /assets/pdf/2016*                                              https://support.voltera.io/hc/en-us/articles/115004414348
 # /assets/images/backgrounds/V-One-Feature-Set.pdf               /pdfs/V-One-Summary.pdf
 # /policies/terms-of-service                                     /docs/tos/
+############################################################
+
+
 
 #Social
 /twitter   https://twitter.com/voltera_io/
@@ -122,6 +142,9 @@ http://support.voltera.io/* https://www.voltera.io/docs/
 # Documents
 /summary        /pdfs/V-One-Summary.pdf
 /techsheet      /pdfs/Voltera-Conductive-Ink.pdf
+
+# Blog Redirects
+/blog/voltera-wins-best-product-award  https://medium.com/@voltera/voltera-wins-best-product-award-66531c46800c
 
 # images - Used to be 
 /v-one-box-min.png /v-one.png
