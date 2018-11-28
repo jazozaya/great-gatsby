@@ -6,18 +6,23 @@ section: ""
 title: "Reflowing solder paste"
 ---
 
-We offer two types of solder paste:
+We currently offer two types of solder paste alloys in T4 and T5 particle sizes:
 
-- Tin Bismuth Silver (RoHS, compatible with our conductive inks)
-- Tin Lead (meant for traditionally fabricated boards)
+- [T4 - Sn42 Bi57.6 Ag0.4](/store/collection/solder/)
+- [T4 - Sn63 Pb37](/store/collection/solder/)
+- [T5 - Sn42 Bi57.6 Ag0.4](/store/collection/solder/)
+- [T5 - Sn63 Pb37](/store/collection/solder/)
 
-The V-One heating platform is capable of following a basic reflow profile for both solder alloys, but before reflowing **_check the following_**:
+Tin Bismuth Silver (Sn42 Bi57.6 Ag0.4) is RoHS compliant and is meant for our conductive inks. Tin Lead (Sn63 Pb37) is meant for factory fabricated boards with a HASL finish.
 
-- Is your board very large? Larger than 3" x 4" ?
-- Are you reflowing large components like capacitors and connectors?
-- Does your board have several solid copper planes?
 
-If you said YES to any of the above, then the automatic **REFLOW** mode may not work correctly. The board will act like a large heat sink and will not reach the peak reflow temperatures. Instead, you should do use the **MANUAL** mode.
+Before reflow soldering on the V-One, **check the following**:
+
+- Is your board larger than 3" x 4" ( 76.2 mm x 101.6 mm) ?
+- Are you reflowing large components like connectors?
+- Does your board have multiple ground planes?
+
+If you said YES to any of the above, then the automatic **REFLOW** mode may not work correctly. The board will act like a large heat sink and will not reach the peak reflow temperatures. Instead, you should use the **MANUAL** mode.
 
 <div class="warning info">
 <p><strong>Tip</strong>: If your board will act like a large heat sink, do a <strong>MANUAL</strong> reflow instead (See below)</p>
@@ -27,16 +32,16 @@ If you said YES to any of the above, then the automatic **REFLOW** mode may not 
 <img src="/docs/advanced/curingAndReflowing/reflow-mode.png" />
 </div>
 
-### Tin Lead Bismuth Profile
+### Tin Lead Bismuth (Sn42 Bi57.6 Ag0.4) Profile
 
-Automatic reflow profile for Tin Lead Bismuth (Sn42Bi57.6Ag0.4)
+Automatic reflow profile for Tin Lead Bismuth (Sn42 Bi57.6 Ag0.4)
 
 <table>
   <tbody>
     <tr>
-      <td style="width: 200px;"><strong>Soak Temperature</strong></td>
+      <td style="width: 200px;"><strong>Soak Temp.</strong></td>
       <td style="width: 200px;"><strong>Soak Time</strong></td>
-      <td style="width: 200px;"><strong>Peak Temperature</strong></td>
+      <td style="width: 200px;"><strong>Peak Temp.</strong></td>
       <td style="width: 200px;"><strong>Peak Time</strong></td>
     </tr>
     <tr>
@@ -52,16 +57,16 @@ Automatic reflow profile for Tin Lead Bismuth (Sn42Bi57.6Ag0.4)
 <img src="/docs/advanced/curingAndReflowing/tinLeadBismuth.png" />
 </div>
 
-### Tin Lead Profile
+### Tin Lead (Sn63 Pb37) Profile
 
-Automatic reflow profile for Tin Lead Bismuth (Sn63Pb37)
+Automatic reflow profile for Tin Lead Bismuth (Sn63 Pb37)
 
 <table>
   <tbody>
     <tr>
-      <td style="width: 200px;"><strong>Soak Temperature</strong></td>
+      <td style="width: 200px;"><strong>Soak Temp.</strong></td>
       <td style="width: 200px;"><strong>Soak Time</strong></td>
-      <td style="width: 200px;"><strong>Peak Temperature</strong></td>
+      <td style="width: 200px;"><strong>Peak Temp.</strong></td>
       <td style="width: 200px;"><strong>Peak Time</strong></td>
     </tr>
     <tr>
@@ -83,7 +88,8 @@ A manual reflow requires the user to place close attention to the board as it is
 
 1. Clamp your board on the heated bed.
 1. Enter **Heat** > **Manual** mode.
-1. Set the temperature to the *soak temperature*. Hold for 1-2 minutes to allow heat distribution
+1. Set the temperature to the *soak temperature*. 
+1. Hold for 1-2 minutes to let the whole board reach the temperature.
 1. Set the temperature to the *peak temperature*.
 1. Observe the solder paste closely. 
 1. As soon as the last pad finishes reflowing, hit **STOP** to start cooling the board.
@@ -92,8 +98,8 @@ A manual reflow requires the user to place close attention to the board as it is
   <tbody>
     <tr>
       <td style="width: 250px;"><strong>Solder Alloy</strong></td>
-      <td style="width: 250px;"><strong>Soak Temperature</strong></td>
-      <td style="width: 250px;"><strong>Peak Temperature</strong></td>
+      <td style="width: 250px;"><strong>Soak Temp.</strong></td>
+      <td style="width: 250px;"><strong>Peak Temp.</strong></td>
     </tr>
     <tr>
       <td>Tin Bismuth Silver</td>

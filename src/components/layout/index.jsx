@@ -24,14 +24,7 @@ export default class Layout extends React.Component {
         google_remarketing_only: true
       });
     } catch (e) {
-      console.error(e);
-    }
-  }
-
-  componentDidUpdate() {
-    // Wait a bit for react helmet to kick in, then update URL (Not bulletproof)
-    if (process.NODE_ENV === "production") {
-      setTimeout(this.trackRemarketing, 500);
+      console.log(e);
     }
   }
 
@@ -41,7 +34,7 @@ export default class Layout extends React.Component {
       loadHeap();
 
       // Wait a little bit to ensure deferred script has finished loading. (Not bulletproof)
-      //setTimeout(this.trackRemarketing, 500);
+      setTimeout(this.trackRemarketing, 500);
     }
   }
 
@@ -65,7 +58,7 @@ export default class Layout extends React.Component {
           <meta property="og:site_name" content="Voltera V-One. Prototyping tool." />
           <meta property="og:locale" content="en_US" />
           <meta property="article:author" content="" />
-          <link rel="shortcut icon" type="image/x-icon" href={favicon}/>
+          <link rel="shortcut icon" type="image/x-icon" href={favicon} />
           <script defer="defer" type="text/javascript" src="https://www.googleadservices.com/pagead/conversion_async.js" charset="utf-8" />
         </Helmet>
         <Header pageName={this.props.pathname} />

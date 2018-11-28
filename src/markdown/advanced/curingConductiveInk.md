@@ -8,7 +8,7 @@ title: "Curing conductive ink"
 
 ## The importance of curing (baking):
 
-After a circuit is printed, it is important to cure the ink immediately so it obtains the best conductiviy, adhesion and soldering properties it can offer. _Why?_
+After a circuit is printed, it is important to cure the ink immediately so it obtains the best conductivity, adhesion and soldering properties it can offer. _Why?_
 
 As the ink temperature increases, chemical reactions are triggered and the metallic particles will form a conductive matrix and fuse together. Many conductivity and soldering problems occur because the ink was either not cured right away, at the right temperature, or long enough.
 
@@ -21,8 +21,8 @@ As the ink temperature increases, chemical reactions are triggered and the metal
 <table>
   <tbody>
     <tr>
-      <td style="width: 200px;"><strong>Material</strong></td>
-      <td style="width: 200px;"><strong>Temp. Celcius</strong></td>
+      <td style="width: 200px;"><strong>Substrate Material</strong></td>
+      <td style="width: 200px;"><strong>Temp. Celsius</strong></td>
       <td style="width: 200px;"><strong>Temp. Fahrenheit</strong></td>
       <td style="width: 250px;"><strong>Time</strong></td>
     </tr>
@@ -55,16 +55,11 @@ You may notice the V-One sets the temperature about 10-20 degrees hotter than th
 
 If you have access to an enclosed curing oven, then you are welcome to cure your boards with it. Just set the oven to the above time and temperatures.
 
-One benefit of using an external oven is that it allows faster printing since you do not need to wait for the V-One to cool down after each print.
+Using an external oven means you can start using your V-One again as soon as the print is finished.
 
-### High temperature substrates
-
-_Disclaimer: Voltera has not tried reproducing these results. The following is anecdotal._
-
-If you are working with high temperature ceramics and you have access to an external oven, it may be worthwhile to try curing our standard conductive ink at higher temperatures. Perhaps 300°C-450°C (572°F - 842°F) for 20-30 minutes. A couple of our users have reported _significant_ increases to conductivity and solderability.
 
 <div class="important info">
-<p><strong>Important</strong>: Do not bake FR4 or FR1 at higher than 240°C (464°F). The materials will not survive.</p>
+<p><strong>Important</strong>: Do not bake FR4 or FR1 at higher than 240°C (464°F). They will catch fire and emit toxic fumes.</p>
 </div>
 
 ## Curing flexible conductive ink
@@ -72,8 +67,8 @@ If you are working with high temperature ceramics and you have access to an exte
 <table>
   <tbody>
     <tr>
-      <td style="width: 200px;"><strong>Material</strong></td>
-      <td style="width: 200px;"><strong>Temp. Celcius</strong></td>
+      <td style="width: 200px;"><strong>Substrate Material</strong></td>
+      <td style="width: 200px;"><strong>Temp. Celsius</strong></td>
       <td style="width: 200px;"><strong>Temp. Fahrenheit</strong></td>
       <td style="width: 250px;"><strong>Time</strong></td>
     </tr>
@@ -98,9 +93,9 @@ If you are working with high temperature ceramics and you have access to an exte
   </tbody>
 </table>
 
-The biggest challenge when curing thin films like Kapton and PET is that **the film will curl** as it heats up.
+Thin films must be kept _completely flat_ and _in contact_ with the heater at all times to prevent poor curing. This is challenging because the **films will lift** as they heat up and expand.
 
-As the film curls, **air will become trapped** between the heated bed and the film. Since the heated platform primarily transfers heat by conduction, and air is a great thermal insulator, the ink will not reach the target temperature.
+As the film lifts, **air will become trapped** between the heated bed and the film. Since the heated platform primarily transfers heat by conduction, and air is a great thermal insulator, the ink will not reach the target temperature.
 
 <div class="warning info">
 <p><strong>Note</strong>: In <strong>BAKE</strong> mode, the max temp. is 160°C (320°F) to avoid damaging PET. If printing on FR4, FR1 or Kapton, a <strong>MANUAL</strong> cure is preferred. (See below) </p>
