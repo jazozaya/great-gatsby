@@ -19,8 +19,14 @@ http://store.voltera.io/* https://www.voltera.io/store/
 /support/software/export-guides-and-gerber-files                 https://www.voltera.io/docs/export/altium/
 /support/user-guides/hand-soldering                              https://www.voltera.io/docs/hand-soldering/
 /support/user-guides/height-calibration                          https://www.voltera.io/docs/understanding-print-height/
+/support/user-guides/circuit-design-and-exporting                https://www.voltera.io/docs/circuit-design-guidelines/
+/support/user-guides/printer-maintenance                         https://www.voltera.io/docs/hello-world/maintenance/
+
+/support/troubleshooting/pad-location                            https://www.voltera.io/docs/
 /support/troubleshooting/probe-repair-and-troubleshooting        https://www.voltera.io/docs/
 /support/troubleshooting/no-ink-coming-out                       https://www.voltera.io/docs/no-ink-or-paste-comes-out/
+/support/troubleshooting/connection-problems                     https://www.voltera.io/docs/usb-connection-problems/
+/support/documentation/msds                                      https://www.voltera.io/docs/sds/
 
 /troubleshooting/ts_no_ink.html                                  https://www.voltera.io/docs/no-ink-or-paste-comes-out/
 /troubleshooting/ts_soldering.html                               https://www.voltera.io/docs/difficulty-soldering/
@@ -29,7 +35,11 @@ http://store.voltera.io/* https://www.voltera.io/store/
 
 /request/chat/                                                   https://www.voltera.io/contact/
 
-/support/contact-support/voltera-support                         https://www.voltera.io/contact/
+/use-cases/hobbyist                                              https://www.voltera.io/
+/use-cases/business                                              https://www.voltera.io/
+/use-cases/education                                             https://www.voltera.io/
+/use-cases/research                                              https://www.voltera.io/
+
 /assets/pdf/KiCAD%20Gerber_Drill%20File%20Export%20Guide.pdf     https://www.voltera.io/docs/export/kicad/
 
 # /assets/downloads/Voltera_DRC.dru                              https://support.voltera.io/hc/article_attachments/115001926453/Voltera_DRC.dru
@@ -116,12 +126,12 @@ https://support.voltera.io/hc/en-us/articles/360002229474*           https://www
 https://support.voltera.io/hc/en-us/articles/115003440253*           https://www.voltera.io/docs
 
 # Main Redirects - Catch Everything (Keep after other support articles)
-https://support.voltera.io https://www.voltera.io/docs/
-http://support.voltera.io https://www.voltera.io/docs/
+https://support.voltera.io     https://www.voltera.io/docs/
+http://support.voltera.io      https://www.voltera.io/docs/
 
 # Catch everything from the old support.
-https://support.voltera.io/* https://www.voltera.io/docs/
-http://support.voltera.io/* https://www.voltera.io/docs/
+https://support.voltera.io/*   https://www.voltera.io/docs/
+http://support.voltera.io/*    https://www.voltera.io/docs/
 
 
 # Links used in the app
@@ -144,7 +154,9 @@ http://support.voltera.io/* https://www.voltera.io/docs/
 /techsheet      /pdfs/Voltera-Conductive-Ink.pdf
 
 # Blog Redirects
-/blog/voltera-wins-best-product-award  https://medium.com/@voltera/voltera-wins-best-product-award-66531c46800c
+/blog/voltera-wins-best-product-award                https://medium.com/@voltera/voltera-wins-best-product-award-66531c46800c
+/blog/you-spin-me-right-round-like-a-drill-bit       https://medium.com/@voltera/you-spin-me-right-round-like-a-drill-bit-60fe2959e20e
+/blog/blogPost*                                      https://medium.com/@voltera
 
 # images - Used to be 
 /v-one-box-min.png /v-one.png

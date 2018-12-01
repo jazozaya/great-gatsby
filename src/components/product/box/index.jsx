@@ -1,7 +1,9 @@
 import React from "react";
+import MediaQuery from "react-responsive";
 import { graphql, StaticQuery } from "gatsby";
-import Bowser from 'bowser'
 import Img from "gatsby-image";
+
+import { mobileThreshold } from './../../../constants'
 
 import "./box.scss";
 
@@ -50,9 +52,8 @@ class InTheBox extends React.Component {
     this.state = {
       description: summary.vOne,
       hoverDescription: null,
-      interacted: false,
+      interacted: false
     };
-
   }
 
   renderVOne() {
@@ -342,6 +343,14 @@ class InTheBox extends React.Component {
     );
   }
   render() {
-    return Bowser.mobile ? this.renderMobile() : this.renderDesktop();
+    return (
+      <div>
+        <MediaQuery maxWidth={mobileThreshold}>
+          {matches => {
+            return matches ? this.renderMobile() : this.renderDesktop();
+          }}
+        </MediaQuery>
+      </div>
+    );
   }
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import MediaQuery from "react-responsive";
 import Logo from "components/common/logo";
 import "./footer.scss";
 
@@ -7,27 +8,18 @@ import facebookIcon from "./facebook-icon.min.svg";
 import instagramIcon from "./instagram-icon.min.svg";
 import youtubeIcon from "./youtube-icon.min.svg";
 
-import { isMobile } from "./../../../constants";
+import { mobileThreshold } from "./../../../constants";
 
 import { Link } from "gatsby";
 
 export default class Footer extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isMobile: true
-    };
-  }
-
-  componentDidMount() {
-    this.setState({ isMobile: isMobile() });
-  }
-
   render() {
     return (
       <div className="footer-wrapper">
         <div className="footer">
-          {this.state.isMobile ? null : <Logo />}
+          <MediaQuery minWidth={mobileThreshold}>
+            <Logo />
+          </MediaQuery>
           <div className="column">
             <p>V-One</p>
             <ul>

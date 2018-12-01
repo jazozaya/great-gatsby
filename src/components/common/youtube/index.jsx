@@ -22,10 +22,6 @@ export default class YouTube extends React.Component {
       playVideo: false,
       isMobile: false
     };
-
-    // if (typeof window !== "undefined") {
-    //   this.state.screenWidth = window.innerWidth
-    // }
   }
 
   componentDidMount() {

@@ -1,4 +1,5 @@
 import React from "react";
+import MediaQuery from "react-responsive";
 
 import Button from "components/common/button";
 import { Link } from "gatsby";
@@ -7,19 +8,17 @@ import EmptyCart from "./empty_cart.min.svg";
 import { fetchRecentCheckout, removeLineItems, updateLineItems } from "components/store/api";
 
 import "./cart.scss";
-import { isMobile } from "../../../constants";
+import { mobileThreshold } from "../../../constants";
 
 export default class Cart extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      checkout: null,
-      isMobile: true
+      checkout: null
     };
   }
 
   componentDidMount() {
-    this.setState({ isMobile: isMobile() });
     fetchRecentCheckout().then(checkout => this.setState({ checkout: checkout }));
   }
 
@@ -175,7 +174,13 @@ export default class Cart extends React.Component {
         </div>
       );
     }
-    return this.state.isMobile ? this.renderMobile() : this.renderDesktop();
+    return (
+      <MediaQuery maxWidth={mobileThreshold}>
+        {matches => {
+          return matches ? this.renderMobile() : this.renderDesktop();
+        }}
+      </MediaQuery>
+    );
   }
 
   render() {

@@ -1,9 +1,10 @@
 import React from "react";
+import MediaQuery from "react-responsive";
 import "./boxDrill.scss";
 
 import { graphql, StaticQuery } from "gatsby";
 import Img from "gatsby-image";
-import { isMobile } from "./../../../constants";
+import { mobileThreshold } from "./../../../constants";
 
 const summary = {
   // IMPORTANT - These names need to match class names in CSS
@@ -48,13 +49,8 @@ class BoxDrill extends React.Component {
     this.state = {
       description: summary.drill,
       hoverDescription: null,
-      interacted: false,
-      isMobile: true
+      interacted: false
     };
-  }
-
-  componentDidMount() {
-    this.setState({ isMobile: isMobile() });
   }
 
   renderDrill() {
@@ -312,6 +308,14 @@ class BoxDrill extends React.Component {
     );
   }
   render() {
-    return this.state.isMobile ? this.renderMobile() : this.renderDesktop();
+    return (
+      <div>
+        <MediaQuery maxWidth={mobileThreshold}>
+          {matches => {
+            return matches ? this.renderMobile() : this.renderDesktop();
+          }}
+        </MediaQuery>
+      </div>
+    );
   }
 }
