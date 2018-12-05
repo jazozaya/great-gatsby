@@ -13,42 +13,10 @@ import { loadHeap } from "./api";
 import "css/main.scss";
 
 export default class Layout extends React.Component {
-  // trackRemarketing() {
-  //   // Anna's add blocker interfered with this function,
-  //   // it said google_trackConversion was not defined.
-  //   // And crashed other things. Hence try catch.
-  //   console.log('tracking conversion!')
-  //   try {
-  //     window.google_trackConversion({
-  //       google_conversion_id: 933031938,
-  //       google_custom_params: {},
-  //       google_remarketing_only: true
-  //     });
-  //   } catch (e) {
-  //     console.log(e);
-  //   }
-  // }
-
-  componentDidMount() {
-    if (process.env.NODE_ENV === "production") {
-
-      // Wait a little bit to ensure deferred script has finished loading. (Not bulletproof)
-      //setTimeout(this.trackRemarketing, 500);
-
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "UA-41924051-3");
-    }
-  }
-
   render() {
     return (
       <div>
         <Helmet>
-          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-41924051-3" />
           <meta charSet="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           <title>Voltera | Build Hardware Faster</title>
