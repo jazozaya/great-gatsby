@@ -70,13 +70,13 @@ module.exports = {
         pixelId: "1802551463109806"
       }
     },
-    {
-      resolve: `gatsby-plugin-hotjar`,
-      options: {
-        id: 640069,
-        sv: 6
-      }
-    },
+    // {
+    //   resolve: `gatsby-plugin-hotjar`,
+    //   options: {
+    //     id: 640069,
+    //     sv: 6
+    //   }
+    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
