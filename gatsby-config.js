@@ -53,12 +53,12 @@ module.exports = {
         exclude: ["/request/thankyou", "/landing/*"]
       }
     },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: "UA-41924051-3"
-      }
-    },
+    // {
+    //   resolve: `gatsby-plugin-google-analytics`,
+    //   options: {
+    //     trackingId: "UA-41924051-3"
+    //   }
+    // },
     {
       resolve: "gatsby-plugin-intercom-spa",
       options: {
