@@ -12,7 +12,7 @@ export default class SomethingFAQ extends React.Component {
     return (
       <Template id={id} title={title} all={all}>
         <Question underline title="What is your warranty policy?">
-          <p>We offer a 6 month warranty from date of delivery.  More information can be found in our <Link to="/docs/tos">Terms of Service</Link>.</p>
+          <p>We offer a 1 year warranty from date of delivery.  More information can be found in our <Link to="/legal/tos/">Terms of Service</Link>.</p>
         </Question>
         <Question underline title="Do you offer bulk discounts?">
           <p>Yes. Contact <strong>sales@voltera.io</strong>.</p>
