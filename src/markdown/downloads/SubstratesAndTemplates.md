@@ -8,12 +8,11 @@ title: "Substrates and templates"
 
 We offer several types of substrate and templates. Incorporating their dimensions and features into your design will improve your V-One experience. Visit our store to view them all.
 
-## EAGLE Library and Design Blocks
+## EAGLE Library
 
-We have developed a Library and a set of Design Blocks for EAGLE that contains parts for all of the templates and substrates in our store. Using it is easy, just drop in the template as you would any other part and away you go.
+We have developed a Library for EAGLE that contains parts for all of the templates and substrates in our store. Using it is easy, just drop in the template as you would any other part and away you go.
 
 - [EAGLE Library](https://github.com/VolteraInc/circuit-design-resources/raw/master/Voltera%20Parts%20Libraries/EAGLE/voltera_EAGLE_community_lib.zip)
-- [EAGLE Design Blocks (for version 8.0.0 & higher)](https://github.com/VolteraInc/circuit-design-resources/raw/master/Voltera%20Parts%20Libraries/EAGLE/Voltera_Design_Blocks.zip)
 
 ## Raw Gerber Files & Drawings
 
