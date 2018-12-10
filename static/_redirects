@@ -15,18 +15,24 @@ http://store.voltera.io/* https://www.voltera.io/store/
 /v-one                                                           /product/technology/
 /support/getting-started/setup                                   https://www.voltera.io/docs/hello-world/printer-setup/
 /support/getting-started/hello-world-print                       https://www.voltera.io/docs/hello-world/printing-the-circuit/
+/support/getting-started/hello-world-solder-paste                https://www.voltera.io/docs/hello-world/dispensing-solder-paste/
+
 /support/downloads/export-guides-and-gerber-files                https://www.voltera.io/docs/export/altium/
 /support/software/export-guides-and-gerber-files                 https://www.voltera.io/docs/export/altium/
 /support/user-guides/hand-soldering                              https://www.voltera.io/docs/hand-soldering/
 /support/user-guides/height-calibration                          https://www.voltera.io/docs/understanding-print-height/
 /support/user-guides/circuit-design-and-exporting                https://www.voltera.io/docs/circuit-design-guidelines/
 /support/user-guides/printer-maintenance                         https://www.voltera.io/docs/hello-world/maintenance/
+/support/user-guides/aligned-printing                            https://www.voltera.io/docs/aligned-printing/
 
 /support/troubleshooting/pad-location                            https://www.voltera.io/docs/
 /support/troubleshooting/probe-repair-and-troubleshooting        https://www.voltera.io/docs/
 /support/troubleshooting/no-ink-coming-out                       https://www.voltera.io/docs/no-ink-or-paste-comes-out/
 /support/troubleshooting/connection-problems                     https://www.voltera.io/docs/usb-connection-problems/
+/support/troubleshooting/broken-nozzle                           https://www.voltera.io/docs/broken-nozzles/
+/support/troubleshooting/circuit-load-errors                     https://www.voltera.io/docs/gerber-files-fail-to-load/
 /support/documentation/msds                                      https://www.voltera.io/docs/sds/
+/support/contact-support/voltera-support                         https://www.voltera.io/contact/
 
 /troubleshooting/ts_no_ink.html                                  https://www.voltera.io/docs/no-ink-or-paste-comes-out/
 /troubleshooting/ts_soldering.html                               https://www.voltera.io/docs/difficulty-soldering/
@@ -157,6 +163,7 @@ http://support.voltera.io/*    https://www.voltera.io/docs/
 /blog/voltera-wins-best-product-award                https://medium.com/@voltera/voltera-wins-best-product-award-66531c46800c
 /blog/you-spin-me-right-round-like-a-drill-bit       https://medium.com/@voltera/you-spin-me-right-round-like-a-drill-bit-60fe2959e20e
 /blog/blogPost*                                      https://medium.com/@voltera
+/blogPost*                                           https://medium.com/@voltera
 
 # images - Used to be 
 /v-one-box-min.png /v-one.png
