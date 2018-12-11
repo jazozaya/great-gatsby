@@ -12,14 +12,13 @@ We offer several types of substrate and templates. Incorporating their dimension
 
 We have developed a Library for EAGLE that contains parts for all of the templates and substrates in our store. Using it is easy, just drop in the template as you would any other part and away you go.
 
-- [EAGLE Library](https://github.com/VolteraInc/circuit-design-resources/raw/master/Voltera%20Parts%20Libraries/EAGLE/voltera_EAGLE_community_lib.zip)
+- [EAGLE Library](https://github.com/VolteraInc/circuit-design-resources/raw/master/EAGLE%20Library/voltera_community_lib.lbr)
 
 ## Raw Gerber Files & Drawings
 
 For other CAD tools, access dimensioned drawings and raw gerbers for all of our substrates and templates below:
 
-- [Raw Gerbers](https://github.com/VolteraInc/circuit-design-resources/raw/master/Voltera%20Template%20Gerbers/Voltera%20Substrate%20Gerbers.zip)
-- [Dimensioned Drawings](https://github.com/VolteraInc/circuit-design-resources/raw/master/Voltera%20Template%20Dimensions/Voltera_Template_Dimensions.zip)
+- [Gerbers and Drawings](https://github.com/VolteraInc/circuit-design-resources/raw/master/Templates/voltera-templates.zip)
 
 ## Other Community Libraries
 
