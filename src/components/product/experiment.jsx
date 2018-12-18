@@ -29,7 +29,7 @@ export default () => (
             }
           }
         }
-        youtube: file(relativePath: { eq: "youtubeScreen/v-one-drill-attachment.jpg" }) {
+        youtube: file(relativePath: { eq: "youtubeScreen/dispensing-system.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 800, quality: 90) {
               ...GatsbyImageSharpFluid_withWebp_noBase64
