@@ -13,47 +13,57 @@ http://store.voltera.io/* https://www.voltera.io/store/
 
 ############ From old website (404's) ######################
 /v-one                                                           /product/technology/
-/support/getting-started/setup                                   https://www.voltera.io/docs/hello-world/printer-setup/
-/support/getting-started/hello-world-print                       https://www.voltera.io/docs/hello-world/printing-the-circuit/
-/support/getting-started/hello-world-solder-paste                https://www.voltera.io/docs/hello-world/dispensing-solder-paste/
+/support/getting-started/setup                                   /docs/hello-world/printer-setup/
+/support/getting-started/hello-world-print                       /docs/hello-world/printing-the-circuit/
+/support/getting-started/hello-world-solder-paste                /docs/hello-world/dispensing-solder-paste/
+/support/getting-started/hello-world-reflow                      /docs/hello-world/reflow-and-assembly/
 
-/support/downloads/export-guides-and-gerber-files                https://www.voltera.io/docs/export/altium/
-/support/software/export-guides-and-gerber-files                 https://www.voltera.io/docs/export/altium/
-/support/user-guides/hand-soldering                              https://www.voltera.io/docs/hand-soldering/
-/support/user-guides/height-calibration                          https://www.voltera.io/docs/understanding-print-height/
-/support/user-guides/circuit-design-and-exporting                https://www.voltera.io/docs/circuit-design-guidelines/
-/support/user-guides/printer-maintenance                         https://www.voltera.io/docs/hello-world/maintenance/
-/support/user-guides/aligned-printing                            https://www.voltera.io/docs/aligned-printing/
+/support/downloads/drivers                                       /docs/desktop-application/
+/support/downloads/export-guides-and-gerber-files                /docs/export/altium/
+/support/software/export-guides-and-gerber-files                 /docs/export/altium/
+/support/software/msds                                           /docs/sds/
+/support/downloads/msds                                          /docs/sds/
+/support/documentation/msds                                      /docs/sds/
 
-/support/troubleshooting/pad-location                            https://www.voltera.io/docs/
-/support/troubleshooting/probe-repair-and-troubleshooting        https://www.voltera.io/docs/
-/support/troubleshooting/no-ink-coming-out                       https://www.voltera.io/docs/no-ink-or-paste-comes-out/
-/support/troubleshooting/connection-problems                     https://www.voltera.io/docs/usb-connection-problems/
-/support/troubleshooting/broken-nozzle                           https://www.voltera.io/docs/broken-nozzles/
-/support/troubleshooting/circuit-load-errors                     https://www.voltera.io/docs/gerber-files-fail-to-load/
-/support/documentation/msds                                      https://www.voltera.io/docs/sds/
-/support/contact-support/voltera-support                         https://www.voltera.io/contact/
+/support/user-guides/hand-soldering                              /docs/hand-soldering/
+/support/user-guides/height-calibration                          /docs/understanding-print-height/
+/support/user-guides/circuit-design-and-exporting                /docs/circuit-design-guidelines/
+/support/user-guides/printer-maintenance                         /docs/hello-world/maintenance/
+/support/user-guides/aligned-printing                            /docs/aligned-printing/
 
-/troubleshooting/ts_no_ink.html                                  https://www.voltera.io/docs/no-ink-or-paste-comes-out/
-/troubleshooting/ts_soldering.html                               https://www.voltera.io/docs/difficulty-soldering/
-/troubleshooting/index.html                                      https://www.voltera.io/docs/
-/troubleshooting/                                                https://www.voltera.io/docs/
+/support/troubleshooting/pad-location                            /docs/
+/support/troubleshooting/probe-repair-and-troubleshooting        /docs/
+/support/troubleshooting/no-ink-coming-out                       /docs/no-ink-or-paste-comes-out/
+/support/troubleshooting/connection-problems                     /docs/usb-connection-problems/
+/support/troubleshooting/broken-nozzle                           /docs/broken-nozzles/
+/support/troubleshooting/circuit-load-errors                     /docs/gerber-files-fail-to-load/
+/support/troubleshooting/soldering                               /docs/difficulty-soldering/
+/support/troubleshooting/backlash-compensation                   /docs/backlash-compensation/
+/support/troubleshooting/print-quality                           /docs/improving-print-quality/
+/support/contact-support/voltera-support                         /contact/
 
-/request/chat/                                                   https://www.voltera.io/contact/
+/troubleshooting/ts_no_ink.html                                  /docs/no-ink-or-paste-comes-out/
+/troubleshooting/ts_soldering.html                               /docs/difficulty-soldering/
+/troubleshooting/index.html                                      /docs/
+/troubleshooting/                                                /docs/
 
-/use-cases/hobbyist                                              https://www.voltera.io/
-/use-cases/business                                              https://www.voltera.io/
-/use-cases/education                                             https://www.voltera.io/
-/use-cases/research                                              https://www.voltera.io/
+/request/chat/                                                   /contact/
 
-/assets/pdf/KiCAD%20Gerber_Drill%20File%20Export%20Guide.pdf     https://www.voltera.io/docs/export/kicad/
+/use-cases/hobbyist                                              /
+/use-cases/business                                              /
+/use-cases/education                                             /
+/use-cases/research                                              /
+
+/policies/terms-of-service                                       /legal/tos/
+/policies/privacy-policy                                         /legal/privacy/
+
+/assets/pdf/KiCAD%20Gerber_Drill%20File%20Export%20Guide.pdf     /docs/export/kicad/
 
 # /assets/downloads/Voltera_DRC.dru                              https://support.voltera.io/hc/article_attachments/115001926453/Voltera_DRC.dru
 # /assets/pdf/Altium-Gerber-Drill-File-Guide.pdf                 https://support.voltera.io/hc/article_attachments/115001926373/Altium-Gerber-Drill-Export-Guide.pdf
 # /assets/pdf/2015*                                              https://support.voltera.io/hc/en-us/articles/115004414348
 # /assets/pdf/2016*                                              https://support.voltera.io/hc/en-us/articles/115004414348
 # /assets/images/backgrounds/V-One-Feature-Set.pdf               /pdfs/V-One-Summary.pdf
-# /policies/terms-of-service                                     /docs/tos/
 ############################################################
 
 
