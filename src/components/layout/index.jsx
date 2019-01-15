@@ -8,8 +8,6 @@ import Reminder from "components/common/reminder";
 
 import favicon from "favicon.ico";
 
-import { loadHeap } from "./api";
-
 import "css/main.scss";
 
 export default class Layout extends React.Component {
