@@ -1,6 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import RMA from 'components/legal/RMA';
+import RMA from 'components/legal/rma';
 
 import Layout from 'components/layout';
 
