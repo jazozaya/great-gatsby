@@ -77,8 +77,6 @@ const EMAIL = {
   failed: 'failed'
 };
 
-let rma_name = null;
-
 export default class RMA extends React.Component {
   constructor(props) {
     super(props);
@@ -123,8 +121,6 @@ export default class RMA extends React.Component {
     pdf.addTitle(data.thirdTitle);
     pdf.addParragraphs(data.parr4);
     pdf.addSignature(data.signature);
-
-    // pdf.doc.save('RMA.pdf');
   }
 
   emailDocument() {
@@ -403,6 +399,7 @@ export default class RMA extends React.Component {
   renderContent() {
     switch (this.state.status) {
       case EMAIL.ready:
+      default:
         return this.renderForm();
 
       case EMAIL.sending:

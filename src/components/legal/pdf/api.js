@@ -1,4 +1,10 @@
-import jsPDF from 'jspdf';
+let doc = null;
+
+if (typeof window !== 'undefined') {
+  const jsPDF = require('jspdf');
+  doc = new jsPDF();
+  module.exports.doc = doc;
+}
 
 let spaceIndex = 4;
 
@@ -14,26 +20,24 @@ const delta = 0.8;
 const parrLength = maxWidth - margin * 2;
 const bulletLength = maxWidth - margin * 2 - 5;
 
-export const doc = new jsPDF();
-
-export function newPage() {
+function newPage() {
   // When starting a new page.
   doc.addPage();
   spaceIndex = 4;
 }
 
-export function addLine(text) {
+function addLine(text) {
   doc.setFontSize(TEXT_SIZE).text(text, margin, spacing * spaceIndex);
   spaceIndex = spaceIndex + delta;
 }
 
-export function addHeader(header) {
+function addHeader(header) {
   spaceIndex = spaceIndex + delta;
   doc.setFontSize(HEADER_SIZE).text(header, margin, spacing * spaceIndex);
   spaceIndex = spaceIndex + 1;
 }
 
-export function addParragraphs(parragraphs) {
+function addParragraphs(parragraphs) {
   doc.setFontSize(TEXT_SIZE);
   parragraphs.forEach(parragraph => {
     let lines = doc.splitTextToSize(parragraph, parrLength); // Returns an array of each line.
@@ -43,13 +47,13 @@ export function addParragraphs(parragraphs) {
   });
 }
 
-export function addTitle(title) {
+function addTitle(title) {
   spaceIndex = spaceIndex + delta;
   doc.setFontSize(TITLE_SIZE).text(title, maxWidth / 2.0, spacing * spaceIndex, 'center');
   spaceIndex = spaceIndex + 1;
 }
 
-export function addBullets(bullets) {
+function addBullets(bullets) {
   doc.setFontSize(TEXT_SIZE);
   bullets.forEach(bullet => {
     let lines = doc.splitTextToSize(bullet, bulletLength);
@@ -62,8 +66,16 @@ export function addBullets(bullets) {
   });
 }
 
-export function addSignature(line) {
+function addSignature(line) {
   spaceIndex = spaceIndex + delta;
   doc.setFontStyle('bold');
   doc.setFontSize(TEXT_SIZE).text(line, maxWidth / 2.0, spacing * spaceIndex, 'center');
 }
+
+module.exports.newPage = newPage;
+module.exports.addLine = addLine;
+module.exports.addHeader = addHeader;
+module.exports.addParragraphs = addParragraphs;
+module.exports.addTitle = addTitle;
+module.exports.addBullets = addBullets;
+module.exports.addSignature = addSignature;
