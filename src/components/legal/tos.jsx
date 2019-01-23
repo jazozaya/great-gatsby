@@ -1,13 +1,13 @@
 import React from 'react'
 
-import './common.scss'
+import s from './common.module.scss'
 
 export default class MyPrivacy extends React.Component {
 
 
   render() {
     return (
-      <section className="legal">
+      <section className={s.legal}>
         <h1>PRODUCT AGREEMENT</h1>
         <p>
           This is a legal agreement between you (meaning you as an individual if acting on your own behalf, or the company that you represent if you are acting on behalf of such company) and Voltera Inc. (“Voltera”).  This agreement, along with Voltera’s Privacy Policy at https://www.voltera.io/docs/privacy, applies to your purchase and use of the Voltera Product (as defined herein). This Agreement may be updated by Voltera from time to time, and it is your responsibility to ensure your use of the Product is in compliance with the current version of this Agreement.

@@ -1,0 +1,50 @@
+@import 'src/css/colors';
+
+.legal {
+  h2 {
+    text-align: left;
+    margin-top: 3em;
+  }
+
+  h3 {
+    margin-top: 2.5em;
+  }
+
+  li {
+    margin: 15px auto;
+  }
+}
+
+.rma {
+  max-width: 800px;
+  min-height: 500px;
+  h3 {
+    margin-top: 2.5em;
+    border-bottom-style: solid;
+    border-bottom-color: $voltera-green;
+    border-bottom-width: 1px;
+    padding-bottom: 5px;
+    margin-top: 40px;
+  }
+
+  textarea {
+    width: 100%;
+    min-height: 100px;
+  }
+
+  .format {
+    text-align: left;
+  }
+
+  .fields {
+    text-align: right;
+    width: 305px;
+  }
+
+  li {
+    margin: 15px auto;
+  }
+  .missing {
+    color: red;
+  }
+}

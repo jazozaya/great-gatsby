@@ -1,13 +1,13 @@
 import React from 'react'
 
-import './common.scss'
+import s from './common.module.scss'
 
 export default class MyRefund extends React.Component {
 
 
   render() {
     return (
-      <section className="legal">
+      <section className={s.legal}>
         <h1>Refund Policy</h1>
         <h2>Refunds</h2>
         <p>Our refund policy lasts 30 days from the date of delivery of your order. If 30 days have gone by since your date of delivery, unfortunately we can’t offer you a refund.</p>

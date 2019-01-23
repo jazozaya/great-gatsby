@@ -1,9 +1,9 @@
 ---
-path: "/docs/difficulty-soldering/"
-date: "2018-11-11"
-category: "Troubleshooting"
-section: ""
-title: "Difficulty soldering"
+path: '/docs/difficulty-soldering/'
+date: '2018-11-11'
+category: 'Troubleshooting'
+section: ''
+title: 'Difficulty soldering'
 ---
 
 Soldering to conductive ink is not the same as soldering to copper traces.
@@ -14,31 +14,31 @@ Soldering to conductive ink is not the same as soldering to copper traces.
 
 ## Quick Checklist
 
-**_What is your iron temperature?_**
+**What is your iron temperature?**
 
 The temperature of your soldering iron must be low. Ideal temperature is between **180C (356F) and 205C (400F)**
 
-**_Are you using flux?_**
+**Are you using flux?**
 
 Our provided solder wire does not have a flux core. Flux has to be applied separately. If you don't have flux, you can always pick some up on our [store](/store/).
 
-**_Are you using the right solder alloy?_**
+**Are you using the right solder alloy?**
 
 Most solder alloys will damage Voltera PCBs. Use the supplied solder alloy, it is a Tin Bismuth Silver, a special low temperature alloy that works great with our conductive inks.
 
-**_Was the circuit flipped during the bake process?_**
+**Was the circuit flipped during the bake process?**
 
 The circuit must have been flipped after printing and placed on the clamp ledges, ink facing towards the print platform, for the conductive ink to bake properly
 
-**_Was the circuit burnished?_**
+**Was the circuit burnished?**
 
 Burnished pads should appear faintly silver, not white. If the pads still appear white it may be possible to salvage the pad by burnishing until it appears silver. This does not usually work after soldering has been attempted.
 
-**_Was the circuit baked long enough?_**
+**Was the circuit baked long enough?**
 
 Symptoms of poor baking include browning of the pads. Make sure you allowed enough time for the bake to finish and cool down. If not, you need to restart your circuit.
 
-**_Is the ink expired?_**
+**Is the ink expired?**
 
 With proper storage, the ink has an expected shelf life of 6 months. Inspect the label on your ink cartridge and check when it was packaged. Expired ink may present difficulties when soldering.
 
