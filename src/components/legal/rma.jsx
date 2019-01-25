@@ -106,8 +106,9 @@ export default class RMA extends React.Component {
 
     pdf.addHeader(data.productHeader);
     pdf.addLine(data.warranty);
+    pdf.addLine(data.description);
     pdf.addLine(data.serialNumber);
-    pdf.addLine(data.returnReason);
+    pdf.addParragraphs([data.returnReason]);
 
     pdf.addTitle(data.secondTitle);
     pdf.addParragraphs(data.parr2);
