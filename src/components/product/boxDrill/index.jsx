@@ -1,22 +1,23 @@
-import React from "react";
-import MediaQuery from "react-responsive";
-import "./boxDrill.scss";
+import React from 'react';
+import Media from 'react-media';
+import './boxDrill.scss';
 
-import { graphql, StaticQuery } from "gatsby";
-import Img from "gatsby-image";
-import { mobileThreshold } from "./../../../constants";
+import { graphql, StaticQuery } from 'gatsby';
+import Img from 'gatsby-image';
+
+import { mobileThreshold } from './../../../constants';
 
 const summary = {
   // IMPORTANT - These names need to match class names in CSS
-  drill: "drill",
-  drillBitContainer: "drill-bit-container",
-  smallSubstrates: "small-substrate",
-  largeSubstrates: "large-substrate",
-  rivetTools: "rivet-tools",
-  rivetContainerSmall: "rivet-container-small",
-  rivetContainerLarge: "rivet-container-large",
-  sacrificial: "sacrificial",
-  safetyGlasses: "safety-glasses"
+  drill: 'drill',
+  drillBitContainer: 'drill-bit-container',
+  smallSubstrates: 'small-substrate',
+  largeSubstrates: 'large-substrate',
+  rivetTools: 'rivet-tools',
+  rivetContainerSmall: 'rivet-container-small',
+  rivetContainerLarge: 'rivet-container-large',
+  sacrificial: 'sacrificial',
+  safetyGlasses: 'safety-glasses'
 };
 
 export default () => (
@@ -49,8 +50,13 @@ class BoxDrill extends React.Component {
     this.state = {
       description: summary.drill,
       hoverDescription: null,
-      interacted: false
+      interacted: false,
+      key: 'drill-box-0'
     };
+  }
+
+  componentDidMount() {
+    this.setState({ key: 'drill-box-1' });
   }
 
   renderDrill() {
@@ -58,8 +64,8 @@ class BoxDrill extends React.Component {
       <div>
         <h2>The V-One Drill</h2>
         <p>
-          The V-One Drill attachment brings CNC drilling to the V-One platform. The V-One's unique magnetic attachments makes tool changing
-          a breeze.
+          The V-One Drill attachment brings CNC drilling to the V-One platform. The V-One's unique magnetic attachments
+          makes tool changing a breeze.
         </p>
         <p>Hover over the items on the left to learn more.</p>
         <i>Items not shown here: 4 Thumbscrews, 1 Hex key, 1 Punk Console starter kit.</i>
@@ -72,7 +78,10 @@ class BoxDrill extends React.Component {
       <div>
         <h2>Drill Bit Set</h2>
         <p>A set of precision 1/8″ shank drill bits. Change bits in seconds with the included hex key.</p>
-        <p>The most common PCB drill sizes are included: 0.70mm, 0.80mm, 0.90mm, 1.00mm, 1.60mm. Two drill bits for each size.</p>
+        <p>
+          The most common PCB drill sizes are included: 0.70mm, 0.80mm, 0.90mm, 1.00mm, 1.60mm. Two drill bits for each
+          size.
+        </p>
         <i>1 set included.</i>
       </div>
     );
@@ -83,8 +92,8 @@ class BoxDrill extends React.Component {
         <h2>2x3” FR1 Substrates</h2>
         <p>If you are going to be drilling, we recommend drilling on FR1 substrates.</p>
         <p>
-          Unlike FR4, FR1 dust does not contain fiber glass which can be harmful to your lungs. It is also a softer material, which means a
-          less wear and tear on the drill bits.
+          Unlike FR4, FR1 dust does not contain fiber glass which can be harmful to your lungs. It is also a softer
+          material, which means a less wear and tear on the drill bits.
         </p>
         <i>10 substrates included</i>
       </div>
@@ -96,8 +105,8 @@ class BoxDrill extends React.Component {
       <div>
         <h2>3x4” FR1 Substrates</h2>
         <p>
-          When you start to run out of space in your design, migrate over to the larger substrates. These are also made of FR1 to extend the
-          life of the drill bits.
+          When you start to run out of space in your design, migrate over to the larger substrates. These are also made
+          of FR1 to extend the life of the drill bits.
         </p>
         <i>6 substrates included</i>
       </div>
@@ -110,8 +119,8 @@ class BoxDrill extends React.Component {
         <h2>Rivet Tools</h2>
         <p>These steel rivet forming tools are used to install the rivets on the PCB after holes have been drilled.</p>
         <p>
-          They have been designed for optimum performance on the ink and ensure an electrical connection between the top and bottom layers
-          of your PCB.
+          They have been designed for optimum performance on the ink and ensure an electrical connection between the top
+          and bottom layers of your PCB.
         </p>
         <i>2 sizes included.</i>
       </div>
@@ -123,8 +132,8 @@ class BoxDrill extends React.Component {
       <div>
         <h2>1.0mm Rivets</h2>
         <p>
-          These larger rivets are perfect for through-hole connections. Create secure mechanical connections for larger components like
-          buttons, headers and connectors
+          These larger rivets are perfect for through-hole connections. Create secure mechanical connections for larger
+          components like buttons, headers and connectors
         </p>
         <p>They have an internal diameter of 1.0mm and a head diameter of 2.2mm</p>
         <i>200 Pcs included.</i>
@@ -148,7 +157,8 @@ class BoxDrill extends React.Component {
       <div>
         <h2>Sacrificial Layer</h2>
         <p>
-          To protect the V-One from any damage during drilling, mount this piece of FR1 on the heated bed and clamp your substrate on top.
+          To protect the V-One from any damage during drilling, mount this piece of FR1 on the heated bed and clamp your
+          substrate on top.
         </p>
         <p>Don't worry, the sacrifical layer can be reused for multiple projects before needing to be replaced.</p>
         <i>1 sacrificial board included</i>
@@ -161,8 +171,8 @@ class BoxDrill extends React.Component {
       <div>
         <h2>Safety Glasses</h2>
         <p>
-          Safety first! The motor and drill bits will be rotating at very high speeds during operation. It is important to protect your eyes
-          from any debris.
+          Safety first! The motor and drill bits will be rotating at very high speeds during operation. It is important
+          to protect your eyes from any debris.
         </p>
         <p>Always wear eye protection when working with the V-One Drill!</p>
         <i>1 set included</i>
@@ -219,7 +229,7 @@ class BoxDrill extends React.Component {
 
   renderInTheBox() {
     if (!this.state.interacted) {
-      const divStyle = { cursor: "pointer" };
+      const divStyle = { cursor: 'pointer' };
       return (
         <div style={divStyle} onClick={() => this.setState({ interacted: true })}>
           <Img fixed={this.props.data.tryMe.childImageSharp.fixed} />
@@ -227,7 +237,7 @@ class BoxDrill extends React.Component {
       );
     }
     return (
-      <div className="in-the-box">
+      <div className='in-the-box'>
         {this.renderItem(summary.drill)}
         {this.renderItem(summary.drillBitContainer)}
         {this.renderItem(summary.rivetTools)}
@@ -243,11 +253,13 @@ class BoxDrill extends React.Component {
 
   renderMobile() {
     return (
-      <section id="drill-box" className="box-wrapper-drill">
+      <section id='drill-box' className='box-wrapper-drill'>
         <h1>What is in the box?</h1>
-        <p className="pull-center">The V-One Drill comes with everything you need to make double sided boards out of the box.</p>
+        <p className='pull-center'>
+          The V-One Drill comes with everything you need to make double sided boards out of the box.
+        </p>
         <Img fluid={this.props.data.mobileBox.childImageSharp.fluid} />
-        <div className="mobile-contents">
+        <div className='mobile-contents'>
           <p>
             <strong>1 - V-One Drill</strong>.<br />A drilling attachment for the Voltera V-One
           </p>
@@ -297,12 +309,14 @@ class BoxDrill extends React.Component {
 
   renderDesktop() {
     return (
-      <section id="drill-box" className="box-wrapper-drill">
+      <section id='drill-box' className='box-wrapper-drill'>
         <h1>What is in the box?</h1>
-        <p className="pull-center">The V-One Drill comes with everything you need to make double sided boards out of the box.</p>
-        <div className="flex-row">
+        <p className='pull-center'>
+          The V-One Drill comes with everything you need to make double sided boards out of the box.
+        </p>
+        <div className='flex-row'>
           {this.renderInTheBox()}
-          <div className="description">{this.renderDescription()}</div>
+          <div className='description'>{this.renderDescription()}</div>
         </div>
       </section>
     );
@@ -310,11 +324,9 @@ class BoxDrill extends React.Component {
   render() {
     return (
       <div>
-        <MediaQuery maxWidth={mobileThreshold}>
-          {matches => {
-            return matches ? this.renderMobile() : this.renderDesktop();
-          }}
-        </MediaQuery>
+        <Media query={{ maxWidth: mobileThreshold }} key={this.state.key}>
+          {matches => (matches ? this.renderMobile() : this.renderDesktop())}
+        </Media>
       </div>
     );
   }
