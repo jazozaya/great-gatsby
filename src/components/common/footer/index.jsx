@@ -37,7 +37,7 @@ export default class Footer extends React.Component {
                 <Link to='/store/'>Store</Link>
               </li>
               <li>
-                <a href='http://support.voltera.io'>Support</a>
+                <a href='/docs/'>Docs</a>
               </li>
               <li>
                 <Link to='/faq/'>FAQ</Link>
@@ -63,7 +63,7 @@ export default class Footer extends React.Component {
                 <a href='https://medium.com/@voltera'>Blog</a>
               </li>
               <li>
-                <a href='http://community.voltera.io'>Forums</a>
+                <a href='https://careers.jobscore.com/careers/voltera'>Careers</a>
               </li>
               <li>
                 <a href='/pdfs/Official-Voltera-Presskit.zip'>Press Kit</a>

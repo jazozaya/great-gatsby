@@ -1,0 +1,54 @@
+@import 'src/css/colors';
+
+.hubspot {
+  .hs-form-field {
+    margin: 10px 0px;
+  }
+
+  .hs-error-msgs {
+    color: red;
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 20px;
+  }
+  .legal-consent-container {
+    color: grey;
+    font-size: 0.8em;
+    margin: 10px 0px 20px 0px;
+  }
+
+  .hs_submit {
+    text-align: center;
+  }
+
+  input {
+    padding: 1px 5px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1em;
+    transition: all 0.1s ease-in-out 0s; 
+  }
+
+  .hs-button {
+    cursor: pointer;
+    display: inline-block;
+    color: $white;
+    background-color: $voltera-blue;
+    border-style: solid;
+    border-color: $white;
+    border-width: 1px;
+    border-radius: 2px;
+    text-transform: uppercase;
+    padding: 0.9em 1.8em;
+    font-weight: 600;
+    user-select: none;
+  }
+
+  .hs-button:hover {
+    color: $voltera-blue;
+    background-color: $white;
+    border-color: $voltera-blue;
+    text-decoration: none;
+  }
+}
