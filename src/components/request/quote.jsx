@@ -3,10 +3,9 @@ import SpinnerLoader from 'components/common/spinnerLoader';
 import HubspotForm from 'react-hubspot-form';
 
 import './hubspot.scss';
-import './common.scss'
+import './common.scss';
 
 export default class QuoteRequest extends React.Component {
-
   renderLoading() {
     return (
       <div>

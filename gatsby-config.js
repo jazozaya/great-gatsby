@@ -128,7 +128,7 @@ module.exports = {
           }
         ]
       }
-    }
+    },
     // {
     //   resolve: `gatsby-plugin-algolia`,
     //   options: {
@@ -160,6 +160,7 @@ module.exports = {
     //   }
     // },
     // "gatsby-plugin-offline"
+    'gatsby-plugin-remove-serviceworker'
   ],
   pathPrefix: "/"
 };
