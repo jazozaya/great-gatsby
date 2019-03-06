@@ -9,7 +9,7 @@ title: "3. Drilling the holes"
 ## Punk Console: Drilling
 
 <div class="important info">
-<p><strong>Note</strong>: This tutorial is for <strong>advanced users</strong>, complete the Hello World tutorial first!.</p>
+<p><strong>Note</strong>: This tutorial is for <strong>advanced users</strong>, complete the Hello World tutorial first!</p>
 </div>
 
 For this tutorial, we are going to be building a Voltera flavored [Atari Punk Console](https://en.wikipedia.org/wiki/Atari_Punk_Console). It is a simple circuit that creates old school synth sounds using a piezo as a speaker. The circuit consists of a 556 IC (two 555 timers), a few capacitors, resistors, two trimpots and the piezo buzzer.

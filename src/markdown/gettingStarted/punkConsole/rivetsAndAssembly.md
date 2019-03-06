@@ -69,7 +69,7 @@ The V-One Drill ships with two rivet tools, one for each size. Position the rive
 
 ### 4. Strike down.
 
-Use a small mallet or similar tool to apply a download force on the rivet tool. You do not need to apply large amounts of force, just enough to deform the copper. The rivet should not be 'loose' after stiking, if the rivet is loose try striking it again a bit harder.
+Use a small mallet or similar tool to apply a download force on the rivet tool. You do not need to apply large amounts of force, just enough to deform the copper. The rivet should not be 'loose' after striking, if the rivet is loose try striking it again a bit harder.
 
 <div class="important info">
     <p><strong>Important</strong>: Applying too much force can damage the printed traces and the FR1 underneath.</p>

@@ -95,6 +95,7 @@ export default class RMA extends React.Component {
     pdf.addLine(data.name);
     pdf.addLine(data.order);
     pdf.addLine(data.phone);
+    pdf.addLine(data.email);
 
     pdf.addHeader(data.shippingHeader);
     pdf.addLine(data.company);

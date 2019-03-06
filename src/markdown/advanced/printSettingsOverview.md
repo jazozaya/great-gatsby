@@ -40,7 +40,7 @@ Depending on the surface energy of a fluid, it might prefer to stick to the nozz
 
 ## Soft start / stop ratio
 
-Due to compressibility of the fluid and mechanical factors (like speed of the motors) there is a delay between when the Kick is initiated (pressurization starts) and when the flow rate reaches the correct level to start a line or other feature this is similarly true for terminating the flow rate/releasing pressure. These parameters are used to appropriately compensate for this. These don't typically need to be adjusted except for particularly compressible or viscous materials.
+Due to compressibility of the fluid and mechanical factors (like speed of the motors) there is a delay between when the Kick is initiated (pressurization starts) and when the flow rate reaches the correct level to start a line or other feature. This is similarly true for terminating the flow rate/releasing pressure. These parameters are used to appropriately compensate for this. These don't typically need to be adjusted except for particularly compressible or viscous materials.
 
 ## Kick
 
