@@ -6,6 +6,16 @@ section: "Hello World"
 title: "2. Printer setup"
 ---
 
+# In a hurry?
+
+Follow along with Mike as you learn the basics of the V-One in this step-by-step guide. He'll teach you tips and tricks as you complete your very first Hello World circuit!
+
+<div class="media-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OrtqXj4ZFjE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+___
+
 ## Unpacking your V-One
 
 Once you’ve opened the box, remove the layers of foam one by one. Place them aside for now, and remove the V-One from the box. Avoid picking the V-One up by the bridge. Instead, use two hands and lift it from the base.

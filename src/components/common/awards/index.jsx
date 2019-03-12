@@ -55,7 +55,7 @@ class Awards extends React.Component {
           </div>
           <div>
             <a
-              href="http://www.jamesdysonaward.org/en-GB/news/voltera-v-one-wins-2015-james-dyson-award/"
+              href="https://www.jamesdysonaward.org/en-CA/2015/project/voltera-v-one-rapid-prototyping-of-electronics/"
               target="_blank"
               rel="noopener noreferrer"
             >
