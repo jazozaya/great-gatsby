@@ -10,6 +10,11 @@ Poor print quality can present itself in many ways; as opens or shorts in traces
 
 There are two key parameters that dictate your trace quality: your **ink pressure** and your **print height**.
 
+<div class="media-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6rkW8Rh4bvc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+
 ## Ink Pressure
 
 This is the amount of force the dispenser exerts on the ink during dispensing. Too much pressure will lead to shorts and potentially a broken nozzle or pierced piston. Not enough pressure will lead to open circuits.

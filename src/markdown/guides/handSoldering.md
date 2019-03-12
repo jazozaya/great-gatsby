@@ -6,6 +6,16 @@ section: ""
 title: "Hand soldering to ink"
 ---
 
+# In a hurry?
+
+In this guide, Mike runs through the key do's and don'ts for solder paste dispensing and hand soldering boards printed on the V-One. **Skip to 2:28** to jump right into handsoldering! 
+
+<div class="media-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1UdnX0GXRDs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+___
+
 # Read this first!
 
 Soldering to conductive ink **IS NOT** exactly like soldering to copper! Even if you are a soldering pro, follow this guide to ensure a good quality solder joint.
