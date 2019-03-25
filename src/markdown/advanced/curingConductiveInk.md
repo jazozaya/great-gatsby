@@ -18,6 +18,8 @@ As the ink temperature increases, chemical reactions are triggered and the metal
 
 ## Curing standard conductive ink
 
+If you are using an external oven to cure the ink. Use the following parameters:
+
 <table>
   <tbody>
     <tr>
@@ -28,20 +30,20 @@ As the ink temperature increases, chemical reactions are triggered and the metal
     </tr>
     <tr>
       <td>FR4</td>
-      <td>200°C-210°C</td>
+      <td>200°C</td>
       <td>392°F - 410°F</td>
-      <td>30-40 mins</td>
+      <td>30 mins</td>
     </tr>
     <tr>
       <td>FR1</td>
-      <td>200°C-210°C</td>
+      <td>200°C</td>
       <td>392°F - 410°F</td>
-      <td>30-40 mins</td>
+      <td>30 mins</td>
     </tr>
   </tbody>
 </table>
 
-You may notice the V-One sets the temperature about 10-20 degrees hotter than the values listed here, this is to compensate for the thermal lag between the temperature of the heated platform and the temperature of the ink on the substrate.
+You may notice the V-One sets the temperature about 20 degrees hotter than the values listed here, this is to compensate for the thermal lag between the temperature of the heated platform and the temperature of the ink on the substrate.
 
 **Tip**: As long the proper ink profile is chosen in the software, the **BAKE** mode will set the correct temperature and time for the ink you are using.
 
