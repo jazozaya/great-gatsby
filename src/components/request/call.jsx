@@ -21,7 +21,7 @@ const status = {
   failed: 'failed'
 };
 
-const requiredFields = ['name', 'email', 'company', 'city', 'country', 'phone', 'time', 'timezone'];
+const requiredFields = ['name', 'email', 'company', 'state', 'country', 'phone', 'time', 'timezone'];
 
 export default class QuoteRequest extends React.Component {
   constructor(props) {
@@ -78,7 +78,7 @@ export default class QuoteRequest extends React.Component {
       from_name: document.getElementById('name').value,
       phone: document.getElementById('phone').value,
       company: document.getElementById('company').value,
-      city: document.getElementById('city').value,
+      state: document.getElementById('state').value,
       country: document.getElementById('country').value,
       time: document.getElementById('time').value,
       timezone: document.getElementById('timezone').value,
@@ -235,7 +235,7 @@ export default class QuoteRequest extends React.Component {
               Company: <input className='text-input' id='company' name='company' autoComplete='company' />
             </p>
             <p>
-              City: <input className='text-input' name='ship-city' id='city' autoComplete='shipping address-level2' />
+              State: <input className='text-input' id='state' autoComplete='shipping address-level3' />
             </p>
             <p>
               Country: <input className='text-input' name='ship-country' id='country' autoComplete='shipping country' />
