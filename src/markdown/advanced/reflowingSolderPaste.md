@@ -32,9 +32,9 @@ If you said YES to any of the above, then the automatic **REFLOW** mode may not 
 <img src="/docs/advanced/curingAndReflowing/reflow-mode.png" />
 </div>
 
-### Tin Lead Bismuth (Sn42 Bi57.6 Ag0.4) Profile
+### Tin Bismuth Silver (Sn42 Bi57.6 Ag0.4) Profile
 
-Automatic reflow profile for Tin Lead Bismuth (Sn42 Bi57.6 Ag0.4)
+Automatic reflow profile for Tin Bismuth Silver (Sn42 Bi57.6 Ag0.4)
 
 <table>
   <tbody>
