@@ -59,7 +59,7 @@ Automatic reflow profile for Tin Lead Bismuth (Sn42 Bi57.6 Ag0.4)
 
 ### Tin Lead (Sn63 Pb37) Profile
 
-Automatic reflow profile for Tin Lead Bismuth (Sn63 Pb37)
+Automatic reflow profile for Tin Lead (Sn63 Pb37)
 
 <table>
   <tbody>
