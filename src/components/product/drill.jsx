@@ -89,7 +89,7 @@ class Drill extends React.Component {
               platform.
             </p>
             <p>
-              The V-One's unique magnetic attachments makes tool changing a breeze. Use the drilling attachment to make quickly vias and
+              The V-One's unique magnetic attachments makes tool changing a breeze. Use the drilling attachment to quickly make vias and
               through holes in your double sided boards.
             </p>
           </div>

@@ -101,7 +101,7 @@ class Print extends React.Component {
                 Our ink is over 90% silver and has excellent electrical properties, perfect for digital and low power applications. Even
                 high frequency applications up to 5 GHz are possible.
               </p>
-              <p>A single cartridge can print almost 100 simple circuits. That means 100 unique designs with no lead time.</p>
+              <p>A single cartridge can print 85 simple circuits. That means 85 unique designs with no lead time.</p>
               <p>
                 Visit our <Link to="/specs/">specifications</Link> page to learn more!
               </p>
