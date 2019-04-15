@@ -11,7 +11,7 @@ export default props => (
     <Helmet>
       <title>Voltera | Schedule a Call</title>
       <meta name="description" content="Want to talk? Have questions about how it works? Schedule a call with us. We can help!" />
-      <script defer="defer" type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js" />
+      <script type='text/javascript' defer="defer" src='https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js' />
     </Helmet>
     <RequestCall />
     <Awards />

@@ -4,7 +4,6 @@ import Img from "gatsby-image";
 
 import CallToAction from "components/common/cta";
 import ExperimentFAQ from "components/faq/experiment";
-import AskUs from "components/common/askUs";
 import MiniHero from "components/common/minihero";
 import FastFact from "components/common/fastFact";
 import YouTube from "components/common/youtube";
@@ -85,7 +84,6 @@ class Experiment extends React.Component {
           </div>
           <Img className={style.imageWrapper} fluid={imgCartridges} />
         </section>
-        <AskUs example="Eg - What viscosity range can you dispense?" />
         <section className="flex-row">
           <Img className={style.imageWrapper} fluid={imgFlexible} />
           <div className={style.description}>

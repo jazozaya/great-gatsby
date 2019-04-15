@@ -2,7 +2,6 @@ import React from 'react'
 
 import InTouch from './inTouch'
 import GoogleMap from './googleMap'
-import AskUs from 'components/common/askUs'
 
 import './contact.scss'
 
@@ -44,7 +43,6 @@ export default class Contact extends React.Component {
             </div>
           </div>
         </div>
-        <AskUs example="Eg - How much does it cost to ship to my country?" />
         <InTouch />
         <div className="location-wrapper">
           <div className="address-wrapper">

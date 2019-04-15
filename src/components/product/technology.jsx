@@ -8,7 +8,6 @@ import CallToAction from "components/common/cta";
 import Specs from "components/common/specs";
 import MiniHero from "components/common/minihero";
 import FastFact from "components/common/fastFact";
-import AskUs from "components/common/askUs";
 import CustomerQuotes from "components/common/customer";
 
 import TechnologyFAQ from "components/faq/technology";
@@ -86,7 +85,6 @@ class Technology extends React.Component {
             </p>
           </div>
         </section>
-        <AskUs example="Eg - What is the print area of the V-One?" />
         <section className="flex-row reverse-wrap">
           <div className={style.description}>
             <h2>A perfect print every time.</h2>
