@@ -120,7 +120,7 @@ The contact pads at the back of the probe should be aligned with the probe conta
 <h3>3. Position the Circuit</h3>
 </div>
 
-In this step the V-One will ensure that there is a clear print path on the clamped board. The probe tip will outline the boundary of the area to be printed. If you see the probe tip passes outside of the board while outlining, click and drag the circuit to adjust the position and outline again.
+In this step the V-One will ensure that there is a clear print path on the clamped board. The probe tip will outline the boundary of the area to be printed. If the probe outline does not fall within the board boundaries, click and drag the circuit to adjust the position and outline again.
 
 ### 4. Probe the Board
 
