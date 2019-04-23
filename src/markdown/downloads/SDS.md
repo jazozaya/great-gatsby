@@ -21,6 +21,9 @@ The SDS (Safety Datasheets) below contain important information on the storage, 
 - [T5 - Sn42 Bi57.6 Ag0.4](/docs/downloads/sds/2018-07-30_T5_SnBiAg_SolderPaste_MSDS_R1.pdf)
 - [T5 - Sn63 Pb37](/docs/downloads/sds/2018-08-01_T5_LeadedSolderPaste_SDS_R1.pdf)
 
+### Solder Wire
+- [Sn42 Bi57.6 Ag0.4](/docs/downloads/sds/2019-04-23_SnBiAg_SolderWire_MSDS_R1.pdf)
+
 ### Experimental and Other Inks
 
 - [Experimental Conductive Ink - EXP001](/docs/downloads/sds/2018-07-25_EXP001_SDS_R1.pdf)
