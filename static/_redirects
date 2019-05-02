@@ -161,6 +161,7 @@ http://support.voltera.io/*    https://www.voltera.io/docs/
 /app-link/priming-the-dispenser            /docs/hello-world/printing-the-circuit/#priming
 /app-link/toolpath-selection               /docs/hello-world/printing-the-circuit/#print
 /app-link/drilling-tutorial                /docs/punk-console/drill-the-holes/
+/app-link/height-map                       /docs/advanced/height-map
 /app-link/icon                             /favicon.ico
 
 # Links used for Inks
@@ -169,6 +170,7 @@ http://support.voltera.io/*    https://www.voltera.io/docs/
 # Documents
 /summary        /pdfs/V-One-Summary.pdf
 /techsheet      /pdfs/Voltera-Conductive-Ink.pdf
+/techsheet-flex /pdfs/Voltera-Flexible-Conductive-Ink.pdf
 
 # Blog Redirects
 /blog/voltera-wins-best-product-award                https://medium.com/@voltera/voltera-wins-best-product-award-66531c46800c
