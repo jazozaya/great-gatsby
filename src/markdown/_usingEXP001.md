@@ -1,7 +1,7 @@
 ---
 path: "/docs/using-exp001/"
 date: "2018-11-11"
-category: "Advanced topics"
+category: "Unused"
 section: ""
 title: "Using EXP001 (Exp. Ink)"
 ---

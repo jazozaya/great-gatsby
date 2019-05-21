@@ -104,7 +104,7 @@ export function fetchRecentCheckout() {
       client.checkout.fetch(checkoutId).then(checkout => {
 
         // Inspect it. If completed - create a new one and store cookie.
-        if (checkout.completedAt === null) {
+        if (checkout && checkout.completedAt === null) {
           return resolve(checkout)
         } else {
           client.checkout.create().then(checkout => {

@@ -112,7 +112,6 @@ https://support.voltera.io/hc/en-us/articles/115002633033*           https://www
 https://support.voltera.io/hc/en-us/articles/115002550914*           https://www.voltera.io/docs/export/kicad/
 https://support.voltera.io/hc/en-us/articles/115002547054*           https://www.voltera.io/docs/export/altium/
 https://support.voltera.io/hc/en-us/articles/360000822694*           https://www.voltera.io/docs/print-settings-overview/
-https://support.voltera.io/hc/en-us/articles/360007508253*           https://www.voltera.io/docs/using-exp001/
 https://support.voltera.io/hc/en-us/articles/115002895614*           https://www.voltera.io/docs/filling-an-empty-cartridge/
 https://support.voltera.io/hc/en-us/articles/115005823647*           https://www.voltera.io/docs/understanding-print-height/
 
@@ -141,6 +140,7 @@ https://support.voltera.io/hc/en-us/articles/360007185254*           https://www
 https://support.voltera.io/hc/en-us/articles/115003451934*           https://www.voltera.io/docs
 https://support.voltera.io/hc/en-us/articles/360002229474*           https://www.voltera.io/docs
 https://support.voltera.io/hc/en-us/articles/115003440253*           https://www.voltera.io/docs
+https://support.voltera.io/hc/en-us/articles/360007508253*           https://www.voltera.io/docs
 
 # Main Redirects - Catch Everything (Keep after other support articles)
 https://support.voltera.io     https://www.voltera.io/docs/
@@ -152,20 +152,21 @@ http://support.voltera.io/*    https://www.voltera.io/docs/
 
 
 # Links used in the app
-/app-link/simple-vs-aligned                /docs/aligned-printing/
-/app-link/connection-troubleshooting       /docs/usb-connection-problems/
-/app-link/outlining-the-circuit            /docs/hello-world/printing-the-circuit/#outline
-/app-link/hand-soldering                   /docs/hand-soldering/
-/app-link/calibrating-the-ink-dispenser    /docs/hello-world/printing-the-circuit/#calibration
-/app-link/calibrating-the-solder-dispenser /docs/hello-world/dispensing-solder-paste/#paste-calibrate
-/app-link/priming-the-dispenser            /docs/hello-world/printing-the-circuit/#priming
-/app-link/toolpath-selection               /docs/hello-world/printing-the-circuit/#print
-/app-link/drilling-tutorial                /docs/punk-console/drill-the-holes/
-/app-link/height-map                       /docs/advanced/height-map
-/app-link/icon                             /favicon.ico
+/app-link/simple-vs-aligned                       /docs/aligned-printing/
+/app-link/connection-troubleshooting              /docs/usb-connection-problems/
+/app-link/outlining-the-circuit                   /docs/hello-world/printing-the-circuit/#outline
+/app-link/hand-soldering                          /docs/hand-soldering/
+/app-link/calibrating-the-ink-dispenser           /docs/hello-world/printing-the-circuit/#calibration
+/app-link/calibrating-the-solder-dispenser        /docs/hello-world/dispensing-solder-paste/#paste-calibrate
+/app-link/priming-the-dispenser                   /docs/hello-world/printing-the-circuit/#priming
+/app-link/toolpath-selection                      /docs/hello-world/printing-the-circuit/#print
+/app-link/drilling-tutorial                       /docs/punk-console/drill-the-holes/
+/app-link/probing-discrepancies                   /docs/understanding-probe-issues/
+/app-link/beta-setting-travel-height              /docs/beta-settings/
+/app-link/beta-setting-probing-error-detection    /docs/beta-settings/
+/app-link/beta-setting-gerber-processing          /docs/beta-settings/
 
-# Links used for Inks
-/inklink/exp/001      /docs/using-exp001/
+/app-link/icon                             /favicon.ico
 
 # Documents
 /summary        /pdfs/V-One-Summary.pdf
