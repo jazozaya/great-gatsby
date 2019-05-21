@@ -1,4 +1,5 @@
 import React from 'react';
+import Bowser from 'bowser';
 
 import * as pdf from './pdf/api';
 
@@ -399,6 +400,14 @@ export default class RMA extends React.Component {
   }
 
   renderContent() {
+    if (Bowser.msie) {
+      return (
+        <div>
+          <h1>Return Merchandise Authorization Form</h1>
+          <p>We are sorry. This form is not supported in Internet Explorer. Please access this page with Chrome, Firefox or Microsoft Edge</p>
+        </div>
+      );
+    }
     switch (this.state.status) {
       case EMAIL.ready:
       default:
