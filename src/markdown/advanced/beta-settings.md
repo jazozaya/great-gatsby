@@ -11,7 +11,7 @@ title: 'Beta settings'
 This parameter controls the height the probe, dispenser and drill will raise to when moving in between features. Useful if you are dispensing on a board that already has components or if you are using magnets to secure your flexible substrate.
 
 <div class="media-wrapper">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/H1Twiakt9vY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cIWtAofiJxg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 ## Probing Error Detection
