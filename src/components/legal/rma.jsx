@@ -14,7 +14,7 @@ let data = {
   parr1: [
     'To complete a Return Merchandise Authorization (RMA) request, complete all required fields below. If the form is completed by Voltera Inc., ensure that the information is correct.',
     'Return the completed form to support@voltera.io. You will be notified with an RMA number if your return request has been approved. Shipping information for sending the unit to Voltera Inc. will be provided once the RMA is issued.',
-    'Complete RMA details are described below of this form.'
+    'Complete RMA details are described below of this form.',
   ],
 
   contactHeader: 'Contact Information',
@@ -40,7 +40,7 @@ let data = {
 
   secondTitle: 'Product Returns for “Warranty” Determination',
   parr2: [
-    'Voltera Inc. will test the product according to the description of the problem listed on the RMA request form. After Voltera’s evaluation, Warranty or Out-of-Warranty status will be determined. If the description of the problem is the same as listed on the RMA request form, the product will be repaired or replaced under warranty at no charge and shipped, prepaid, back to the customer. If the description of the problem is different from the problem listed on the RMA request form, or damaged from delivery, we will contact the customer. If the product has no identifiable problem we reserve the right to charge for testing and return delivery. Warranty repairs do not extend the original warranty period, except as outlined explicitly in the terms of use.'
+    'Voltera Inc. will test the product according to the description of the problem listed on the RMA request form. After Voltera’s evaluation, Warranty or Out-of-Warranty status will be determined. If the description of the problem is the same as listed on the RMA request form, the product will be repaired or replaced under warranty at no charge and shipped, prepaid, back to the customer. If the description of the problem is different from the problem listed on the RMA request form, or damaged from delivery, we will contact the customer. If the product has no identifiable problem we reserve the right to charge for testing and return delivery. Warranty repairs do not extend the original warranty period, except as outlined explicitly in the terms of use.',
   ],
   listHeader: 'No Warranty Credits or Exchanges for: ',
   listItems: [
@@ -53,29 +53,29 @@ let data = {
     'Returned items that are incomplete or defaced.',
     'Any consumable or standard wear items (e.g. conductive ink, substrates, or solder wire).',
     'Returned items with a different serial number from what was authorized for return.',
-    "Freight damaged items. If your original shipment from Voltera arrives damaged, you must note the damage on the carrier's delivery record in accordance with the carrier's policy, save the merchandise in the original box and packing it arrived in, and arrange for a carrier inspection of damaged merchandise."
+    "Freight damaged items. If your original shipment from Voltera arrives damaged, you must note the damage on the carrier's delivery record in accordance with the carrier's policy, save the merchandise in the original box and packing it arrived in, and arrange for a carrier inspection of damaged merchandise.",
   ],
 
   parr3: [
     'For any product returned to Voltera Inc. for reasons other than warranty, shipping costs will be deducted from the credit refund or directly charged to the purchaser, as applicable.',
-    'All returned items must be in their original box and must include all packing material, manuals, consumables, and accessories, except as explicitly instructed by Voltera Inc. Please take care to package your return carefully. Voltera Inc. is not responsible for damage or a lost product(s) caused by shipping. Any damage or subsequent failure of the hardware product related to inappropriate packaging will result in additional charges for the repair of the product, or deducting the cost of repairs from the credit refund.'
+    'All returned items must be in their original box and must include all packing material, manuals, consumables, and accessories, except as explicitly instructed by Voltera Inc. Please take care to package your return carefully. Voltera Inc. is not responsible for damage or a lost product(s) caused by shipping. Any damage or subsequent failure of the hardware product related to inappropriate packaging will result in additional charges for the repair of the product, or deducting the cost of repairs from the credit refund.',
   ],
 
   thirdTitle: 'Product Returns for “Non-Warranty” Determination',
   parr4: [
     'After Voltera’s evaluation, the customer shall be notified of the repair cost. If the description of the problem is different from the problem listed on the RMA request form, or damaged from delivery, we will contact the customer. If the product has no problem that we can identify, we reserve the right to charge for testing and return delivery.',
     'At such time the customer must issue a written confirmation to proceed with the repair(s), agree to cover the costs of the repair and return freight, or authorize the product to be shipped back as is, at the customer’s expense. If the customer declines to ship back the product, or fails to provide a written confirmation within thirty (30) days Voltera reserve the right to hold the product for resale or internal use. Repair work is warranted for thirty (30) days from date of shipment.',
-    'Please take care to package your return carefully. Voltera Inc. is not responsible for damage or a lost product(s) caused by shipping. Any damage or subsequent failure of the hardware product related to inappropriate packaging will result in additional charges for the repair of the product.'
+    'Please take care to package your return carefully. Voltera Inc. is not responsible for damage or a lost product(s) caused by shipping. Any damage or subsequent failure of the hardware product related to inappropriate packaging will result in additional charges for the repair of the product.',
   ],
 
-  signature: ' has agreed to the terms and conditions set forth in this document electronically.'
+  signature: ' has agreed to the terms and conditions set forth in this document electronically.',
 };
 
 const EMAIL = {
   ready: 'ready',
   sending: 'sending',
   sent: 'sent',
-  failed: 'failed'
+  failed: 'failed',
 };
 
 export default class RMA extends React.Component {
@@ -83,7 +83,7 @@ export default class RMA extends React.Component {
     super(props);
     this.state = {
       errorMsg: null,
-      status: EMAIL.ready
+      status: EMAIL.ready,
     };
   }
 
@@ -131,7 +131,7 @@ export default class RMA extends React.Component {
       to_email: process.env.NODE_ENV === 'production' ? 'support@voltera.io' : 'jesus@voltera.io',
       rma_number: data.rmaNumber,
       name: document.getElementById('fname').value,
-      rma_attachment: pdf.doc.output('datauri')
+      rma_attachment: pdf.doc.output('datauri'),
     };
 
     // Change state to sending.
@@ -139,7 +139,10 @@ export default class RMA extends React.Component {
     window.emailjs.init('user_a6VUHHdymj1y3WbePDyCm');
     window.emailjs
       .send('gmail', 'rma_form', emailParams)
-      .then(response => this.setState({ status: EMAIL.sent }), err => this.setState({ status: EMAIL.failed }));
+      .then(
+        response => this.setState({ status: EMAIL.sent }),
+        err => this.setState({ status: EMAIL.failed })
+      );
   }
 
   formCompleted() {
@@ -155,28 +158,21 @@ export default class RMA extends React.Component {
       'postal',
       'country',
       'serial-number',
-      'return-reason'
+      'return-reason',
     ];
 
-    const allComplete = requiredFields.every(field => document.getElementById(field).value.length > 0);
+    const allComplete = requiredFields.every(
+      field => document.getElementById(field).value.length > 0
+    );
     if (!allComplete) {
       return 'Please complete all the fields';
     }
 
     if (
-      !document
-        .getElementById('order')
-        .value.toUpperCase()
-        .startsWith('VOLT')
-    ) {
-      return 'Invalid order number. (Ex. VOLT-1234)';
-    }
-
-    if (
-      !document
-        .getElementById('serial-number')
-        .value.toUpperCase()
-        .startsWith('V1-')
+      !(
+        document.getElementById('serial-number').value.toUpperCase.startsWith('V1-') ||
+        document.getElementById('serial-number').value.toUpperCase.startsWith('D1-')
+      )
     ) {
       return 'Invalid serial number. (Ex. V1-05-0000-120)';
     }
@@ -254,7 +250,13 @@ export default class RMA extends React.Component {
             </p>
             <p>
               {data.order}
-              <input className='text-input' type='text' id='order' name='order' placeholder='Eg. VOLT-1234' />
+              <input
+                className='text-input'
+                type='text'
+                id='order'
+                name='order'
+                placeholder='Eg. VOLT-1234'
+              />
             </p>
             <p>
               {data.phone}
@@ -262,7 +264,13 @@ export default class RMA extends React.Component {
             </p>
             <p>
               {data.email}
-              <input className='text-input' type='email' id='email' name='email' autoComplete='email' />
+              <input
+                className='text-input'
+                type='email'
+                id='email'
+                name='email'
+                autoComplete='email'
+              />
             </p>
           </div>
         </div>
@@ -271,27 +279,57 @@ export default class RMA extends React.Component {
           <div className={s.fields}>
             <p>
               {data.company}
-              <input className='text-input' name='ship-address' id='company' autoComplete='shipping company' />
+              <input
+                className='text-input'
+                name='ship-address'
+                id='company'
+                autoComplete='shipping company'
+              />
             </p>
             <p>
               {data.street}
-              <input className='text-input' name='ship-address' id='street' autoComplete='shipping street-address' />
+              <input
+                className='text-input'
+                name='ship-address'
+                id='street'
+                autoComplete='shipping street-address'
+              />
             </p>
             <p>
               {data.city}
-              <input className='text-input' name='ship-city' id='city' autoComplete='shipping locality' />
+              <input
+                className='text-input'
+                name='ship-city'
+                id='city'
+                autoComplete='shipping locality'
+              />
             </p>
             <p>
               {data.state}
-              <input className='text-input' name='ship-state' id='state' autoComplete='shipping region' />
+              <input
+                className='text-input'
+                name='ship-state'
+                id='state'
+                autoComplete='shipping region'
+              />
             </p>
             <p>
               {data.postal}
-              <input className='text-input' name='ship-zip' id='postal' autoComplete='shipping postal-code' />
+              <input
+                className='text-input'
+                name='ship-zip'
+                id='postal'
+                autoComplete='shipping postal-code'
+              />
             </p>
             <p>
               {data.country}
-              <input className='text-input' name='ship-country' id='country' autoComplete='shipping country' />
+              <input
+                className='text-input'
+                name='ship-country'
+                id='country'
+                autoComplete='shipping country'
+              />
             </p>
           </div>
         </div>
@@ -313,7 +351,12 @@ export default class RMA extends React.Component {
           <p>{data.description}</p>
           <p>
             {data.serialNumber}
-            <input className='text-input' name='serial-number' id='serial-number' placeholder='Eg. V1-05-0000-120' />
+            <input
+              className='text-input'
+              name='serial-number'
+              id='serial-number'
+              placeholder='Eg. V1-05-0000-120'
+            />
           </p>
           <p>{data.returnReason}</p>
           <textarea
@@ -404,7 +447,10 @@ export default class RMA extends React.Component {
       return (
         <div>
           <h1>Return Merchandise Authorization Form</h1>
-          <p>We are sorry. This form is not supported in Internet Explorer. Please access this page with Chrome, Firefox or Microsoft Edge</p>
+          <p>
+            We are sorry. This form is not supported in Internet Explorer. Please access this page
+            with Chrome, Firefox or Microsoft Edge
+          </p>
         </div>
       );
     }
