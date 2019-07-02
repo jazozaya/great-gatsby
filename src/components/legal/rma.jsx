@@ -170,8 +170,8 @@ export default class RMA extends React.Component {
 
     if (
       !(
-        document.getElementById('serial-number').value.toUpperCase.startsWith('V1-') ||
-        document.getElementById('serial-number').value.toUpperCase.startsWith('D1-')
+        document.getElementById('serial-number').value.toUpperCase().startsWith('V1-') ||
+        document.getElementById('serial-number').value.toUpperCase().startsWith('D1-')
       )
     ) {
       return 'Invalid serial number. (Ex. V1-05-0000-120)';
@@ -360,7 +360,7 @@ export default class RMA extends React.Component {
           </p>
           <p>{data.returnReason}</p>
           <textarea
-            maxlength='400'
+            maxLength='400'
             placeholder='Ex. The V-One does not turn on when I push the power button...'
             id='return-reason'
           />
