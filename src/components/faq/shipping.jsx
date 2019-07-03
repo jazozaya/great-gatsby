@@ -12,9 +12,9 @@ export default class Shipping extends React.Component {
     return (
       <Template id={id} title={title} all={all}>
         <Question underline title="What is the cost to ship to my country?">
-          <p>It costs <strong>$25 USD</strong> per printer to ship within Canada </p>
-          <p>It costs <strong>$100 USD</strong> per printer to ship to the USA</p>
-          <p>It costs <strong>$250 USD</strong> per printer to ship international </p>
+          <p>It costs <strong>$25 USD</strong> per printer to ship within Canada.</p>
+          <p>It costs <strong>$100 USD</strong> per printer to ship to the USA.</p>
+          <p>It costs <strong>$250 USD</strong> per printer to ship international.</p>
           <p>For consumable shipping, we charge a flat fee of <strong>$20 USD</strong> worldwide.</p>
           
         </Question>
