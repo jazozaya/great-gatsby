@@ -1,6 +1,6 @@
 ---
 path: "/docs/hello-world/printing-the-circuit/"
-date: "2018-11-11"
+date: '2019-07-10'
 category: "Getting started"
 section: "Hello World"
 title: "3. Printing the circuit"
@@ -160,6 +160,12 @@ You can adjust the width of the printed lines while printing by controlling the 
 
 - The **+** button dispenses more ink by a tiny amount. Makes lines thicker.
 - The **-** button dispenses less ink by a tiny amount. Makes lines thinner.
+
+Here's a thorough overview of the 'E'- Value next to the + and - buttons.
+
+<div class="media-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OhwidEK7L8E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 <div id="print">
 <h2>Printing</h2>

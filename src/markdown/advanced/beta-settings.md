@@ -1,6 +1,6 @@
 ---
 path: '/docs/beta-settings/'
-date: '2019-05-21'
+date: '2019-07-10'
 category: 'Advanced topics'
 section: ''
 title: 'Beta settings'
@@ -18,7 +18,7 @@ This parameter controls the height the probe, dispenser and drill will raise to 
 
 Sets the maximum allowable height difference between adjacent points during probing.
 
-See <a href='/docs/understanding-probe-issues/'>Understanding Probing Issues</a> for more information.
+See [Understanding Probing Issues](/docs/understanding-probe-issues/) for more information.
 
 ## Gerber Processing
 

@@ -1,12 +1,17 @@
 ---
 path: "/docs/filling-an-empty-cartridge/"
-date: "2018-11-11"
+date: '2019-07-10'
 category: "Guides"
 section: ""
 title: "Filling an empty cartridge"
 ---
 
 If you want to use your own material when printing with the V-One, you'll need to fill an empty cartridge - and to do that, you'll need our [Empty Cartridge Pack](https://www.voltera.io/store/collection/accessories/). Follow the instructions below for a smooth experience!
+
+<div class="media-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/o3Oif5Uzmas" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 
 ## Filling the Cartridge
 

@@ -1,12 +1,16 @@
 ---
 path: '/docs/understanding-probe-issues/'
-date: '2019-05-21'
+date: '2019-07-10'
 category: 'Advanced topics'
 section: ''
 title: 'Understanding probe issues'
 ---
 
 The V-One software now has a new feature to help users better diagnose issues they might face. One of the most important errors to catch are height related errors. The software will now compare probed points against each other to try and catch these problems.
+
+<div class="media-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/JWYXRz-b2Yo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## The probing process
 

@@ -1,9 +1,19 @@
 ---
 path: "/docs/reflowing-solder-paste/"
-date: "2018-11-23"
+date: '2019-07-10'
 category: "Advanced topics"
 section: ""
 title: "Reflowing solder paste"
+---
+
+## What is solder paste?
+
+Alloys, Flux, T4, T5, Wetting - Not sure what this all means? Here's a crash course on solder paste.
+
+<div class="media-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/UKiR9WMrUaU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 ---
 
 We currently offer two types of solder paste alloys in T4 and T5 particle sizes:
