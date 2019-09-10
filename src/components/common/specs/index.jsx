@@ -112,7 +112,7 @@ export default class Specs extends React.Component {
             <Row units={units}>
               <p>Minimum pin-to-pin pitch</p>
               <p>0.65mm</p>
-              <p>32 mil</p>
+              <p>26 mil</p>
             </Row>
             <Row units={units} dark>
               <p>Resistivity</p>
