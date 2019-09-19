@@ -158,8 +158,8 @@ export default class Specs extends React.Component {
             <h3>Print Bed</h3>
             <Row units={units}>
               <p>Print Area</p>
-              <p>	128mm x 105mm</p>
-              <p>5.0” x 4.1”</p>
+              <p>	128mm x 116mm</p>
+              <p>5.0” x 4.5”</p>
             </Row>
             <Row units={units} dark>
               <p>Max. heated bed temperature</p>
