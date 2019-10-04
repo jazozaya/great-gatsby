@@ -20,7 +20,7 @@ export default class TechnologyFAQ extends React.Component {
         </Question>
         <Question underline title='What is the print area of the V-One?'>
           <p>
-            127mm x 104mm (5.0" x 4.1"). Visit our <Link to='/specs/'>specifications</Link> page for full product
+            128mm x 116mm (5.0" x 4.5"). Visit our <Link to='/specs/'>specifications</Link> page for full product
             details.
           </p>
         </Question>
