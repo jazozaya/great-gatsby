@@ -20,7 +20,7 @@ Controls minimum center-to-center distance between two adjacent lines printed wi
 
 ## Dispense height
 
-Distance between the top of the nozzle and the substrate surface during printing. The V-One dynamically corrects the height to maintain this value as constant (+/- about 20um)
+Distance between the tip of the nozzle and the substrate surface during printing. The V-One dynamically corrects the height to maintain this value as constant (+/- about 20um)
 
 ## Feedrate
 
