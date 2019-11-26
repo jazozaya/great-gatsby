@@ -10,8 +10,8 @@ The SDS (Safety Datasheets) below contain important information on the storage, 
 
 ### Conductive Inks
 
-- [Standard Conductive Ink](/docs/downloads/sds/2018-06-26_Conductor_SDS_R3.pdf)
-- [Flexible 2 Conductive Ink](/docs/downloads/sds/2019-03-15_FlexConductor2_MSDS_R1.pdf)
+- [Conductor 2 Ink](/docs/downloads/sds/2019-10-15_Conductor2_MSDS_R1.pdf)
+- [Flexible 2 Ink](/docs/downloads/sds/2019-03-15_FlexConductor2_MSDS_R1.pdf)
 
 
 ### Solder Paste Cartridges
@@ -24,7 +24,7 @@ The SDS (Safety Datasheets) below contain important information on the storage, 
 ### Solder Wire
 - [Sn42 Bi57.6 Ag0.4](/docs/downloads/sds/2019-04-23_SnBiAg_SolderWire_MSDS_R1.pdf)
 
-### Experimental and Other Inks
-
+### Experimental and Older Inks
+- [Standard Conductive Ink](/docs/downloads/sds/2018-06-26_Conductor_SDS_R3.pdf)
 - [Experimental Conductive Ink - EXP001](/docs/downloads/sds/2018-07-25_EXP001_SDS_R1.pdf)
 - [Flexible Conductive Ink](/docs/downloads/sds/2017-11-13_FlexConductor_MSDS_R1.pdf)
