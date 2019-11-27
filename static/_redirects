@@ -166,6 +166,17 @@ http://support.voltera.io/*    https://www.voltera.io/docs/
 /app-link/beta-setting-probing-error-detection    /docs/beta-settings/
 /app-link/beta-setting-gerber-processing          /docs/beta-settings/
 
+/app-link/dispense-settings-pass-spacing          /docs/print-settings-overview/
+/app-link/dispense-settings-dispense-height       /docs/print-settings-overview/
+/app-link/dispense-settings-feedrate              /docs/print-settings-overview/
+/app-link/dispense-settings-trim-length           /docs/print-settings-overview/
+/app-link/dispense-settings-trace-penetration     /docs/print-settings-overview/
+/app-link/dispense-settings-antistringing         /docs/print-settings-overview/
+/app-link/dispense-settings-kick                  /docs/print-settings-overview/
+/app-link/dispense-settings-soft-start            /docs/print-settings-overview/
+/app-link/dispense-settings-soft-stop             /docs/print-settings-overview/
+/app-link/dispense-settings-rheological-setpoint  /docs/print-settings-overview/
+
 /app-link/icon                             /favicon.ico
 
 # Documents
