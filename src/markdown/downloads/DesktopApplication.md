@@ -11,7 +11,9 @@ title: "Desktop application"
 Download the V-One software installer for your operating system. Open the file and install on your system.
 
 - [Windows 7, 8, 10](http://voltera-styx.herokuapp.com/download/win32) (64-bit only)
-- [macOS 10.13 (High Sierra), macOS 10.14 (Mojave)](http://voltera-styx.herokuapp.com/download/osx)
+- [macOS 10.13 (High Sierra), macOS 10.14 (Mojave), macOS 10.15 (Catalina)](http://voltera-styx.herokuapp.com/download/osx)
+
+**Note:** Special instructions for [macOS 10.15 (Catalina) users](/docs/catalina-installation/).
 
 ## Drivers
 
