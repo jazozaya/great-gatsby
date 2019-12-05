@@ -29,6 +29,6 @@ To get around this one you need to right click on the app and choose open. This 
 <img src="/docs/troubleshooting/catalinaInstallation/3.png">
 </div>
 
-Clicking open should have you good to go. You can then close the app and copy it to your *Applications directory*.
+Clicking open should have you good to go. You can then close the app and copy it to your */Applications* directory.
 
 Apologies for the inconvenience. Once you've got it running the first time you should be fine going forward as the problem is occurring during extracting the archive.
