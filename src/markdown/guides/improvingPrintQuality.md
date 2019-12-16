@@ -33,7 +33,7 @@ You only need to click the pressure buttons once or twice before seeing a differ
 
 ## Print Height
 
-This is the air gap between the substrate and the tip of the nozzle. The default height is 0.08 mm (80 microns) for the silver ink and 0.14 mm for solder paste. Print height is maintained automatically during a print based on the height map generated through the probing step.
+This is the air gap between the substrate and the tip of the nozzle. The default height is 0.08 mm (80 microns) for the silver ink and 0.1 mm for solder paste. Print height is maintained automatically during a print based on the height map generated through the probing step.
 
 The following sections identify common printing issues you may experience.
 
