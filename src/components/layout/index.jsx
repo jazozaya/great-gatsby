@@ -3,7 +3,6 @@ import Helmet from 'react-helmet';
 import Footer from 'components/common/footer';
 import Header from 'components/common/header';
 import DummyHeader from 'components/common/dummyHeader';
-import SignUp from 'components/common/signUp';
 import Reminder from 'components/common/reminder';
 
 import favicon from 'favicon.ico';
@@ -34,7 +33,6 @@ export default class Layout extends React.Component {
           <link rel='shortcut icon' type='image/x-icon' href={favicon} />
         </Helmet>
         <Header pageName={this.props.pathname} />
-        <SignUp />
         <Reminder pageName={this.props.pathname} />
         <DummyHeader />
         {this.props.children}
