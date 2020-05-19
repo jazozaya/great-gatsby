@@ -9,7 +9,7 @@ import quoteIcon from "./quote.min.svg";
 export default class InTouch extends React.Component {
   render() {
     return (
-      <div className="in-touch flex-row">
+      <div className="in-touch">
         <div className="action">
           <img src={quoteIcon} alt="" />
           <p>Tell us your contact and shipping information and we'll send you a quote!</p>
