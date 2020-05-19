@@ -50,6 +50,24 @@
   // background-color: $white;
 }
 
+.covid-wrapper {
+  background-color: $white;
+  color: $voltera-blue;
+  padding: 0px $small-padding;
+  height: $subheader-height;
+  border-bottom: thin;
+  border-bottom-style: solid;
+}
+
+.covid {
+  margin: auto;
+  max-width: $max-width;
+  text-align: right;
+  padding: 10px 0px;
+  font-size: 0.9em;
+  font-weight: 600;
+}
+
 .child-wrapper {
   background-color: $voltera-blue;
   padding: 0px $small-padding;

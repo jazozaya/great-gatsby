@@ -16,12 +16,6 @@ export default class Index extends React.Component {
   render() {
 
     const buttonOne = {
-      label: "Book a Call",
-      url: "/request/call/",
-      internal: true
-    }
-
-    const buttonTwo = {
       label: "Get A Quote",
       url: "/request/quote/",
       internal: true
@@ -35,10 +29,9 @@ export default class Index extends React.Component {
         <Testimonial />
         <Awards />
         <CallToAction
-          title="Want to get in touch?"
-          subtitle="Let's find a time to talk!"
+          title="Want to get specifics?"
+          subtitle="Let's build a quote for you!"
           buttonOne={buttonOne}
-          buttonTwo={buttonTwo}
         />
       </div>
     )

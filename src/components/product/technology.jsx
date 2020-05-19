@@ -104,14 +104,9 @@ class Technology extends React.Component {
         <TechnologyFAQ id="faq" title="F.A.Q." all />
         <Specs display="vOne" />
         <CallToAction
-          title="Want to schedule a call?"
-          subtitle="Let's find a time to talk!"
+          title="Want to get specifics?"
+          subtitle="Let's build a quote for you!"
           buttonOne={{
-            label: "Book a Call",
-            url: "/request/call/",
-            internal: true
-          }}
-          buttonTwo={{
             label: "Get A Quote",
             url: "/request/quote/",
             internal: true
