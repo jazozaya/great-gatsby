@@ -29,7 +29,7 @@
     "gatsby-transformer-remark": "^2.2.0",
     "gatsby-transformer-sharp": "^2.1.10",
     "google-fonts-plugin": "^2.0.2",
-    "jspdf": "^1.5.3",
+    "jspdf": "^2.3.1",
     "moment": "^2.23.0",
     "node-fetch": "^2.3.0",
     "node-sass": "^4.11.0",
