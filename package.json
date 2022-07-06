@@ -30,7 +30,7 @@
     "gatsby-transformer-sharp": "^2.1.10",
     "google-fonts-plugin": "^2.0.2",
     "jspdf": "^1.5.3",
-    "moment": "^2.23.0",
+    "moment": "^2.29.4",
     "node-fetch": "^2.3.0",
     "node-sass": "^4.11.0",
     "query-string": "^5.1.1",
